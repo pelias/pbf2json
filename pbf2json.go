@@ -31,8 +31,7 @@ func getSettings() Settings {
 
   // invalid tags
   if( len(*tagList) < 1 ){
-    fmt.Printf("Nothing to do, you must specify tags to match against\n")
-    os.Exit(1)
+    log.Fatal("Nothing to do, you must specify tags to match against")
   }
 
   // parse tag conditions
