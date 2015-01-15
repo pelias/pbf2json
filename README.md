@@ -96,6 +96,7 @@ Make sure `Go` is installed and configured on your system, see: https://gist.git
 
 ```bash
 sudo apt-get install mercurial;
+cd src;
 go get;
 go run osm2pbf.go;
 ```
