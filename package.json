@@ -1,0 +1,35 @@
+{
+  "name": "pbf2json",
+  "author": "mapzen",
+  "version": "0.0.0",
+  "description": "Golang osm pbf parser with npm wrapper",
+  "homepage": "https://github.com/pelias/pbf2json",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "bin": {
+    "pbf2json": "./build/pbf2json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pelias/pbf2json.git"
+  },
+  "keywords": [
+    "pelias",
+    "openstreetmap",
+    "pbf",
+    "parser"
+  ],
+  "bugs": {
+    "url": "https://github.com/pelias/pbf2json/issues"
+  },
+  "engines": {
+    "node": ">=0.10.26",
+    "npm": ">=1.4.3"
+  },
+  "dependencies": {
+    "split": "^0.3.2",
+    "through2": "^0.6.3"
+  }
+}

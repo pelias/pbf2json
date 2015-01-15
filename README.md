@@ -90,6 +90,25 @@ By default the leveldb path is set to `/tmp`, you can change where it stores the
 $ ./build/pbf2json -leveldb="/tmp/somewhere"
 ```
 
+### NPM module
+
+```javascript
+var pbf2json = require('pbf2json'),
+    through = require('through2');
+
+var config = {
+  file: '/tmp/wellington_new-zealand.osm.pbf',
+  tags: 'addr:housenumber+addr:street',
+  leveldb: '/tmp'
+};
+
+pbf2json.createReadStream( config )
+ .pipe( through.obj( function( item, e, next ){
+    console.log( item );
+    next();
+ }));
+```
+
 ### Run the go code from source
 
 Make sure `Go` is installed and configured on your system, see: https://gist.github.com/missinglink/4212a81a7d9c125b68d9
