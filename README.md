@@ -42,6 +42,53 @@ $ ./build/pbf2json -tags="addr:housenumber+addr:street" /tmp/wellington_new-zeal
 {"id":267314224,"type":"node","lat":-41.2952482,"lon":174.7749056,"tags":{"addr:city":"Wellington","addr:housenumber":"213","addr:street":"Cuba Street","name":"Comfort Hotel","tourism":"hotel"},"timestamp":"0001-01-01T00:00:00Z"}
 ```
 
+### Denormalization
+
+When processing the ways, the node refs are looked up for you and the lat/lon values are added to each way:
+
+```bash
+{
+  "id": 257577170,
+  "type": "way",
+  "tags": {
+    "building": "yes"
+  },
+  "nodes": [
+    {
+      "lat": "-41.317247",
+      "lon": "174.794847"
+    },
+    {
+      "lat": "-41.317356",
+      "lon": "174.794804"
+    },
+    {
+      "lat": "-41.317408",
+      "lon": "174.795076"
+    },
+    {
+      "lat": "-41.317298",
+      "lon": "174.795115"
+    },
+    {
+      "lat": "-41.317247",
+      "lon": "174.794847"
+    }
+  ],
+  "timestamp": "0001-01-01T00:00:00Z"
+}
+```
+
+### Leveldb
+
+This library used `leveldb` to store the lat/lon info about nodes so that it can denormalize the ways for you.
+
+By default the leveldb path is set to `/tmp`, you can change where it stores the data with a flag:
+
+```bash
+$ ./build/pbf2json -leveldb="/tmp/somewhere"
+```
+
 ### Run the go code from source
 
 Make sure `Go` is installed and configured on your system, see: https://gist.github.com/missinglink/4212a81a7d9c125b68d9
