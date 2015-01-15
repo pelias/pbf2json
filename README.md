@@ -28,8 +28,8 @@ Multiple tags can be specified with commas, records will be returned if they mat
 $ ./build/pbf2json -tags="building,shop" /tmp/wellington_new-zealand.osm.pbf
 ```
 ```bash
-{"id":267784221,"type":"node","lat":-41.2975165,"lon":174.7799081,"tags":{"name":"The Warehouse","shop":"department_store"},"timestamp":"0001-01-01T00:00:00Z"}
 {"id":279402641,"type":"node","lat":-41.306234100000005,"lon":174.77813590000002,"tags":{"name":"Beaurepaires","shop":"car_repair"},"timestamp":"0001-01-01T00:00:00Z"}
+{"id":307350056,"type":"node","lat":-41.282209800000004,"lon":174.7653727,"tags":{"building":"pavilion","name":"The Duckpond Pavilion"},"timestamp":"0001-01-01T00:00:00Z"}
 ```
 
 Tags can also be grouped with the `+` symbol, records will only be returned if they match one `AND` the other:
