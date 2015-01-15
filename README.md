@@ -32,7 +32,7 @@ Multiple tags can be specified with commas, records will be returned if they mat
 Tags can also be grouped with the `+` symbol, records will only be returned if they match one `AND` the other:
 
 ```bash
-# only records with valid street addresses
+# only records with BOTH housenumber and street specified
 -tags="addr:housenumber+addr:street"
 ```
 
