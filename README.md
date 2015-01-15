@@ -10,7 +10,7 @@ Nothing to do, you must specify tags to match against
 
 ### Usage
 
-To control which tags are outputted you must pass the `-tags=` flag to `pbf2json` and the PBF filepath:
+To control which tags are output you must pass the `-tags=` flag to `pbf2json` and the PBF filepath:
 
 ```bash
 $ ./build/pbf2json -tags="amenity" /tmp/wellington_new-zealand.osm.pbf
