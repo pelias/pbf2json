@@ -25,21 +25,22 @@ $ ./build/pbf2json -tags="amenity" /tmp/wellington_new-zealand.osm.pbf
 Multiple tags can be specified with commas, records will be returned if they match one `OR` the other:
 
 ```bash
-$ ./build/pbf2json -tags="building,shop" /tmp/wellington_new-zealand.osm.pbf
-```
-```bash
-{"id":279402641,"type":"node","lat":-41.306234100000005,"lon":174.77813590000002,"tags":{"name":"Beaurepaires","shop":"car_repair"},"timestamp":"0001-01-01T00:00:00Z"}
-{"id":307350056,"type":"node","lat":-41.282209800000004,"lon":174.7653727,"tags":{"building":"pavilion","name":"The Duckpond Pavilion"},"timestamp":"0001-01-01T00:00:00Z"}
+# all buildings and shops
+-tags="building,shop"
 ```
 
 Tags can also be grouped with the `+` symbol, records will only be returned if they match one `AND` the other:
 
 ```bash
-$ ./build/pbf2json -tags="addr:housenumber+addr:street" /tmp/wellington_new-zealand.osm.pbf
+# only records with valid street addresses
+-tags="addr:housenumber+addr:street"
 ```
+
+You can also combine the above 2 delimiters to get even more control over what get's returned:
+
 ```bash
-{"id":172588254,"type":"node","lat":-41.305838200000004,"lon":174.7634702,"tags":{"addr:city":"Wellington","addr:housenumber":"205","addr:postcode":"6021","addr:street":"Ohiro Road","amenity":"cinema","name":"Penthouse Cinema","source":"knowledge","website":"http://www.penthousecinema.co.nz/"},"timestamp":"0001-01-01T00:00:00Z"}
-{"id":267314224,"type":"node","lat":-41.2952482,"lon":174.7749056,"tags":{"addr:city":"Wellington","addr:housenumber":"213","addr:street":"Cuba Street","name":"Comfort Hotel","tourism":"hotel"},"timestamp":"0001-01-01T00:00:00Z"}
+# only highways and waterways which have a name
+-tags="highway+name,waterway+name"
 ```
 
 ### Denormalization
