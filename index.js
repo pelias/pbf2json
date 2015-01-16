@@ -22,7 +22,17 @@ function createReadStream( config ){
   var proc = child.spawn( exec, flags );
 
   var decoder = createJsonDecodeStream();
-  proc.stdout.pipe( split() ).pipe( decoder );
+  proc.stdout
+    .pipe( split() )
+    .pipe( through( function( chunk, enc, next ){
+      var str = chunk.toString('utf8'); // convert buffers to strings
+      // remove empty lines
+      if( 'string' === typeof str && str.length ){
+        this.push( str );
+      }
+      next();
+    }))
+    .pipe( decoder );
 
   // print error and exit on decoder pipeline error
   decoder.on( 'error', errorHandler( 'decoder' ) );
@@ -34,9 +44,9 @@ function createReadStream( config ){
 }
 
 function createJsonDecodeStream(){
-  return through.obj( function( chunk, enc, next ){
+  return through.obj( function( str, enc, next ){
     try {
-      var o = JSON.parse( chunk.toString('utf8') );
+      var o = JSON.parse( str );
       if( o ){ this.push( o ); }
     }
     catch( e ){
