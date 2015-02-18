@@ -14,10 +14,12 @@ function errorHandler( name ){
 
 function createReadStream( config ){
 
-  var flags = [ util.format( '-tags=%s', config.tags ), config.file ];
+  var flags = [];
+  flags.push( util.format( '-tags=%s', config.tags ) );
   if( config.hasOwnProperty( 'leveldb' ) ){
     flags.push( util.format( '-leveldb=%s', config.leveldb ) );
   }
+  flags.push( config.file );
 
   var proc = child.spawn( exec, flags );
 
