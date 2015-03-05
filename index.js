@@ -42,6 +42,12 @@ function createReadStream( config ){
   // print error and exit on stderr
   proc.stderr.on( 'data', errorHandler( 'stderr' ) );
 
+  // terminate the process and pipeline
+  decoder.kill = function(){
+    proc.kill();
+    decoder.end();
+  }
+
   return decoder;
 }
 
