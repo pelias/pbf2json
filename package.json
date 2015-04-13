@@ -6,7 +6,7 @@
   "homepage": "https://github.com/pelias/pbf2json",
   "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": "node test/run.js | tap-spec"
   },
   "bin": {
     "pbf2json": "./build/pbf2json"
@@ -31,5 +31,10 @@
   "dependencies": {
     "split": "^0.3.2",
     "through2": "^0.6.3"
+  },
+  "devDependencies": {
+    "tape": "^2.13.4",
+    "tap-spec": "^0.2.0",
+    "precommit-hook": "1.0.7"
   }
 }
