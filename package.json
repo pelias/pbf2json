@@ -10,9 +10,6 @@
     "pretest": "test/pretest.sh",
     "end-to-end": "node test/end-to-end.js;"
   },
-  "bin": {
-    "pbf2json": "./build/pbf2json"
-  },
   "repository": {
     "type": "git",
     "url": "git://github.com/pelias/pbf2json.git"
