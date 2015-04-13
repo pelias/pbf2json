@@ -2,7 +2,7 @@
 #!/bin/bash
 # @ref: https://gist.github.com/missinglink/414edeaae2298db711e3
 
-dirname=$(dirname `readlink -f $0`);
+dirname=$(dirname $0);
 cd "$dirname";
 file=somes.osm.pbf;
 
