@@ -1,10 +1,11 @@
 
 var util = require('util'),
     path = require('path'),
+    os = require('os'),
     split = require('split'),
     through = require('through2'),
     child = require('child_process'),
-    exec = path.resolve(__dirname, 'build/pbf2json');
+    exec = path.join(__dirname, 'build', util.format( 'pbf2json.%s-%s', os.platform(), os.arch() ) );
 
 function errorHandler( name ){
   return function( data ){
@@ -46,7 +47,7 @@ function createReadStream( config ){
   decoder.kill = function(){
     proc.kill();
     decoder.end();
-  }
+  };
 
   return decoder;
 }

@@ -1,10 +1,17 @@
 
 ### Run from pre-built binary
 
-You don't need to have `Go` installed on your system to use the binary file in `./build`:
+You don't need to have `Go` installed on your system to use one of the binary files in `./build`:
 
 ```bash
-$ ./build/pbf2json 
+# 64-bit linux distributions
+$ ./build/pbf2json.linux-amd64
+Nothing to do, you must specify tags to match against
+```
+
+```bash
+# 64-bit OSX distributions
+$ ./build/pbf2json.darwin-amd64
 Nothing to do, you must specify tags to match against
 ```
 
@@ -13,7 +20,7 @@ Nothing to do, you must specify tags to match against
 To control which tags are output you must pass the `-tags=` flag to `pbf2json` and the PBF filepath:
 
 ```bash
-$ ./build/pbf2json -tags="amenity" /tmp/wellington_new-zealand.osm.pbf
+$ ./build/pbf2json.linux-amd64 -tags="amenity" /tmp/wellington_new-zealand.osm.pbf
 ```
 ```bash
 {"id":170603342,"type":"node","lat":-41.289843000000005,"lon":174.7944402,"tags":{"amenity":"fountain","created_by":"Potlatch 0.5d","name":"Oriental Bay Fountain","source":"knowledge"},"timestamp":"0001-01-01T00:00:00Z"}
@@ -87,7 +94,7 @@ This library used `leveldb` to store the lat/lon info about nodes so that it can
 By default the leveldb path is set to `/tmp`, you can change where it stores the data with a flag:
 
 ```bash
-$ ./build/pbf2json -leveldb="/tmp/somewhere"
+$ ./build/pbf2json.linux-amd64 -leveldb="/tmp/somewhere"
 ```
 
 ### NPM module
@@ -115,7 +122,30 @@ Make sure `Go` is installed and configured on your system, see: https://gist.git
 
 ```bash
 sudo apt-get install mercurial;
-cd src;
 go get;
 go run osm2pbf.go;
 ```
+
+### Compile source for a new architecture
+
+If you would like to compile a version of this lib for an architecture which isn't currently supported you can:
+
+```bash
+go get;
+go build osm2pbf.go;
+chmod +x pbf2json;
+mv pbf2json build/pbf2json.{platform}-{arch};
+```
+
+Note you will need to change the variables {platform} and {arch} to match those returned by `nodejs` for your system:
+
+```javascript
+$ node
+> var os=require('os')
+> os.platform()
+'linux'
+> os.arch()
+'x64'
+```
+
+Then submit a pull request, you are awesome ;)
