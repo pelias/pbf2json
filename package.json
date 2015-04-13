@@ -1,7 +1,7 @@
 {
   "name": "pbf2json",
   "author": "mapzen",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "Golang osm pbf parser with npm wrapper",
   "homepage": "https://github.com/pelias/pbf2json",
   "license": "MIT",
