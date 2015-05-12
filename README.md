@@ -54,7 +54,7 @@ If you need to target only specific values for a tag you can specify exactly whi
 
 ```bash
 # only extract amenity tags which have the value of toilets or kindergarten
--tags="amenity:toilets,amenity:kindergarten"
+-tags="amenity$toilets,amenity$kindergarten"
 ```
 
 ### Denormalization
