@@ -23612,7 +23612,7 @@
     "tags": {
       "amenity": "restaurant",
       "name": "Prosepect Point Cafe",
-      "phone": "(604)669-2737 ",
+      "phone": "(604)669-2737",
       "source": "local_knowledge",
       "website": "http://www.prospectpoint.ca/Prospect_Point/Restaurant.html"
     },
@@ -23624,7 +23624,7 @@
     "lat": 49.312619700000006,
     "lon": -123.14273030000001,
     "tags": {
-      "amenity": " ice_cream",
+      "amenity": "ice_cream",
       "source": "local_knowledge"
     },
     "timestamp": "2014-04-01T04:32:43Z"

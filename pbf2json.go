@@ -93,6 +93,8 @@ func run(d *osmpbf.Decoder, db *leveldb.DB, config Settings){
           cacheStore(db, v)
 
           if !hasTags(v.Tags) { break }
+
+          v.Tags = trimTags(v.Tags)
           if containsValidTags( v.Tags, config.Tags ) {
             onNode(v)
           }
@@ -103,6 +105,8 @@ func run(d *osmpbf.Decoder, db *leveldb.DB, config Settings){
           wc++
 
           if !hasTags(v.Tags) { break }
+
+          v.Tags = trimTags(v.Tags)
           if containsValidTags( v.Tags, config.Tags ) {
 
             // lookup from leveldb
@@ -272,6 +276,14 @@ func containsValidTags(tags map[string]string, group map[string][]string) bool {
     }
   }
   return false
+}
+
+func trimTags(tags map[string]string) map[string]string {
+  trimmed := make(map[string]string)
+  for k, v := range tags {
+    trimmed[strings.TrimSpace(k)] = strings.TrimSpace(v);
+  }
+  return trimmed
 }
 
 func hasTags(tags map[string]string) bool {
