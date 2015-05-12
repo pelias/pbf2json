@@ -110,7 +110,10 @@ func run(d *osmpbf.Decoder, db *leveldb.DB, config Settings){
           if containsValidTags( v.Tags, config.Tags ) {
 
             // lookup from leveldb
-            latlons := cacheLookup(db, v)
+            latlons, err := cacheLookup(db, v)
+
+            // skip ways which fail to denormalize
+            if err == nil { break }
 
             onWay(v,latlons)
           }
@@ -175,7 +178,7 @@ func cacheStore(db *leveldb.DB, node *osmpbf.Node){
   }
 }
 
-func cacheLookup(db *leveldb.DB, way *osmpbf.Way) []map[string]string{
+func cacheLookup(db *leveldb.DB, way *osmpbf.Way) ([]map[string]string, error) {
 
   var container []map[string]string
 
@@ -184,7 +187,8 @@ func cacheLookup(db *leveldb.DB, way *osmpbf.Way) []map[string]string{
 
     data, err := db.Get([]byte(stringid), nil)
     if err != nil {
-      log.Fatal(err)
+      log.Println("denormalize failed for way:", way.ID, "node not found:", stringid)
+      return container, err
     }
 
     s := string(data)
@@ -199,7 +203,7 @@ func cacheLookup(db *leveldb.DB, way *osmpbf.Way) []map[string]string{
 
   }
 
-  return container
+  return container, nil
 
   // fmt.Println(way.NodeIDs)
   // fmt.Println(container)
