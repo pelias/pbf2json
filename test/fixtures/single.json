@@ -1,0 +1,3008 @@
+{
+  "23717008": {
+    "id": 23717008,
+    "type": "way",
+    "tags": {
+      "building": "yes",
+      "created_by": "Potlatch 0.8a"
+    },
+    "nodes": null,
+    "timestamp": "2008-04-11T05:03:01Z"
+  },
+  "23718166": {
+    "id": 23718166,
+    "type": "way",
+    "tags": {
+      "building": "yes"
+    },
+    "nodes": null,
+    "timestamp": "2012-05-28T20:56:52Z"
+  },
+  "23718168": {
+    "id": 23718168,
+    "type": "way",
+    "tags": {
+      "building": "yes"
+    },
+    "nodes": [
+      {
+        "lat": "49.302845",
+        "lon": "-123.020469"
+      }
+    ],
+    "timestamp": "2012-05-28T20:56:52Z"
+  },
+  "23718264": {
+    "id": 23718264,
+    "type": "way",
+    "tags": {
+      "building": "yes"
+    },
+    "nodes": null,
+    "timestamp": "2012-08-03T03:36:10Z"
+  },
+  "23718886": {
+    "id": 23718886,
+    "type": "way",
+    "tags": {
+      "building": "yes",
+      "created_by": "Potlatch 0.8a"
+    },
+    "nodes": [
+      {
+        "lat": "49.319447",
+        "lon": "-123.097796"
+      },
+      {
+        "lat": "49.319638",
+        "lon": "-123.097796"
+      },
+      {
+        "lat": "49.319638",
+        "lon": "-123.097710"
+      },
+      {
+        "lat": "49.319761",
+        "lon": "-123.097710"
+      },
+      {
+        "lat": "49.319761",
+        "lon": "-123.097762"
+      },
+      {
+        "lat": "49.319968",
+        "lon": "-123.097788"
+      },
+      {
+        "lat": "49.319973",
+        "lon": "-123.097341"
+      },
+      {
+        "lat": "49.319750",
+        "lon": "-123.097341"
+      },
+      {
+        "lat": "49.319750",
+        "lon": "-123.097196"
+      }
+    ],
+    "timestamp": "2008-04-11T09:36:07Z"
+  },
+  "23737032": {
+    "id": 23737032,
+    "type": "way",
+    "tags": {
+      "building": "yes",
+      "created_by": "Potlatch 0.8a"
+    },
+    "nodes": [
+      {
+        "lat": "49.319842",
+        "lon": "-123.107990"
+      }
+    ],
+    "timestamp": "2008-04-15T00:12:04Z"
+  },
+  "23787107": {
+    "id": 23787107,
+    "type": "way",
+    "tags": {
+      "amenity": "school",
+      "building": "school",
+      "name": "Brooksbank Elementary"
+    },
+    "nodes": [
+      {
+        "lat": "49.319776",
+        "lon": "-123.046019"
+      },
+      {
+        "lat": "49.319828",
+        "lon": "-123.045934"
+      },
+      {
+        "lat": "49.319873",
+        "lon": "-123.045906"
+      },
+      {
+        "lat": "49.319948",
+        "lon": "-123.045905"
+      },
+      {
+        "lat": "49.319991",
+        "lon": "-123.045925"
+      }
+    ],
+    "timestamp": "2012-10-06T01:50:58Z"
+  },
+  "23937742": {
+    "id": 23937742,
+    "type": "way",
+    "tags": {
+      "building": "yes"
+    },
+    "nodes": null,
+    "timestamp": "2012-06-19T13:43:53Z"
+  },
+  "23948314": {
+    "id": 23948314,
+    "type": "way",
+    "tags": {
+      "building": "yes"
+    },
+    "nodes": null,
+    "timestamp": "2012-05-29T11:13:25Z"
+  },
+  "44635941": {
+    "id": 44635941,
+    "type": "way",
+    "tags": {
+      "building": "yes"
+    },
+    "nodes": null,
+    "timestamp": "2012-06-06T05:11:49Z"
+  },
+  "58473638": {
+    "id": 58473638,
+    "type": "way",
+    "tags": {
+      "building": "yes"
+    },
+    "nodes": [
+      {
+        "lat": "49.196421",
+        "lon": "-123.159778"
+      },
+      {
+        "lat": "49.196456",
+        "lon": "-123.159767"
+      },
+      {
+        "lat": "49.196477",
+        "lon": "-123.159939"
+      },
+      {
+        "lat": "49.195916",
+        "lon": "-123.160100"
+      },
+      {
+        "lat": "49.195867",
+        "lon": "-123.159767"
+      },
+      {
+        "lat": "49.195923",
+        "lon": "-123.159746"
+      },
+      {
+        "lat": "49.195888",
+        "lon": "-123.159542"
+      },
+      {
+        "lat": "49.195650",
+        "lon": "-123.159596"
+      },
+      {
+        "lat": "49.195678",
+        "lon": "-123.160079"
+      }
+    ],
+    "timestamp": "2010-05-07T04:44:09Z"
+  },
+  "90296170": {
+    "id": 90296170,
+    "type": "way",
+    "tags": {
+      "aeroway": "terminal",
+      "building": "yes",
+      "wheelchair": "yes"
+    },
+    "nodes": null,
+    "timestamp": "2015-01-27T07:10:33Z"
+  },
+  "90296176": {
+    "id": 90296176,
+    "type": "way",
+    "tags": {
+      "aeroway": "terminal",
+      "building": "yes"
+    },
+    "nodes": [
+      {
+        "lat": "49.195500",
+        "lon": "-123.178623"
+      },
+      {
+        "lat": "49.195033",
+        "lon": "-123.180572"
+      },
+      {
+        "lat": "49.195028",
+        "lon": "-123.180568"
+      }
+    ],
+    "timestamp": "2015-01-27T07:10:35Z"
+  },
+  "90296197": {
+    "id": 90296197,
+    "type": "way",
+    "tags": {
+      "aeroway": "terminal",
+      "building": "yes"
+    },
+    "nodes": [
+      {
+        "lat": "49.195085",
+        "lon": "-123.181980"
+      },
+      {
+        "lat": "49.195070",
+        "lon": "-123.181999"
+      }
+    ],
+    "timestamp": "2015-01-27T07:10:33Z"
+  },
+  "90296208": {
+    "id": 90296208,
+    "type": "way",
+    "tags": {
+      "aeroway": "terminal",
+      "building": "yes",
+      "wheelchair": "yes"
+    },
+    "nodes": null,
+    "timestamp": "2015-01-27T07:10:35Z"
+  },
+  "94065555": {
+    "id": 94065555,
+    "type": "way",
+    "tags": {
+      "building": "yes"
+    },
+    "nodes": null,
+    "timestamp": "2011-01-09T09:06:51Z"
+  },
+  "103943164": {
+    "id": 103943164,
+    "type": "way",
+    "tags": {
+      "building": "yes",
+      "source": "Bing"
+    },
+    "nodes": [
+      {
+        "lat": "49.264373",
+        "lon": "-123.020085"
+      }
+    ],
+    "timestamp": "2011-03-13T07:17:55Z"
+  },
+  "103943177": {
+    "id": 103943177,
+    "type": "way",
+    "tags": {
+      "building": "yes",
+      "source": "Bing"
+    },
+    "nodes": null,
+    "timestamp": "2011-03-13T07:17:59Z"
+  },
+  "136941124": {
+    "id": 136941124,
+    "type": "way",
+    "tags": {
+      "building": "yes",
+      "source": "Bing"
+    },
+    "nodes": null,
+    "timestamp": "2011-11-14T00:32:36Z"
+  },
+  "136941140": {
+    "id": 136941140,
+    "type": "way",
+    "tags": {
+      "building": "yes",
+      "source": "Bing"
+    },
+    "nodes": [
+      {
+        "lat": "49.263408",
+        "lon": "-123.020893"
+      },
+      {
+        "lat": "49.263117",
+        "lon": "-123.020898"
+      }
+    ],
+    "timestamp": "2011-11-14T00:32:39Z"
+  },
+  "140089344": {
+    "id": 140089344,
+    "type": "way",
+    "tags": {
+      "building": "yes",
+      "landuse": "residential"
+    },
+    "nodes": null,
+    "timestamp": "2011-12-07T04:24:16Z"
+  },
+  "140089348": {
+    "id": 140089348,
+    "type": "way",
+    "tags": {
+      "building": "yes",
+      "landuse": "residential"
+    },
+    "nodes": [
+      {
+        "lat": "49.319914",
+        "lon": "-123.051598"
+      },
+      {
+        "lat": "49.319881",
+        "lon": "-123.051597"
+      },
+      {
+        "lat": "49.319882",
+        "lon": "-123.051489"
+      }
+    ],
+    "timestamp": "2012-01-10T14:30:18Z"
+  },
+  "140089350": {
+    "id": 140089350,
+    "type": "way",
+    "tags": {
+      "building": "yes",
+      "landuse": "residential"
+    },
+    "nodes": [
+      {
+        "lat": "49.319995",
+        "lon": "-123.051401"
+      },
+      {
+        "lat": "49.319994",
+        "lon": "-123.051408"
+      },
+      {
+        "lat": "49.319892",
+        "lon": "-123.051403"
+      },
+      {
+        "lat": "49.319894",
+        "lon": "-123.051284"
+      },
+      {
+        "lat": "49.319995",
+        "lon": "-123.051288"
+      },
+      {
+        "lat": "49.319994",
+        "lon": "-123.051324"
+      }
+    ],
+    "timestamp": "2012-01-10T14:30:17Z"
+  },
+  "140089352": {
+    "id": 140089352,
+    "type": "way",
+    "tags": {
+      "building": "yes",
+      "landuse": "residential"
+    },
+    "nodes": [
+      {
+        "lat": "49.319983",
+        "lon": "-123.049679"
+      },
+      {
+        "lat": "49.319899",
+        "lon": "-123.049679"
+      },
+      {
+        "lat": "49.319901",
+        "lon": "-123.049496"
+      }
+    ],
+    "timestamp": "2011-12-07T04:24:18Z"
+  },
+  "140089354": {
+    "id": 140089354,
+    "type": "way",
+    "tags": {
+      "building": "yes",
+      "landuse": "residential"
+    },
+    "nodes": null,
+    "timestamp": "2011-12-07T04:24:18Z"
+  },
+  "140089357": {
+    "id": 140089357,
+    "type": "way",
+    "tags": {
+      "building": "yes",
+      "landuse": "residential"
+    },
+    "nodes": [
+      {
+        "lat": "49.319898",
+        "lon": "-123.050171"
+      },
+      {
+        "lat": "49.319899",
+        "lon": "-123.049984"
+      },
+      {
+        "lat": "49.319990",
+        "lon": "-123.049985"
+      },
+      {
+        "lat": "49.319989",
+        "lon": "-123.050066"
+      }
+    ],
+    "timestamp": "2011-12-07T04:24:19Z"
+  },
+  "140089359": {
+    "id": 140089359,
+    "type": "way",
+    "tags": {
+      "building": "yes",
+      "landuse": "residential"
+    },
+    "nodes": null,
+    "timestamp": "2011-12-07T04:24:19Z"
+  },
+  "140089361": {
+    "id": 140089361,
+    "type": "way",
+    "tags": {
+      "building": "yes",
+      "landuse": "residential"
+    },
+    "nodes": null,
+    "timestamp": "2011-12-07T04:24:20Z"
+  },
+  "140089366": {
+    "id": 140089366,
+    "type": "way",
+    "tags": {
+      "building": "yes"
+    },
+    "nodes": [
+      {
+        "lat": "49.319889",
+        "lon": "-123.051045"
+      }
+    ],
+    "timestamp": "2012-01-10T14:30:18Z"
+  },
+  "140129460": {
+    "id": 140129460,
+    "type": "way",
+    "tags": {
+      "building": "yes",
+      "landuse": "residential"
+    },
+    "nodes": null,
+    "timestamp": "2011-12-07T14:38:35Z"
+  },
+  "140129461": {
+    "id": 140129461,
+    "type": "way",
+    "tags": {
+      "building": "yes",
+      "landuse": "residential"
+    },
+    "nodes": [
+      {
+        "lat": "49.319909",
+        "lon": "-123.047610"
+      }
+    ],
+    "timestamp": "2011-12-07T14:38:35Z"
+  },
+  "144989513": {
+    "id": 144989513,
+    "type": "way",
+    "tags": {
+      "building": "yes",
+      "landuse": "residential"
+    },
+    "nodes": [
+      {
+        "lat": "49.319971",
+        "lon": "-123.047108"
+      },
+      {
+        "lat": "49.319971",
+        "lon": "-123.047000"
+      }
+    ],
+    "timestamp": "2012-01-10T14:30:04Z"
+  },
+  "149506567": {
+    "id": 149506567,
+    "type": "way",
+    "tags": {
+      "building": "yes"
+    },
+    "nodes": null,
+    "timestamp": "2012-02-09T01:33:49Z"
+  },
+  "152748689": {
+    "id": 152748689,
+    "type": "way",
+    "tags": {
+      "building": "yes",
+      "landuse": "residential"
+    },
+    "nodes": [
+      {
+        "lat": "49.319944",
+        "lon": "-123.054910"
+      },
+      {
+        "lat": "49.319944",
+        "lon": "-123.054757"
+      }
+    ],
+    "timestamp": "2012-03-02T00:07:15Z"
+  },
+  "152748691": {
+    "id": 152748691,
+    "type": "way",
+    "tags": {
+      "building": "yes",
+      "landuse": "residential"
+    },
+    "nodes": [
+      {
+        "lat": "49.319929",
+        "lon": "-123.054263"
+      }
+    ],
+    "timestamp": "2012-03-02T00:07:16Z"
+  },
+  "152748698": {
+    "id": 152748698,
+    "type": "way",
+    "tags": {
+      "building": "yes",
+      "landuse": "residential"
+    },
+    "nodes": [
+      {
+        "lat": "49.319947",
+        "lon": "-123.055290"
+      }
+    ],
+    "timestamp": "2012-03-02T00:07:18Z"
+  },
+  "152751478": {
+    "id": 152751478,
+    "type": "way",
+    "tags": {
+      "building": "yes",
+      "landuse": "residential"
+    },
+    "nodes": null,
+    "timestamp": "2012-03-02T00:20:22Z"
+  },
+  "152751512": {
+    "id": 152751512,
+    "type": "way",
+    "tags": {
+      "building": "yes",
+      "landuse": "residential"
+    },
+    "nodes": null,
+    "timestamp": "2012-03-02T00:20:25Z"
+  },
+  "152751516": {
+    "id": 152751516,
+    "type": "way",
+    "tags": {
+      "building": "yes",
+      "landuse": "residential"
+    },
+    "nodes": [
+      {
+        "lat": "49.319945",
+        "lon": "-123.054957"
+      },
+      {
+        "lat": "49.319961",
+        "lon": "-123.054957"
+      },
+      {
+        "lat": "49.319961",
+        "lon": "-123.054939"
+      }
+    ],
+    "timestamp": "2012-03-02T00:20:25Z"
+  },
+  "152763157": {
+    "id": 152763157,
+    "type": "way",
+    "tags": {
+      "building": "yes",
+      "landuse": "residential"
+    },
+    "nodes": [
+      {
+        "lat": "49.319990",
+        "lon": "-123.052235"
+      },
+      {
+        "lat": "49.319990",
+        "lon": "-123.052224"
+      },
+      {
+        "lat": "49.319934",
+        "lon": "-123.052222"
+      },
+      {
+        "lat": "49.319935",
+        "lon": "-123.052152"
+      },
+      {
+        "lat": "49.319984",
+        "lon": "-123.052154"
+      },
+      {
+        "lat": "49.319987",
+        "lon": "-123.052128"
+      }
+    ],
+    "timestamp": "2012-03-02T03:32:17Z"
+  },
+  "152763158": {
+    "id": 152763158,
+    "type": "way",
+    "tags": {
+      "building": "yes",
+      "landuse": "residential"
+    },
+    "nodes": null,
+    "timestamp": "2012-03-02T03:32:17Z"
+  },
+  "152763160": {
+    "id": 152763160,
+    "type": "way",
+    "tags": {
+      "building": "yes",
+      "landuse": "residential"
+    },
+    "nodes": null,
+    "timestamp": "2012-03-02T03:32:18Z"
+  },
+  "152763167": {
+    "id": 152763167,
+    "type": "way",
+    "tags": {
+      "building": "yes",
+      "landuse": "residential"
+    },
+    "nodes": null,
+    "timestamp": "2012-03-02T03:32:19Z"
+  },
+  "152763173": {
+    "id": 152763173,
+    "type": "way",
+    "tags": {
+      "building": "yes",
+      "landuse": "residential"
+    },
+    "nodes": null,
+    "timestamp": "2012-03-02T03:32:20Z"
+  },
+  "152763174": {
+    "id": 152763174,
+    "type": "way",
+    "tags": {
+      "building": "yes",
+      "landuse": "residential"
+    },
+    "nodes": null,
+    "timestamp": "2012-03-02T03:32:20Z"
+  },
+  "152763175": {
+    "id": 152763175,
+    "type": "way",
+    "tags": {
+      "building": "yes",
+      "landuse": "residential"
+    },
+    "nodes": null,
+    "timestamp": "2012-03-02T03:32:20Z"
+  },
+  "152763180": {
+    "id": 152763180,
+    "type": "way",
+    "tags": {
+      "building": "yes",
+      "landuse": "residential"
+    },
+    "nodes": null,
+    "timestamp": "2012-03-02T03:32:21Z"
+  },
+  "152763184": {
+    "id": 152763184,
+    "type": "way",
+    "tags": {
+      "building": "yes",
+      "landuse": "residential"
+    },
+    "nodes": [
+      {
+        "lat": "49.319904",
+        "lon": "-123.052105"
+      },
+      {
+        "lat": "49.319905",
+        "lon": "-123.052001"
+      }
+    ],
+    "timestamp": "2012-03-02T03:32:22Z"
+  },
+  "152763188": {
+    "id": 152763188,
+    "type": "way",
+    "tags": {
+      "building": "yes",
+      "landuse": "residential"
+    },
+    "nodes": null,
+    "timestamp": "2012-03-02T03:32:22Z"
+  },
+  "152763201": {
+    "id": 152763201,
+    "type": "way",
+    "tags": {
+      "building": "yes",
+      "landuse": "residential"
+    },
+    "nodes": null,
+    "timestamp": "2012-03-02T03:32:25Z"
+  },
+  "152763202": {
+    "id": 152763202,
+    "type": "way",
+    "tags": {
+      "building": "yes",
+      "landuse": "residential"
+    },
+    "nodes": null,
+    "timestamp": "2012-03-02T03:32:25Z"
+  },
+  "152763206": {
+    "id": 152763206,
+    "type": "way",
+    "tags": {
+      "building": "yes",
+      "landuse": "residential"
+    },
+    "nodes": null,
+    "timestamp": "2012-03-02T03:32:26Z"
+  },
+  "158189612": {
+    "id": 158189612,
+    "type": "way",
+    "tags": {
+      "building": "yes",
+      "name": "Bansal & Sons Diesel Automotive Ltd",
+      "shop": "car_repair"
+    },
+    "nodes": [
+      {
+        "lat": "49.205101",
+        "lon": "-123.020421"
+      },
+      {
+        "lat": "49.204969",
+        "lon": "-123.020421"
+      }
+    ],
+    "timestamp": "2012-04-06T10:20:43Z"
+  },
+  "162924307": {
+    "id": 162924307,
+    "type": "way",
+    "tags": {
+      "building": "yes"
+    },
+    "nodes": null,
+    "timestamp": "2012-05-09T23:32:21Z"
+  },
+  "162924313": {
+    "id": 162924313,
+    "type": "way",
+    "tags": {
+      "building": "yes"
+    },
+    "nodes": [
+      {
+        "lat": "49.319966",
+        "lon": "-123.060592"
+      }
+    ],
+    "timestamp": "2012-05-09T23:32:22Z"
+  },
+  "162924317": {
+    "id": 162924317,
+    "type": "way",
+    "tags": {
+      "building": "yes"
+    },
+    "nodes": null,
+    "timestamp": "2012-05-09T23:32:23Z"
+  },
+  "165385751": {
+    "id": 165385751,
+    "type": "way",
+    "tags": {
+      "building": "yes"
+    },
+    "nodes": [
+      {
+        "lat": "49.318767",
+        "lon": "-123.020005"
+      },
+      {
+        "lat": "49.318596",
+        "lon": "-123.020004"
+      }
+    ],
+    "timestamp": "2012-05-29T11:13:19Z"
+  },
+  "166090053": {
+    "id": 166090053,
+    "type": "way",
+    "tags": {
+      "building": "yes"
+    },
+    "nodes": [
+      {
+        "lat": "49.228203",
+        "lon": "-123.020481"
+      },
+      {
+        "lat": "49.228167",
+        "lon": "-123.020364"
+      },
+      {
+        "lat": "49.228275",
+        "lon": "-123.020285"
+      }
+    ],
+    "timestamp": "2014-05-31T06:00:43Z"
+  },
+  "166303677": {
+    "id": 166303677,
+    "type": "way",
+    "tags": {
+      "building": "yes"
+    },
+    "nodes": null,
+    "timestamp": "2012-06-06T05:11:49Z"
+  },
+  "172249326": {
+    "id": 172249326,
+    "type": "way",
+    "tags": {
+      "building": "yes"
+    },
+    "nodes": null,
+    "timestamp": "2012-07-20T06:34:05Z"
+  },
+  "172811233": {
+    "id": 172811233,
+    "type": "way",
+    "tags": {
+      "building": "yes"
+    },
+    "nodes": [
+      {
+        "lat": "49.319396",
+        "lon": "-123.020080"
+      },
+      {
+        "lat": "49.319202",
+        "lon": "-123.020082"
+      }
+    ],
+    "timestamp": "2012-07-24T14:36:31Z"
+  },
+  "172999062": {
+    "id": 172999062,
+    "type": "way",
+    "tags": {
+      "building": "yes"
+    },
+    "nodes": [
+      {
+        "lat": "49.312846",
+        "lon": "-123.020141"
+      },
+      {
+        "lat": "49.312770",
+        "lon": "-123.020039"
+      }
+    ],
+    "timestamp": "2012-07-26T00:30:49Z"
+  },
+  "172999063": {
+    "id": 172999063,
+    "type": "way",
+    "tags": {
+      "building": "yes"
+    },
+    "nodes": [
+      {
+        "lat": "49.313218",
+        "lon": "-123.020026"
+      }
+    ],
+    "timestamp": "2012-07-26T00:30:50Z"
+  },
+  "172999066": {
+    "id": 172999066,
+    "type": "way",
+    "tags": {
+      "building": "yes"
+    },
+    "nodes": [
+      {
+        "lat": "49.313136",
+        "lon": "-123.020184"
+      },
+      {
+        "lat": "49.313047",
+        "lon": "-123.020069"
+      }
+    ],
+    "timestamp": "2012-07-26T00:30:50Z"
+  },
+  "174247987": {
+    "id": 174247987,
+    "type": "way",
+    "tags": {
+      "building": "yes"
+    },
+    "nodes": [
+      {
+        "lat": "49.305743",
+        "lon": "-123.020018"
+      },
+      {
+        "lat": "49.305705",
+        "lon": "-123.020002"
+      },
+      {
+        "lat": "49.305700",
+        "lon": "-123.020031"
+      },
+      {
+        "lat": "49.305661",
+        "lon": "-123.020077"
+      }
+    ],
+    "timestamp": "2012-08-03T03:35:42Z"
+  },
+  "174529837": {
+    "id": 174529837,
+    "type": "way",
+    "tags": {
+      "building": "yes"
+    },
+    "nodes": [
+      {
+        "lat": "49.319966",
+        "lon": "-123.039875"
+      },
+      {
+        "lat": "49.319839",
+        "lon": "-123.039779"
+      },
+      {
+        "lat": "49.319872",
+        "lon": "-123.039677"
+      },
+      {
+        "lat": "49.319899",
+        "lon": "-123.039698"
+      },
+      {
+        "lat": "49.319931",
+        "lon": "-123.039598"
+      }
+    ],
+    "timestamp": "2012-08-04T20:00:11Z"
+  },
+  "174529842": {
+    "id": 174529842,
+    "type": "way",
+    "tags": {
+      "building": "yes"
+    },
+    "nodes": [
+      {
+        "lat": "49.319961",
+        "lon": "-123.039228"
+      },
+      {
+        "lat": "49.319885",
+        "lon": "-123.039137"
+      },
+      {
+        "lat": "49.319966",
+        "lon": "-123.038976"
+      }
+    ],
+    "timestamp": "2012-08-04T20:00:11Z"
+  },
+  "174644560": {
+    "id": 174644560,
+    "type": "way",
+    "tags": {
+      "building": "yes"
+    },
+    "nodes": null,
+    "timestamp": "2012-08-05T15:30:47Z"
+  },
+  "174644564": {
+    "id": 174644564,
+    "type": "way",
+    "tags": {
+      "building": "yes"
+    },
+    "nodes": null,
+    "timestamp": "2012-08-05T15:30:47Z"
+  },
+  "174644569": {
+    "id": 174644569,
+    "type": "way",
+    "tags": {
+      "building": "yes"
+    },
+    "nodes": null,
+    "timestamp": "2012-08-05T15:30:48Z"
+  },
+  "174644581": {
+    "id": 174644581,
+    "type": "way",
+    "tags": {
+      "building": "yes"
+    },
+    "nodes": [
+      {
+        "lat": "49.319905",
+        "lon": "-123.034919"
+      },
+      {
+        "lat": "49.319868",
+        "lon": "-123.034769"
+      },
+      {
+        "lat": "49.319979",
+        "lon": "-123.034704"
+      },
+      {
+        "lat": "49.319967",
+        "lon": "-123.034655"
+      }
+    ],
+    "timestamp": "2012-08-05T15:30:49Z"
+  },
+  "177129065": {
+    "id": 177129065,
+    "type": "way",
+    "tags": {
+      "building": "yes"
+    },
+    "nodes": [
+      {
+        "lat": "49.319923",
+        "lon": "-123.034055"
+      }
+    ],
+    "timestamp": "2012-08-21T11:29:13Z"
+  },
+  "179140543": {
+    "id": 179140543,
+    "type": "way",
+    "tags": {
+      "building": "yes"
+    },
+    "nodes": [
+      {
+        "lat": "49.212636",
+        "lon": "-123.020171"
+      }
+    ],
+    "timestamp": "2012-09-02T15:15:06Z"
+  },
+  "179140611": {
+    "id": 179140611,
+    "type": "way",
+    "tags": {
+      "building": "yes"
+    },
+    "nodes": [
+      {
+        "lat": "49.211348",
+        "lon": "-123.020133"
+      },
+      {
+        "lat": "49.211372",
+        "lon": "-123.020001"
+      }
+    ],
+    "timestamp": "2012-09-02T15:15:14Z"
+  },
+  "179145203": {
+    "id": 179145203,
+    "type": "way",
+    "tags": {
+      "building": "yes"
+    },
+    "nodes": [
+      {
+        "lat": "49.214256",
+        "lon": "-123.020034"
+      }
+    ],
+    "timestamp": "2012-09-02T15:33:54Z"
+  },
+  "179145212": {
+    "id": 179145212,
+    "type": "way",
+    "tags": {
+      "building": "yes"
+    },
+    "nodes": [
+      {
+        "lat": "49.214375",
+        "lon": "-123.020050"
+      }
+    ],
+    "timestamp": "2012-09-02T15:33:55Z"
+  },
+  "179145230": {
+    "id": 179145230,
+    "type": "way",
+    "tags": {
+      "building": "yes"
+    },
+    "nodes": [
+      {
+        "lat": "49.214056",
+        "lon": "-123.020040"
+      }
+    ],
+    "timestamp": "2012-09-02T15:33:57Z"
+  },
+  "179145238": {
+    "id": 179145238,
+    "type": "way",
+    "tags": {
+      "building": "yes"
+    },
+    "nodes": [
+      {
+        "lat": "49.214658",
+        "lon": "-123.020102"
+      }
+    ],
+    "timestamp": "2012-09-02T15:33:57Z"
+  },
+  "179234507": {
+    "id": 179234507,
+    "type": "way",
+    "tags": {
+      "building": "yes"
+    },
+    "nodes": [
+      {
+        "lat": "49.207678",
+        "lon": "-123.020137"
+      }
+    ],
+    "timestamp": "2012-09-03T06:32:46Z"
+  },
+  "179234516": {
+    "id": 179234516,
+    "type": "way",
+    "tags": {
+      "building": "yes"
+    },
+    "nodes": [
+      {
+        "lat": "49.207953",
+        "lon": "-123.020113"
+      }
+    ],
+    "timestamp": "2012-09-03T06:32:47Z"
+  },
+  "194950699": {
+    "id": 194950699,
+    "type": "way",
+    "tags": {
+      "addr:housenumber": "9920",
+      "addr:street": "River Drive",
+      "building": "yes",
+      "rfr": "yes"
+    },
+    "nodes": null,
+    "timestamp": "2014-02-28T23:39:27Z"
+  },
+  "194950704": {
+    "id": 194950704,
+    "type": "way",
+    "tags": {
+      "building": "yes",
+      "source": "Bing"
+    },
+    "nodes": null,
+    "timestamp": "2012-12-07T16:27:42Z"
+  },
+  "194950746": {
+    "id": 194950746,
+    "type": "way",
+    "tags": {
+      "addr:housenumber": "9200",
+      "addr:street": "Van Horne Way",
+      "building": "yes",
+      "rfr": "yes",
+      "source": "Bing"
+    },
+    "nodes": [
+      {
+        "lat": "49.195226",
+        "lon": "-123.123404"
+      },
+      {
+        "lat": "49.195577",
+        "lon": "-123.122551"
+      },
+      {
+        "lat": "49.195476",
+        "lon": "-123.122465"
+      },
+      {
+        "lat": "49.195644",
+        "lon": "-123.122041"
+      }
+    ],
+    "timestamp": "2014-02-03T22:28:54Z"
+  },
+  "261150289": {
+    "id": 261150289,
+    "type": "way",
+    "tags": {
+      "addr:housenumber": "2400/2420",
+      "addr:street": "Viscount Way",
+      "building": "yes",
+      "rfr": "yes"
+    },
+    "nodes": [
+      {
+        "lat": "49.195072",
+        "lon": "-123.078477"
+      },
+      {
+        "lat": "49.195075",
+        "lon": "-123.077848"
+      }
+    ],
+    "timestamp": "2014-02-11T22:06:29Z"
+  },
+  "261315232": {
+    "id": 261315232,
+    "type": "way",
+    "tags": {
+      "addr:housenumber": "2251",
+      "addr:street": "Number 5 Road",
+      "building": "yes",
+      "rfr": "yes"
+    },
+    "nodes": [
+      {
+        "lat": "49.196047",
+        "lon": "-123.093382"
+      },
+      {
+        "lat": "49.196053",
+        "lon": "-123.092691"
+      },
+      {
+        "lat": "49.196060",
+        "lon": "-123.092003"
+      },
+      {
+        "lat": "49.196255",
+        "lon": "-123.092006"
+      },
+      {
+        "lat": "49.196256",
+        "lon": "-123.091834"
+      },
+      {
+        "lat": "49.196106",
+        "lon": "-123.091832"
+      },
+      {
+        "lat": "49.196106",
+        "lon": "-123.091977"
+      },
+      {
+        "lat": "49.196026",
+        "lon": "-123.091976"
+      },
+      {
+        "lat": "49.196027",
+        "lon": "-123.091809"
+      },
+      {
+        "lat": "49.195731",
+        "lon": "-123.091806"
+      },
+      {
+        "lat": "49.195731",
+        "lon": "-123.091971"
+      },
+      {
+        "lat": "49.195286",
+        "lon": "-123.091966"
+      },
+      {
+        "lat": "49.195297",
+        "lon": "-123.091918"
+      }
+    ],
+    "timestamp": "2014-02-12T23:38:15Z"
+  },
+  "261315413": {
+    "id": 261315413,
+    "type": "way",
+    "tags": {
+      "addr:housenumber": "11500",
+      "addr:street": "River Road",
+      "building": "yes",
+      "rfr": "yes"
+    },
+    "nodes": null,
+    "timestamp": "2014-02-12T23:41:30Z"
+  },
+  "971076208": {
+    "id": 971076208,
+    "type": "node",
+    "lat": 49.268254400000004,
+    "lon": -123.25487740000001,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T11:13:46Z"
+  },
+  "971076252": {
+    "id": 971076252,
+    "type": "node",
+    "lat": 49.2695687,
+    "lon": -123.25546840000001,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T11:13:46Z"
+  },
+  "971076280": {
+    "id": 971076280,
+    "type": "node",
+    "lat": 49.2698454,
+    "lon": -123.25474340000001,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T11:13:45Z"
+  },
+  "971076307": {
+    "id": 971076307,
+    "type": "node",
+    "lat": 49.269441500000006,
+    "lon": -123.25534200000001,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T11:13:45Z"
+  },
+  "971082702": {
+    "id": 971082702,
+    "type": "node",
+    "lat": 49.270138900000006,
+    "lon": -123.2488771,
+    "tags": {
+      "building": "entrance",
+      "source": "BC Government Openmaps"
+    },
+    "timestamp": "2012-12-10T11:13:44Z"
+  },
+  "971121411": {
+    "id": 971121411,
+    "type": "node",
+    "lat": 49.271102500000005,
+    "lon": -123.25040750000001,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T11:13:44Z"
+  },
+  "971121479": {
+    "id": 971121479,
+    "type": "node",
+    "lat": 49.2709398,
+    "lon": -123.25027460000001,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T11:13:44Z"
+  },
+  "971128720": {
+    "id": 971128720,
+    "type": "node",
+    "lat": 49.268887400000004,
+    "lon": -123.25218070000001,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T11:13:43Z"
+  },
+  "971128724": {
+    "id": 971128724,
+    "type": "node",
+    "lat": 49.268646000000004,
+    "lon": -123.25259810000001,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T11:13:43Z"
+  },
+  "971128733": {
+    "id": 971128733,
+    "type": "node",
+    "lat": 49.268532400000005,
+    "lon": -123.2524784,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T11:13:43Z"
+  },
+  "971129555": {
+    "id": 971129555,
+    "type": "node",
+    "lat": 49.2699718,
+    "lon": -123.25155470000001,
+    "tags": {
+      "access": "private",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T11:13:43Z"
+  },
+  "971129558": {
+    "id": 971129558,
+    "type": "node",
+    "lat": 49.270409900000004,
+    "lon": -123.25185950000001,
+    "tags": {
+      "access": "private",
+      "building": "entrance"
+    },
+    "timestamp": "2014-01-28T09:53:22Z"
+  },
+  "971129564": {
+    "id": 971129564,
+    "type": "node",
+    "lat": 49.2702475,
+    "lon": -123.25193290000001,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T11:13:42Z"
+  },
+  "971129567": {
+    "id": 971129567,
+    "type": "node",
+    "lat": 49.269869500000006,
+    "lon": -123.251534,
+    "tags": {
+      "access": "private",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T11:13:42Z"
+  },
+  "971129574": {
+    "id": 971129574,
+    "type": "node",
+    "lat": 49.270296900000005,
+    "lon": -123.2517643,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T11:13:42Z"
+  },
+  "971130624": {
+    "id": 971130624,
+    "type": "node",
+    "lat": 49.268194,
+    "lon": -123.25209480000001,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T11:13:41Z"
+  },
+  "971131434": {
+    "id": 971131434,
+    "type": "node",
+    "lat": 49.26894720000001,
+    "lon": -123.2525628,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T11:13:41Z"
+  },
+  "971136051": {
+    "id": 971136051,
+    "type": "node",
+    "lat": 49.2693595,
+    "lon": -123.2512324,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T11:13:41Z"
+  },
+  "971357846": {
+    "id": 971357846,
+    "type": "node",
+    "lat": 49.265778700000006,
+    "lon": -123.25621190000001,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T11:13:40Z"
+  },
+  "971430735": {
+    "id": 971430735,
+    "type": "node",
+    "lat": 49.2622871,
+    "lon": -123.24976620000001,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T11:13:40Z"
+  },
+  "971430756": {
+    "id": 971430756,
+    "type": "node",
+    "lat": 49.2627363,
+    "lon": -123.24918120000001,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T11:13:39Z"
+  },
+  "971430865": {
+    "id": 971430865,
+    "type": "node",
+    "lat": 49.262458900000006,
+    "lon": -123.2492194,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T11:13:39Z"
+  },
+  "971499653": {
+    "id": 971499653,
+    "type": "node",
+    "lat": 49.2683095,
+    "lon": -123.254705,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T11:13:38Z"
+  },
+  "971510471": {
+    "id": 971510471,
+    "type": "node",
+    "lat": 49.2690774,
+    "lon": -123.25478090000001,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T11:13:38Z"
+  },
+  "971670340": {
+    "id": 971670340,
+    "type": "node",
+    "lat": 49.264181400000005,
+    "lon": -123.2498508,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T11:13:38Z"
+  },
+  "971670355": {
+    "id": 971670355,
+    "type": "node",
+    "lat": 49.264131500000005,
+    "lon": -123.24953180000001,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T11:13:37Z"
+  },
+  "1034904305": {
+    "id": 1034904305,
+    "type": "node",
+    "lat": 49.261098700000005,
+    "lon": -123.24931550000001,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T23:33:29Z"
+  },
+  "1034904369": {
+    "id": 1034904369,
+    "type": "node",
+    "lat": 49.261761400000005,
+    "lon": -123.2488921,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T23:33:29Z"
+  },
+  "1034904458": {
+    "id": 1034904458,
+    "type": "node",
+    "lat": 49.261432000000006,
+    "lon": -123.24905020000001,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T23:33:28Z"
+  },
+  "1034904476": {
+    "id": 1034904476,
+    "type": "node",
+    "lat": 49.2620481,
+    "lon": -123.2495731,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T23:33:28Z"
+  },
+  "1034904542": {
+    "id": 1034904542,
+    "type": "node",
+    "lat": 49.261483600000005,
+    "lon": -123.2494829,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T23:33:27Z"
+  },
+  "1034904680": {
+    "id": 1034904680,
+    "type": "node",
+    "lat": 49.261499300000004,
+    "lon": -123.24926590000001,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T23:33:27Z"
+  },
+  "1058421538": {
+    "id": 1058421538,
+    "type": "node",
+    "lat": 49.268156000000005,
+    "lon": -123.25457460000001,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T23:28:10Z"
+  },
+  "1060937841": {
+    "id": 1060937841,
+    "type": "node",
+    "lat": 49.26213550000001,
+    "lon": -123.25017330000001,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2013-03-01T20:24:55Z"
+  },
+  "1148231748": {
+    "id": 1148231748,
+    "type": "node",
+    "lat": 49.2620823,
+    "lon": -123.24872800000001,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T23:01:17Z"
+  },
+  "1148535015": {
+    "id": 1148535015,
+    "type": "node",
+    "lat": 49.263266200000004,
+    "lon": -123.2482525,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T23:01:14Z"
+  },
+  "1148535016": {
+    "id": 1148535016,
+    "type": "node",
+    "lat": 49.263144800000006,
+    "lon": -123.24718250000001,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T23:01:14Z"
+  },
+  "1148535018": {
+    "id": 1148535018,
+    "type": "node",
+    "lat": 49.263663900000005,
+    "lon": -123.2485594,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T23:01:14Z"
+  },
+  "1148535019": {
+    "id": 1148535019,
+    "type": "node",
+    "lat": 49.2635403,
+    "lon": -123.24745580000001,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T23:01:13Z"
+  },
+  "1148535020": {
+    "id": 1148535020,
+    "type": "node",
+    "lat": 49.2639262,
+    "lon": -123.24779350000001,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T23:01:13Z"
+  },
+  "1148535021": {
+    "id": 1148535021,
+    "type": "node",
+    "lat": 49.262867,
+    "lon": -123.24790850000001,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T23:01:13Z"
+  },
+  "1149419017": {
+    "id": 1149419017,
+    "type": "node",
+    "lat": 49.2624143,
+    "lon": -123.25438600000001,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T23:00:54Z"
+  },
+  "1149427664": {
+    "id": 1149427664,
+    "type": "node",
+    "lat": 49.262894100000004,
+    "lon": -123.2542753,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T23:00:54Z"
+  },
+  "1149427667": {
+    "id": 1149427667,
+    "type": "node",
+    "lat": 49.263049800000005,
+    "lon": -123.25490850000001,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T23:00:53Z"
+  },
+  "1231717619": {
+    "id": 1231717619,
+    "type": "node",
+    "lat": 49.2548333,
+    "lon": -123.2353379,
+    "tags": {
+      "addr:city": "Vancouver",
+      "addr:housenumber": "3318",
+      "addr:postcode": "V6S 0A8",
+      "addr:street": "Wesbrook Mall",
+      "building": "entrance",
+      "name": "Westland Insurance",
+      "office": "insurance",
+      "website": "http://www.westland-insurance.com"
+    },
+    "timestamp": "2014-07-17T22:39:54Z"
+  },
+  "1233278083": {
+    "id": 1233278083,
+    "type": "node",
+    "lat": 49.2548496,
+    "lon": -123.2364491,
+    "tags": {
+      "amenity": "cafe",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T22:10:50Z"
+  },
+  "1233278099": {
+    "id": 1233278099,
+    "type": "node",
+    "lat": 49.254955100000004,
+    "lon": -123.23616190000001,
+    "tags": {
+      "addr:city": "Vancouver",
+      "addr:housenumber": "5903",
+      "addr:postcode": "V6S 0B3",
+      "addr:street": "Berton Avenue",
+      "amenity": "bank",
+      "atm": "yes",
+      "building": "entrance",
+      "operator": "RBC Royal Bank",
+      "website": "http://www.rbc.com/"
+    },
+    "timestamp": "2012-12-11T02:36:38Z"
+  },
+  "1234229227": {
+    "id": 1234229227,
+    "type": "node",
+    "lat": 49.266831700000004,
+    "lon": -123.2584597,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T22:09:09Z"
+  },
+  "1234229229": {
+    "id": 1234229229,
+    "type": "node",
+    "lat": 49.26678080000001,
+    "lon": -123.25903310000001,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T22:09:09Z"
+  },
+  "1234229230": {
+    "id": 1234229230,
+    "type": "node",
+    "lat": 49.2665713,
+    "lon": -123.2588798,
+    "tags": {
+      "access": "delivery",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T22:09:09Z"
+  },
+  "1234351320": {
+    "id": 1234351320,
+    "type": "node",
+    "lat": 49.2544331,
+    "lon": -123.2357714,
+    "tags": {
+      "access": "private",
+      "addr:street": "Shrum Lane",
+      "amenity": "parking",
+      "building": "entrance",
+      "parking": "underground"
+    },
+    "timestamp": "2012-12-10T22:09:06Z"
+  },
+  "1234351323": {
+    "id": 1234351323,
+    "type": "node",
+    "lat": 49.2542327,
+    "lon": -123.2361336,
+    "tags": {
+      "addr:housenumber": "3345",
+      "building": "entrance"
+    },
+    "timestamp": "2014-01-23T03:19:05Z"
+  },
+  "1234351380": {
+    "id": 1234351380,
+    "type": "node",
+    "lat": 49.254114,
+    "lon": -123.23469340000001,
+    "tags": {
+      "addr:housenumber": "3382",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-11T04:29:33Z"
+  },
+  "1234351386": {
+    "id": 1234351386,
+    "type": "node",
+    "lat": 49.254582000000006,
+    "lon": -123.23315470000001,
+    "tags": {
+      "addr:housenumber": "5779",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-11T02:41:03Z"
+  },
+  "1234351393": {
+    "id": 1234351393,
+    "type": "node",
+    "lat": 49.25453,
+    "lon": -123.233378,
+    "tags": {
+      "addr:housenumber": "5777",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-11T02:41:08Z"
+  },
+  "1234358190": {
+    "id": 1234358190,
+    "type": "node",
+    "lat": 49.2540217,
+    "lon": -123.23314300000001,
+    "tags": {
+      "addr:housenumber": "5788",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-11T02:41:02Z"
+  },
+  "1234358191": {
+    "id": 1234358191,
+    "type": "node",
+    "lat": 49.25334530000001,
+    "lon": -123.23512710000001,
+    "tags": {
+      "addr:housenumber": "5928",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-11T02:36:34Z"
+  },
+  "1234358194": {
+    "id": 1234358194,
+    "type": "node",
+    "lat": 49.253494700000005,
+    "lon": -123.23423740000001,
+    "tags": {
+      "addr:city": "Vancouver",
+      "addr:housenumber": "3428",
+      "addr:postcode": "V6T 1Z4",
+      "addr:street": "Wesbrook Mall",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-11T04:25:20Z"
+  },
+  "1234395932": {
+    "id": 1234395932,
+    "type": "node",
+    "lat": 49.252919000000006,
+    "lon": -123.2337179,
+    "tags": {
+      "addr:housenumber": "3478",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-11T04:25:06Z"
+  },
+  "1234993811": {
+    "id": 1234993811,
+    "type": "node",
+    "lat": 49.254867700000005,
+    "lon": -123.235786,
+    "tags": {
+      "addr:housenumber": "5900",
+      "addr:street": "Berton Avenue",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-11T02:36:39Z"
+  },
+  "1234993821": {
+    "id": 1234993821,
+    "type": "node",
+    "lat": 49.254499300000006,
+    "lon": -123.23543690000001,
+    "tags": {
+      "addr:housenumber": "3339",
+      "addr:street": "Wesbrook Mall",
+      "building": "entrance",
+      "name": "Wesbrook Eyecare",
+      "shop": "optician",
+      "website": "http://www.wesbrookeyecare.com"
+    },
+    "timestamp": "2012-12-10T23:54:31Z"
+  },
+  "1234993829": {
+    "id": 1234993829,
+    "type": "node",
+    "lat": 49.254614800000006,
+    "lon": -123.2359251,
+    "tags": {
+      "addr:housenumber": "3318",
+      "addr:street": "Shrum Lane",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-11T04:29:56Z"
+  },
+  "1234993854": {
+    "id": 1234993854,
+    "type": "node",
+    "lat": 49.2546971,
+    "lon": -123.2356015,
+    "tags": {
+      "addr:housenumber": "3323",
+      "addr:street": "Wesbrook Mall",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-11T04:29:53Z"
+  },
+  "1234993862": {
+    "id": 1234993862,
+    "type": "node",
+    "lat": 49.254750400000006,
+    "lon": -123.2365857,
+    "tags": {
+      "addr:city": "Vancouver",
+      "addr:housenumber": "5945",
+      "addr:postcode": "V6S 0B3",
+      "addr:street": "Berton Avenue",
+      "building": "entrance",
+      "name": "Save-On-Foods",
+      "opening_hours": "Mo-Su 07:00-23:00",
+      "shop": "supermarket"
+    },
+    "timestamp": "2012-12-11T00:03:32Z"
+  },
+  "1234993873": {
+    "id": 1234993873,
+    "type": "node",
+    "lat": 49.2547976,
+    "lon": -123.2359856,
+    "tags": {
+      "addr:housenumber": "5920",
+      "addr:street": "Berton Avenue",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-11T02:36:35Z"
+  },
+  "1234993888": {
+    "id": 1234993888,
+    "type": "node",
+    "lat": 49.254539300000005,
+    "lon": -123.2354698,
+    "tags": {
+      "addr:housenumber": "3337",
+      "addr:street": "Wesbrook Mall",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-11T04:29:44Z"
+  },
+  "1234993893": {
+    "id": 1234993893,
+    "type": "node",
+    "lat": 49.2544015,
+    "lon": -123.23534760000001,
+    "tags": {
+      "addr:housenumber": "3351",
+      "addr:street": "Wesbrook Mall",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-11T04:29:37Z"
+  },
+  "1234993894": {
+    "id": 1234993894,
+    "type": "node",
+    "lat": 49.2546655,
+    "lon": -123.2363133,
+    "tags": {
+      "amenity": "parking_entrance",
+      "building": "entrance",
+      "foot": "permissive",
+      "vehicle": "no"
+    },
+    "timestamp": "2012-12-10T22:07:45Z"
+  },
+  "1234993898": {
+    "id": 1234993898,
+    "type": "node",
+    "lat": 49.2545079,
+    "lon": -123.2358858,
+    "tags": {
+      "addr:housenumber": "3328",
+      "addr:street": "Shrum Lane",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-11T04:29:53Z"
+  },
+  "1234993909": {
+    "id": 1234993909,
+    "type": "node",
+    "lat": 49.2551068,
+    "lon": -123.2364448,
+    "tags": {
+      "addr:city": "Vancouver",
+      "addr:housenumber": "3233",
+      "addr:postcode": "V6S 0B4",
+      "addr:street": "Wesbrook Mall",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-11T04:34:58Z"
+  },
+  "1234993914": {
+    "id": 1234993914,
+    "type": "node",
+    "lat": 49.2547797,
+    "lon": -123.23565950000001,
+    "tags": {
+      "addr:housenumber": "3311",
+      "addr:street": "Wesbrook Mall",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-11T04:29:57Z"
+  },
+  "1234993937": {
+    "id": 1234993937,
+    "type": "node",
+    "lat": 49.2545001,
+    "lon": -123.2372735,
+    "tags": {
+      "amenity": "parking",
+      "building": "entrance",
+      "capacity": "200",
+      "parking": "underground"
+    },
+    "timestamp": "2012-12-10T22:07:45Z"
+  },
+  "1234993945": {
+    "id": 1234993945,
+    "type": "node",
+    "lat": 49.2546478,
+    "lon": -123.2360424,
+    "tags": {
+      "addr:housenumber": "3312",
+      "addr:street": "Shrum Lane",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-11T04:29:56Z"
+  },
+  "1234993968": {
+    "id": 1234993968,
+    "type": "node",
+    "lat": 49.255092000000005,
+    "lon": -123.2362791,
+    "tags": {
+      "addr:city": "Vancouver",
+      "addr:housenumber": "5923",
+      "addr:postcode": "V6S 0B3",
+      "addr:street": "Berton Avenue",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-11T02:36:35Z"
+  },
+  "1234993972": {
+    "id": 1234993972,
+    "type": "node",
+    "lat": 49.2547189,
+    "lon": -123.2356194,
+    "tags": {
+      "addr:housenumber": "3317",
+      "addr:street": "Wesbrook Mall",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-11T04:29:56Z"
+  },
+  "1234993985": {
+    "id": 1234993985,
+    "type": "node",
+    "lat": 49.2550011,
+    "lon": -123.2359418,
+    "tags": {
+      "amenity": "atm",
+      "building": "entrance",
+      "operator": "RBC Royal Bank"
+    },
+    "timestamp": "2012-12-10T22:07:45Z"
+  },
+  "1234993987": {
+    "id": 1234993987,
+    "type": "node",
+    "lat": 49.254836600000004,
+    "lon": -123.23587450000001,
+    "tags": {
+      "addr:housenumber": "5910",
+      "addr:street": "Berton Avenue",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-11T02:36:37Z"
+  },
+  "1234993995": {
+    "id": 1234993995,
+    "type": "node",
+    "lat": 49.2544698,
+    "lon": -123.2354126,
+    "tags": {
+      "addr:street": "Wesbrook Mall",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T22:07:44Z"
+  },
+  "1234993997": {
+    "id": 1234993997,
+    "type": "node",
+    "lat": 49.254565500000005,
+    "lon": -123.2358844,
+    "tags": {
+      "addr:housenumber": "3322",
+      "addr:street": "Shrum Lane",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-11T04:29:54Z"
+  },
+  "1234994006": {
+    "id": 1234994006,
+    "type": "node",
+    "lat": 49.2546614,
+    "lon": -123.235572,
+    "tags": {
+      "addr:housenumber": "3327",
+      "addr:street": "Wesbrook Mall",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-11T04:29:53Z"
+  },
+  "1234994011": {
+    "id": 1234994011,
+    "type": "node",
+    "lat": 49.2547021,
+    "lon": -123.23608720000001,
+    "tags": {
+      "addr:housenumber": "3308",
+      "addr:street": "Shrum Lane",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-11T04:29:58Z"
+  },
+  "1234994026": {
+    "id": 1234994026,
+    "type": "node",
+    "lat": 49.2545737,
+    "lon": -123.23549820000001,
+    "tags": {
+      "addr:housenumber": "3335",
+      "addr:street": "Wesbrook Mall",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-11T04:29:44Z"
+  },
+  "1234994030": {
+    "id": 1234994030,
+    "type": "node",
+    "lat": 49.2544641,
+    "lon": -123.2358497,
+    "tags": {
+      "addr:housenumber": "3332",
+      "addr:street": "Shrum Lane",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-11T04:29:45Z"
+  },
+  "1234994038": {
+    "id": 1234994038,
+    "type": "node",
+    "lat": 49.254270600000005,
+    "lon": -123.2357302,
+    "tags": {
+      "addr:housenumber": "3340",
+      "addr:street": "Shrum Lane",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-11T04:29:39Z"
+  },
+  "1234994041": {
+    "id": 1234994041,
+    "type": "node",
+    "lat": 49.2546027,
+    "lon": -123.2355416,
+    "tags": {
+      "addr:housenumber": "3333",
+      "addr:street": "Wesbrook Mall",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-11T04:29:45Z"
+  },
+  "1235133812": {
+    "id": 1235133812,
+    "type": "node",
+    "lat": 49.254378900000006,
+    "lon": -123.2349571,
+    "tags": {
+      "addr:city": "Vancouver",
+      "addr:housenumber": "3358",
+      "addr:postcode": "V6S 0A8",
+      "addr:street": "Wesbrook Mall",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-11T04:29:36Z"
+  },
+  "1235133825": {
+    "id": 1235133825,
+    "type": "node",
+    "lat": 49.2547434,
+    "lon": -123.23526240000001,
+    "tags": {
+      "addr:city": "Vancouver",
+      "addr:housenumber": "3328",
+      "addr:postcode": "V6S 0A8",
+      "addr:street": "Wesbrook Mall",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-11T04:29:52Z"
+  },
+  "1235133850": {
+    "id": 1235133850,
+    "type": "node",
+    "lat": 49.2544897,
+    "lon": -123.23505010000001,
+    "tags": {
+      "addr:city": "Vancouver",
+      "addr:housenumber": "3348",
+      "addr:postcode": "V6S 0A8",
+      "addr:street": "Wesbrook Mall",
+      "amenity": "cafe",
+      "building": "entrance",
+      "cuisine": "coffee_shop",
+      "name": "Jugo Juice"
+    },
+    "timestamp": "2012-12-11T00:20:23Z"
+  },
+  "1235133867": {
+    "id": 1235133867,
+    "type": "node",
+    "lat": 49.2541931,
+    "lon": -123.23480280000001,
+    "tags": {
+      "addr:city": "Vancouver",
+      "addr:housenumber": "32",
+      "addr:postcode": "V6",
+      "addr:street": "Wesbrook Mall",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-11T04:36:06Z"
+  },
+  "1235133887": {
+    "id": 1235133887,
+    "type": "node",
+    "lat": 49.2546309,
+    "lon": -123.23513190000001,
+    "tags": {
+      "addr:city": "Vancouver",
+      "addr:housenumber": "3338",
+      "addr:postcode": "V6S 0A6",
+      "addr:street": "Wesbrook Mall",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-11T04:29:43Z"
+  },
+  "1235184769": {
+    "id": 1235184769,
+    "type": "node",
+    "lat": 49.253663800000005,
+    "lon": -123.233973,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T22:07:36Z"
+  },
+  "1235184802": {
+    "id": 1235184802,
+    "type": "node",
+    "lat": 49.2535241,
+    "lon": -123.23386760000001,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T22:07:36Z"
+  },
+  "1235353106": {
+    "id": 1235353106,
+    "type": "node",
+    "lat": 49.269181700000004,
+    "lon": -123.25588110000001,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T22:07:35Z"
+  },
+  "1235353127": {
+    "id": 1235353127,
+    "type": "node",
+    "lat": 49.269874300000005,
+    "lon": -123.25538010000001,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T22:07:35Z"
+  },
+  "1237905905": {
+    "id": 1237905905,
+    "type": "node",
+    "lat": 49.271305700000006,
+    "lon": -123.2574721,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T22:03:21Z"
+  },
+  "1237905909": {
+    "id": 1237905909,
+    "type": "node",
+    "lat": 49.271081900000006,
+    "lon": -123.2553232,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T22:03:21Z"
+  },
+  "1237905958": {
+    "id": 1237905958,
+    "type": "node",
+    "lat": 49.2713357,
+    "lon": -123.25776850000001,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T22:03:20Z"
+  },
+  "1237906065": {
+    "id": 1237906065,
+    "type": "node",
+    "lat": 49.27106980000001,
+    "lon": -123.25542340000001,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T22:03:20Z"
+  },
+  "1237906114": {
+    "id": 1237906114,
+    "type": "node",
+    "lat": 49.2713418,
+    "lon": -123.2573978,
+    "tags": {
+      "access": "delivery",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T22:03:19Z"
+  },
+  "1237906115": {
+    "id": 1237906115,
+    "type": "node",
+    "lat": 49.2705781,
+    "lon": -123.25637180000001,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T22:03:19Z"
+  },
+  "1237906139": {
+    "id": 1237906139,
+    "type": "node",
+    "lat": 49.2712708,
+    "lon": -123.25681410000001,
+    "tags": {
+      "access": "delivery",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T22:03:18Z"
+  },
+  "1237906156": {
+    "id": 1237906156,
+    "type": "node",
+    "lat": 49.2712566,
+    "lon": -123.2561378,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T22:03:18Z"
+  },
+  "1237906165": {
+    "id": 1237906165,
+    "type": "node",
+    "lat": 49.2710512,
+    "lon": -123.25637900000001,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T22:03:17Z"
+  },
+  "1241180206": {
+    "id": 1241180206,
+    "type": "node",
+    "lat": 49.2590318,
+    "lon": -123.24828910000001,
+    "tags": {
+      "addr:city": "Vancouver",
+      "addr:housenumber": "6308",
+      "addr:postcode": "V6T 1Z4",
+      "addr:street": "Thunderbird Boulevard",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-11T02:12:57Z"
+  },
+  "1241180211": {
+    "id": 1241180211,
+    "type": "node",
+    "lat": 49.258853,
+    "lon": -123.24804700000001,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T21:57:38Z"
+  },
+  "1241180231": {
+    "id": 1241180231,
+    "type": "node",
+    "lat": 49.2584091,
+    "lon": -123.24616870000001,
+    "tags": {
+      "access": "private",
+      "amenity": "parking",
+      "building": "entrance",
+      "parking": "underground"
+    },
+    "timestamp": "2012-12-10T21:57:37Z"
+  },
+  "1241350083": {
+    "id": 1241350083,
+    "type": "node",
+    "lat": 49.2381248,
+    "lon": -123.1973696,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T21:56:58Z"
+  },
+  "1241350198": {
+    "id": 1241350198,
+    "type": "node",
+    "lat": 49.237802800000004,
+    "lon": -123.19736680000001,
+    "tags": {
+      "addr:city": "Vancouver",
+      "addr:housenumber": "5351",
+      "addr:postcode": "V6N 2C4",
+      "addr:street": "Camosun Street",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-11T02:49:59Z"
+  },
+  "1329293380": {
+    "id": 1329293380,
+    "type": "node",
+    "lat": 49.266557000000006,
+    "lon": -123.1430694,
+    "tags": {
+      "addr:housenumber": "2130",
+      "addr:street": "Pine Street",
+      "building": "industrial",
+      "opening_hours": "Mo-sa 10-18",
+      "phone": "6047370020",
+      "website": "www.robertheld.com"
+    },
+    "timestamp": "2014-09-27T19:48:21Z"
+  },
+  "1369643082": {
+    "id": 1369643082,
+    "type": "node",
+    "lat": 49.2606569,
+    "lon": -123.2534078,
+    "tags": {
+      "addr:housenumber": "2329",
+      "addr:street": "West Mall",
+      "amenity": "post_office",
+      "building": "entrance",
+      "name": "UBC Campus Mailing Services"
+    },
+    "timestamp": "2012-12-10T23:56:37Z"
+  },
+  "1435065683": {
+    "id": 1435065683,
+    "type": "node",
+    "lat": 49.2066779,
+    "lon": -123.13311940000001,
+    "tags": {
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-10T19:33:26Z"
+  },
+  "1488815788": {
+    "id": 1488815788,
+    "type": "node",
+    "lat": 49.252735,
+    "lon": -123.23425950000001,
+    "tags": {
+      "addr:housenumber": "3479",
+      "building": "entrance"
+    },
+    "timestamp": "2012-12-11T04:25:06Z"
+  },
+  "1515880313": {
+    "id": 1515880313,
+    "type": "node",
+    "lat": 49.310252500000004,
+    "lon": -123.0816772,
+    "tags": {
+      "building": "yes"
+    },
+    "timestamp": "2011-11-24T20:24:26Z"
+  },
+  "1525641846": {
+    "id": 1525641846,
+    "type": "node",
+    "lat": 49.2601463,
+    "lon": -123.09720060000001,
+    "tags": {
+      "brand": "Honda",
+      "building": "yes",
+      "name": "Kingsway Honda",
+      "shop": "car"
+    },
+    "timestamp": "2011-12-01T02:09:17Z"
+  },
+  "1636438795": {
+    "id": 1636438795,
+    "type": "node",
+    "lat": 49.266311300000005,
+    "lon": -123.2518742,
+    "tags": {
+      "building": "entrance",
+      "wheelchair": "no"
+    },
+    "timestamp": "2012-12-10T16:30:58Z"
+  },
+  "1655098872": {
+    "id": 1655098872,
+    "type": "node",
+    "lat": 49.2809929,
+    "lon": -123.1063067,
+    "tags": {
+      "addr:housenumber": "119",
+      "addr:street": "West Pender Street",
+      "building": "office",
+      "name": "Duncan Building"
+    },
+    "timestamp": "2014-11-07T06:05:20Z"
+  },
+  "1685445550": {
+    "id": 1685445550,
+    "type": "node",
+    "lat": 49.2668605,
+    "lon": -123.1126035,
+    "tags": {
+      "addr:housenumber": "2088",
+      "addr:postcode": "V5Y4B1",
+      "addr:street": "Yukon Street",
+      "building": "residential",
+      "name": "Lookout Society"
+    },
+    "timestamp": "2014-11-07T06:05:25Z"
+  },
+  "1713522802": {
+    "id": 1713522802,
+    "type": "node",
+    "lat": 49.264164300000004,
+    "lon": -123.100136,
+    "tags": {
+      "addr:housenumber": "1",
+      "addr:postcode": "V5T 3H7",
+      "addr:street": "Kingsway",
+      "building": "public",
+      "leisure": "sports_centre",
+      "name": "Mount Pleasant Community Centre",
+      "sport": "gymnastics"
+    },
+    "timestamp": "2012-04-13T02:42:01Z"
+  },
+  "1798832737": {
+    "id": 1798832737,
+    "type": "node",
+    "lat": 49.277230200000005,
+    "lon": -123.13466430000001,
+    "tags": {
+      "addr:housenumber": "1011",
+      "addr:postcode": "V6E 1T8",
+      "addr:street": "Beach Avenue",
+      "building": "apartments",
+      "name": "Martello Tower"
+    },
+    "timestamp": "2014-11-07T06:05:26Z"
+  },
+  "1798961163": {
+    "id": 1798961163,
+    "type": "node",
+    "lat": 49.264593000000005,
+    "lon": -123.2503303,
+    "tags": {
+      "addr:postcode": "V6T 1Z4",
+      "building": "yes",
+      "name": "Michael Smith Laboratories"
+    },
+    "timestamp": "2014-11-07T06:05:26Z"
+  },
+  "1887632000": {
+    "id": 1887632000,
+    "type": "node",
+    "lat": 49.233176400000005,
+    "lon": -123.156574,
+    "tags": {
+      "addr:housenumber": "5851",
+      "addr:postcode": "V6M 3W9",
+      "addr:street": "West Boulevard",
+      "building": "public",
+      "leisure": "sports_centre",
+      "name": "Kerrisdale Community Centre",
+      "source": "http://www.kerrisdalecc.com/"
+    },
+    "timestamp": "2012-08-29T00:35:39Z"
+  },
+  "2025074291": {
+    "id": 2025074291,
+    "type": "node",
+    "lat": 49.2288858,
+    "lon": -123.116838,
+    "tags": {
+      "building": "school",
+      "name": "Alliance Française de Vancouver"
+    },
+    "timestamp": "2012-11-21T17:41:08Z"
+  },
+  "2087947371": {
+    "id": 2087947371,
+    "type": "node",
+    "lat": 49.2782452,
+    "lon": -123.02038010000001,
+    "tags": {
+      "addr:housenumber": "3812",
+      "addr:postcode": "V5C 2S8",
+      "addr:street": "Georgia Street",
+      "building": "residential"
+    },
+    "timestamp": "2012-12-30T01:32:35Z"
+  },
+  "2410987244": {
+    "id": 2410987244,
+    "type": "node",
+    "lat": 49.244707700000006,
+    "lon": -123.090625,
+    "tags": {
+      "addr:city": "Vancouver",
+      "building": "office",
+      "contact:email": "Office@nolimitlandscapes.com",
+      "contact:phone": "604.559.9882",
+      "contact:website": "http://nolimitlandscapes.com/",
+      "name": "No Limit Landscaping",
+      "payment:bitcoin": "yes"
+    },
+    "timestamp": "2013-08-08T11:48:02Z"
+  },
+  "2551902578": {
+    "id": 2551902578,
+    "type": "node",
+    "lat": 49.27543360000001,
+    "lon": -123.120264,
+    "tags": {
+      "addr:city": "Vancouver",
+      "addr:housenumber": "210",
+      "addr:postcode": "V6B 2T4",
+      "addr:street": "Mainland Street",
+      "building": "office",
+      "name": "Fullboar Creative",
+      "payment:bitcoin": "yes",
+      "phone": "+1.604.800.0266",
+      "website": "http://www.fullboarcreative.com"
+    },
+    "timestamp": "2014-11-07T06:05:21Z"
+  },
+  "2641696621": {
+    "id": 2641696621,
+    "type": "node",
+    "lat": 49.278869900000004,
+    "lon": -123.1110395,
+    "tags": {
+      "addr:housenumber": "161",
+      "addr:street": "West Georgia Street",
+      "building": "residential",
+      "building:levels": "27",
+      "name": "Cosmo"
+    },
+    "timestamp": "2014-01-29T03:05:16Z"
+  },
+  "2778943586": {
+    "id": 2778943586,
+    "type": "node",
+    "lat": 49.2346007,
+    "lon": -123.1706594,
+    "tags": {
+      "building": "residential",
+      "name": "2922 W 41st Av"
+    },
+    "timestamp": "2014-04-09T08:14:49Z"
+  },
+  "2895786319": {
+    "id": 2895786319,
+    "type": "node",
+    "lat": 49.2849342,
+    "lon": -123.11352810000001,
+    "tags": {
+      "addr:city": "Vancouver",
+      "addr:housenumber": "688",
+      "addr:postcode": "V6B1P1",
+      "addr:street": "West Hastings Street",
+      "building": "school",
+      "building:levels": "3",
+      "name": "Hastings Building (HB)"
+    },
+    "timestamp": "2014-06-02T17:20:46Z"
+  },
+  "2924838425": {
+    "id": 2924838425,
+    "type": "node",
+    "lat": 49.2755394,
+    "lon": -123.04987500000001,
+    "tags": {
+      "building": "school",
+      "name": "Garibaldi Annex School"
+    },
+    "timestamp": "2014-06-20T15:33:49Z"
+  },
+  "2935043004": {
+    "id": 2935043004,
+    "type": "node",
+    "lat": 49.213430100000004,
+    "lon": -123.05850050000001,
+    "tags": {
+      "building": "school",
+      "name": "David Oppenheimer Elementary"
+    },
+    "timestamp": "2014-06-27T05:52:44Z"
+  },
+  "2975144173": {
+    "id": 2975144173,
+    "type": "node",
+    "lat": 49.2636866,
+    "lon": -123.1076259,
+    "tags": {
+      "building": "commercial",
+      "name": "Terra Kendama",
+      "payment:bitcoin": "yes",
+      "website": "www.terrakendama.com"
+    },
+    "timestamp": "2014-07-23T01:21:53Z"
+  },
+  "3146975305": {
+    "id": 3146975305,
+    "type": "node",
+    "lat": 49.270695100000005,
+    "lon": -123.1151703,
+    "tags": {
+      "addr:city": "Vancouver",
+      "addr:housenumber": "1800",
+      "addr:postcode": "V5Z 4K7",
+      "addr:province": "BC",
+      "addr:street": "Spyglass Place",
+      "building": "school",
+      "building:levels": "1",
+      "name": "CityStudio Vancouver",
+      "phone": "1-604-874-6401",
+      "website": "http://citystudiovancouver.com/",
+      "wheelchair": "yes"
+    },
+    "timestamp": "2014-10-24T07:19:35Z"
+  },
+  "3148480507": {
+    "id": 3148480507,
+    "type": "node",
+    "lat": 49.270695100000005,
+    "lon": -123.1151703,
+    "tags": {
+      "addr:city": "Vancouver",
+      "addr:housenumber": "1800",
+      "addr:postcode": "V5Z 4K7",
+      "addr:province": "BC",
+      "addr:street": "Spyglass Place",
+      "building": "school",
+      "building:levels": "2",
+      "name": "CityStudio Vancouver",
+      "phone": "1-604-874-6401",
+      "website": "http://citystudiovancouver.com/",
+      "wheelchair": "yes"
+    },
+    "timestamp": "2014-10-25T03:02:29Z"
+  },
+  "3239032820": {
+    "id": 3239032820,
+    "type": "node",
+    "lat": 49.229796500000006,
+    "lon": -123.1499433,
+    "tags": {
+      "building": "school"
+    },
+    "timestamp": "2014-12-17T07:21:58Z"
+  },
+  "3239032821": {
+    "id": 3239032821,
+    "type": "node",
+    "lat": 49.2289423,
+    "lon": -123.15142340000001,
+    "tags": {
+      "building": "school",
+      "name": "Magee Secondary School"
+    },
+    "timestamp": "2014-12-17T07:21:58Z"
+  },
+  "3328040320": {
+    "id": 3328040320,
+    "type": "node",
+    "lat": 49.261355900000005,
+    "lon": -123.24636570000001,
+    "tags": {
+      "addr:city": "Vancouver",
+      "addr:housenumber": "6190",
+      "addr:postcode": "V6T1Z3",
+      "addr:province": "BC",
+      "addr:street": "Agronomy Road",
+      "building": "school",
+      "name": "Eaton Arrowsmith School"
+    },
+    "timestamp": "2015-02-03T07:33:28Z"
+  },
+  "3477294752": {
+    "id": 3477294752,
+    "type": "node",
+    "lat": 49.280947700000006,
+    "lon": -123.0513296,
+    "tags": {
+      "addr:housenumber": "2632",
+      "addr:street": "East Hastings Street",
+      "building": "retail",
+      "name": "Di Oliva"
+    },
+    "timestamp": "2015-04-28T02:34:18Z"
+  }
+}
