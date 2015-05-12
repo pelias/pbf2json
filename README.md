@@ -50,6 +50,13 @@ You can also combine the above 2 delimiters to get even more control over what g
 -tags="highway+name,waterway+name"
 ```
 
+If you need to target only specific values for a tag you can specify exactly which values you wish to extract using the `:` symbol:
+
+```bash
+# only extract amenity tags which have the value of toilets or kindergarten
+-tags="amenity:toilets,amenity:kindergarten"
+```
+
 ### Denormalization
 
 When processing the ways, the node refs are looked up for you and the lat/lon values are added to each way:
