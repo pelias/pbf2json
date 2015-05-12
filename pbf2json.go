@@ -27,7 +27,13 @@ func getSettings() Settings {
   leveldbPath := flag.String("leveldb", "/tmp", "path to leveldb directory")
   tagList := flag.String("tags", "", "comma-separated list of valid tags, group AND conditions with a +")
   // parseAddresses := flag.Bool("addresses", false, "import addresses true/false")
+
   flag.Parse()
+  args := flag.Args();
+
+  if len( args ) < 1 {
+    log.Fatal("invalid args, you must specify a PBF file")
+  }
 
   // invalid tags
   if( len(*tagList) < 1 ){
@@ -43,7 +49,7 @@ func getSettings() Settings {
   // fmt.Print(conditions, len(conditions))
   // os.Exit(1)
 
-  return Settings{ flag.Args()[0], *leveldbPath, conditions }
+  return Settings{ args[0], *leveldbPath, conditions }
 }
 
 func main() {
@@ -87,6 +93,8 @@ func run(d *osmpbf.Decoder, db *leveldb.DB, config Settings){
           cacheStore(db, v)
 
           if !hasTags(v.Tags) { break }
+
+          v.Tags = trimTags(v.Tags)
           if containsValidTags( v.Tags, config.Tags ) {
             onNode(v)
           }
@@ -97,6 +105,8 @@ func run(d *osmpbf.Decoder, db *leveldb.DB, config Settings){
           wc++
 
           if !hasTags(v.Tags) { break }
+
+          v.Tags = trimTags(v.Tags)
           if containsValidTags( v.Tags, config.Tags ) {
 
             // lookup from leveldb
@@ -243,11 +253,23 @@ func openLevelDB(path string) *leveldb.DB {
 
 func matchTagsAgainstCompulsoryTagList(tags map[string]string, tagList []string) bool {
   for _, name := range tagList {
-    _, found := tags[name]
-    if !found {
+
+    feature := strings.Split(name,":")
+    foundVal, foundKey := tags[feature[0]]
+
+    // key check
+    if !foundKey {
       return false
     }
+
+    // value check
+    if len( feature ) > 1 {
+      if foundVal != feature[1] {
+        return false
+      }
+    }
   }
+
   return true
 }
 
@@ -258,6 +280,14 @@ func containsValidTags(tags map[string]string, group map[string][]string) bool {
     }
   }
   return false
+}
+
+func trimTags(tags map[string]string) map[string]string {
+  trimmed := make(map[string]string)
+  for k, v := range tags {
+    trimmed[strings.TrimSpace(k)] = strings.TrimSpace(v);
+  }
+  return trimmed
 }
 
 func hasTags(tags map[string]string) bool {
