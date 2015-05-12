@@ -8,7 +8,7 @@
   "scripts": {
     "test": "node test/run.js | tap-spec",
     "pretest": "test/pretest.sh",
-    "end-to-end": "node test/end-to-end.js;"
+    "end-to-end": "npm run pretest; node test/end-to-end.js;"
   },
   "repository": {
     "type": "git",

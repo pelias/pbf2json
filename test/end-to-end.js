@@ -14,8 +14,8 @@ var fs = require('fs'),
     pbf2json = require('../index');
 
 var tmpfile = tmp.fileSync({ postfix: '.json' }).name,
-    pbfPath = path.resolve(__dirname) + '/somes.osm.pbf',
-    expectedPath = path.resolve(__dirname) + '/somes.extract.expected.json';
+    pbfPath = path.resolve(__dirname) + '/vancouver_canada.osm.pbf',
+    expectedPath = path.resolve(__dirname) + '/vancouver.extract.expected.json';
 
 fs.writeFileSync( tmpfile, '{}' ); // init naivedb
 var db = naivedb(tmpfile);
