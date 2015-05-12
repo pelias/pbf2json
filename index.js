@@ -59,7 +59,6 @@ function createJsonDecodeStream(){
       if( o ){ this.push( o ); }
     }
     catch( e ){
-      // console.log( str.toString('utf8') );
       this.emit( 'error', e );
     }
     finally {
