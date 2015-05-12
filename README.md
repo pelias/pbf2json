@@ -50,7 +50,7 @@ You can also combine the above 2 delimiters to get even more control over what g
 -tags="highway+name,waterway+name"
 ```
 
-If you need to target only specific values for a tag you can specify exactly which values you wish to extract using the `:` symbol:
+If you need to target only specific values for a tag you can specify exactly which values you wish to extract using the `$` symbol:
 
 ```bash
 # only extract amenity tags which have the value of toilets or kindergarten
