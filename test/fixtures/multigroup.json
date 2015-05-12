@@ -1,0 +1,5007 @@
+{
+  "4231615": {
+    "id": 4231615,
+    "type": "way",
+    "tags": {
+      "highway": "unclassified",
+      "name": "Shell Road",
+      "odbl": "clean"
+    },
+    "nodes": [
+      {
+        "lat": "49.197806",
+        "lon": "-123.102663"
+      },
+      {
+        "lat": "49.197687",
+        "lon": "-123.102738"
+      },
+      {
+        "lat": "49.196631",
+        "lon": "-123.102703"
+      }
+    ],
+    "timestamp": "2012-03-17T21:31:46Z"
+  },
+  "4755915": {
+    "id": 4755915,
+    "type": "way",
+    "tags": {
+      "bridge": "yes",
+      "hgv": "no",
+      "highway": "primary",
+      "lanes": "3",
+      "layer": "1",
+      "maxspeed": "60",
+      "maxweight": "13",
+      "name": "Lions Gate Bridge",
+      "ref": "99;1A"
+    },
+    "nodes": [
+      {
+        "lat": "49.311768",
+        "lon": "-123.141928"
+      }
+    ],
+    "timestamp": "2014-09-25T23:39:05Z"
+  },
+  "23422301": {
+    "id": 23422301,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Albert Street"
+    },
+    "nodes": [
+      {
+        "lat": "49.282005",
+        "lon": "-123.023582"
+      },
+      {
+        "lat": "49.281997",
+        "lon": "-123.023365"
+      },
+      {
+        "lat": "49.281981",
+        "lon": "-123.020958"
+      }
+    ],
+    "timestamp": "2015-05-01T12:26:07Z"
+  },
+  "23422326": {
+    "id": 23422326,
+    "type": "way",
+    "tags": {
+      "bicycle": "yes",
+      "highway": "residential",
+      "name": "Eton Street",
+      "oneway": "no"
+    },
+    "nodes": null,
+    "timestamp": "2015-04-03T12:37:26Z"
+  },
+  "23422439": {
+    "id": 23422439,
+    "type": "way",
+    "tags": {
+      "bicycle": "yes",
+      "cycleway": "designated",
+      "highway": "residential",
+      "name": "Union Street"
+    },
+    "nodes": [
+      {
+        "lat": "49.277557",
+        "lon": "-123.023404"
+      },
+      {
+        "lat": "49.277550",
+        "lon": "-123.022728"
+      },
+      {
+        "lat": "49.277532",
+        "lon": "-123.021025"
+      }
+    ],
+    "timestamp": "2013-07-28T22:17:12Z"
+  },
+  "23422442": {
+    "id": 23422442,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Venables Street"
+    },
+    "nodes": [
+      {
+        "lat": "49.276661",
+        "lon": "-123.023402"
+      }
+    ],
+    "timestamp": "2015-04-03T22:15:36Z"
+  },
+  "23422447": {
+    "id": 23422447,
+    "type": "way",
+    "tags": {
+      "highway": "tertiary",
+      "name": "Parker Street"
+    },
+    "nodes": [
+      {
+        "lat": "49.275745",
+        "lon": "-123.023665"
+      },
+      {
+        "lat": "49.275734",
+        "lon": "-123.021928"
+      }
+    ],
+    "timestamp": "2015-04-03T22:15:36Z"
+  },
+  "23422453": {
+    "id": 23422453,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Napier Street"
+    },
+    "nodes": null,
+    "timestamp": "2010-05-04T04:40:45Z"
+  },
+  "23422547": {
+    "id": 23422547,
+    "type": "way",
+    "tags": {
+      "bicycle": "yes",
+      "foot": "yes",
+      "highway": "residential",
+      "name": "Pandora Street",
+      "oneway": "no",
+      "surface": "paved"
+    },
+    "nodes": null,
+    "timestamp": "2015-05-01T12:23:57Z"
+  },
+  "23422557": {
+    "id": 23422557,
+    "type": "way",
+    "tags": {
+      "bicycle": "yes",
+      "cycleway": "no",
+      "foot": "yes",
+      "highway": "residential",
+      "lanes": "2",
+      "name": "Triumph Street",
+      "oneway": "no",
+      "sidewalk": "both",
+      "surface": "paved"
+    },
+    "nodes": [
+      {
+        "lat": "49.283880",
+        "lon": "-123.030871"
+      },
+      {
+        "lat": "49.283853",
+        "lon": "-123.028316"
+      },
+      {
+        "lat": "49.283846",
+        "lon": "-123.025723"
+      },
+      {
+        "lat": "49.283848",
+        "lon": "-123.024921"
+      },
+      {
+        "lat": "49.283844",
+        "lon": "-123.024283"
+      },
+      {
+        "lat": "49.283839",
+        "lon": "-123.023564"
+      },
+      {
+        "lat": "49.283839",
+        "lon": "-123.023357"
+      },
+      {
+        "lat": "49.283825",
+        "lon": "-123.020939"
+      }
+    ],
+    "timestamp": "2015-04-03T12:50:30Z"
+  },
+  "23422573": {
+    "id": 23422573,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Cambridge Street",
+      "oneway": "no"
+    },
+    "nodes": null,
+    "timestamp": "2015-04-03T23:24:18Z"
+  },
+  "23487939": {
+    "id": 23487939,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Sutherland Avenue"
+    },
+    "nodes": null,
+    "timestamp": "2015-04-10T00:49:34Z"
+  },
+  "23489078": {
+    "id": 23489078,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Forbes Avenue"
+    },
+    "nodes": null,
+    "timestamp": "2013-12-11T03:55:59Z"
+  },
+  "23499189": {
+    "id": 23499189,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "West 8th Street"
+    },
+    "nodes": null,
+    "timestamp": "2012-11-25T01:18:47Z"
+  },
+  "23499811": {
+    "id": 23499811,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Gladstone Avenue"
+    },
+    "nodes": null,
+    "timestamp": "2012-11-25T01:17:21Z"
+  },
+  "23500214": {
+    "id": 23500214,
+    "type": "way",
+    "tags": {
+      "highway": "secondary",
+      "name": "West 13th Street",
+      "oneway": "yes"
+    },
+    "nodes": null,
+    "timestamp": "2014-02-12T01:48:22Z"
+  },
+  "23500243": {
+    "id": 23500243,
+    "type": "way",
+    "tags": {
+      "highway": "secondary",
+      "name": "Mahon Avenue"
+    },
+    "nodes": [
+      {
+        "lat": "49.319460",
+        "lon": "-123.079874"
+      },
+      {
+        "lat": "49.319512",
+        "lon": "-123.079821"
+      },
+      {
+        "lat": "49.319570",
+        "lon": "-123.079815"
+      },
+      {
+        "lat": "49.319942",
+        "lon": "-123.079922"
+      }
+    ],
+    "timestamp": "2013-07-19T23:59:57Z"
+  },
+  "23588240": {
+    "id": 23588240,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Number 5 Road"
+    },
+    "nodes": [
+      {
+        "lat": "49.196505",
+        "lon": "-123.091432"
+      }
+    ],
+    "timestamp": "2012-12-02T20:42:08Z"
+  },
+  "23593740": {
+    "id": 23593740,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Welch Street"
+    },
+    "nodes": [
+      {
+        "lat": "49.317428",
+        "lon": "-123.105869"
+      },
+      {
+        "lat": "49.317490",
+        "lon": "-123.106392"
+      },
+      {
+        "lat": "49.317516",
+        "lon": "-123.107173"
+      },
+      {
+        "lat": "49.317542",
+        "lon": "-123.107922"
+      },
+      {
+        "lat": "49.317558",
+        "lon": "-123.108783"
+      },
+      {
+        "lat": "49.317560",
+        "lon": "-123.108889"
+      },
+      {
+        "lat": "49.317598",
+        "lon": "-123.111059"
+      },
+      {
+        "lat": "49.317634",
+        "lon": "-123.113607"
+      },
+      {
+        "lat": "49.317629",
+        "lon": "-123.114243"
+      },
+      {
+        "lat": "49.317618",
+        "lon": "-123.114906"
+      },
+      {
+        "lat": "49.317632",
+        "lon": "-123.115929"
+      },
+      {
+        "lat": "49.317655",
+        "lon": "-123.118307"
+      },
+      {
+        "lat": "49.317685",
+        "lon": "-123.119999"
+      },
+      {
+        "lat": "49.317695",
+        "lon": "-123.120612"
+      },
+      {
+        "lat": "49.317702",
+        "lon": "-123.121166"
+      },
+      {
+        "lat": "49.317736",
+        "lon": "-123.121945"
+      },
+      {
+        "lat": "49.317987",
+        "lon": "-123.122880"
+      },
+      {
+        "lat": "49.318418",
+        "lon": "-123.124562"
+      },
+      {
+        "lat": "49.318596",
+        "lon": "-123.125051"
+      },
+      {
+        "lat": "49.318726",
+        "lon": "-123.125446"
+      },
+      {
+        "lat": "49.318804",
+        "lon": "-123.125704"
+      },
+      {
+        "lat": "49.319106",
+        "lon": "-123.126409"
+      },
+      {
+        "lat": "49.319406",
+        "lon": "-123.127033"
+      },
+      {
+        "lat": "49.319810",
+        "lon": "-123.127597"
+      },
+      {
+        "lat": "49.319978",
+        "lon": "-123.127955"
+      }
+    ],
+    "timestamp": "2014-03-11T21:27:23Z"
+  },
+  "23593747": {
+    "id": 23593747,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Mathias Road"
+    },
+    "nodes": null,
+    "timestamp": "2012-11-25T01:17:55Z"
+  },
+  "23593753": {
+    "id": 23593753,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Lower Capilano Road"
+    },
+    "nodes": null,
+    "timestamp": "2012-11-25T03:52:06Z"
+  },
+  "23594145": {
+    "id": 23594145,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Whonoak Street"
+    },
+    "nodes": null,
+    "timestamp": "2015-01-01T22:27:30Z"
+  },
+  "23603599": {
+    "id": 23603599,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Jacobs Crescent"
+    },
+    "nodes": null,
+    "timestamp": "2012-11-25T01:17:40Z"
+  },
+  "23603604": {
+    "id": 23603604,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Jacobs Crescent"
+    },
+    "nodes": null,
+    "timestamp": "2012-11-25T01:17:40Z"
+  },
+  "23603613": {
+    "id": 23603613,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Pemberton Avenue"
+    },
+    "nodes": [
+      {
+        "lat": "49.316163",
+        "lon": "-123.107950"
+      },
+      {
+        "lat": "49.317048",
+        "lon": "-123.107923"
+      },
+      {
+        "lat": "49.317542",
+        "lon": "-123.107922"
+      },
+      {
+        "lat": "49.317596",
+        "lon": "-123.107919"
+      },
+      {
+        "lat": "49.319343",
+        "lon": "-123.107869"
+      },
+      {
+        "lat": "49.319759",
+        "lon": "-123.107857"
+      }
+    ],
+    "timestamp": "2014-03-11T21:27:22Z"
+  },
+  "23603615": {
+    "id": 23603615,
+    "type": "way",
+    "tags": {
+      "cycleway": "shared",
+      "highway": "residential",
+      "name": "Tatlow Avenue"
+    },
+    "nodes": [
+      {
+        "lat": "49.318111",
+        "lon": "-123.117508"
+      },
+      {
+        "lat": "49.318837",
+        "lon": "-123.117489"
+      }
+    ],
+    "timestamp": "2012-09-25T23:47:22Z"
+  },
+  "23603619": {
+    "id": 23603619,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Redwood Street"
+    },
+    "nodes": [
+      {
+        "lat": "49.318095",
+        "lon": "-123.111096"
+      },
+      {
+        "lat": "49.318756",
+        "lon": "-123.111113"
+      },
+      {
+        "lat": "49.319485",
+        "lon": "-123.111109"
+      },
+      {
+        "lat": "49.319834",
+        "lon": "-123.111121"
+      }
+    ],
+    "timestamp": "2012-11-25T01:18:12Z"
+  },
+  "23603680": {
+    "id": 23603680,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Lloyd Avenue"
+    },
+    "nodes": null,
+    "timestamp": "2012-11-25T01:17:48Z"
+  },
+  "23603766": {
+    "id": 23603766,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Hanes Avenue"
+    },
+    "nodes": [
+      {
+        "lat": "49.318082",
+        "lon": "-123.098898"
+      }
+    ],
+    "timestamp": "2012-11-25T01:17:29Z"
+  },
+  "23603767": {
+    "id": 23603767,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Donaghy Avenue"
+    },
+    "nodes": [
+      {
+        "lat": "49.318049",
+        "lon": "-123.096940"
+      }
+    ],
+    "timestamp": "2012-11-25T01:16:50Z"
+  },
+  "23669480": {
+    "id": 23669480,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Greg Lee Way"
+    },
+    "nodes": null,
+    "timestamp": "2014-02-14T02:53:42Z"
+  },
+  "23669863": {
+    "id": 23669863,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Sheena Road"
+    },
+    "nodes": null,
+    "timestamp": "2014-02-14T02:52:51Z"
+  },
+  "23674904": {
+    "id": 23674904,
+    "type": "way",
+    "tags": {
+      "highway": "unclassified",
+      "name": "West Riverside Drive"
+    },
+    "nodes": null,
+    "timestamp": "2014-09-14T21:40:44Z"
+  },
+  "23726902": {
+    "id": 23726902,
+    "type": "way",
+    "tags": {
+      "highway": "tertiary",
+      "name": "Henning Drive"
+    },
+    "nodes": [
+      {
+        "lat": "49.263605",
+        "lon": "-123.023724"
+      },
+      {
+        "lat": "49.263600",
+        "lon": "-123.023445"
+      },
+      {
+        "lat": "49.263577",
+        "lon": "-123.022067"
+      },
+      {
+        "lat": "49.263745",
+        "lon": "-123.021492"
+      },
+      {
+        "lat": "49.263801",
+        "lon": "-123.021299"
+      },
+      {
+        "lat": "49.263907",
+        "lon": "-123.020934"
+      }
+    ],
+    "timestamp": "2015-04-03T07:17:02Z"
+  },
+  "23766582": {
+    "id": 23766582,
+    "type": "way",
+    "tags": {
+      "bicycle": "yes",
+      "bridge": "yes",
+      "cycleway": "no",
+      "foot": "yes",
+      "hgv": "designated",
+      "highway": "motorway",
+      "lanes": "3",
+      "layer": "1",
+      "motor_vehicle": "yes",
+      "name": "Knight Street",
+      "oneway": "yes",
+      "sidewalk": "right"
+    },
+    "nodes": [
+      {
+        "lat": "49.205472",
+        "lon": "-123.077550"
+      },
+      {
+        "lat": "49.204653",
+        "lon": "-123.077577"
+      },
+      {
+        "lat": "49.203442",
+        "lon": "-123.077574"
+      },
+      {
+        "lat": "49.202103",
+        "lon": "-123.077557"
+      },
+      {
+        "lat": "49.200427",
+        "lon": "-123.077568"
+      },
+      {
+        "lat": "49.198245",
+        "lon": "-123.077563"
+      },
+      {
+        "lat": "49.196971",
+        "lon": "-123.077558"
+      }
+    ],
+    "timestamp": "2013-04-14T14:21:33Z"
+  },
+  "23803065": {
+    "id": 23803065,
+    "type": "way",
+    "tags": {
+      "cycleway": "shared_lane",
+      "highway": "residential",
+      "name": "Chesterfield Avenue"
+    },
+    "nodes": [
+      {
+        "lat": "49.319185",
+        "lon": "-123.075667"
+      },
+      {
+        "lat": "49.319307",
+        "lon": "-123.075587"
+      },
+      {
+        "lat": "49.319466",
+        "lon": "-123.075562"
+      },
+      {
+        "lat": "49.319992",
+        "lon": "-123.075531"
+      }
+    ],
+    "timestamp": "2012-09-03T17:00:19Z"
+  },
+  "23803130": {
+    "id": 23803130,
+    "type": "way",
+    "tags": {
+      "highway": "tertiary",
+      "name": "Hendry Street",
+      "oneway": "no"
+    },
+    "nodes": [
+      {
+        "lat": "49.313394",
+        "lon": "-123.052010"
+      },
+      {
+        "lat": "49.313842",
+        "lon": "-123.051981"
+      },
+      {
+        "lat": "49.314020",
+        "lon": "-123.051975"
+      },
+      {
+        "lat": "49.314474",
+        "lon": "-123.051963"
+      },
+      {
+        "lat": "49.314536",
+        "lon": "-123.051963"
+      },
+      {
+        "lat": "49.315055",
+        "lon": "-123.051959"
+      },
+      {
+        "lat": "49.315582",
+        "lon": "-123.051935"
+      },
+      {
+        "lat": "49.315701",
+        "lon": "-123.051931"
+      },
+      {
+        "lat": "49.316106",
+        "lon": "-123.051945"
+      },
+      {
+        "lat": "49.316625",
+        "lon": "-123.051925"
+      },
+      {
+        "lat": "49.317147",
+        "lon": "-123.051911"
+      },
+      {
+        "lat": "49.317664",
+        "lon": "-123.051889"
+      },
+      {
+        "lat": "49.318173",
+        "lon": "-123.051870"
+      },
+      {
+        "lat": "49.318688",
+        "lon": "-123.051824"
+      },
+      {
+        "lat": "49.319231",
+        "lon": "-123.051796"
+      },
+      {
+        "lat": "49.319733",
+        "lon": "-123.051799"
+      }
+    ],
+    "timestamp": "2014-08-11T04:34:48Z"
+  },
+  "23811065": {
+    "id": 23811065,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Appin Road"
+    },
+    "nodes": null,
+    "timestamp": "2012-12-12T00:36:35Z"
+  },
+  "23825045": {
+    "id": 23825045,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Number 4 Road"
+    },
+    "nodes": [
+      {
+        "lat": "49.200159",
+        "lon": "-123.113838"
+      },
+      {
+        "lat": "49.199172",
+        "lon": "-123.113928"
+      },
+      {
+        "lat": "49.196438",
+        "lon": "-123.113923"
+      }
+    ],
+    "timestamp": "2015-01-10T09:25:38Z"
+  },
+  "24006559": {
+    "id": 24006559,
+    "type": "way",
+    "tags": {
+      "highway": "secondary",
+      "maxspeed": "50",
+      "name": "Lonsdale Avenue"
+    },
+    "nodes": null,
+    "timestamp": "2015-04-15T21:54:07Z"
+  },
+  "24006560": {
+    "id": 24006560,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "St. Georges Avenue"
+    },
+    "nodes": null,
+    "timestamp": "2012-09-03T17:00:23Z"
+  },
+  "24006564": {
+    "id": 24006564,
+    "type": "way",
+    "tags": {
+      "cycleway": "shared",
+      "highway": "residential",
+      "name": "St. Andrews Avenue"
+    },
+    "nodes": [
+      {
+        "lat": "49.319893",
+        "lon": "-123.066165"
+      }
+    ],
+    "timestamp": "2012-09-03T17:00:23Z"
+  },
+  "24006565": {
+    "id": 24006565,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Ridgeway Avenue"
+    },
+    "nodes": [
+      {
+        "lat": "49.319845",
+        "lon": "-123.063090"
+      }
+    ],
+    "timestamp": "2012-09-03T17:00:23Z"
+  },
+  "24006568": {
+    "id": 24006568,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Moody Avenue"
+    },
+    "nodes": [
+      {
+        "lat": "49.319829",
+        "lon": "-123.060034"
+      }
+    ],
+    "timestamp": "2012-11-25T01:17:58Z"
+  },
+  "24006569": {
+    "id": 24006569,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Grand Boulevard West"
+    },
+    "nodes": [
+      {
+        "lat": "49.319815",
+        "lon": "-123.057562"
+      }
+    ],
+    "timestamp": "2012-11-25T01:17:25Z"
+  },
+  "24008985": {
+    "id": 24008985,
+    "type": "way",
+    "tags": {
+      "highway": "secondary",
+      "lanes": "2",
+      "name": "Dollarton Highway",
+      "oneway": "yes",
+      "sidewalk": "separate"
+    },
+    "nodes": [
+      {
+        "lat": "49.305207",
+        "lon": "-123.021310"
+      }
+    ],
+    "timestamp": "2015-04-07T00:32:15Z"
+  },
+  "24035593": {
+    "id": 24035593,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Tantalus Road"
+    },
+    "nodes": null,
+    "timestamp": "2010-05-13T20:47:36Z"
+  },
+  "24035634": {
+    "id": 24035634,
+    "type": "way",
+    "tags": {
+      "cycleway": "shared_lane",
+      "highway": "secondary",
+      "lcn_ref": "Lillooet",
+      "name": "Lillooet Road",
+      "oneway": "no"
+    },
+    "nodes": null,
+    "timestamp": "2015-02-24T21:18:40Z"
+  },
+  "24036978": {
+    "id": 24036978,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "lanes": "4",
+      "name": "Fell Avenue"
+    },
+    "nodes": null,
+    "timestamp": "2014-08-02T20:00:09Z"
+  },
+  "24037408": {
+    "id": 24037408,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Delbruck Avenue"
+    },
+    "nodes": null,
+    "timestamp": "2012-06-20T00:11:37Z"
+  },
+  "24250331": {
+    "id": 24250331,
+    "type": "way",
+    "tags": {
+      "cycleway": "shared",
+      "highway": "tertiary",
+      "name": "Arborlynn Drive"
+    },
+    "nodes": null,
+    "timestamp": "2014-08-02T20:00:03Z"
+  },
+  "24267642": {
+    "id": 24267642,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "lcn": "proposed",
+      "lcn_ref": "Burke",
+      "name": "Burke Street"
+    },
+    "nodes": [
+      {
+        "lat": "49.236985",
+        "lon": "-123.023567"
+      },
+      {
+        "lat": "49.236975",
+        "lon": "-123.023328"
+      },
+      {
+        "lat": "49.236985",
+        "lon": "-123.022873"
+      },
+      {
+        "lat": "49.236971",
+        "lon": "-123.022289"
+      },
+      {
+        "lat": "49.236972",
+        "lon": "-123.021176"
+      }
+    ],
+    "timestamp": "2012-11-11T05:34:45Z"
+  },
+  "24394793": {
+    "id": 24394793,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Finlayson Court"
+    },
+    "nodes": [
+      {
+        "lat": "49.195405",
+        "lon": "-123.111518"
+      }
+    ],
+    "timestamp": "2015-01-15T04:08:37Z"
+  },
+  "24394795": {
+    "id": 24394795,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Davies Place"
+    },
+    "nodes": [
+      {
+        "lat": "49.195330",
+        "lon": "-123.109399"
+      }
+    ],
+    "timestamp": "2014-07-27T23:01:54Z"
+  },
+  "24394799": {
+    "id": 24394799,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "McClennan Road"
+    },
+    "nodes": null,
+    "timestamp": "2011-08-01T20:35:16Z"
+  },
+  "24530021": {
+    "id": 24530021,
+    "type": "way",
+    "tags": {
+      "bridge": "yes",
+      "cycleway": "lane",
+      "hgv": "designated",
+      "highway": "motorway",
+      "lanes": "2",
+      "layer": "2",
+      "lit": "yes",
+      "maxspeed": "60",
+      "name": "Oak Street Bridge",
+      "oneway": "yes",
+      "ref": "99"
+    },
+    "nodes": [
+      {
+        "lat": "49.205004",
+        "lon": "-123.130067"
+      },
+      {
+        "lat": "49.204858",
+        "lon": "-123.130010"
+      },
+      {
+        "lat": "49.204649",
+        "lon": "-123.129925"
+      },
+      {
+        "lat": "49.204313",
+        "lon": "-123.129746"
+      },
+      {
+        "lat": "49.204013",
+        "lon": "-123.129553"
+      },
+      {
+        "lat": "49.203683",
+        "lon": "-123.129307"
+      },
+      {
+        "lat": "49.202776",
+        "lon": "-123.128482"
+      }
+    ],
+    "timestamp": "2014-01-20T21:49:45Z"
+  },
+  "24868444": {
+    "id": 24868444,
+    "type": "way",
+    "tags": {
+      "created_by": "Potlatch 0.10f",
+      "highway": "residential",
+      "name": "Number 8 Road"
+    },
+    "nodes": [
+      {
+        "lat": "49.197724",
+        "lon": "-123.024204"
+      }
+    ],
+    "timestamp": "2009-07-01T02:44:51Z"
+  },
+  "24885827": {
+    "id": 24885827,
+    "type": "way",
+    "tags": {
+      "bicycle": "yes",
+      "bridge": "yes",
+      "cycleway": "no",
+      "foot": "yes",
+      "hgv": "designated",
+      "highway": "motorway",
+      "lanes": "3",
+      "layer": "1",
+      "maxspeed": "80",
+      "name": "Knight Street",
+      "oneway": "yes",
+      "sidewalk": "right"
+    },
+    "nodes": null,
+    "timestamp": "2013-04-14T14:21:33Z"
+  },
+  "24907630": {
+    "id": 24907630,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "lanes": "2",
+      "name": "Number 7 Road",
+      "sidewalk": "none",
+      "surface": "asphalt"
+    },
+    "nodes": [
+      {
+        "lat": "49.202065",
+        "lon": "-123.046798"
+      },
+      {
+        "lat": "49.199305",
+        "lon": "-123.046816"
+      },
+      {
+        "lat": "49.199068",
+        "lon": "-123.046817"
+      },
+      {
+        "lat": "49.199044",
+        "lon": "-123.046813"
+      },
+      {
+        "lat": "49.198830",
+        "lon": "-123.046817"
+      },
+      {
+        "lat": "49.195436",
+        "lon": "-123.046820"
+      }
+    ],
+    "timestamp": "2014-09-12T00:27:17Z"
+  },
+  "25144056": {
+    "id": 25144056,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Baydala Court"
+    },
+    "nodes": null,
+    "timestamp": "2010-09-04T10:11:28Z"
+  },
+  "25144199": {
+    "id": 25144199,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "McLeod Avenue"
+    },
+    "nodes": null,
+    "timestamp": "2010-02-12T23:51:36Z"
+  },
+  "25144251": {
+    "id": 25144251,
+    "type": "way",
+    "tags": {
+      "created_by": "Potlatch 0.10f",
+      "highway": "residential",
+      "name": "Gagnon Place"
+    },
+    "nodes": null,
+    "timestamp": "2009-03-13T11:45:25Z"
+  },
+  "25397913": {
+    "id": 25397913,
+    "type": "way",
+    "tags": {
+      "cycleway": "lane",
+      "highway": "unclassified",
+      "name": "Templeton Street"
+    },
+    "nodes": null,
+    "timestamp": "2015-03-11T06:19:09Z"
+  },
+  "25397919": {
+    "id": 25397919,
+    "type": "way",
+    "tags": {
+      "bicycle": "designated",
+      "cycleway": "lane",
+      "highway": "tertiary",
+      "name": "Great Canadian Way",
+      "oneway": "no"
+    },
+    "nodes": [
+      {
+        "lat": "49.196639",
+        "lon": "-123.126125"
+      },
+      {
+        "lat": "49.196536",
+        "lon": "-123.125993"
+      },
+      {
+        "lat": "49.196340",
+        "lon": "-123.125752"
+      },
+      {
+        "lat": "49.196152",
+        "lon": "-123.125585"
+      },
+      {
+        "lat": "49.196015",
+        "lon": "-123.125469"
+      },
+      {
+        "lat": "49.195641",
+        "lon": "-123.125295"
+      },
+      {
+        "lat": "49.195461",
+        "lon": "-123.125212"
+      }
+    ],
+    "timestamp": "2015-04-12T06:59:59Z"
+  },
+  "25397920": {
+    "id": 25397920,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "River Road"
+    },
+    "nodes": [
+      {
+        "lat": "49.196639",
+        "lon": "-123.126125"
+      },
+      {
+        "lat": "49.195649",
+        "lon": "-123.127726"
+      },
+      {
+        "lat": "49.195222",
+        "lon": "-123.128401"
+      },
+      {
+        "lat": "49.195060",
+        "lon": "-123.128658"
+      }
+    ],
+    "timestamp": "2010-02-12T23:51:33Z"
+  },
+  "26732233": {
+    "id": 26732233,
+    "type": "way",
+    "tags": {
+      "bicycle": "yes",
+      "highway": "residential",
+      "name": "Yale Street"
+    },
+    "nodes": [
+      {
+        "lat": "49.290174",
+        "lon": "-123.023243"
+      },
+      {
+        "lat": "49.290169",
+        "lon": "-123.020850"
+      }
+    ],
+    "timestamp": "2015-04-03T12:33:14Z"
+  },
+  "30124778": {
+    "id": 30124778,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Laurel Street"
+    },
+    "nodes": null,
+    "timestamp": "2013-01-15T09:36:29Z"
+  },
+  "30124779": {
+    "id": 30124779,
+    "type": "way",
+    "tags": {
+      "highway": "secondary",
+      "name": "Moscrop Street"
+    },
+    "nodes": [
+      {
+        "lat": "49.242994",
+        "lon": "-123.023664"
+      },
+      {
+        "lat": "49.242992",
+        "lon": "-123.023481"
+      },
+      {
+        "lat": "49.242991",
+        "lon": "-123.022972"
+      },
+      {
+        "lat": "49.242989",
+        "lon": "-123.022805"
+      }
+    ],
+    "timestamp": "2011-05-02T03:54:06Z"
+  },
+  "30409929": {
+    "id": 30409929,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Manor Street"
+    },
+    "nodes": null,
+    "timestamp": "2009-11-07T05:54:29Z"
+  },
+  "30409987": {
+    "id": 30409987,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Thurston Street"
+    },
+    "nodes": null,
+    "timestamp": "2012-11-11T05:34:44Z"
+  },
+  "30410142": {
+    "id": 30410142,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Brandon Street"
+    },
+    "nodes": [
+      {
+        "lat": "49.238422",
+        "lon": "-123.022249"
+      },
+      {
+        "lat": "49.238435",
+        "lon": "-123.021678"
+      },
+      {
+        "lat": "49.238414",
+        "lon": "-123.021053"
+      },
+      {
+        "lat": "49.238426",
+        "lon": "-123.020565"
+      }
+    ],
+    "timestamp": "2010-02-09T01:26:09Z"
+  },
+  "30410151": {
+    "id": 30410151,
+    "type": "way",
+    "tags": {
+      "created_by": "Potlatch 0.10f",
+      "highway": "residential",
+      "name": "Belleville Avenue"
+    },
+    "nodes": null,
+    "timestamp": "2009-01-23T20:57:46Z"
+  },
+  "30422530": {
+    "id": 30422530,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Linwood Street"
+    },
+    "nodes": [
+      {
+        "lat": "49.253287",
+        "lon": "-123.023781"
+      },
+      {
+        "lat": "49.253306",
+        "lon": "-123.023512"
+      },
+      {
+        "lat": "49.253310",
+        "lon": "-123.022812"
+      }
+    ],
+    "timestamp": "2013-05-21T08:56:07Z"
+  },
+  "30422534": {
+    "id": 30422534,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Avondale Street"
+    },
+    "nodes": [
+      {
+        "lat": "49.252391",
+        "lon": "-123.023781"
+      },
+      {
+        "lat": "49.252411",
+        "lon": "-123.023512"
+      },
+      {
+        "lat": "49.252408",
+        "lon": "-123.022811"
+      }
+    ],
+    "timestamp": "2011-03-13T18:30:27Z"
+  },
+  "30422589": {
+    "id": 30422589,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Nithsdale Street"
+    },
+    "nodes": null,
+    "timestamp": "2009-11-07T05:54:26Z"
+  },
+  "30423009": {
+    "id": 30423009,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Dominion Street"
+    },
+    "nodes": null,
+    "timestamp": "2009-11-07T05:54:28Z"
+  },
+  "30423030": {
+    "id": 30423030,
+    "type": "way",
+    "tags": {
+      "created_by": "Potlatch 0.10f",
+      "highway": "residential",
+      "name": "Norfolk Street"
+    },
+    "nodes": [
+      {
+        "lat": "49.255449",
+        "lon": "-123.022135"
+      },
+      {
+        "lat": "49.255489",
+        "lon": "-123.021911"
+      },
+      {
+        "lat": "49.255486",
+        "lon": "-123.021706"
+      }
+    ],
+    "timestamp": "2009-07-01T04:42:01Z"
+  },
+  "30423356": {
+    "id": 30423356,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Spruce Street"
+    },
+    "nodes": null,
+    "timestamp": "2010-02-09T01:26:12Z"
+  },
+  "30423404": {
+    "id": 30423404,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Fir Street"
+    },
+    "nodes": null,
+    "timestamp": "2010-02-09T01:26:13Z"
+  },
+  "30425966": {
+    "id": 30425966,
+    "type": "way",
+    "tags": {
+      "created_by": "Potlatch 0.10f",
+      "highway": "residential",
+      "name": "Wakefield Crescent"
+    },
+    "nodes": [
+      {
+        "lat": "49.244015",
+        "lon": "-123.022279"
+      }
+    ],
+    "timestamp": "2009-01-23T20:53:17Z"
+  },
+  "30426039": {
+    "id": 30426039,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Warren Street"
+    },
+    "nodes": [
+      {
+        "lat": "49.242042",
+        "lon": "-123.023644"
+      },
+      {
+        "lat": "49.242042",
+        "lon": "-123.023479"
+      },
+      {
+        "lat": "49.242056",
+        "lon": "-123.022916"
+      },
+      {
+        "lat": "49.242054",
+        "lon": "-123.022805"
+      },
+      {
+        "lat": "49.242035",
+        "lon": "-123.021034"
+      },
+      {
+        "lat": "49.242034",
+        "lon": "-123.020596"
+      },
+      {
+        "lat": "49.242033",
+        "lon": "-123.020422"
+      }
+    ],
+    "timestamp": "2012-11-17T07:20:32Z"
+  },
+  "30426067": {
+    "id": 30426067,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Price Street"
+    },
+    "nodes": [
+      {
+        "lat": "49.240193",
+        "lon": "-123.023562"
+      },
+      {
+        "lat": "49.240193",
+        "lon": "-123.023429"
+      },
+      {
+        "lat": "49.240198",
+        "lon": "-123.020470"
+      }
+    ],
+    "timestamp": "2012-11-17T07:20:32Z"
+  },
+  "30463668": {
+    "id": 30463668,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Still Creek Drive"
+    },
+    "nodes": [
+      {
+        "lat": "49.260808",
+        "lon": "-123.022170"
+      },
+      {
+        "lat": "49.260746",
+        "lon": "-123.022051"
+      },
+      {
+        "lat": "49.260758",
+        "lon": "-123.021908"
+      },
+      {
+        "lat": "49.260795",
+        "lon": "-123.021748"
+      },
+      {
+        "lat": "49.260844",
+        "lon": "-123.021585"
+      },
+      {
+        "lat": "49.260886",
+        "lon": "-123.021372"
+      },
+      {
+        "lat": "49.260875",
+        "lon": "-123.020876"
+      }
+    ],
+    "timestamp": "2015-05-01T22:23:45Z"
+  },
+  "30463769": {
+    "id": 30463769,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Myrtle Street"
+    },
+    "nodes": [
+      {
+        "lat": "49.260071",
+        "lon": "-123.021346"
+      },
+      {
+        "lat": "49.260029",
+        "lon": "-123.021165"
+      },
+      {
+        "lat": "49.260005",
+        "lon": "-123.021030"
+      }
+    ],
+    "timestamp": "2012-03-21T07:44:06Z"
+  },
+  "30480182": {
+    "id": 30480182,
+    "type": "way",
+    "tags": {
+      "bicycle": "yes",
+      "highway": "residential",
+      "name": "Trinity Street",
+      "oneway": "no"
+    },
+    "nodes": [
+      {
+        "lat": "49.289281",
+        "lon": "-123.023262"
+      },
+      {
+        "lat": "49.289271",
+        "lon": "-123.021813"
+      },
+      {
+        "lat": "49.289264",
+        "lon": "-123.020868"
+      }
+    ],
+    "timestamp": "2015-04-03T23:08:41Z"
+  },
+  "30481560": {
+    "id": 30481560,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Pender Street"
+    },
+    "nodes": [
+      {
+        "lat": "49.280227",
+        "lon": "-123.023614"
+      }
+    ],
+    "timestamp": "2015-04-03T14:16:38Z"
+  },
+  "30488987": {
+    "id": 30488987,
+    "type": "way",
+    "tags": {
+      "highway": "tertiary",
+      "name": "Douglas Road"
+    },
+    "nodes": [
+      {
+        "lat": "49.276515",
+        "lon": "-123.023649"
+      },
+      {
+        "lat": "49.276391",
+        "lon": "-123.023407"
+      },
+      {
+        "lat": "49.276322",
+        "lon": "-123.023138"
+      },
+      {
+        "lat": "49.276169",
+        "lon": "-123.022705"
+      },
+      {
+        "lat": "49.275902",
+        "lon": "-123.022211"
+      },
+      {
+        "lat": "49.275734",
+        "lon": "-123.021928"
+      },
+      {
+        "lat": "49.275331",
+        "lon": "-123.021310"
+      },
+      {
+        "lat": "49.275169",
+        "lon": "-123.021077"
+      },
+      {
+        "lat": "49.275118",
+        "lon": "-123.021003"
+      },
+      {
+        "lat": "49.274776",
+        "lon": "-123.020478"
+      },
+      {
+        "lat": "49.274743",
+        "lon": "-123.020426"
+      }
+    ],
+    "timestamp": "2015-01-04T23:17:11Z"
+  },
+  "30489366": {
+    "id": 30489366,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "2nd Avenue East"
+    },
+    "nodes": [
+      {
+        "lat": "49.268464",
+        "lon": "-123.023738"
+      },
+      {
+        "lat": "49.268461",
+        "lon": "-123.023452"
+      },
+      {
+        "lat": "49.268471",
+        "lon": "-123.022640"
+      },
+      {
+        "lat": "49.268489",
+        "lon": "-123.021080"
+      }
+    ],
+    "timestamp": "2009-12-23T04:30:35Z"
+  },
+  "30489471": {
+    "id": 30489471,
+    "type": "way",
+    "tags": {
+      "highway": "tertiary",
+      "name": "1st Avenue East"
+    },
+    "nodes": null,
+    "timestamp": "2015-04-15T07:16:30Z"
+  },
+  "30489801": {
+    "id": 30489801,
+    "type": "way",
+    "tags": {
+      "highway": "unclassified",
+      "lanes": "2",
+      "name": "Kitchener Street"
+    },
+    "nodes": [
+      {
+        "lat": "49.272114",
+        "lon": "-123.023666"
+      },
+      {
+        "lat": "49.272111",
+        "lon": "-123.023434"
+      },
+      {
+        "lat": "49.272103",
+        "lon": "-123.022683"
+      }
+    ],
+    "timestamp": "2015-01-04T23:17:11Z"
+  },
+  "30567218": {
+    "id": 30567218,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Dubois Street"
+    },
+    "nodes": [
+      {
+        "lat": "49.220985",
+        "lon": "-123.023445"
+      },
+      {
+        "lat": "49.220979",
+        "lon": "-123.022866"
+      },
+      {
+        "lat": "49.220943",
+        "lon": "-123.020882"
+      }
+    ],
+    "timestamp": "2010-02-09T01:26:06Z"
+  },
+  "30567445": {
+    "id": 30567445,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "lcn_ref": "Joffre",
+      "name": "Joffre Avenue"
+    },
+    "nodes": [
+      {
+        "lat": "49.212654",
+        "lon": "-123.020882"
+      },
+      {
+        "lat": "49.212132",
+        "lon": "-123.020882"
+      },
+      {
+        "lat": "49.211859",
+        "lon": "-123.020853"
+      },
+      {
+        "lat": "49.211813",
+        "lon": "-123.020848"
+      },
+      {
+        "lat": "49.211532",
+        "lon": "-123.020685"
+      },
+      {
+        "lat": "49.211061",
+        "lon": "-123.020161"
+      }
+    ],
+    "timestamp": "2015-04-21T00:00:46Z"
+  },
+  "30567867": {
+    "id": 30567867,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Hurst Street",
+      "source": "Yahoo"
+    },
+    "nodes": [
+      {
+        "lat": "49.220147",
+        "lon": "-123.023464"
+      },
+      {
+        "lat": "49.220158",
+        "lon": "-123.022851"
+      },
+      {
+        "lat": "49.220145",
+        "lon": "-123.020908"
+      }
+    ],
+    "timestamp": "2010-02-09T01:26:06Z"
+  },
+  "30579396": {
+    "id": 30579396,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Southwood Street"
+    },
+    "nodes": null,
+    "timestamp": "2010-02-09T01:25:55Z"
+  },
+  "30579667": {
+    "id": 30579667,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Clinton Street"
+    },
+    "nodes": null,
+    "timestamp": "2010-02-09T01:25:54Z"
+  },
+  "30579858": {
+    "id": 30579858,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Carson Street"
+    },
+    "nodes": [
+      {
+        "lat": "49.210915",
+        "lon": "-123.022748"
+      },
+      {
+        "lat": "49.210843",
+        "lon": "-123.022611"
+      },
+      {
+        "lat": "49.210837",
+        "lon": "-123.021624"
+      },
+      {
+        "lat": "49.210821",
+        "lon": "-123.021004"
+      },
+      {
+        "lat": "49.210814",
+        "lon": "-123.020650"
+      },
+      {
+        "lat": "49.210795",
+        "lon": "-123.020307"
+      },
+      {
+        "lat": "49.210804",
+        "lon": "-123.020103"
+      }
+    ],
+    "timestamp": "2010-02-09T01:25:55Z"
+  },
+  "31284781": {
+    "id": 31284781,
+    "type": "way",
+    "tags": {
+      "highway": "primary",
+      "is_in": "Burnaby, BC",
+      "name": "Hastings Street",
+      "ref": "7A"
+    },
+    "nodes": [
+      {
+        "lat": "49.281101",
+        "lon": "-123.023388"
+      },
+      {
+        "lat": "49.281104",
+        "lon": "-123.020971"
+      }
+    ],
+    "timestamp": "2015-04-03T23:55:05Z"
+  },
+  "31284853": {
+    "id": 31284853,
+    "type": "way",
+    "tags": {
+      "bicycle": "yes",
+      "cycleway": "no",
+      "foot": "yes",
+      "highway": "residential",
+      "motor_vehicle": "designated",
+      "name": "Frances Street",
+      "oneway": "no"
+    },
+    "nodes": [
+      {
+        "lat": "49.279337",
+        "lon": "-123.023386"
+      },
+      {
+        "lat": "49.279317",
+        "lon": "-123.020998"
+      }
+    ],
+    "timestamp": "2015-04-02T03:03:31Z"
+  },
+  "32058381": {
+    "id": 32058381,
+    "type": "way",
+    "tags": {
+      "highway": "tertiary",
+      "lanes": "2",
+      "name": "Number 6 Road",
+      "surface": "paved"
+    },
+    "nodes": null,
+    "timestamp": "2011-09-28T02:15:53Z"
+  },
+  "32622099": {
+    "id": 32622099,
+    "type": "way",
+    "tags": {
+      "created_by": "Potlatch 0.10f",
+      "highway": "residential",
+      "name": "Simpson Road"
+    },
+    "nodes": [
+      {
+        "lat": "49.197418",
+        "lon": "-123.098983"
+      }
+    ],
+    "timestamp": "2009-03-29T12:58:33Z"
+  },
+  "32810549": {
+    "id": 32810549,
+    "type": "way",
+    "tags": {
+      "bicycle": "designated",
+      "cycleway": "lane",
+      "highway": "residential",
+      "lcn_ref": "North Fraser Way",
+      "name": "North Fraser Way",
+      "route": "proposed"
+    },
+    "nodes": [
+      {
+        "lat": "49.202150",
+        "lon": "-123.022165"
+      }
+    ],
+    "timestamp": "2012-05-06T20:55:41Z"
+  },
+  "32810784": {
+    "id": 32810784,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Keith Street"
+    },
+    "nodes": [
+      {
+        "lat": "49.206906",
+        "lon": "-123.022603"
+      },
+      {
+        "lat": "49.206861",
+        "lon": "-123.021908"
+      },
+      {
+        "lat": "49.206833",
+        "lon": "-123.021367"
+      },
+      {
+        "lat": "49.206749",
+        "lon": "-123.020638"
+      }
+    ],
+    "timestamp": "2013-07-17T18:18:45Z"
+  },
+  "32810805": {
+    "id": 32810805,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Brechin Street"
+    },
+    "nodes": [
+      {
+        "lat": "49.204349",
+        "lon": "-123.020595"
+      }
+    ],
+    "timestamp": "2010-02-09T01:25:53Z"
+  },
+  "33614276": {
+    "id": 33614276,
+    "type": "way",
+    "tags": {
+      "bicycle": "yes",
+      "foot": "yes",
+      "highway": "path",
+      "lcn": "yes",
+      "lcn_ref": "Bridgeport Trail",
+      "name": "Bridgeport Trail",
+      "railway": "abandoned",
+      "surface": "unpaved"
+    },
+    "nodes": null,
+    "timestamp": "2015-01-15T04:08:36Z"
+  },
+  "35352803": {
+    "id": 35352803,
+    "type": "way",
+    "tags": {
+      "bridge": "yes",
+      "hgv": "designated",
+      "highway": "motorway_link",
+      "is_in": "Burnaby, BC",
+      "layer": "1",
+      "lit": "yes",
+      "maxspeed": "40",
+      "name": "Grandview Highway",
+      "oneway": "yes"
+    },
+    "nodes": null,
+    "timestamp": "2014-10-27T06:24:35Z"
+  },
+  "35352813": {
+    "id": 35352813,
+    "type": "way",
+    "tags": {
+      "bicycle": "no",
+      "hgv": "designated",
+      "highway": "motorway",
+      "lanes": "4",
+      "lit": "yes",
+      "maxspeed": "80",
+      "name": "Trans-Canada Highway",
+      "oneway": "yes",
+      "ref": "1",
+      "reg_name": "British Columbia Provincial Highway 1"
+    },
+    "nodes": [
+      {
+        "lat": "49.260164",
+        "lon": "-123.022603"
+      },
+      {
+        "lat": "49.258772",
+        "lon": "-123.020468"
+      }
+    ],
+    "timestamp": "2014-10-27T06:24:35Z"
+  },
+  "38725545": {
+    "id": 38725545,
+    "type": "way",
+    "tags": {
+      "bicycle": "designated",
+      "cycleway": "lane",
+      "highway": "residential",
+      "lcn": "yes",
+      "lcn_ref": "Van Horne Way",
+      "name": "Van Horne Way",
+      "oneway": "no"
+    },
+    "nodes": [
+      {
+        "lat": "49.198766",
+        "lon": "-123.119035"
+      },
+      {
+        "lat": "49.198748",
+        "lon": "-123.119035"
+      },
+      {
+        "lat": "49.198240",
+        "lon": "-123.119027"
+      },
+      {
+        "lat": "49.197164",
+        "lon": "-123.119039"
+      },
+      {
+        "lat": "49.196993",
+        "lon": "-123.119110"
+      },
+      {
+        "lat": "49.196960",
+        "lon": "-123.119132"
+      },
+      {
+        "lat": "49.196925",
+        "lon": "-123.119158"
+      },
+      {
+        "lat": "49.196848",
+        "lon": "-123.119240"
+      },
+      {
+        "lat": "49.196812",
+        "lon": "-123.119292"
+      },
+      {
+        "lat": "49.196688",
+        "lon": "-123.119601"
+      },
+      {
+        "lat": "49.195958",
+        "lon": "-123.122041"
+      },
+      {
+        "lat": "49.195539",
+        "lon": "-123.123096"
+      },
+      {
+        "lat": "49.195153",
+        "lon": "-123.124075"
+      }
+    ],
+    "timestamp": "2015-04-12T16:51:43Z"
+  },
+  "38725550": {
+    "id": 38725550,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Number 3 Road"
+    },
+    "nodes": null,
+    "timestamp": "2015-01-28T00:38:59Z"
+  },
+  "45334405": {
+    "id": 45334405,
+    "type": "way",
+    "tags": {
+      "bicycle": "no",
+      "hgv": "designated",
+      "highway": "motorway",
+      "lanes": "2",
+      "maxspeed": "100",
+      "name": "Trans-Canada Highway",
+      "oneway": "yes",
+      "ref": "1",
+      "surface": "asphalt"
+    },
+    "nodes": null,
+    "timestamp": "2013-04-16T16:52:02Z"
+  },
+  "45336998": {
+    "id": 45336998,
+    "type": "way",
+    "tags": {
+      "bicycle": "no",
+      "hgv": "designated",
+      "highway": "motorway",
+      "lanes": "2",
+      "maxspeed": "100",
+      "name": "Trans-Canada Highway",
+      "oneway": "yes",
+      "ref": "1",
+      "surface": "asphalt"
+    },
+    "nodes": [
+      {
+        "lat": "49.315459",
+        "lon": "-123.037389"
+      },
+      {
+        "lat": "49.315618",
+        "lon": "-123.037599"
+      },
+      {
+        "lat": "49.315891",
+        "lon": "-123.037973"
+      },
+      {
+        "lat": "49.316370",
+        "lon": "-123.038425"
+      },
+      {
+        "lat": "49.316933",
+        "lon": "-123.038891"
+      },
+      {
+        "lat": "49.317766",
+        "lon": "-123.039508"
+      },
+      {
+        "lat": "49.319829",
+        "lon": "-123.041148"
+      }
+    ],
+    "timestamp": "2013-04-12T01:43:29Z"
+  },
+  "45395767": {
+    "id": 45395767,
+    "type": "way",
+    "tags": {
+      "cycleway": "lane",
+      "highway": "secondary",
+      "name": "Mt Seymour Parkway",
+      "oneway": "yes"
+    },
+    "nodes": null,
+    "timestamp": "2014-09-14T21:40:42Z"
+  },
+  "45395778": {
+    "id": 45395778,
+    "type": "way",
+    "tags": {
+      "bridge": "yes",
+      "cycleway": "lane",
+      "highway": "secondary",
+      "name": "Mt Seymour Parkway",
+      "oneway": "yes"
+    },
+    "nodes": [
+      {
+        "lat": "49.310945",
+        "lon": "-123.020045"
+      }
+    ],
+    "timestamp": "2014-09-14T21:40:41Z"
+  },
+  "46867020": {
+    "id": 46867020,
+    "type": "way",
+    "tags": {
+      "attribution": "GeoBase®",
+      "bicycle": "yes",
+      "foot": "yes",
+      "highway": "residential",
+      "is_in": "Burnaby,British Columbia",
+      "lanes": "2",
+      "name": "Edinburgh Street",
+      "oneway": "no"
+    },
+    "nodes": [
+      {
+        "lat": "49.291107",
+        "lon": "-123.023482"
+      },
+      {
+        "lat": "49.291105",
+        "lon": "-123.023235"
+      },
+      {
+        "lat": "49.291082",
+        "lon": "-123.020822"
+      }
+    ],
+    "timestamp": "2015-04-03T13:28:09Z"
+  },
+  "49742842": {
+    "id": 49742842,
+    "type": "way",
+    "tags": {
+      "bicycle": "yes",
+      "foot": "yes",
+      "highway": "service",
+      "lcn_ref": "TCT connector",
+      "motor_vehicle": "no",
+      "name": "service access road / connector to TCT",
+      "old_name": "Montrose St",
+      "service": "emergency_access",
+      "surface": "gravel"
+    },
+    "nodes": null,
+    "timestamp": "2015-05-01T21:22:35Z"
+  },
+  "49938908": {
+    "id": 49938908,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Viking Way"
+    },
+    "nodes": [
+      {
+        "lat": "49.197598",
+        "lon": "-123.073317"
+      }
+    ],
+    "timestamp": "2014-09-18T18:27:29Z"
+  },
+  "49938916": {
+    "id": 49938916,
+    "type": "way",
+    "tags": {
+      "attribution": "GeoBase®",
+      "geobase:acquisitionTechnique": "GPS",
+      "geobase:datasetName": "NRN:British Columbia",
+      "geobase:uuid": "6d5aaca0968311d99c9f000ea65e52d8",
+      "highway": "residential",
+      "is_in": "Richmond,British Columbia",
+      "lanes": "2",
+      "name": "Viscount Way",
+      "source": "Geobase_Import_2009"
+    },
+    "nodes": null,
+    "timestamp": "2010-02-09T21:07:44Z"
+  },
+  "50171782": {
+    "id": 50171782,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Charles Street"
+    },
+    "nodes": null,
+    "timestamp": "2010-02-12T21:45:02Z"
+  },
+  "50190784": {
+    "id": 50190784,
+    "type": "way",
+    "tags": {
+      "attribution": "GeoBase®",
+      "geobase:acquisitionTechnique": "GPS",
+      "highway": "residential",
+      "is_in": "Richmond,British Columbia",
+      "lanes": "2",
+      "name": "South McDonald Road",
+      "source": "Geobase_Import_2009"
+    },
+    "nodes": null,
+    "timestamp": "2015-04-04T04:44:47Z"
+  },
+  "51355592": {
+    "id": 51355592,
+    "type": "way",
+    "tags": {
+      "highway": "unclassified",
+      "name": "Vulcan Way"
+    },
+    "nodes": null,
+    "timestamp": "2014-02-16T06:08:46Z"
+  },
+  "52300966": {
+    "id": 52300966,
+    "type": "way",
+    "tags": {
+      "bicycle": "designated",
+      "foot": "yes",
+      "highway": "path",
+      "name": "Trans Canada Trail - Burnaby Heights Trail",
+      "segregated": "no",
+      "surface": "gravel"
+    },
+    "nodes": null,
+    "timestamp": "2015-04-12T05:52:52Z"
+  },
+  "70954668": {
+    "id": 70954668,
+    "type": "way",
+    "tags": {
+      "bicycle": "yes",
+      "bridge": "yes",
+      "foot": "yes",
+      "highway": "cycleway",
+      "layer": "1",
+      "motor_vehicle": "no",
+      "name": "Lions Gate Bridge",
+      "oneway": "yes",
+      "segregated": "no"
+    },
+    "nodes": [
+      {
+        "lat": "49.311942",
+        "lon": "-123.141701"
+      }
+    ],
+    "timestamp": "2014-08-02T20:00:10Z"
+  },
+  "70954672": {
+    "id": 70954672,
+    "type": "way",
+    "tags": {
+      "bicycle": "yes",
+      "bridge": "yes",
+      "foot": "yes",
+      "highway": "cycleway",
+      "layer": "1",
+      "motor_vehicle": "no",
+      "name": "Lions Gate Bridge",
+      "oneway": "yes",
+      "segregated": "no"
+    },
+    "nodes": null,
+    "timestamp": "2014-08-02T20:00:10Z"
+  },
+  "72194274": {
+    "id": 72194274,
+    "type": "way",
+    "tags": {
+      "accuracy": "10",
+      "attribution": "Natural Resources Canada",
+      "name": "Lynn Creek",
+      "source": "GeobaseNHN_Import_2009",
+      "waterway": "stream"
+    },
+    "nodes": null,
+    "timestamp": "2013-01-18T15:42:22Z"
+  },
+  "72194568": {
+    "id": 72194568,
+    "type": "way",
+    "tags": {
+      "accuracy": "10",
+      "attribution": "Natural Resources Canada",
+      "name": "Mackay Creek",
+      "source": "GeobaseNHN_Import_2009",
+      "waterway": "stream"
+    },
+    "nodes": null,
+    "timestamp": "2014-04-15T01:13:07Z"
+  },
+  "72198220": {
+    "id": 72198220,
+    "type": "way",
+    "tags": {
+      "accuracy": "10",
+      "attribution": "Natural Resources Canada",
+      "name": "Mosquito Creek",
+      "source": "GeobaseNHN_Import_2009",
+      "waterway": "stream"
+    },
+    "nodes": null,
+    "timestamp": "2011-03-14T01:04:01Z"
+  },
+  "72199495": {
+    "id": 72199495,
+    "type": "way",
+    "tags": {
+      "accuracy": "10",
+      "attribution": "Natural Resources Canada",
+      "name": "Thain Creek",
+      "source": "GeobaseNHN_Import_2009",
+      "waterway": "stream"
+    },
+    "nodes": null,
+    "timestamp": "2011-03-14T01:04:35Z"
+  },
+  "72203978": {
+    "id": 72203978,
+    "type": "way",
+    "tags": {
+      "accuracy": "10",
+      "attribution": "Natural Resources Canada",
+      "name": "Keith Creek",
+      "source": "GeobaseNHN_Import_2009",
+      "waterway": "stream"
+    },
+    "nodes": null,
+    "timestamp": "2011-03-14T02:17:27Z"
+  },
+  "72831379": {
+    "id": 72831379,
+    "type": "way",
+    "tags": {
+      "attribution": "Natural Resources Canada",
+      "name": "Morey Channel",
+      "source": "GeobaseNHN_Import_2009",
+      "waterway": "river"
+    },
+    "nodes": [
+      {
+        "lat": "49.198535",
+        "lon": "-123.132423"
+      },
+      {
+        "lat": "49.197366",
+        "lon": "-123.133470"
+      },
+      {
+        "lat": "49.196006",
+        "lon": "-123.134649"
+      }
+    ],
+    "timestamp": "2013-05-14T03:00:24Z"
+  },
+  "72833844": {
+    "id": 72833844,
+    "type": "way",
+    "tags": {
+      "accuracy": "10",
+      "attribution": "Natural Resources Canada",
+      "name": "Still Creek",
+      "source": "GeobaseNHN_Import_2009",
+      "waterway": "stream"
+    },
+    "nodes": [
+      {
+        "lat": "49.260921",
+        "lon": "-123.022032"
+      },
+      {
+        "lat": "49.260957",
+        "lon": "-123.021935"
+      },
+      {
+        "lat": "49.261038",
+        "lon": "-123.021701"
+      },
+      {
+        "lat": "49.261101",
+        "lon": "-123.021454"
+      },
+      {
+        "lat": "49.261155",
+        "lon": "-123.021181"
+      },
+      {
+        "lat": "49.261182",
+        "lon": "-123.020849"
+      },
+      {
+        "lat": "49.261191",
+        "lon": "-123.020505"
+      },
+      {
+        "lat": "49.261201",
+        "lon": "-123.020148"
+      }
+    ],
+    "timestamp": "2011-03-14T01:05:13Z"
+  },
+  "73902061": {
+    "id": 73902061,
+    "type": "way",
+    "tags": {
+      "bicycle": "yes",
+      "foot": "permissive",
+      "highway": "cycleway",
+      "name": "Deer Lake Parkway Urban Trail"
+    },
+    "nodes": [
+      {
+        "lat": "49.242983",
+        "lon": "-123.023833"
+      },
+      {
+        "lat": "49.243130",
+        "lon": "-123.023826"
+      },
+      {
+        "lat": "49.243129",
+        "lon": "-123.023672"
+      },
+      {
+        "lat": "49.243128",
+        "lon": "-123.023490"
+      },
+      {
+        "lat": "49.243117",
+        "lon": "-123.023184"
+      },
+      {
+        "lat": "49.243119",
+        "lon": "-123.022972"
+      },
+      {
+        "lat": "49.243105",
+        "lon": "-123.021716"
+      }
+    ],
+    "timestamp": "2013-07-29T04:48:59Z"
+  },
+  "73902620": {
+    "id": 73902620,
+    "type": "way",
+    "tags": {
+      "bicycle": "yes",
+      "foot": "yes",
+      "highway": "residential",
+      "lcn": "proposed",
+      "lcn_ref": "Dundas Street",
+      "name": "Dundas Street",
+      "oneway": "no"
+    },
+    "nodes": null,
+    "timestamp": "2015-04-03T12:49:13Z"
+  },
+  "73902622": {
+    "id": 73902622,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "lcn": "proposed",
+      "lcn_ref": "William Street",
+      "name": "William Street"
+    },
+    "nodes": null,
+    "timestamp": "2010-11-04T05:24:23Z"
+  },
+  "73915752": {
+    "id": 73915752,
+    "type": "way",
+    "tags": {
+      "bicycle": "yes",
+      "cycleway": "lane",
+      "highway": "primary",
+      "lanes": "3",
+      "name": "Lougheed Highway",
+      "oneway": "yes",
+      "ref": "7"
+    },
+    "nodes": null,
+    "timestamp": "2015-04-04T23:51:26Z"
+  },
+  "74252158": {
+    "id": 74252158,
+    "type": "way",
+    "tags": {
+      "highway": "secondary",
+      "name": "Marine Drive",
+      "oneway": "yes"
+    },
+    "nodes": null,
+    "timestamp": "2012-03-26T00:51:26Z"
+  },
+  "74264100": {
+    "id": 74264100,
+    "type": "way",
+    "tags": {
+      "highway": "tertiary",
+      "name": "Grand Boulevard East"
+    },
+    "nodes": null,
+    "timestamp": "2012-11-25T01:17:24Z"
+  },
+  "74264104": {
+    "id": 74264104,
+    "type": "way",
+    "tags": {
+      "highway": "secondary",
+      "name": "West 13th Street",
+      "oneway": "yes"
+    },
+    "nodes": [
+      {
+        "lat": "49.319867",
+        "lon": "-123.081746"
+      },
+      {
+        "lat": "49.319865",
+        "lon": "-123.081602"
+      },
+      {
+        "lat": "49.319890",
+        "lon": "-123.080408"
+      },
+      {
+        "lat": "49.319903",
+        "lon": "-123.080244"
+      },
+      {
+        "lat": "49.319942",
+        "lon": "-123.079922"
+      },
+      {
+        "lat": "49.319998",
+        "lon": "-123.079337"
+      }
+    ],
+    "timestamp": "2013-07-19T23:58:26Z"
+  },
+  "74264105": {
+    "id": 74264105,
+    "type": "way",
+    "tags": {
+      "highway": "tertiary",
+      "name": "Jones Avenue"
+    },
+    "nodes": [
+      {
+        "lat": "49.319867",
+        "lon": "-123.081746"
+      }
+    ],
+    "timestamp": "2013-07-19T23:53:48Z"
+  },
+  "74399878": {
+    "id": 74399878,
+    "type": "way",
+    "tags": {
+      "highway": "secondary",
+      "is_in": "Burnaby, BC",
+      "name": "Imperial Street"
+    },
+    "nodes": null,
+    "timestamp": "2010-12-03T22:26:33Z"
+  },
+  "76168471": {
+    "id": 76168471,
+    "type": "way",
+    "tags": {
+      "highway": "secondary",
+      "lanes": "2",
+      "maxspeed": "60",
+      "name": "Grant McConachie Way",
+      "oneway": "yes"
+    },
+    "nodes": [
+      {
+        "lat": "49.195236",
+        "lon": "-123.139635"
+      },
+      {
+        "lat": "49.195152",
+        "lon": "-123.139914"
+      }
+    ],
+    "timestamp": "2015-04-12T18:39:25Z"
+  },
+  "83017337": {
+    "id": 83017337,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "lcn": "proposed",
+      "name": "Forest Street"
+    },
+    "nodes": null,
+    "timestamp": "2010-11-04T05:33:09Z"
+  },
+  "83017338": {
+    "id": 83017338,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "lcn": "proposed",
+      "lcn_ref": "Elmwood",
+      "name": "Elmwood Street"
+    },
+    "nodes": null,
+    "timestamp": "2010-11-04T05:33:10Z"
+  },
+  "83069673": {
+    "id": 83069673,
+    "type": "way",
+    "tags": {
+      "highway": "tertiary",
+      "lcn": "proposed",
+      "lcn_ref": "Marine Drive",
+      "name": "Marine Drive"
+    },
+    "nodes": [
+      {
+        "lat": "49.208101",
+        "lon": "-123.020282"
+      }
+    ],
+    "timestamp": "2013-07-17T18:24:08Z"
+  },
+  "83231802": {
+    "id": 83231802,
+    "type": "way",
+    "tags": {
+      "attribution": "Natural Resources Canada",
+      "name": "Fraser River (North Arm)",
+      "source": "GeobaseNHN_Import_2009",
+      "waterway": "river"
+    },
+    "nodes": null,
+    "timestamp": "2013-06-29T21:23:58Z"
+  },
+  "84508215": {
+    "id": 84508215,
+    "type": "way",
+    "tags": {
+      "highway": "secondary",
+      "name": "Mountain Highway"
+    },
+    "nodes": null,
+    "timestamp": "2014-07-23T01:52:28Z"
+  },
+  "87325795": {
+    "id": 87325795,
+    "type": "way",
+    "tags": {
+      "hgv": "designated",
+      "highway": "primary",
+      "is_in": "Burnaby, BC",
+      "lanes": "4",
+      "maxspeed": "50",
+      "name": "Kingsway",
+      "ref": "1A;99A"
+    },
+    "nodes": [
+      {
+        "lat": "49.232482",
+        "lon": "-123.020664"
+      }
+    ],
+    "timestamp": "2014-05-31T06:18:07Z"
+  },
+  "92594317": {
+    "id": 92594317,
+    "type": "way",
+    "tags": {
+      "hgv": "no",
+      "highway": "tertiary",
+      "maxweight": "9",
+      "name": "River Road"
+    },
+    "nodes": [
+      {
+        "lat": "49.201260",
+        "lon": "-123.037987"
+      },
+      {
+        "lat": "49.199083",
+        "lon": "-123.031787"
+      },
+      {
+        "lat": "49.198150",
+        "lon": "-123.028150"
+      },
+      {
+        "lat": "49.197740",
+        "lon": "-123.024349"
+      },
+      {
+        "lat": "49.197724",
+        "lon": "-123.024204"
+      },
+      {
+        "lat": "49.197183",
+        "lon": "-123.020800"
+      }
+    ],
+    "timestamp": "2014-07-04T16:10:50Z"
+  },
+  "92831134": {
+    "id": 92831134,
+    "type": "way",
+    "tags": {
+      "highway": "unclassified",
+      "name": "Spicer Road"
+    },
+    "nodes": null,
+    "timestamp": "2014-09-14T21:40:43Z"
+  },
+  "103698311": {
+    "id": 103698311,
+    "type": "way",
+    "tags": {
+      "highway": "secondary",
+      "name": "West 13th Street"
+    },
+    "nodes": [
+      {
+        "lat": "49.319992",
+        "lon": "-123.075531"
+      }
+    ],
+    "timestamp": "2013-07-19T23:58:24Z"
+  },
+  "103703108": {
+    "id": 103703108,
+    "type": "way",
+    "tags": {
+      "cycleway": "lane",
+      "highway": "secondary",
+      "name": "West 13th Street",
+      "oneway": "yes"
+    },
+    "nodes": [
+      {
+        "lat": "49.319970",
+        "lon": "-123.073092"
+      },
+      {
+        "lat": "49.319993",
+        "lon": "-123.073225"
+      }
+    ],
+    "timestamp": "2013-07-19T23:58:25Z"
+  },
+  "116419376": {
+    "id": 116419376,
+    "type": "way",
+    "tags": {
+      "cycleway": "shared",
+      "highway": "unclassified",
+      "name": "Airport Road"
+    },
+    "nodes": [
+      {
+        "lat": "49.196164",
+        "lon": "-123.136957"
+      },
+      {
+        "lat": "49.195873",
+        "lon": "-123.137115"
+      },
+      {
+        "lat": "49.195576",
+        "lon": "-123.137338"
+      },
+      {
+        "lat": "49.195340",
+        "lon": "-123.137857"
+      },
+      {
+        "lat": "49.195144",
+        "lon": "-123.138041"
+      }
+    ],
+    "timestamp": "2011-06-05T00:28:05Z"
+  },
+  "121969154": {
+    "id": 121969154,
+    "type": "way",
+    "tags": {
+      "highway": "unclassified",
+      "name": "Interriver Park Road"
+    },
+    "nodes": [
+      {
+        "lat": "49.318859",
+        "lon": "-123.023759"
+      },
+      {
+        "lat": "49.318895",
+        "lon": "-123.023862"
+      },
+      {
+        "lat": "49.319080",
+        "lon": "-123.024260"
+      },
+      {
+        "lat": "49.319187",
+        "lon": "-123.024527"
+      },
+      {
+        "lat": "49.319243",
+        "lon": "-123.024863"
+      },
+      {
+        "lat": "49.319297",
+        "lon": "-123.025167"
+      },
+      {
+        "lat": "49.319409",
+        "lon": "-123.025398"
+      },
+      {
+        "lat": "49.319555",
+        "lon": "-123.025558"
+      },
+      {
+        "lat": "49.319710",
+        "lon": "-123.025655"
+      },
+      {
+        "lat": "49.319841",
+        "lon": "-123.025675"
+      },
+      {
+        "lat": "49.319993",
+        "lon": "-123.025672"
+      }
+    ],
+    "timestamp": "2015-01-01T00:22:19Z"
+  },
+  "121969157": {
+    "id": 121969157,
+    "type": "way",
+    "tags": {
+      "bicycle": "yes",
+      "foot": "yes",
+      "highway": "path",
+      "name": "Richard Juryn Trail"
+    },
+    "nodes": null,
+    "timestamp": "2013-10-25T06:52:20Z"
+  },
+  "125101807": {
+    "id": 125101807,
+    "type": "way",
+    "tags": {
+      "foot": "yes",
+      "highway": "cycleway",
+      "name": "Seymour River Greenway"
+    },
+    "nodes": [
+      {
+        "lat": "49.312256",
+        "lon": "-123.025153"
+      },
+      {
+        "lat": "49.312286",
+        "lon": "-123.025138"
+      },
+      {
+        "lat": "49.312358",
+        "lon": "-123.025102"
+      },
+      {
+        "lat": "49.312481",
+        "lon": "-123.025033"
+      },
+      {
+        "lat": "49.312547",
+        "lon": "-123.024880"
+      },
+      {
+        "lat": "49.312622",
+        "lon": "-123.024783"
+      },
+      {
+        "lat": "49.312605",
+        "lon": "-123.024502"
+      },
+      {
+        "lat": "49.312599",
+        "lon": "-123.023903"
+      },
+      {
+        "lat": "49.312619",
+        "lon": "-123.023552"
+      },
+      {
+        "lat": "49.312679",
+        "lon": "-123.023372"
+      },
+      {
+        "lat": "49.312746",
+        "lon": "-123.023241"
+      },
+      {
+        "lat": "49.312736",
+        "lon": "-123.022894"
+      },
+      {
+        "lat": "49.312747",
+        "lon": "-123.022696"
+      },
+      {
+        "lat": "49.312750",
+        "lon": "-123.022642"
+      },
+      {
+        "lat": "49.312799",
+        "lon": "-123.022488"
+      },
+      {
+        "lat": "49.312849",
+        "lon": "-123.022399"
+      },
+      {
+        "lat": "49.312941",
+        "lon": "-123.022326"
+      },
+      {
+        "lat": "49.313004",
+        "lon": "-123.022221"
+      },
+      {
+        "lat": "49.313063",
+        "lon": "-123.022073"
+      },
+      {
+        "lat": "49.313126",
+        "lon": "-123.021978"
+      },
+      {
+        "lat": "49.313276",
+        "lon": "-123.021783"
+      },
+      {
+        "lat": "49.313384",
+        "lon": "-123.021560"
+      },
+      {
+        "lat": "49.313411",
+        "lon": "-123.021392"
+      },
+      {
+        "lat": "49.313435",
+        "lon": "-123.021186"
+      },
+      {
+        "lat": "49.313470",
+        "lon": "-123.021138"
+      },
+      {
+        "lat": "49.313579",
+        "lon": "-123.021137"
+      },
+      {
+        "lat": "49.313643",
+        "lon": "-123.021142"
+      },
+      {
+        "lat": "49.313701",
+        "lon": "-123.021058"
+      },
+      {
+        "lat": "49.313787",
+        "lon": "-123.020850"
+      },
+      {
+        "lat": "49.313919",
+        "lon": "-123.020587"
+      },
+      {
+        "lat": "49.314015",
+        "lon": "-123.020277"
+      },
+      {
+        "lat": "49.314170",
+        "lon": "-123.020017"
+      }
+    ],
+    "timestamp": "2014-02-14T02:52:51Z"
+  },
+  "142867205": {
+    "id": 142867205,
+    "type": "way",
+    "tags": {
+      "bicycle": "designated",
+      "foot": "designated",
+      "highway": "cycleway",
+      "name": "Dollarton Highway",
+      "segregated": "no",
+      "surface": "paved"
+    },
+    "nodes": null,
+    "timestamp": "2015-04-07T00:27:49Z"
+  },
+  "154415823": {
+    "id": 154415823,
+    "type": "way",
+    "tags": {
+      "foot": "yes",
+      "highway": "cycleway",
+      "name": "Spirit Trail"
+    },
+    "nodes": null,
+    "timestamp": "2014-07-26T19:09:54Z"
+  },
+  "156891480": {
+    "id": 156891480,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Bewicke Avenue"
+    },
+    "nodes": [
+      {
+        "lat": "49.319879",
+        "lon": "-123.091406"
+      },
+      {
+        "lat": "49.319994",
+        "lon": "-123.091389"
+      }
+    ],
+    "timestamp": "2012-03-26T00:50:59Z"
+  },
+  "156891513": {
+    "id": 156891513,
+    "type": "way",
+    "tags": {
+      "highway": "secondary",
+      "name": "West 3rd Street",
+      "oneway": "yes"
+    },
+    "nodes": [
+      {
+        "lat": "49.319994",
+        "lon": "-123.091389"
+      }
+    ],
+    "timestamp": "2012-03-26T00:51:04Z"
+  },
+  "157205207": {
+    "id": 157205207,
+    "type": "way",
+    "tags": {
+      "bicycle": "yes",
+      "foot": "yes",
+      "highway": "path",
+      "name": "Sea to Sky Trail"
+    },
+    "nodes": [
+      {
+        "lat": "49.313554",
+        "lon": "-123.034001"
+      },
+      {
+        "lat": "49.313725",
+        "lon": "-123.033801"
+      },
+      {
+        "lat": "49.314016",
+        "lon": "-123.033577"
+      },
+      {
+        "lat": "49.314134",
+        "lon": "-123.033588"
+      },
+      {
+        "lat": "49.314303",
+        "lon": "-123.033584"
+      },
+      {
+        "lat": "49.314618",
+        "lon": "-123.033913"
+      },
+      {
+        "lat": "49.315092",
+        "lon": "-123.033912"
+      },
+      {
+        "lat": "49.316528",
+        "lon": "-123.033732"
+      },
+      {
+        "lat": "49.317321",
+        "lon": "-123.033242"
+      },
+      {
+        "lat": "49.317912",
+        "lon": "-123.032739"
+      },
+      {
+        "lat": "49.318097",
+        "lon": "-123.032331"
+      },
+      {
+        "lat": "49.318298",
+        "lon": "-123.032152"
+      },
+      {
+        "lat": "49.318619",
+        "lon": "-123.032150"
+      },
+      {
+        "lat": "49.318950",
+        "lon": "-123.032529"
+      },
+      {
+        "lat": "49.319382",
+        "lon": "-123.031810"
+      },
+      {
+        "lat": "49.319825",
+        "lon": "-123.031612"
+      }
+    ],
+    "timestamp": "2015-01-01T00:22:20Z"
+  },
+  "167684948": {
+    "id": 167684948,
+    "type": "way",
+    "tags": {
+      "bicycle": "yes",
+      "cycleway": "shared",
+      "highway": "residential",
+      "name": "MacKay Road"
+    },
+    "nodes": [
+      {
+        "lat": "49.318084",
+        "lon": "-123.102362"
+      }
+    ],
+    "timestamp": "2014-08-02T20:00:11Z"
+  },
+  "182607985": {
+    "id": 182607985,
+    "type": "way",
+    "tags": {
+      "bridge": "yes",
+      "cycleway": "lane;track",
+      "hgv": "designated",
+      "highway": "motorway",
+      "lanes": "2",
+      "layer": "2",
+      "lit": "yes",
+      "maxspeed": "60",
+      "name": "Oak Street Bridge",
+      "oneway": "yes",
+      "ref": "99"
+    },
+    "nodes": null,
+    "timestamp": "2015-04-12T06:38:15Z"
+  },
+  "183347038": {
+    "id": 183347038,
+    "type": "way",
+    "tags": {
+      "highway": "secondary",
+      "is_in": "Burnaby, BC",
+      "lanes": "4",
+      "name": "Canada Way",
+      "surface": "paved"
+    },
+    "nodes": [
+      {
+        "lat": "49.255283",
+        "lon": "-123.023512"
+      },
+      {
+        "lat": "49.255011",
+        "lon": "-123.023162"
+      },
+      {
+        "lat": "49.254765",
+        "lon": "-123.022673"
+      },
+      {
+        "lat": "49.254718",
+        "lon": "-123.022379"
+      }
+    ],
+    "timestamp": "2012-12-16T07:49:09Z"
+  },
+  "194971457": {
+    "id": 194971457,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "North Service Road"
+    },
+    "nodes": [
+      {
+        "lat": "49.195387",
+        "lon": "-123.151914"
+      },
+      {
+        "lat": "49.195151",
+        "lon": "-123.152003"
+      }
+    ],
+    "timestamp": "2015-04-04T04:44:46Z"
+  },
+  "198590779": {
+    "id": 198590779,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Georgia Street"
+    },
+    "nodes": [
+      {
+        "lat": "49.278482",
+        "lon": "-123.023629"
+      },
+      {
+        "lat": "49.278467",
+        "lon": "-123.021011"
+      }
+    ],
+    "timestamp": "2015-04-03T14:09:55Z"
+  },
+  "229130680": {
+    "id": 229130680,
+    "type": "way",
+    "tags": {
+      "bicycle": "yes",
+      "highway": "primary",
+      "lanes": "3",
+      "name": "Lougheed Highway",
+      "oneway": "yes",
+      "ref": "7"
+    },
+    "nodes": [
+      {
+        "lat": "49.265518",
+        "lon": "-123.023437"
+      },
+      {
+        "lat": "49.265576",
+        "lon": "-123.023062"
+      },
+      {
+        "lat": "49.265654",
+        "lon": "-123.021893"
+      },
+      {
+        "lat": "49.265712",
+        "lon": "-123.020184"
+      }
+    ],
+    "timestamp": "2015-04-04T23:51:26Z"
+  },
+  "230251523": {
+    "id": 230251523,
+    "type": "way",
+    "tags": {
+      "bicycle": "yes",
+      "cycleway": "lane",
+      "hgv": "designated",
+      "highway": "secondary",
+      "lanes": "2",
+      "maxspeed": "50",
+      "name": "Marine Way",
+      "oneway": "yes"
+    },
+    "nodes": [
+      {
+        "lat": "49.205367",
+        "lon": "-123.023334"
+      },
+      {
+        "lat": "49.205335",
+        "lon": "-123.020595"
+      }
+    ],
+    "timestamp": "2014-01-16T03:04:49Z"
+  },
+  "230251531": {
+    "id": 230251531,
+    "type": "way",
+    "tags": {
+      "bicycle": "yes",
+      "cycleway": "lane",
+      "hgv": "designated",
+      "highway": "secondary",
+      "lanes": "2",
+      "maxspeed": "50",
+      "name": "Marine Way",
+      "oneway": "yes"
+    },
+    "nodes": null,
+    "timestamp": "2014-01-16T03:04:49Z"
+  },
+  "230251884": {
+    "id": 230251884,
+    "type": "way",
+    "tags": {
+      "bicycle": "yes",
+      "highway": "secondary",
+      "lcn_ref": "Rumble",
+      "name": "Rumble Street"
+    },
+    "nodes": null,
+    "timestamp": "2013-07-17T18:21:28Z"
+  },
+  "289829684": {
+    "id": 289829684,
+    "type": "way",
+    "tags": {
+      "bicycle": "yes",
+      "foot": "yes",
+      "highway": "track",
+      "motor_vehicle": "no",
+      "name": "Trail of Hope",
+      "surface": "gravel"
+    },
+    "nodes": [
+      {
+        "lat": "49.223618",
+        "lon": "-123.020362"
+      }
+    ],
+    "timestamp": "2014-06-26T01:13:17Z"
+  },
+  "309860618": {
+    "id": 309860618,
+    "type": "way",
+    "tags": {
+      "bicycle": "no",
+      "foot": "no",
+      "hgv": "designated",
+      "highway": "motorway",
+      "lanes": "3",
+      "lit": "yes",
+      "maxspeed": "80",
+      "name": "Trans-Canada Highway",
+      "oneway": "yes",
+      "ref": "1",
+      "reg_name": "British Columbia Provincial Highway 1",
+      "surface": "asphalt"
+    },
+    "nodes": null,
+    "timestamp": "2014-10-27T06:24:15Z"
+  },
+  "325844983": {
+    "id": 325844983,
+    "type": "node",
+    "lat": 49.2485353,
+    "lon": -123.0556808,
+    "tags": {
+      "bench": "yes",
+      "bicycle": "yes",
+      "highway": "bus_stop",
+      "is_in:city": "Vancouver",
+      "is_in:country": "Canada",
+      "is_in:province": "British Columbia",
+      "name": "Nanaimo Station (Bay 4)",
+      "operator": "TransLink",
+      "ref": "50688",
+      "shelter": "yes",
+      "wheelchair": "yes"
+    },
+    "timestamp": "2015-04-26T10:43:28Z"
+  },
+  "327411261": {
+    "id": 327411261,
+    "type": "node",
+    "lat": 49.2858305,
+    "lon": -123.11264310000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Waterfront Station",
+      "operator": "TransLink",
+      "ref": "58202",
+      "wheelchair": "yes"
+    },
+    "timestamp": "2015-04-25T06:36:22Z"
+  },
+  "331985625": {
+    "id": 331985625,
+    "type": "way",
+    "tags": {
+      "destination": "Vancouver",
+      "highway": "secondary",
+      "lanes": "2",
+      "maxspeed": "60",
+      "name": "Grant McConachie Way",
+      "oneway": "yes",
+      "source": "NRCan-CanVec-8.0",
+      "surface": "paved",
+      "turn:lanes": "through|through"
+    },
+    "nodes": null,
+    "timestamp": "2015-03-09T12:17:22Z"
+  },
+  "336360107": {
+    "id": 336360107,
+    "type": "way",
+    "tags": {
+      "bicycle": "yes",
+      "foot": "yes",
+      "highway": "residential",
+      "name": "Oxford Street",
+      "oneway": "no"
+    },
+    "nodes": [
+      {
+        "lat": "49.285672",
+        "lon": "-123.023317"
+      }
+    ],
+    "timestamp": "2015-04-03T13:32:52Z"
+  },
+  "337099010": {
+    "id": 337099010,
+    "type": "way",
+    "tags": {
+      "bicycle": "designated",
+      "cycleway": "crossing",
+      "foot": "designated",
+      "highway": "cycleway",
+      "name": "Dollarton Highway",
+      "segregated": "no"
+    },
+    "nodes": [
+      {
+        "lat": "49.305127",
+        "lon": "-123.020038"
+      }
+    ],
+    "timestamp": "2015-04-06T23:50:59Z"
+  },
+  "337104129": {
+    "id": 337104129,
+    "type": "way",
+    "tags": {
+      "highway": "secondary",
+      "lanes": "2",
+      "name": "Dollarton Highway",
+      "oneway": "yes",
+      "sidewalk": "separate"
+    },
+    "nodes": null,
+    "timestamp": "2015-04-07T00:32:15Z"
+  },
+  "338610689": {
+    "id": 338610689,
+    "type": "way",
+    "tags": {
+      "culvert": "yes",
+      "layer": "-1",
+      "name": "Chubb Creek - underground",
+      "source": "Burnaby CIty GIS map",
+      "tunnel": "culvert",
+      "waterway": "stream"
+    },
+    "nodes": null,
+    "timestamp": "2015-04-15T10:51:58Z"
+  },
+  "340581930": {
+    "id": 340581930,
+    "type": "way",
+    "tags": {
+      "highway": "tertiary",
+      "lanes": "2",
+      "name": "Kincaid Street",
+      "source": "NRCan-CanVec-8.0",
+      "surface": "paved"
+    },
+    "nodes": null,
+    "timestamp": "2015-04-26T08:21:25Z"
+  },
+  "340581971": {
+    "id": 340581971,
+    "type": "way",
+    "tags": {
+      "highway": "residential",
+      "name": "Sunset Street"
+    },
+    "nodes": [
+      {
+        "lat": "49.249731",
+        "lon": "-123.023518"
+      },
+      {
+        "lat": "49.249731",
+        "lon": "-123.022824"
+      },
+      {
+        "lat": "49.249718",
+        "lon": "-123.020955"
+      }
+    ],
+    "timestamp": "2015-04-26T08:21:30Z"
+  },
+  "430410083": {
+    "id": 430410083,
+    "type": "node",
+    "lat": 49.248248200000006,
+    "lon": -123.0562953,
+    "tags": {
+      "bench": "yes",
+      "bicycle": "yes",
+      "highway": "bus_stop",
+      "is_in:city": "Vancouver",
+      "is_in:country": "Canada",
+      "is_in:province": "British Columbia",
+      "name": "Nanaimo Station (Bay 1)",
+      "operator": "TransLink",
+      "ref": "58422",
+      "shelter": "yes",
+      "wheelchair": "yes"
+    },
+    "timestamp": "2015-04-26T10:43:28Z"
+  },
+  "432429646": {
+    "id": 432429646,
+    "type": "node",
+    "lat": 49.2662618,
+    "lon": -123.1200373,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Heather Square Bay 1"
+    },
+    "timestamp": "2015-04-25T20:39:14Z"
+  },
+  "610649398": {
+    "id": 610649398,
+    "type": "node",
+    "lat": 49.2681223,
+    "lon": -123.25860940000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "61424",
+      "ref": "61424",
+      "route_ref": "C19",
+      "shelter": "no",
+      "towards": "U.B.C."
+    },
+    "timestamp": "2010-01-10T00:54:37Z"
+  },
+  "615967561": {
+    "id": 615967561,
+    "type": "node",
+    "lat": 49.2637501,
+    "lon": -123.2087901,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Sasamat & Broadway",
+      "operator": "TransLink"
+    },
+    "timestamp": "2012-04-07T05:03:11Z"
+  },
+  "615967562": {
+    "id": 615967562,
+    "type": "node",
+    "lat": 49.263918100000005,
+    "lon": -123.209359,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Sasamat & Broadway",
+      "operator": "TransLink",
+      "ref": "58023"
+    },
+    "timestamp": "2012-04-07T05:03:11Z"
+  },
+  "615967563": {
+    "id": 615967563,
+    "type": "node",
+    "lat": 49.2607615,
+    "lon": -123.2409698,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Thunderbird Boulevard",
+      "ref": "51480"
+    },
+    "timestamp": "2011-04-25T22:41:37Z"
+  },
+  "615967564": {
+    "id": 615967564,
+    "type": "node",
+    "lat": 49.2621096,
+    "lon": -123.2416596,
+    "tags": {
+      "bench": "yes",
+      "highway": "bus_stop",
+      "name": "Thunderbird Boulevard",
+      "operator": "TransLink",
+      "ref": "59715",
+      "shelter": "yes"
+    },
+    "timestamp": "2012-04-07T04:47:09Z"
+  },
+  "615967571": {
+    "id": 615967571,
+    "type": "node",
+    "lat": 49.2637851,
+    "lon": -123.18606600000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Alma & Broadway",
+      "ref": "50357"
+    },
+    "timestamp": "2011-04-27T19:01:04Z"
+  },
+  "615967572": {
+    "id": 615967572,
+    "type": "node",
+    "lat": 49.2638131,
+    "lon": -123.18573380000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Alma & Broadway",
+      "operator": "TransLink"
+    },
+    "timestamp": "2012-04-07T05:03:10Z"
+  },
+  "615967573": {
+    "id": 615967573,
+    "type": "node",
+    "lat": 49.264351100000006,
+    "lon": -123.18570580000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Alma & Broadway",
+      "operator": "TransLink",
+      "ref": "58037"
+    },
+    "timestamp": "2015-04-30T05:57:20Z"
+  },
+  "615967574": {
+    "id": 615967574,
+    "type": "node",
+    "lat": 49.2635171,
+    "lon": -123.1934363,
+    "tags": {
+      "bench": "yes",
+      "highway": "bus_stop",
+      "name": "10th & Crown",
+      "operator": "TransLink",
+      "shelter": "yes",
+      "wheelchair": "yes"
+    },
+    "timestamp": "2012-04-19T07:13:03Z"
+  },
+  "615967576": {
+    "id": 615967576,
+    "type": "node",
+    "lat": 49.264177200000006,
+    "lon": -123.167484,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "MacDonald & Broadway"
+    },
+    "timestamp": "2011-04-27T19:01:06Z"
+  },
+  "615967577": {
+    "id": 615967577,
+    "type": "node",
+    "lat": 49.2639912,
+    "lon": -123.16727630000001,
+    "tags": {
+      "bench": "yes",
+      "highway": "bus_stop",
+      "name": "Broadway & MacDonald",
+      "operator": "TransLink",
+      "ref": "50319",
+      "shelter": "yes",
+      "wheelchair": "yes"
+    },
+    "timestamp": "2012-04-19T21:47:57Z"
+  },
+  "615967578": {
+    "id": 615967578,
+    "type": "node",
+    "lat": 49.264191200000006,
+    "lon": -123.16872900000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "MacDonald & Broadway",
+      "operator": "TransLink",
+      "ref": "50564"
+    },
+    "timestamp": "2012-04-07T05:12:17Z"
+  },
+  "615967579": {
+    "id": 615967579,
+    "type": "node",
+    "lat": 49.2638407,
+    "lon": -123.1680769,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "MacDonald & Broadway"
+    },
+    "timestamp": "2012-04-19T21:47:58Z"
+  },
+  "685755414": {
+    "id": 685755414,
+    "type": "node",
+    "lat": 49.263913,
+    "lon": -123.15345140000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Arbutus & Broadway",
+      "operator": "TransLink"
+    },
+    "timestamp": "2012-04-07T05:12:16Z"
+  },
+  "685755425": {
+    "id": 685755425,
+    "type": "node",
+    "lat": 49.2637099,
+    "lon": -123.1519815,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Arbutus & Broadway",
+      "operator": "TransLink"
+    },
+    "timestamp": "2012-04-07T05:12:16Z"
+  },
+  "725882494": {
+    "id": 725882494,
+    "type": "node",
+    "lat": 49.262482500000004,
+    "lon": -123.0785773,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Clark & Broadway"
+    },
+    "timestamp": "2014-07-14T18:28:02Z"
+  },
+  "725882512": {
+    "id": 725882512,
+    "type": "node",
+    "lat": 49.262343400000006,
+    "lon": -123.08476200000001,
+    "tags": {
+      "bench": "yes",
+      "highway": "bus_stop",
+      "name": "Broadway & St Catherines",
+      "operator": "TransLink",
+      "shelter": "yes"
+    },
+    "timestamp": "2013-10-16T22:50:49Z"
+  },
+  "725882519": {
+    "id": 725882519,
+    "type": "node",
+    "lat": 49.262793300000006,
+    "lon": -123.1004123,
+    "tags": {
+      "bench": "no",
+      "highway": "bus_stop",
+      "name": "Main & Broadway",
+      "ref": "52101",
+      "shelter": "no"
+    },
+    "timestamp": "2012-04-20T01:48:58Z"
+  },
+  "725882536": {
+    "id": 725882536,
+    "type": "node",
+    "lat": 49.2634479,
+    "lon": -123.0695924,
+    "tags": {
+      "bench": "no",
+      "highway": "bus_stop",
+      "name": "Commercial-Broadway Station",
+      "operator": "TransLink",
+      "ref": "58491",
+      "shelter": "no"
+    },
+    "timestamp": "2014-04-19T21:03:18Z"
+  },
+  "729440560": {
+    "id": 729440560,
+    "type": "node",
+    "lat": 49.266889500000005,
+    "lon": -123.24306820000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Allison Road",
+      "operator": "TransLink",
+      "ref": "50605"
+    },
+    "timestamp": "2012-04-07T05:00:49Z"
+  },
+  "730355398": {
+    "id": 730355398,
+    "type": "node",
+    "lat": 49.264070000000004,
+    "lon": -123.24384730000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "UBC Hospital",
+      "operator": "TransLink",
+      "ref": "51479"
+    },
+    "timestamp": "2012-04-07T04:54:00Z"
+  },
+  "743060752": {
+    "id": 743060752,
+    "type": "node",
+    "lat": 49.266826,
+    "lon": -123.24183850000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Allison Road",
+      "operator": "TransLink",
+      "ref": "50268"
+    },
+    "timestamp": "2015-04-25T19:12:13Z"
+  },
+  "768406640": {
+    "id": 768406640,
+    "type": "node",
+    "lat": 49.263328,
+    "lon": -123.1155157,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Broadway - City Hall",
+      "operator": "TransLink",
+      "ref": "58501"
+    },
+    "timestamp": "2012-04-07T05:12:17Z"
+  },
+  "768406641": {
+    "id": 768406641,
+    "type": "node",
+    "lat": 49.263133700000004,
+    "lon": -123.1142597,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Broadway - City Hall",
+      "operator": "TransLink",
+      "ref": "50875"
+    },
+    "timestamp": "2012-04-07T05:12:17Z"
+  },
+  "768417670": {
+    "id": 768417670,
+    "type": "node",
+    "lat": 49.2637124,
+    "lon": -123.13899810000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Broadway & Granville",
+      "operator": "TransLink",
+      "ref": "58239"
+    },
+    "timestamp": "2012-04-07T05:12:16Z"
+  },
+  "768417671": {
+    "id": 768417671,
+    "type": "node",
+    "lat": 49.263510000000004,
+    "lon": -123.13814020000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Broadway & Granville",
+      "operator": "TransLink",
+      "ref": "58503"
+    },
+    "timestamp": "2012-04-07T05:12:16Z"
+  },
+  "806901507": {
+    "id": 806901507,
+    "type": "node",
+    "lat": 49.2682057,
+    "lon": -123.16434260000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Trafalgar and 4th"
+    },
+    "timestamp": "2014-12-10T09:12:52Z"
+  },
+  "806901508": {
+    "id": 806901508,
+    "type": "node",
+    "lat": 49.2684367,
+    "lon": -123.1686985,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Express bus stop"
+    },
+    "timestamp": "2014-12-10T09:12:52Z"
+  },
+  "806902448": {
+    "id": 806902448,
+    "type": "node",
+    "lat": 49.2695166,
+    "lon": -123.168006,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "No. 22 bus stop"
+    },
+    "timestamp": "2010-07-08T17:59:43Z"
+  },
+  "886669501": {
+    "id": 886669501,
+    "type": "node",
+    "lat": 49.268737400000006,
+    "lon": -123.24876350000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "UBC Community Shuttle Terminus",
+      "operator": "TransLink",
+      "wheelchair": "yes"
+    },
+    "timestamp": "2012-04-07T04:47:09Z"
+  },
+  "992235528": {
+    "id": 992235528,
+    "type": "node",
+    "lat": 49.282592,
+    "lon": -123.118042,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Vancouver City Center",
+      "wheelchair": "yes"
+    },
+    "timestamp": "2015-02-26T19:02:41Z"
+  },
+  "993323356": {
+    "id": 993323356,
+    "type": "node",
+    "lat": 49.284681000000006,
+    "lon": -123.121306,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Georgia & Burrard"
+    },
+    "timestamp": "2010-11-24T02:46:47Z"
+  },
+  "993326673": {
+    "id": 993326673,
+    "type": "node",
+    "lat": 49.2928164,
+    "lon": -123.1338779,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Georgia & Denman"
+    },
+    "timestamp": "2013-06-04T00:27:22Z"
+  },
+  "994910457": {
+    "id": 994910457,
+    "type": "node",
+    "lat": 49.281894,
+    "lon": -123.11909700000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Vancouver City Center"
+    },
+    "timestamp": "2011-04-26T04:12:34Z"
+  },
+  "994915200": {
+    "id": 994915200,
+    "type": "node",
+    "lat": 49.278826,
+    "lon": -123.123737,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Granville Street & Nelson Street"
+    },
+    "timestamp": "2010-11-25T17:09:29Z"
+  },
+  "994916966": {
+    "id": 994916966,
+    "type": "node",
+    "lat": 49.276873,
+    "lon": -123.12672800000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Davie Street"
+    },
+    "timestamp": "2010-11-24T17:03:09Z"
+  },
+  "995628784": {
+    "id": 995628784,
+    "type": "node",
+    "lat": 49.286976,
+    "lon": -123.124903,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Georgia & Bute Street"
+    },
+    "timestamp": "2015-03-24T04:55:28Z"
+  },
+  "1001091481": {
+    "id": 1001091481,
+    "type": "node",
+    "lat": 49.2937,
+    "lon": -123.135642,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Georgia & Gilford"
+    },
+    "timestamp": "2010-11-23T16:56:37Z"
+  },
+  "1001092112": {
+    "id": 1001092112,
+    "type": "node",
+    "lat": 49.292292,
+    "lon": -123.13346200000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Georgia & Denman"
+    },
+    "timestamp": "2010-11-23T16:57:16Z"
+  },
+  "1001095593": {
+    "id": 1001095593,
+    "type": "node",
+    "lat": 49.286839,
+    "lon": -123.125078,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Georgia & Bute"
+    },
+    "timestamp": "2010-11-23T17:00:22Z"
+  },
+  "1001648767": {
+    "id": 1001648767,
+    "type": "node",
+    "lat": 49.290765500000006,
+    "lon": -123.13073700000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "West Georgia & Cardero Street"
+    },
+    "timestamp": "2013-06-04T00:27:22Z"
+  },
+  "1002665455": {
+    "id": 1002665455,
+    "type": "node",
+    "lat": 49.28864900000001,
+    "lon": -123.12783100000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Broughton Street"
+    },
+    "timestamp": "2010-11-24T16:52:01Z"
+  },
+  "1002680660": {
+    "id": 1002680660,
+    "type": "node",
+    "lat": 49.2759822,
+    "lon": -123.1281299,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Drake Street",
+      "shelter": "yes"
+    },
+    "timestamp": "2015-01-21T20:21:51Z"
+  },
+  "1002682409": {
+    "id": 1002682409,
+    "type": "node",
+    "lat": 49.266881000000005,
+    "lon": -123.138862,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Cloverleaf & Granville Street",
+      "wheelchair": "yes"
+    },
+    "timestamp": "2011-01-11T00:54:38Z"
+  },
+  "1003316772": {
+    "id": 1003316772,
+    "type": "node",
+    "lat": 49.289411,
+    "lon": -123.128594,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Broughton"
+    },
+    "timestamp": "2010-11-25T02:42:43Z"
+  },
+  "1005594367": {
+    "id": 1005594367,
+    "type": "node",
+    "lat": 49.291252,
+    "lon": -123.13185000000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Bidwell Street"
+    },
+    "timestamp": "2010-11-26T16:49:35Z"
+  },
+  "1006237608": {
+    "id": 1006237608,
+    "type": "node",
+    "lat": 49.282401,
+    "lon": -123.11785400000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Vancouver City Center"
+    },
+    "timestamp": "2011-04-26T04:12:34Z"
+  },
+  "1006238197": {
+    "id": 1006238197,
+    "type": "node",
+    "lat": 49.282259,
+    "lon": -123.11823500000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Vancouver City Center"
+    },
+    "timestamp": "2011-04-26T04:12:34Z"
+  },
+  "1006238910": {
+    "id": 1006238910,
+    "type": "node",
+    "lat": 49.282488,
+    "lon": -123.11840000000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Vancouver City Center"
+    },
+    "timestamp": "2011-04-26T04:12:33Z"
+  },
+  "1014770773": {
+    "id": 1014770773,
+    "type": "node",
+    "lat": 49.284065000000005,
+    "lon": -123.120788,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Burrard"
+    },
+    "timestamp": "2010-12-01T16:59:19Z"
+  },
+  "1235052933": {
+    "id": 1235052933,
+    "type": "node",
+    "lat": 49.256164500000004,
+    "lon": -123.23539210000001,
+    "tags": {
+      "bench": "no",
+      "highway": "bus_stop",
+      "name": "Wesbrook Mall",
+      "operator": "TransLink",
+      "ref": "61043",
+      "shelter": "no"
+    },
+    "timestamp": "2012-04-07T05:22:32Z"
+  },
+  "1260309702": {
+    "id": 1260309702,
+    "type": "node",
+    "lat": 49.2646772,
+    "lon": -123.24384420000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "UBC Hospital",
+      "operator": "TransLink"
+    },
+    "timestamp": "2012-04-07T04:54:00Z"
+  },
+  "1260309703": {
+    "id": 1260309703,
+    "type": "node",
+    "lat": 49.2643422,
+    "lon": -123.16849470000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "MacDonald & Broadway"
+    },
+    "timestamp": "2011-04-27T19:01:02Z"
+  },
+  "1262378176": {
+    "id": 1262378176,
+    "type": "node",
+    "lat": 49.2629874,
+    "lon": -123.10164440000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Main & Broadway"
+    },
+    "timestamp": "2011-04-27T19:00:56Z"
+  },
+  "1262378177": {
+    "id": 1262378177,
+    "type": "node",
+    "lat": 49.2632094,
+    "lon": -123.12022780000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Heather & Broadway"
+    },
+    "timestamp": "2012-04-20T00:17:44Z"
+  },
+  "1262378181": {
+    "id": 1262378181,
+    "type": "node",
+    "lat": 49.2634197,
+    "lon": -123.12235740000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Willow & Broadway"
+    },
+    "timestamp": "2011-04-27T19:00:56Z"
+  },
+  "1262378186": {
+    "id": 1262378186,
+    "type": "node",
+    "lat": 49.26794760000001,
+    "lon": -123.24714300000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Bay 2",
+      "operator": "TransLink",
+      "ref": "59266",
+      "wheelchair": "yes"
+    },
+    "timestamp": "2015-04-25T19:12:13Z"
+  },
+  "1702183514": {
+    "id": 1702183514,
+    "type": "node",
+    "lat": 49.2346882,
+    "lon": -123.1815631,
+    "tags": {
+      "bench": "no",
+      "highway": "bus_stop",
+      "name": "West 41st Avenue & Collingwood Street",
+      "note": "Stop ID: 50374",
+      "operator": "TransLink",
+      "shelter": "no"
+    },
+    "timestamp": "2013-05-20T06:45:48Z"
+  },
+  "1722557992": {
+    "id": 1722557992,
+    "type": "node",
+    "lat": 49.2674755,
+    "lon": -123.2466998,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Bay 1",
+      "operator": "TransLink",
+      "ref": "59265",
+      "wheelchair": "yes"
+    },
+    "timestamp": "2015-04-25T19:12:13Z"
+  },
+  "1722557993": {
+    "id": 1722557993,
+    "type": "node",
+    "lat": 49.2679173,
+    "lon": -123.24747140000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Bay 10",
+      "operator": "TransLink",
+      "ref": "59272",
+      "wheelchair": "yes"
+    },
+    "timestamp": "2015-04-25T19:12:13Z"
+  },
+  "1722557998": {
+    "id": 1722557998,
+    "type": "node",
+    "lat": 49.2677695,
+    "lon": -123.24735810000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Bay 11",
+      "operator": "TransLink",
+      "ref": "59271",
+      "wheelchair": "yes"
+    },
+    "timestamp": "2015-04-25T19:12:13Z"
+  },
+  "1722558012": {
+    "id": 1722558012,
+    "type": "node",
+    "lat": 49.2681562,
+    "lon": -123.24728830000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Bay 3",
+      "operator": "TransLink",
+      "ref": "59267",
+      "wheelchair": "yes"
+    },
+    "timestamp": "2015-04-25T19:12:13Z"
+  },
+  "1722558019": {
+    "id": 1722558019,
+    "type": "node",
+    "lat": 49.2680073,
+    "lon": -123.24761260000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Bay 4",
+      "operator": "TransLink",
+      "ref": "59267",
+      "wheelchair": "yes"
+    },
+    "timestamp": "2015-04-25T19:12:13Z"
+  },
+  "1722558026": {
+    "id": 1722558026,
+    "type": "node",
+    "lat": 49.267326800000006,
+    "lon": -123.2465557,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "UBC Bus Loop (Bay 1A)",
+      "operator": "TransLink",
+      "wheelchair": "yes"
+    },
+    "timestamp": "2015-04-25T19:12:14Z"
+  },
+  "1722558029": {
+    "id": 1722558029,
+    "type": "node",
+    "lat": 49.268664900000005,
+    "lon": -123.2480594,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Bay 6",
+      "operator": "TransLink",
+      "ref": "59270",
+      "wheelchair": "yes"
+    },
+    "timestamp": "2015-04-25T19:12:13Z"
+  },
+  "1722558030": {
+    "id": 1722558030,
+    "type": "node",
+    "lat": 49.2684924,
+    "lon": -123.24787260000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Bay 7",
+      "operator": "TransLink",
+      "ref": "59275",
+      "wheelchair": "yes"
+    },
+    "timestamp": "2015-04-25T19:12:14Z"
+  },
+  "1722558035": {
+    "id": 1722558035,
+    "type": "node",
+    "lat": 49.268241800000006,
+    "lon": -123.24769810000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Bay 8",
+      "operator": "TransLink",
+      "ref": "59274",
+      "wheelchair": "yes"
+    },
+    "timestamp": "2015-04-25T19:12:14Z"
+  },
+  "1722558054": {
+    "id": 1722558054,
+    "type": "node",
+    "lat": 49.2680773,
+    "lon": -123.24758290000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Bay 9",
+      "operator": "TransLink",
+      "ref": "59273",
+      "wheelchair": "yes"
+    },
+    "timestamp": "2015-04-25T19:12:14Z"
+  },
+  "1722586998": {
+    "id": 1722586998,
+    "type": "node",
+    "lat": 49.263430500000005,
+    "lon": -123.18744500000001,
+    "tags": {
+      "bench": "yes",
+      "highway": "bus_stop",
+      "name": "10th & Alma",
+      "operator": "TransLink",
+      "shelter": "yes",
+      "wheelchair": "yes"
+    },
+    "timestamp": "2012-04-19T07:13:01Z"
+  },
+  "1722586999": {
+    "id": 1722586999,
+    "type": "node",
+    "lat": 49.2635568,
+    "lon": -123.19653840000001,
+    "tags": {
+      "bench": "yes",
+      "highway": "bus_stop",
+      "name": "10th & Camosun",
+      "operator": "TransLink",
+      "shelter": "yes",
+      "wheelchair": "yes"
+    },
+    "timestamp": "2012-04-19T07:13:01Z"
+  },
+  "1722590745": {
+    "id": 1722590745,
+    "type": "node",
+    "lat": 49.2642717,
+    "lon": -123.1852331,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Alma & Broadway",
+      "operator": "TransLink",
+      "ref": "58037"
+    },
+    "timestamp": "2012-04-19T07:20:02Z"
+  },
+  "1723405964": {
+    "id": 1723405964,
+    "type": "node",
+    "lat": 49.2635142,
+    "lon": -123.140369,
+    "tags": {
+      "bench": "yes",
+      "highway": "bus_stop",
+      "name": "Broadway & Fir",
+      "operator": "TransLink",
+      "shelter": "yes"
+    },
+    "timestamp": "2012-04-19T23:13:47Z"
+  },
+  "1723435754": {
+    "id": 1723435754,
+    "type": "node",
+    "lat": 49.2632375,
+    "lon": -123.12352310000001,
+    "tags": {
+      "bench": "yes",
+      "highway": "bus_stop",
+      "name": "Broadway & Laurel",
+      "shelter": "yes"
+    },
+    "timestamp": "2012-04-20T00:13:08Z"
+  },
+  "1723438404": {
+    "id": 1723438404,
+    "type": "node",
+    "lat": 49.2632132,
+    "lon": -123.12089200000001,
+    "tags": {
+      "bench": "yes",
+      "highway": "bus_stop",
+      "name": "Broadway",
+      "note": "Name on sign is just \"Broadway\"",
+      "operator": "TransLink",
+      "shelter": "yes"
+    },
+    "timestamp": "2012-04-20T00:21:30Z"
+  },
+  "1723548140": {
+    "id": 1723548140,
+    "type": "node",
+    "lat": 49.262265400000004,
+    "lon": -123.0762923,
+    "tags": {
+      "bench": "yes",
+      "highway": "bus_stop",
+      "name": "Broadway & Clark",
+      "ref": "58499",
+      "shelter": "yes"
+    },
+    "timestamp": "2012-04-20T02:45:10Z"
+  },
+  "2442092113": {
+    "id": 2442092113,
+    "type": "node",
+    "lat": 49.2077291,
+    "lon": -123.0481804,
+    "tags": {
+      "bus": "yes",
+      "highway": "bus_stop",
+      "name": "WESTBOUND SE MARINE DR AT JELLICOE ST",
+      "operator": "TransLink",
+      "ref": "51797",
+      "route_ref": "100",
+      "shelter": "yes"
+    },
+    "timestamp": "2013-09-02T02:01:29Z"
+  },
+  "2442092114": {
+    "id": 2442092114,
+    "type": "node",
+    "lat": 49.2075607,
+    "lon": -123.0471804,
+    "tags": {
+      "bus": "yes",
+      "highway": "bus_stop",
+      "name": "EASTBOUND SE MARINE DR AT JELLICOE ST",
+      "operator": "Translink",
+      "ref": "51836",
+      "route_ref": "100",
+      "shelter": "no"
+    },
+    "timestamp": "2013-09-02T02:01:29Z"
+  },
+  "2672527820": {
+    "id": 2672527820,
+    "type": "node",
+    "lat": 49.262578600000005,
+    "lon": -123.0936698,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "St George and Broadway",
+      "operator": "BC Transit"
+    },
+    "timestamp": "2014-02-15T07:46:24Z"
+  },
+  "2940018981": {
+    "id": 2940018981,
+    "type": "node",
+    "lat": 49.265738500000005,
+    "lon": -123.24843320000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "14 Bus Stop",
+      "operator": "Translink"
+    },
+    "timestamp": "2015-04-30T05:57:21Z"
+  },
+  "3001429533": {
+    "id": 3001429533,
+    "type": "node",
+    "lat": 49.274254000000006,
+    "lon": -123.11779000000001,
+    "tags": {
+      "covered": "yes",
+      "fixme": "59916",
+      "highway": "bus_stop",
+      "name": "Pacific Bvld & Boathouse Mews",
+      "operator": "TransLink",
+      "wheelchair": "yes"
+    },
+    "timestamp": "2014-08-06T23:20:11Z"
+  },
+  "3190360575": {
+    "id": 3190360575,
+    "type": "node",
+    "lat": 49.235266300000006,
+    "lon": -123.19763180000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "WB SW Marine Dr FS Camosun St",
+      "operator": "Translink",
+      "shelter": "no"
+    },
+    "timestamp": "2014-11-16T17:58:41Z"
+  },
+  "3190360576": {
+    "id": 3190360576,
+    "type": "node",
+    "lat": 49.2375186,
+    "lon": -123.2059402,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "WB SW Marine Dr at Kullahun Dr",
+      "operator": "Translink",
+      "shelter": "no"
+    },
+    "timestamp": "2014-11-16T17:58:41Z"
+  },
+  "3456757226": {
+    "id": 3456757226,
+    "type": "node",
+    "lat": 49.2682797,
+    "lon": -123.1678974,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Express bus stop"
+    },
+    "timestamp": "2015-04-15T03:02:26Z"
+  },
+  "3476035321": {
+    "id": 3476035321,
+    "type": "node",
+    "lat": 49.2859149,
+    "lon": -123.11253370000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Waterfront Station",
+      "operator": "TransLink",
+      "ref": "58202",
+      "wheelchair": "yes"
+    },
+    "timestamp": "2015-04-25T06:35:28Z"
+  },
+  "3477055511": {
+    "id": 3477055511,
+    "type": "node",
+    "lat": 49.268401600000004,
+    "lon": -123.24788000000001,
+    "tags": {
+      "highway": "bus_stop",
+      "name": "Bay 5",
+      "operator": "TransLink",
+      "ref": "59267",
+      "wheelchair": "yes"
+    },
+    "timestamp": "2015-04-25T19:11:51Z"
+  },
+  "3478227247": {
+    "id": 3478227247,
+    "type": "node",
+    "lat": 49.2485384,
+    "lon": -123.0562074,
+    "tags": {
+      "bench": "yes",
+      "bicycle": "yes",
+      "highway": "bus_stop",
+      "name": "Nanaimo Station (Bay 2)",
+      "operator": "TransLink",
+      "ref": "51529",
+      "shelter": "yes",
+      "wheelchair": "yes"
+    },
+    "timestamp": "2015-04-26T10:43:28Z"
+  },
+  "3478227248": {
+    "id": 3478227248,
+    "type": "node",
+    "lat": 49.248699,
+    "lon": -123.05611750000001,
+    "tags": {
+      "bench": "yes",
+      "bicycle": "yes",
+      "highway": "bus_stop",
+      "is_in:city": "Vancouver",
+      "is_in:country": "Canada",
+      "is_in:province": "British Columbia",
+      "name": "Nanaimo Station (Bay 3)",
+      "operator": "TransLink",
+      "ref": "51560",
+      "shelter": "yes",
+      "wheelchair": "yes"
+    },
+    "timestamp": "2015-04-26T10:43:28Z"
+  },
+  "3488069331": {
+    "id": 3488069331,
+    "type": "node",
+    "lat": 49.265739100000005,
+    "lon": -123.2486063,
+    "tags": {
+      "bench": "yes",
+      "bicycle": "yes",
+      "highway": "bus_stop",
+      "name": "Bay 12",
+      "note": "UBC Trolley-bus Loop",
+      "operator": "Translink",
+      "ref": "58895",
+      "shelter": "yes",
+      "wheelchair": "yes"
+    },
+    "timestamp": "2015-04-30T05:55:45Z"
+  },
+  "3488069332": {
+    "id": 3488069332,
+    "type": "node",
+    "lat": 49.265765300000005,
+    "lon": -123.2486157,
+    "tags": {
+      "bench": "yes",
+      "bicycle": "yes",
+      "highway": "bus_stop",
+      "name": "Bay 12",
+      "operator": "Translink",
+      "ref": "58895",
+      "shelter": "yes",
+      "wheelchair": "yes"
+    },
+    "timestamp": "2015-04-30T05:55:45Z"
+  },
+  "3488069333": {
+    "id": 3488069333,
+    "type": "node",
+    "lat": 49.265841200000004,
+    "lon": -123.24793600000001,
+    "tags": {
+      "bench": "yes",
+      "bicycle": "yes",
+      "highway": "bus_stop",
+      "name": "Bay 13",
+      "note": "UBC Trolley-bus Loop",
+      "operator": "TransLink",
+      "ref": "61701",
+      "shelter": "yes",
+      "wheelchair": "yes"
+    },
+    "timestamp": "2015-04-30T05:55:45Z"
+  },
+  "3488069334": {
+    "id": 3488069334,
+    "type": "node",
+    "lat": 49.265867400000005,
+    "lon": -123.2479454,
+    "tags": {
+      "bench": "yes",
+      "bicycle": "yes",
+      "highway": "bus_stop",
+      "name": "Bay 13",
+      "operator": "TransLink",
+      "ref": "61701",
+      "shelter": "yes",
+      "wheelchair": "yes"
+    },
+    "timestamp": "2015-04-30T05:55:45Z"
+  },
+  "3488069335": {
+    "id": 3488069335,
+    "type": "node",
+    "lat": 49.2659432,
+    "lon": -123.24726570000001,
+    "tags": {
+      "bench": "yes",
+      "bicycle": "yes",
+      "highway": "bus_stop",
+      "name": "Bay 14",
+      "note": "UBC Trolley-bus Loop",
+      "operator": "Translink",
+      "ref": "-----",
+      "shelter": "yes",
+      "wheelchair": "yes"
+    },
+    "timestamp": "2015-04-30T05:55:45Z"
+  },
+  "3488069336": {
+    "id": 3488069336,
+    "type": "node",
+    "lat": 49.265969500000004,
+    "lon": -123.24727510000001,
+    "tags": {
+      "bench": "yes",
+      "bicycle": "yes",
+      "highway": "bus_stop",
+      "name": "Bay 14",
+      "operator": "Translink",
+      "ref": "-----",
+      "shelter": "yes",
+      "wheelchair": "yes"
+    },
+    "timestamp": "2015-04-30T05:55:45Z"
+  }
+}

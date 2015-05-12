@@ -13,28 +13,52 @@ var fs = require('fs'),
     naivedb = require('naivedb'),
     pbf2json = require('../index');
 
-var tmpfile = tmp.fileSync({ postfix: '.json' }).name,
-    pbfPath = path.resolve(__dirname) + '/vancouver_canada.osm.pbf',
-    expectedPath = path.resolve(__dirname) + '/vancouver.extract.expected.json';
+function test( name, tags, cb ){
 
-fs.writeFileSync( tmpfile, '{}' ); // init naivedb
-var db = naivedb(tmpfile);
+  var tmpfile = tmp.fileSync({ postfix: '.json' }).name,
+      pbfPath = path.resolve(__dirname) + '/vancouver_canada.osm.pbf',
+      expectedPath = path.resolve(__dirname) + '/fixtures/' + name + '.json';
 
-pbf2json.createReadStream({ file: pbfPath, tags: ['amenity'] })
-  .pipe( db.createWriteStream('id') )
-  .on('finish', function assert(){
+  fs.writeFileSync( tmpfile, '{}' ); // init naivedb
+  var db = naivedb(tmpfile);
 
-    db.writeSync();
+  pbf2json.createReadStream({ file: pbfPath, tags: tags })
+    .pipe( db.createWriteStream('id') )
+    .on('finish', function assert(){
 
-    var actual = JSON.parse( fs.readFileSync( tmpfile, { encoding: 'utf8' } ) ),
-        expected = JSON.parse( fs.readFileSync( expectedPath, { encoding: 'utf8' } ) );
+      db.writeSync();
 
-    var diff = deep.diff( actual, expected );
+      var actual = JSON.parse( fs.readFileSync( tmpfile, { encoding: 'utf8' } ) ),
+          expected = JSON.parse( fs.readFileSync( expectedPath, { encoding: 'utf8' } ) );
 
-    if( diff ){
-      console.log( 'end-to-end error:', tmpfile );
-      console.log( 'actual !== expected' );
-      console.log( diff );
-      process.exit(1);
-    }
-  });
+      var diff = deep.diff( actual, expected );
+
+      if( diff ){
+        console.log( 'end-to-end error:', tmpfile, name );
+        console.log( 'actual !== expected' );
+        console.log( diff );
+        process.exit(1);
+      }
+
+      cb();
+    });
+
+}
+
+var tests = [
+  [ 'single',     ['building'] ],
+  [ 'multiple',   ['building','shop'] ],
+  [ 'colon',      ['addr:housenumber'] ],
+  [ 'group',      ['addr:housenumber+addr:street'] ],
+  [ 'multigroup', ['highway+name','waterway+name'] ],
+  [ 'value',      ['amenity~toilets'] ],
+  [ 'multivalue', ['amenity~toilets','amenity~kindergarten'] ]
+];
+
+function next(){
+  var t = tests.shift();
+  if( t ){ test( t[0], t[1], next ); }
+}
+
+// run each test synchronously
+next();
