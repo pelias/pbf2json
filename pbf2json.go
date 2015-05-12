@@ -254,7 +254,7 @@ func openLevelDB(path string) *leveldb.DB {
 func matchTagsAgainstCompulsoryTagList(tags map[string]string, tagList []string) bool {
   for _, name := range tagList {
 
-    feature := strings.Split(name,"$")
+    feature := strings.Split(name,"~")
     foundVal, foundKey := tags[feature[0]]
 
     // key check
