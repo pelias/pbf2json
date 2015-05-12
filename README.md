@@ -132,7 +132,7 @@ If you would like to compile a version of this lib for an architecture which isn
 
 ```bash
 go get;
-go build osm2pbf.go;
+go build pbf2json.go;
 chmod +x pbf2json;
 mv pbf2json build/pbf2json.{platform}-{arch};
 ```
