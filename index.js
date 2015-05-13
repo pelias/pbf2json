@@ -9,7 +9,9 @@ var util = require('util'),
 
 function errorHandler( name ){
   return function( data ){
-    console.log( util.format( '[%s]:', name ), data.toString('utf8') );
+    data.toString('utf8').trim().split('\n').forEach( function( line ){
+      console.log( util.format( '[%s]:', name ), line );
+    });
   };
 }
 
@@ -41,7 +43,7 @@ function createReadStream( config ){
   decoder.on( 'error', errorHandler( 'decoder' ) );
 
   // print error and exit on stderr
-  proc.stderr.on( 'data', errorHandler( 'stderr' ) );
+  proc.stderr.on( 'data', errorHandler( 'pbf2json' ) );
 
   // terminate the process and pipeline
   decoder.kill = function(){
