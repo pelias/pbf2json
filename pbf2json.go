@@ -113,7 +113,7 @@ func run(d *osmpbf.Decoder, db *leveldb.DB, config Settings){
             latlons, err := cacheLookup(db, v)
 
             // skip ways which fail to denormalize
-            if err == nil { break }
+            if err != nil { break }
 
             onWay(v,latlons)
           }
