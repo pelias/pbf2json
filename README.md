@@ -150,7 +150,7 @@ Since version `3.0` centroids are also computed for each way:
 
 ### Leveldb
 
-This library used `leveldb` to store the lat/lon info about nodes so that it can denormalize the ways for you.
+This library uses `leveldb` to store the lat/lon info about nodes so that it can denormalize the ways for you.
 
 By default the leveldb path is set to `/tmp`, you can change where it stores the data with a flag:
 
