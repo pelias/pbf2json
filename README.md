@@ -94,6 +94,60 @@ When processing the ways, the node refs are looked up for you and the lat/lon va
 }
 ```
 
+Since version `3.0` centroids are also computed for each way:
+
+```bash
+{
+  "id": 301435061,
+  "type": "way",
+  "tags": {
+    "addr:housenumber": "33",
+    "addr:postcode": "N5 1TH",
+    "addr:street": "Highbury Park",
+    "building": "residential"
+  },
+  "centroid": {
+    "lat": "51.554679",
+    "lon": "-0.098485"
+  },
+  "nodes": [
+    {
+      "lat": "51.554663",
+      "lon": "-0.098369"
+    },
+    {
+      "lat": "51.554657",
+      "lon": "-0.098529"
+    },
+    {
+      "lat": "51.554656",
+      "lon": "-0.098592"
+    },
+    {
+      "lat": "51.554676",
+      "lon": "-0.098590"
+    },
+    {
+      "lat": "51.554680",
+      "lon": "-0.098529"
+    },
+    {
+      "lat": "51.554715",
+      "lon": "-0.098529"
+    },
+    {
+      "lat": "51.554720",
+      "lon": "-0.098369"
+    },
+    {
+      "lat": "51.554663",
+      "lon": "-0.098369"
+    }
+  ],
+  "timestamp": "0001-01-01T00:00:00Z"
+}
+```
+
 ### Leveldb
 
 This library used `leveldb` to store the lat/lon info about nodes so that it can denormalize the ways for you.

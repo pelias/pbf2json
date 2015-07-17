@@ -3,6 +3,7 @@ package main
 
 import "encoding/json"
 import "fmt"
+import "flag"
 import "bytes"
 import "os"
 import "log"
@@ -13,7 +14,8 @@ import "strings"
 import "strconv"
 import "github.com/qedus/osmpbf"
 import "github.com/syndtr/goleveldb/leveldb"
-import "flag"
+import "github.com/paulmach/go.geo"
+import "math"
 
 type Settings struct {
   PbfPath           string
@@ -141,7 +143,10 @@ func run(d *osmpbf.Decoder, db *leveldb.DB, config Settings){
             // skip ways which fail to denormalize
             if err != nil { break }
 
-            onWay(v,latlons)
+            // compute centroid
+            var centroid = computeCentroid(latlons);
+
+            onWay(v,latlons,centroid)
           }
 
         case *osmpbf.Relation:
@@ -182,12 +187,13 @@ type JsonWay struct {
   Type      string              `json:"type"`
   Tags      map[string]string   `json:"tags"`
   // NodeIDs   []int64             `json:"refs"`
+  Centroid  map[string]string   `json:"centroid"`
   Nodes     []map[string]string `json:"nodes"`
   Timestamp time.Time           `json:"timestamp"`
 }
 
-func onWay(way *osmpbf.Way, latlons []map[string]string){
-  marshall := JsonWay{ way.ID, "way", way.Tags/*, way.NodeIDs*/, latlons, way.Timestamp }
+func onWay(way *osmpbf.Way, latlons []map[string]string, centroid map[string]string){
+  marshall := JsonWay{ way.ID, "way", way.Tags/*, way.NodeIDs*/, centroid, latlons, way.Timestamp }
   json, _ := json.Marshal(marshall)
   fmt.Println(string(json))
 }
@@ -342,4 +348,58 @@ func hasTags(tags map[string]string) bool {
     return false
   }
   return true
+}
+
+// compute the centroid of a way
+func computeCentroid(latlons []map[string]string) map[string]string {
+
+  points := geo.PointSet{}
+  for _, each := range latlons {
+    var lon, _ = strconv.ParseFloat( each["lon"], 64 );
+    var lat, _ = strconv.ParseFloat( each["lat"], 64 );
+    points.Push( geo.NewPoint( lon, lat ))
+  }
+
+  var compute = getCentroid(points);
+
+  var centroid = make(map[string]string)
+  centroid["lat"] = strconv.FormatFloat(compute.Lat(),'f',6,64)
+  centroid["lon"] = strconv.FormatFloat(compute.Lng(),'f',6,64)
+
+  return centroid
+}
+
+// compute the centroid of a polygon set
+// using a spherical co-ordinate system
+func getCentroid(ps geo.PointSet) *geo.Point {
+
+  X := 0.0
+  Y := 0.0
+  Z := 0.0
+
+  var toRad = math.Pi / 180
+  var fromRad = 180 / math.Pi
+
+  for _, point := range ps {
+
+    var lon = point[0] * toRad
+    var lat = point[1] * toRad
+
+    X += math.Cos(lat) * math.Cos(lon)
+    Y += math.Cos(lat) * math.Sin(lon)
+    Z += math.Sin(lat)
+  }
+
+  numPoints := float64(len(ps))
+  X = X / numPoints
+  Y = Y / numPoints
+  Z = Z / numPoints
+
+  var lon = math.Atan2(Y, X)
+  var hyp = math.Sqrt(X * X + Y * Y)
+  var lat = math.Atan2(Z, hyp)
+
+  var centroid = geo.NewPoint(lon * fromRad, lat * fromRad)
+
+  return centroid;
 }
