@@ -3,6 +3,7 @@ package main
 
 import "encoding/json"
 import "fmt"
+import "flag"
 import "bytes"
 import "os"
 import "log"
@@ -13,12 +14,14 @@ import "strings"
 import "strconv"
 import "github.com/qedus/osmpbf"
 import "github.com/syndtr/goleveldb/leveldb"
-import "flag"
+import "github.com/paulmach/go.geo"
+import "math"
 
 type Settings struct {
   PbfPath           string
   LevedbPath        string
   Tags              map[string][]string
+  BatchSize         int
 }
 
 func getSettings() Settings {
@@ -26,7 +29,7 @@ func getSettings() Settings {
   // command line flags
   leveldbPath := flag.String("leveldb", "/tmp", "path to leveldb directory")
   tagList := flag.String("tags", "", "comma-separated list of valid tags, group AND conditions with a +")
-  // parseAddresses := flag.Bool("addresses", false, "import addresses true/false")
+  batchSize := flag.Int("batch", 50000, "batch leveldb writes in batches of this size")
 
   flag.Parse()
   args := flag.Args();
@@ -49,7 +52,7 @@ func getSettings() Settings {
   // fmt.Print(conditions, len(conditions))
   // os.Exit(1)
 
-  return Settings{ args[0], *leveldbPath, conditions }
+  return Settings{ args[0], *leveldbPath, conditions, *batchSize }
 }
 
 func main() {
@@ -75,6 +78,8 @@ func main() {
 
 func run(d *osmpbf.Decoder, db *leveldb.DB, config Settings){
 
+  batch := new(leveldb.Batch)
+
   var nc, wc, rc uint64
   for {
     if v, err := d.Decode(); err == io.EOF {
@@ -89,8 +94,22 @@ func run(d *osmpbf.Decoder, db *leveldb.DB, config Settings){
           // inc count
           nc++
 
+          // ----------------
           // write to leveldb
-          cacheStore(db, v)
+          // ----------------
+
+          // write immediately
+          // cacheStore(db, v)
+
+          // write in batches
+          cacheQueue(batch, v)
+          if batch.Len() > config.BatchSize {
+            cacheFlush(db, batch)
+          }
+
+          // ----------------
+          // handle tags
+          // ----------------
 
           if !hasTags(v.Tags) { break }
 
@@ -100,6 +119,15 @@ func run(d *osmpbf.Decoder, db *leveldb.DB, config Settings){
           }
         
         case *osmpbf.Way:
+
+          // ----------------
+          // write to leveldb
+          // ----------------
+
+          // flush outstanding batches
+          if batch.Len() > 1 {
+            cacheFlush(db, batch)
+          }
 
           // inc count
           wc++
@@ -115,7 +143,10 @@ func run(d *osmpbf.Decoder, db *leveldb.DB, config Settings){
             // skip ways which fail to denormalize
             if err != nil { break }
 
-            onWay(v,latlons)
+            // compute centroid
+            var centroid = computeCentroid(latlons);
+
+            onWay(v,latlons,centroid)
           }
 
         case *osmpbf.Relation:
@@ -156,12 +187,13 @@ type JsonWay struct {
   Type      string              `json:"type"`
   Tags      map[string]string   `json:"tags"`
   // NodeIDs   []int64             `json:"refs"`
+  Centroid  map[string]string   `json:"centroid"`
   Nodes     []map[string]string `json:"nodes"`
   Timestamp time.Time           `json:"timestamp"`
 }
 
-func onWay(way *osmpbf.Way, latlons []map[string]string){
-  marshall := JsonWay{ way.ID, "way", way.Tags/*, way.NodeIDs*/, latlons, way.Timestamp }
+func onWay(way *osmpbf.Way, latlons []map[string]string, centroid map[string]string){
+  marshall := JsonWay{ way.ID, "way", way.Tags/*, way.NodeIDs*/, centroid, latlons, way.Timestamp }
   json, _ := json.Marshal(marshall)
   fmt.Println(string(json))
 }
@@ -170,12 +202,28 @@ func onRelation(relation *osmpbf.Relation){
   // do nothing (yet)
 }
 
+// write to leveldb immediately
 func cacheStore(db *leveldb.DB, node *osmpbf.Node){
   id, val := formatLevelDB(node)
   err := db.Put([]byte(id), []byte(val), nil)
   if err != nil {
     log.Fatal(err)
   }
+}
+
+// queue a leveldb write in a batch
+func cacheQueue(batch *leveldb.Batch, node *osmpbf.Node){
+  id, val := formatLevelDB(node)
+  batch.Put([]byte(id), []byte(val))
+}
+
+// flush a leveldb batch to database and reset batch to 0
+func cacheFlush(db *leveldb.DB, batch *leveldb.Batch){
+  err := db.Write(batch, nil)
+  if err != nil {
+    log.Fatal(err)
+  }
+  batch.Reset()
 }
 
 func cacheLookup(db *leveldb.DB, way *osmpbf.Way) ([]map[string]string, error) {
@@ -251,6 +299,7 @@ func openLevelDB(path string) *leveldb.DB {
 //     keys = append(keys, k)
 // }
 
+// check tags contain features from a whitelist
 func matchTagsAgainstCompulsoryTagList(tags map[string]string, tagList []string) bool {
   for _, name := range tagList {
 
@@ -273,6 +322,7 @@ func matchTagsAgainstCompulsoryTagList(tags map[string]string, tagList []string)
   return true
 }
 
+// check tags contain features from a groups of whitelists
 func containsValidTags(tags map[string]string, group map[string][]string) bool {
   for _, list := range group {
     if matchTagsAgainstCompulsoryTagList( tags, list ){
@@ -282,6 +332,7 @@ func containsValidTags(tags map[string]string, group map[string][]string) bool {
   return false
 }
 
+// trim leading/trailing spaces from keys and values
 func trimTags(tags map[string]string) map[string]string {
   trimmed := make(map[string]string)
   for k, v := range tags {
@@ -290,6 +341,7 @@ func trimTags(tags map[string]string) map[string]string {
   return trimmed
 }
 
+// check if a tag list is empty or not
 func hasTags(tags map[string]string) bool {
   n := len(tags)
   if n == 0 {
@@ -298,48 +350,56 @@ func hasTags(tags map[string]string) bool {
   return true
 }
 
-// func hasTag(tags map[string]string, name string) bool {
-//   _, found := tags[name]
-//   return found
-// }
+// compute the centroid of a way
+func computeCentroid(latlons []map[string]string) map[string]string {
 
-// func isAddress(tags map[string]string) bool {
-//   _, test1 := tags["addr:housenumber"]
-//   _, test2 := tags["addr:street"]
-//   return test1 && test2
-// }
+  points := geo.PointSet{}
+  for _, each := range latlons {
+    var lon, _ = strconv.ParseFloat( each["lon"], 64 );
+    var lat, _ = strconv.ParseFloat( each["lat"], 64 );
+    points.Push( geo.NewPoint( lon, lat ))
+  }
 
-// func isInFeatureList(tags map[string]string, features []string) bool {
-//   for _, each := range features {
-//     _, test := tags[each]
-//     if test {
-//       return true
-//     }
-//   }
-//   return false
-// }
+  var compute = getCentroid(points);
 
-// func getFeatures() []string{
-//   features := []string{
-//     "amenity",
-//     "building",
-//     "shop",
-//     "office",
-//     "public_transport",
-//     "cuisine",
-//     "railway",
-//     "sport",
-//     "natural",
-//     "tourism",
-//     "leisure",
-//     "historic",
-//     "man_made",
-//     "landuse",
-//     "waterway",
-//     "aerialway",
-//     "aeroway",
-//     "craft",
-//     "military",
-//   }
-//   return features
-// }
+  var centroid = make(map[string]string)
+  centroid["lat"] = strconv.FormatFloat(compute.Lat(),'f',6,64)
+  centroid["lon"] = strconv.FormatFloat(compute.Lng(),'f',6,64)
+
+  return centroid
+}
+
+// compute the centroid of a polygon set
+// using a spherical co-ordinate system
+func getCentroid(ps geo.PointSet) *geo.Point {
+
+  X := 0.0
+  Y := 0.0
+  Z := 0.0
+
+  var toRad = math.Pi / 180
+  var fromRad = 180 / math.Pi
+
+  for _, point := range ps {
+
+    var lon = point[0] * toRad
+    var lat = point[1] * toRad
+
+    X += math.Cos(lat) * math.Cos(lon)
+    Y += math.Cos(lat) * math.Sin(lon)
+    Z += math.Sin(lat)
+  }
+
+  numPoints := float64(len(ps))
+  X = X / numPoints
+  Y = Y / numPoints
+  Z = Z / numPoints
+
+  var lon = math.Atan2(Y, X)
+  var hyp = math.Sqrt(X * X + Y * Y)
+  var lat = math.Atan2(Z, hyp)
+
+  var centroid = geo.NewPoint(lon * fromRad, lat * fromRad)
+
+  return centroid;
+}

@@ -34,9 +34,9 @@ function test( name, tags, cb ){
       var diff = deep.diff( actual, expected );
 
       if( diff ){
-        console.log( 'end-to-end error:', tmpfile, name );
-        console.log( 'actual !== expected' );
         console.log( diff );
+        console.error( 'end-to-end tests failed :(' );
+        console.error( 'contents of', tmpfile, 'do not match expected:', expectedPath );
         process.exit(1);
       }
 
