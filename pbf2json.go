@@ -19,6 +19,7 @@ type Settings struct {
   PbfPath           string
   LevedbPath        string
   Tags              map[string][]string
+  BatchSize         int
 }
 
 func getSettings() Settings {
@@ -26,7 +27,7 @@ func getSettings() Settings {
   // command line flags
   leveldbPath := flag.String("leveldb", "/tmp", "path to leveldb directory")
   tagList := flag.String("tags", "", "comma-separated list of valid tags, group AND conditions with a +")
-  // parseAddresses := flag.Bool("addresses", false, "import addresses true/false")
+  batchSize := flag.Int("batch", 50000, "batch leveldb writes in batches of this size")
 
   flag.Parse()
   args := flag.Args();
@@ -49,7 +50,7 @@ func getSettings() Settings {
   // fmt.Print(conditions, len(conditions))
   // os.Exit(1)
 
-  return Settings{ args[0], *leveldbPath, conditions }
+  return Settings{ args[0], *leveldbPath, conditions, *batchSize }
 }
 
 func main() {
@@ -75,6 +76,8 @@ func main() {
 
 func run(d *osmpbf.Decoder, db *leveldb.DB, config Settings){
 
+  batch := new(leveldb.Batch)
+
   var nc, wc, rc uint64
   for {
     if v, err := d.Decode(); err == io.EOF {
@@ -89,8 +92,22 @@ func run(d *osmpbf.Decoder, db *leveldb.DB, config Settings){
           // inc count
           nc++
 
+          // ----------------
           // write to leveldb
-          cacheStore(db, v)
+          // ----------------
+
+          // write immediately
+          // cacheStore(db, v)
+
+          // write in batches
+          cacheQueue(batch, v)
+          if batch.Len() > config.BatchSize {
+            cacheFlush(db, batch)
+          }
+
+          // ----------------
+          // handle tags
+          // ----------------
 
           if !hasTags(v.Tags) { break }
 
@@ -100,6 +117,15 @@ func run(d *osmpbf.Decoder, db *leveldb.DB, config Settings){
           }
         
         case *osmpbf.Way:
+
+          // ----------------
+          // write to leveldb
+          // ----------------
+
+          // flush outstanding batches
+          if batch.Len() > 1 {
+            cacheFlush(db, batch)
+          }
 
           // inc count
           wc++
@@ -170,12 +196,28 @@ func onRelation(relation *osmpbf.Relation){
   // do nothing (yet)
 }
 
+// write to leveldb immediately
 func cacheStore(db *leveldb.DB, node *osmpbf.Node){
   id, val := formatLevelDB(node)
   err := db.Put([]byte(id), []byte(val), nil)
   if err != nil {
     log.Fatal(err)
   }
+}
+
+// queue a leveldb write in a batch
+func cacheQueue(batch *leveldb.Batch, node *osmpbf.Node){
+  id, val := formatLevelDB(node)
+  batch.Put([]byte(id), []byte(val))
+}
+
+// flush a leveldb batch to database and reset batch to 0
+func cacheFlush(db *leveldb.DB, batch *leveldb.Batch){
+  err := db.Write(batch, nil)
+  if err != nil {
+    log.Fatal(err)
+  }
+  batch.Reset()
 }
 
 func cacheLookup(db *leveldb.DB, way *osmpbf.Way) ([]map[string]string, error) {
@@ -251,6 +293,7 @@ func openLevelDB(path string) *leveldb.DB {
 //     keys = append(keys, k)
 // }
 
+// check tags contain features from a whitelist
 func matchTagsAgainstCompulsoryTagList(tags map[string]string, tagList []string) bool {
   for _, name := range tagList {
 
@@ -273,6 +316,7 @@ func matchTagsAgainstCompulsoryTagList(tags map[string]string, tagList []string)
   return true
 }
 
+// check tags contain features from a groups of whitelists
 func containsValidTags(tags map[string]string, group map[string][]string) bool {
   for _, list := range group {
     if matchTagsAgainstCompulsoryTagList( tags, list ){
@@ -282,6 +326,7 @@ func containsValidTags(tags map[string]string, group map[string][]string) bool {
   return false
 }
 
+// trim leading/trailing spaces from keys and values
 func trimTags(tags map[string]string) map[string]string {
   trimmed := make(map[string]string)
   for k, v := range tags {
@@ -290,6 +335,7 @@ func trimTags(tags map[string]string) map[string]string {
   return trimmed
 }
 
+// check if a tag list is empty or not
 func hasTags(tags map[string]string) bool {
   n := len(tags)
   if n == 0 {
@@ -297,49 +343,3 @@ func hasTags(tags map[string]string) bool {
   }
   return true
 }
-
-// func hasTag(tags map[string]string, name string) bool {
-//   _, found := tags[name]
-//   return found
-// }
-
-// func isAddress(tags map[string]string) bool {
-//   _, test1 := tags["addr:housenumber"]
-//   _, test2 := tags["addr:street"]
-//   return test1 && test2
-// }
-
-// func isInFeatureList(tags map[string]string, features []string) bool {
-//   for _, each := range features {
-//     _, test := tags[each]
-//     if test {
-//       return true
-//     }
-//   }
-//   return false
-// }
-
-// func getFeatures() []string{
-//   features := []string{
-//     "amenity",
-//     "building",
-//     "shop",
-//     "office",
-//     "public_transport",
-//     "cuisine",
-//     "railway",
-//     "sport",
-//     "natural",
-//     "tourism",
-//     "leisure",
-//     "historic",
-//     "man_made",
-//     "landuse",
-//     "waterway",
-//     "aerialway",
-//     "aeroway",
-//     "craft",
-//     "military",
-//   }
-//   return features
-// }
