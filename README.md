@@ -104,6 +104,16 @@ By default the leveldb path is set to `/tmp`, you can change where it stores the
 $ ./build/pbf2json.linux-amd64 -leveldb="/tmp/somewhere"
 ```
 
+### Batched writes
+
+Since version `3.0` writing of node info to leveldb is done in batches to improve performance.
+
+By default the batch size is `50000`, you can change this with the following flag:
+
+```bash
+$ ./build/pbf2json.linux-amd64 -batch="1000"
+```
+
 ### NPM module
 
 ```javascript
