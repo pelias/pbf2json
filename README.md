@@ -197,6 +197,16 @@ go get;
 go run pbf2json.go;
 ```
 
+### Compile source for all supported architecture
+
+If you are doing a release and would like to compile for all supported architectures:
+
+*note* if ithis is your first time doing this please read the notes in './compile.sh' to set it all up on your machine.
+
+```bash
+bash compile.sh;
+``
+
 ### Compile source for a new architecture
 
 If you would like to compile a version of this lib for an architecture which isn't currently supported you can:
