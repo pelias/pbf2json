@@ -205,7 +205,7 @@ If you are doing a release and would like to compile for all supported architect
 
 ```bash
 bash compile.sh;
-``
+```
 
 ### Compile source for a new architecture
 
