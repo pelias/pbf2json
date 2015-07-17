@@ -130,7 +130,7 @@ Make sure `Go` is installed and configured on your system, see: https://gist.git
 ```bash
 sudo apt-get install mercurial;
 go get;
-go run osm2pbf.go;
+go run pbf2json.go;
 ```
 
 ### Compile source for a new architecture
