@@ -6,6 +6,10 @@
       "amenity": "toilets",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.253937",
+      "lon": "-123.061418"
+    },
     "nodes": [
       {
         "lat": "49.253979",
@@ -60,6 +64,10 @@
     "tags": {
       "amenity": "toilets"
     },
+    "centroid": {
+      "lat": "49.293964",
+      "lon": "-123.138530"
+    },
     "nodes": [
       {
         "lat": "49.293994",
@@ -90,6 +98,10 @@
     "tags": {
       "amenity": "toilets",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.256856",
+      "lon": "-123.059346"
     },
     "nodes": [
       {
@@ -122,6 +134,10 @@
       "amenity": "toilets",
       "building": "yes",
       "source": "local_knowledge"
+    },
+    "centroid": {
+      "lat": "49.312408",
+      "lon": "-123.142663"
     },
     "nodes": [
       {
@@ -162,6 +178,10 @@
       "amenity": "toilets",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.282295",
+      "lon": "-123.057497"
+    },
     "nodes": [
       {
         "lat": "49.282325",
@@ -193,6 +213,10 @@
       "amenity": "toilets",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.238798",
+      "lon": "-123.111546"
+    },
     "nodes": [
       {
         "lat": "49.238882",
@@ -223,6 +247,10 @@
     "tags": {
       "amenity": "toilets",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.223102",
+      "lon": "-123.159642"
     },
     "nodes": [
       {
@@ -266,6 +294,10 @@
     "tags": {
       "amenity": "toilets"
     },
+    "centroid": {
+      "lat": "49.236532",
+      "lon": "-123.036686"
+    },
     "nodes": [
       {
         "lat": "49.236496",
@@ -296,6 +328,10 @@
     "tags": {
       "amenity": "toilets",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.237953",
+      "lon": "-123.051427"
     },
     "nodes": [
       {
@@ -328,6 +364,10 @@
       "amenity": "toilets",
       "building": "yes",
       "fee": "no"
+    },
+    "centroid": {
+      "lat": "49.277423",
+      "lon": "-123.150469"
     },
     "nodes": [
       {
@@ -392,6 +432,10 @@
       "amenity": "toilets",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.271750",
+      "lon": "-123.067422"
+    },
     "nodes": [
       {
         "lat": "49.271786",
@@ -447,6 +491,10 @@
       "building:levels": "1",
       "name": "Bridgman Park Washrooms"
     },
+    "centroid": {
+      "lat": "49.312497",
+      "lon": "-123.035072"
+    },
     "nodes": [
       {
         "lat": "49.312538",
@@ -479,6 +527,10 @@
       "building": "civic",
       "building:levels": "1",
       "name": "Inter River Park South Fieldhouse"
+    },
+    "centroid": {
+      "lat": "49.318833",
+      "lon": "-123.027964"
     },
     "nodes": [
       {

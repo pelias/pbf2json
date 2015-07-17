@@ -11,6 +11,10 @@
       "name": "John Oliver Secondary School",
       "website": "http://jo-online.vsb.bc.ca/"
     },
+    "centroid": {
+      "lat": "49.231789",
+      "lon": "-123.092974"
+    },
     "nodes": [
       {
         "lat": "49.231118",
@@ -43,6 +47,10 @@
       "addr:street": "West Mall",
       "building": "yes",
       "name": "Auditorium Annex Offices"
+    },
+    "centroid": {
+      "lat": "49.266444",
+      "lon": "-123.256749"
     },
     "nodes": [
       {
@@ -78,6 +86,10 @@
       "addr:street": "Keefer Street",
       "building": "school",
       "name": "Sir Richard McBride Elementary"
+    },
+    "centroid": {
+      "lat": "49.278784",
+      "lon": "-123.080810"
     },
     "nodes": [
       {
@@ -157,6 +169,10 @@
       "opening_hours": "Mo-Th 10:00-21:00;Fr 10:00-18:00;Sa 10:00-18:00;Su 11:00-18:00",
       "operator": "City of Vancouver",
       "tourism": "attraction"
+    },
+    "centroid": {
+      "lat": "49.279767",
+      "lon": "-123.115556"
     },
     "nodes": [
       {
@@ -347,6 +363,10 @@
       "surface": "grass",
       "website": "http://www.vansouthlbc.zoomshare.com/"
     },
+    "centroid": {
+      "lat": "49.241043",
+      "lon": "-123.085656"
+    },
     "nodes": [
       {
         "lat": "49.241177",
@@ -380,6 +400,10 @@
       "addr:province": "BC",
       "addr:street": "East 32nd Avenue",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.242047",
+      "lon": "-123.103592"
     },
     "nodes": [
       {
@@ -417,6 +441,10 @@
       "phone": "604-257-8680",
       "sport": "swimming;skating",
       "website": "www.hillcrestcentre.ca"
+    },
+    "centroid": {
+      "lat": "49.244068",
+      "lon": "-123.107614"
     },
     "nodes": [
       {
@@ -537,6 +565,10 @@
       "phone": "604-684-1833",
       "website": "http://www.oceanconcrete.com"
     },
+    "centroid": {
+      "lat": "49.271371",
+      "lon": "-123.133590"
+    },
     "nodes": [
       {
         "lat": "49.271536",
@@ -577,6 +609,10 @@
       "addr:housenumber": "874",
       "addr:street": "Whitchurch Street",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.316027",
+      "lon": "-123.049183"
     },
     "nodes": [
       {
@@ -627,6 +663,10 @@
       "landuse": "farm",
       "name": "Botanical Garden Service Yard"
     },
+    "centroid": {
+      "lat": "49.254825",
+      "lon": "-123.247995"
+    },
     "nodes": [
       {
         "lat": "49.254942",
@@ -666,6 +706,10 @@
       "highway": "service",
       "lanes": "1",
       "source": "Geobase_Import_2009"
+    },
+    "centroid": {
+      "lat": "49.216438",
+      "lon": "-123.145842"
     },
     "nodes": [
       {
@@ -750,6 +794,10 @@
       "building:levels": "5",
       "name": "Vancouver Post Office"
     },
+    "centroid": {
+      "lat": "49.280826",
+      "lon": "-123.113987"
+    },
     "nodes": [
       {
         "lat": "49.280676",
@@ -781,6 +829,10 @@
       "addr:housenumber": "2233",
       "building": "yes",
       "name": "Ross House"
+    },
+    "centroid": {
+      "lat": "49.265585",
+      "lon": "-123.242015"
     },
     "nodes": [
       {
@@ -814,6 +866,10 @@
       "building": "yes",
       "name": "Mackenzie House"
     },
+    "centroid": {
+      "lat": "49.264722",
+      "lon": "-123.242059"
+    },
     "nodes": [
       {
         "lat": "49.264525",
@@ -846,6 +902,10 @@
       "addr:street": "Wesbrook Mall",
       "building": "yes",
       "name": "Chaucer Hall"
+    },
+    "centroid": {
+      "lat": "49.264252",
+      "lon": "-123.243100"
     },
     "nodes": [
       {
@@ -886,6 +946,10 @@
       "addr:housenumber": "2280",
       "building": "yes",
       "name": "Keats Hall"
+    },
+    "centroid": {
+      "lat": "49.263410",
+      "lon": "-123.242366"
     },
     "nodes": [
       {
@@ -930,6 +994,10 @@
       "building": "apartments",
       "building:levels": "24",
       "name": "MacDonald House"
+    },
+    "centroid": {
+      "lat": "49.284094",
+      "lon": "-123.141816"
     },
     "nodes": [
       {
@@ -999,6 +1067,10 @@
       "emergency": "yes",
       "name": "St. Paul's Hospital"
     },
+    "centroid": {
+      "lat": "49.280731",
+      "lon": "-123.128945"
+    },
     "nodes": [
       {
         "lat": "49.279547",
@@ -1042,6 +1114,10 @@
       "name": "Emily Carr University",
       "phone": "604-844-3840",
       "website": "http://www.ecuad.ca"
+    },
+    "centroid": {
+      "lat": "49.270581",
+      "lon": "-123.132327"
     },
     "nodes": [
       {
@@ -1094,6 +1170,10 @@
       "building": "school",
       "name": "Prince of Wales Mini School"
     },
+    "centroid": {
+      "lat": "49.244751",
+      "lon": "-123.158943"
+    },
     "nodes": [
       {
         "lat": "49.244926",
@@ -1133,6 +1213,10 @@
       "addr:street": "Main Mall",
       "building": "yes",
       "name": "Earth Sciences Building"
+    },
+    "centroid": {
+      "lat": "49.262882",
+      "lon": "-123.252090"
     },
     "nodes": [
       {
@@ -1176,6 +1260,10 @@
     "tags": {
       "addr:housenumber": "605",
       "building": "industrial"
+    },
+    "centroid": {
+      "lat": "49.206124",
+      "lon": "-123.119702"
     },
     "nodes": [
       {
@@ -1225,6 +1313,10 @@
       "addr:housenumber": "954",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.205039",
+      "lon": "-123.127992"
+    },
     "nodes": [
       {
         "lat": "49.204815",
@@ -1257,6 +1349,10 @@
       "addr:housenumber": "966",
       "addr:street": "Southwest Marine Drive",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.204848",
+      "lon": "-123.128436"
     },
     "nodes": [
       {
@@ -1291,6 +1387,10 @@
       "addr:street": "Southwest Marine Drive",
       "building": "yes",
       "shop": "alcohol"
+    },
+    "centroid": {
+      "lat": "49.204320",
+      "lon": "-123.139686"
     },
     "nodes": [
       {
@@ -1331,6 +1431,10 @@
       "addr:housenumber": "1750",
       "building": "industrial",
       "name": "Westport Innovations"
+    },
+    "centroid": {
+      "lat": "49.206484",
+      "lon": "-123.146336"
     },
     "nodes": [
       {
@@ -1374,6 +1478,10 @@
       "addr:street": "West 13th Avenue",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.259961",
+      "lon": "-123.159114"
+    },
     "nodes": [
       {
         "lat": "49.259993",
@@ -1407,6 +1515,10 @@
       "addr:housenumber": "2326",
       "addr:street": "West 13th Avenue",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.259926",
+      "lon": "-123.158478"
     },
     "nodes": [
       {
@@ -1449,6 +1561,10 @@
       "addr:housenumber": "2346",
       "addr:street": "West 13th Avenue",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.259933",
+      "lon": "-123.158907"
     },
     "nodes": [
       {
@@ -1516,6 +1632,10 @@
       "addr:street": "West 13th Avenue",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.259916",
+      "lon": "-123.158275"
+    },
     "nodes": [
       {
         "lat": "49.260000",
@@ -1566,6 +1686,10 @@
       "addr:street": "West 13th Avenue",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.260899",
+      "lon": "-123.159898"
+    },
     "nodes": [
       {
         "lat": "49.260951",
@@ -1607,6 +1731,10 @@
       "addr:housenumber": "2366",
       "addr:street": "West 13th Avenue",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.260866",
+      "lon": "-123.159286"
     },
     "nodes": [
       {
@@ -1657,6 +1785,10 @@
       "addr:housenumber": "2305",
       "addr:street": "West 13th Avenue",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.260389",
+      "lon": "-123.158053"
     },
     "nodes": [
       {
@@ -1724,6 +1856,10 @@
       "addr:street": "West 13th Avenue",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.260869",
+      "lon": "-123.158681"
+    },
     "nodes": [
       {
         "lat": "49.260921",
@@ -1765,6 +1901,10 @@
       "addr:housenumber": "2386",
       "addr:street": "West 13th Avenue",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.260874",
+      "lon": "-123.159713"
     },
     "nodes": [
       {
@@ -1816,6 +1956,10 @@
       "addr:street": "West 13th Avenue",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.260880",
+      "lon": "-123.158227"
+    },
     "nodes": [
       {
         "lat": "49.260913",
@@ -1865,6 +2009,10 @@
       "addr:housenumber": "2386",
       "addr:street": "West 13th Avenue",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.259940",
+      "lon": "-123.159709"
     },
     "nodes": [
       {
@@ -1916,6 +2064,10 @@
       "addr:street": "West 13th Avenue",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.259967",
+      "lon": "-123.159960"
+    },
     "nodes": [
       {
         "lat": "49.260019",
@@ -1950,6 +2102,10 @@
       "addr:street": "West 13th Avenue",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.260884",
+      "lon": "-123.158458"
+    },
     "nodes": [
       {
         "lat": "49.260919",
@@ -1983,6 +2139,10 @@
       "addr:housenumber": "2315",
       "addr:street": "West 13th Avenue",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.260385",
+      "lon": "-123.158235"
     },
     "nodes": [
       {
@@ -2042,6 +2202,10 @@
       "addr:street": "West 13th Avenue",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.259937",
+      "lon": "-123.158041"
+    },
     "nodes": [
       {
         "lat": "49.259993",
@@ -2092,6 +2256,10 @@
       "addr:street": "West 13th Avenue",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.260871",
+      "lon": "-123.159090"
+    },
     "nodes": [
       {
         "lat": "49.260834",
@@ -2125,6 +2293,10 @@
       "addr:housenumber": "2325",
       "addr:street": "West 13th Avenue",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.260437",
+      "lon": "-123.158471"
     },
     "nodes": [
       {
@@ -2175,6 +2347,10 @@
       "addr:housenumber": "2376",
       "addr:street": "West 13th Avenue",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.259956",
+      "lon": "-123.159526"
     },
     "nodes": [
       {
@@ -2241,6 +2417,10 @@
       "addr:housenumber": "2346",
       "addr:street": "West 13th Avenue",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.260863",
+      "lon": "-123.158861"
     },
     "nodes": [
       {
@@ -2324,6 +2504,10 @@
       "addr:street": "West 13th Avenue",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.260414",
+      "lon": "-123.159944"
+    },
     "nodes": [
       {
         "lat": "49.260452",
@@ -2381,6 +2565,10 @@
       "addr:housenumber": "2376",
       "addr:street": "West 13th Avenue",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.260852",
+      "lon": "-123.159523"
     },
     "nodes": [
       {
@@ -2440,6 +2628,10 @@
       "addr:street": "West 13th Avenue",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.259931",
+      "lon": "-123.159316"
+    },
     "nodes": [
       {
         "lat": "49.259995",
@@ -2489,6 +2681,10 @@
       "addr:housenumber": "2336",
       "addr:street": "West 13th Avenue",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.259936",
+      "lon": "-123.158691"
     },
     "nodes": [
       {
@@ -2548,6 +2744,10 @@
       "addr:street": "West 13th Avenue",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.260850",
+      "lon": "-123.158039"
+    },
     "nodes": [
       {
         "lat": "49.260920",
@@ -2602,6 +2802,10 @@
       "addr:street": "West 13th Avenue",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.260398",
+      "lon": "-123.159102"
+    },
     "nodes": [
       {
         "lat": "49.260449",
@@ -2635,6 +2839,10 @@
       "addr:housenumber": "2375",
       "addr:street": "West 13th Avenue",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.260387",
+      "lon": "-123.159516"
     },
     "nodes": [
       {
@@ -2702,6 +2910,10 @@
       "addr:street": "West 13th Avenue",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.260375",
+      "lon": "-123.158889"
+    },
     "nodes": [
       {
         "lat": "49.260425",
@@ -2743,6 +2955,10 @@
       "addr:housenumber": "2335",
       "addr:street": "West 13th Avenue",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.260393",
+      "lon": "-123.158673"
     },
     "nodes": [
       {
@@ -2802,6 +3018,10 @@
       "addr:street": "West 13th Avenue",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.260391",
+      "lon": "-123.159314"
+    },
     "nodes": [
       {
         "lat": "49.260437",
@@ -2835,6 +3055,10 @@
       "addr:housenumber": "2385",
       "addr:street": "West 13th Avenue",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.260433",
+      "lon": "-123.159727"
     },
     "nodes": [
       {
@@ -2914,6 +3138,10 @@
       "source": "Yahoo",
       "website": "http://www.realcanadiansuperstore.ca/LCLOnline/store_details_landing_page.jsp?storeId=835"
     },
+    "centroid": {
+      "lat": "49.259030",
+      "lon": "-123.036600"
+    },
     "nodes": [
       {
         "lat": "49.258388",
@@ -2973,6 +3201,10 @@
       "phone": "6046624700",
       "tourism": "museum",
       "website": "www.vanartgallery.bc.ca"
+    },
+    "centroid": {
+      "lat": "49.282849",
+      "lon": "-123.120669"
     },
     "nodes": [
       {
@@ -3064,6 +3296,10 @@
       "building": "yes",
       "name": "Emily Carr University"
     },
+    "centroid": {
+      "lat": "49.270567",
+      "lon": "-123.133731"
+    },
     "nodes": [
       {
         "lat": "49.270839",
@@ -3104,6 +3340,10 @@
       "phone": "604-736-7028",
       "shop": "art_supplies",
       "website": "http://www.opusframing.com"
+    },
+    "centroid": {
+      "lat": "49.270143",
+      "lon": "-123.133105"
     },
     "nodes": [
       {
@@ -3152,6 +3392,10 @@
       "building": "yes",
       "name": "Bridges Bistro",
       "phone": "604-687-4400"
+    },
+    "centroid": {
+      "lat": "49.272769",
+      "lon": "-123.136500"
     },
     "nodes": [
       {
@@ -3225,6 +3469,10 @@
       "tourism": "hotel",
       "website": "http://www.empirelandmarkhotel.com/"
     },
+    "centroid": {
+      "lat": "49.288125",
+      "lon": "-123.130933"
+    },
     "nodes": [
       {
         "lat": "49.288283",
@@ -3264,6 +3512,10 @@
       "source": "BC Government Openmaps (bc_gvrd_west_xc100mm_2009)",
       "website": "http://www.skiisandbiikes.com/vancouver"
     },
+    "centroid": {
+      "lat": "49.269053",
+      "lon": "-123.143585"
+    },
     "nodes": [
       {
         "lat": "49.268961",
@@ -3299,6 +3551,10 @@
       "building": "retail",
       "name": "Mark's",
       "website": "http://www.marks.com/shop/en/marks-marksdefaultsalescatalog/store-locator/11193"
+    },
+    "centroid": {
+      "lat": "49.268345",
+      "lon": "-123.147619"
     },
     "nodes": [
       {
@@ -3338,6 +3594,10 @@
       "shop": "car",
       "source": "BC Government Openmaps (bc_gvrd_west_xc100mm_2009)",
       "website": "http://www.astonmartinvancouver.com/"
+    },
+    "centroid": {
+      "lat": "49.269541",
+      "lon": "-123.145274"
     },
     "nodes": [
       {
@@ -3383,6 +3643,10 @@
       "opening_hours": "Mon-Wed09:30 AM - 05:00 PM/ Thu-Fri09:30 AM - 07:00 PM/ Sat09:30 AM - 04:00 PM Sunclosed",
       "source": "BC Government Openmaps (bc_gvrd_west_xc100mm_2009)"
     },
+    "centroid": {
+      "lat": "49.267949",
+      "lon": "-123.152504"
+    },
     "nodes": [
       {
         "lat": "49.267994",
@@ -3417,6 +3681,10 @@
       "name": "MCL Motor Cars",
       "opening_hours": "Mo-Fr 09:00-18:00; Sa 09:00-17:00",
       "source": "BC Government Openmaps (bc_gvrd_west_xc100mm_2009)"
+    },
+    "centroid": {
+      "lat": "49.268641",
+      "lon": "-123.143479"
     },
     "nodes": [
       {
@@ -3457,6 +3725,10 @@
       "storage": "self_storage",
       "website": "http://publicstoragecanada.com/self-storage-vancouver/1698-w-3rd-avenue"
     },
+    "centroid": {
+      "lat": "49.268594",
+      "lon": "-123.142692"
+    },
     "nodes": [
       {
         "lat": "49.268496",
@@ -3496,6 +3768,10 @@
       "source": "BC Government Openmaps (bc_gvrd_west_xc100mm_2009)",
       "website": "http://ferrarimaseratiofvancouver.com/"
     },
+    "centroid": {
+      "lat": "49.269116",
+      "lon": "-123.145228"
+    },
     "nodes": [
       {
         "lat": "49.268986",
@@ -3532,6 +3808,10 @@
       "building": "yes",
       "building:levels": "2",
       "name": "Geography Building"
+    },
+    "centroid": {
+      "lat": "49.265948",
+      "lon": "-123.256171"
     },
     "nodes": [
       {
@@ -3680,6 +3960,10 @@
       "building": "yes",
       "building:levels": "5",
       "name": "Chemistry Physics Building"
+    },
+    "centroid": {
+      "lat": "49.265762",
+      "lon": "-123.251427"
     },
     "nodes": [
       {
@@ -3830,6 +4114,10 @@
       "building:min_level": "-1",
       "name": "Hebb Building"
     },
+    "centroid": {
+      "lat": "49.266083",
+      "lon": "-123.251727"
+    },
     "nodes": [
       {
         "lat": "49.266236",
@@ -3936,6 +4224,10 @@
       "phone": "+1 604 822 3853",
       "ref": "HENN",
       "website": "http://www.phas.ubc.ca"
+    },
+    "centroid": {
+      "lat": "49.266333",
+      "lon": "-123.252203"
     },
     "nodes": [
       {
@@ -4049,6 +4341,10 @@
       "addr:street": "West 12th Avenue",
       "building": "yes",
       "name": "Jim Pattison Pavilion"
+    },
+    "centroid": {
+      "lat": "49.261070",
+      "lon": "-123.124342"
     },
     "nodes": [
       {
@@ -4181,6 +4477,10 @@
       "name": "Gordon and Leslie Diamond Health Care Centre",
       "phone": "6048754111"
     },
+    "centroid": {
+      "lat": "49.261217",
+      "lon": "-123.125992"
+    },
     "nodes": [
       {
         "lat": "49.261479",
@@ -4293,6 +4593,10 @@
       "building": "yes",
       "name": "Skin Care Center"
     },
+    "centroid": {
+      "lat": "49.262688",
+      "lon": "-123.122853"
+    },
     "nodes": [
       {
         "lat": "49.262800",
@@ -4324,6 +4628,10 @@
       "addr:housenumber": "895",
       "building": "yes",
       "name": "Arthritis Center"
+    },
+    "centroid": {
+      "lat": "49.262758",
+      "lon": "-123.123741"
     },
     "nodes": [
       {
@@ -4374,6 +4682,10 @@
       "area": "yes",
       "highway": "pedestrian",
       "name": "Jack Poole Plaza"
+    },
+    "centroid": {
+      "lat": "49.289229",
+      "lon": "-123.117926"
     },
     "nodes": [
       {
@@ -4462,6 +4774,10 @@
       "source": "survey",
       "website": "http://www.cactusclubcafe.com"
     },
+    "centroid": {
+      "lat": "49.289647",
+      "lon": "-123.118081"
+    },
     "nodes": [
       {
         "lat": "49.289593",
@@ -4526,6 +4842,10 @@
       "building:levels": "41",
       "height": "149",
       "name": "Shaw Tower"
+    },
+    "centroid": {
+      "lat": "49.288389",
+      "lon": "-123.117803"
     },
     "nodes": [
       {
@@ -4599,6 +4919,10 @@
       "building:levels": "17",
       "name": "Shaw Tower"
     },
+    "centroid": {
+      "lat": "49.288274",
+      "lon": "-123.117608"
+    },
     "nodes": [
       {
         "lat": "49.288201",
@@ -4641,6 +4965,10 @@
       "building": "residential",
       "building:levels": "4",
       "name": "Connaught Place"
+    },
+    "centroid": {
+      "lat": "49.262704",
+      "lon": "-123.154781"
     },
     "nodes": [
       {
@@ -4907,6 +5235,10 @@
       "addr:street": "Rumble Street",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.215036",
+      "lon": "-123.022194"
+    },
     "nodes": [
       {
         "lat": "49.215074",
@@ -4946,6 +5278,10 @@
       "addr:housenumber": "3739",
       "addr:street": "Rumble Street",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.215027",
+      "lon": "-123.022414"
     },
     "nodes": [
       {
@@ -4994,6 +5330,10 @@
       "addr:housenumber": "3721",
       "addr:street": "Rumble Street",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.215029",
+      "lon": "-123.022614"
     },
     "nodes": [
       {
@@ -5051,6 +5391,10 @@
       "addr:street": "Great Northern Way",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.267425",
+      "lon": "-123.090280"
+    },
     "nodes": [
       {
         "lat": "49.267133",
@@ -5106,6 +5450,10 @@
       "addr:housenumber": "555",
       "addr:street": "Great Northern Way",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.267559",
+      "lon": "-123.092306"
     },
     "nodes": [
       {
@@ -5213,6 +5561,10 @@
       "amenity": "school",
       "building": "school",
       "name": "University Hill Secondary School"
+    },
+    "centroid": {
+      "lat": "49.254284",
+      "lon": "-123.238849"
     },
     "nodes": [
       {
@@ -5536,6 +5888,10 @@
       "source": "UBC Plant Ops 2011",
       "ubc:building_num": "553"
     },
+    "centroid": {
+      "lat": "49.261462",
+      "lon": "-123.240786"
+    },
     "nodes": [
       {
         "lat": "49.261559",
@@ -5794,6 +6150,10 @@
       "source": "UBC Plant Ops 2011",
       "ubc:building_num": "918"
     },
+    "centroid": {
+      "lat": "49.260136",
+      "lon": "-123.239535"
+    },
     "nodes": [
       {
         "lat": "49.260303",
@@ -5941,6 +6301,10 @@
       "name": "Acadia Community Centre",
       "source": "UBC Plant Ops 2011",
       "ubc:building_num": "011"
+    },
+    "centroid": {
+      "lat": "49.262644",
+      "lon": "-123.237352"
     },
     "nodes": [
       {
@@ -6182,6 +6546,10 @@
       "source": "UBC Plant Ops 2011",
       "ubc:building_num": "858"
     },
+    "centroid": {
+      "lat": "49.259312",
+      "lon": "-123.253540"
+    },
     "nodes": [
       {
         "lat": "49.259351",
@@ -6216,6 +6584,10 @@
       "name": "Clements Green",
       "source": "UBC Plant Ops 2011",
       "ubc:building_num": "621"
+    },
+    "centroid": {
+      "lat": "49.258226",
+      "lon": "-123.245836"
     },
     "nodes": [
       {
@@ -6768,6 +7140,10 @@
       "source": "UBC Plant Ops 2011",
       "ubc:building_num": "668"
     },
+    "centroid": {
+      "lat": "49.256152",
+      "lon": "-123.249012"
+    },
     "nodes": [
       {
         "lat": "49.256280",
@@ -6804,6 +7180,10 @@
       "name": "UBC Hospital",
       "source": "UBC Plant Ops 2011",
       "ubc:building_num": "463"
+    },
+    "centroid": {
+      "lat": "49.264217",
+      "lon": "-123.245792"
     },
     "nodes": [
       {
@@ -6899,6 +7279,10 @@
       "name": "Institute For Computing, Information And Cognitive Systems / Computer Science",
       "source": "UBC Plant Ops 2011",
       "ubc:building_num": "165"
+    },
+    "centroid": {
+      "lat": "49.261110",
+      "lon": "-123.249011"
     },
     "nodes": [
       {
@@ -7152,6 +7536,10 @@
       "source": "UBC Plant Ops 2011",
       "ubc:building_num": "164"
     },
+    "centroid": {
+      "lat": "49.261222",
+      "lon": "-123.248007"
+    },
     "nodes": [
       {
         "lat": "49.261227",
@@ -7242,6 +7630,10 @@
       "name": "C.K. Choi Building For The Institute For Asian Reseach",
       "source": "UBC Plant Ops 2011",
       "ubc:building_num": "478"
+    },
+    "centroid": {
+      "lat": "49.267215",
+      "lon": "-123.257920"
     },
     "nodes": [
       {
@@ -7405,6 +7797,10 @@
       "source": "UBC Plant Ops 2011",
       "ubc:building_num": "863-1"
     },
+    "centroid": {
+      "lat": "49.266303",
+      "lon": "-123.257233"
+    },
     "nodes": [
       {
         "lat": "49.266538",
@@ -7440,6 +7836,10 @@
       "source": "UBC Plant Ops 2011",
       "ubc:building_num": "472"
     },
+    "centroid": {
+      "lat": "49.267808",
+      "lon": "-123.259004"
+    },
     "nodes": [
       {
         "lat": "49.267823",
@@ -7473,6 +7873,10 @@
       "building": "yes",
       "rfr": "yes",
       "source": "bing"
+    },
+    "centroid": {
+      "lat": "49.203688",
+      "lon": "-123.079013"
     },
     "nodes": [
       {
@@ -7508,6 +7912,10 @@
       "rfr": "yes",
       "source": "bing"
     },
+    "centroid": {
+      "lat": "49.203495",
+      "lon": "-123.080737"
+    },
     "nodes": [
       {
         "lat": "49.203669",
@@ -7540,6 +7948,10 @@
       "addr:street": "Granville Street",
       "building": "yes",
       "name": "Edward's Block"
+    },
+    "centroid": {
+      "lat": "49.263991",
+      "lon": "-123.138883"
     },
     "nodes": [
       {
@@ -7575,6 +7987,10 @@
       "building": "yes",
       "name": "Sky Tower"
     },
+    "centroid": {
+      "lat": "49.313138",
+      "lon": "-123.080001"
+    },
     "nodes": [
       {
         "lat": "49.313106",
@@ -7607,6 +8023,10 @@
       "addr:street": "Eburne Way",
       "building": "yes",
       "rfr": "yes"
+    },
+    "centroid": {
+      "lat": "49.200556",
+      "lon": "-123.094443"
     },
     "nodes": [
       {
@@ -7761,6 +8181,10 @@
       "building": "yes",
       "rfr": "yes"
     },
+    "centroid": {
+      "lat": "49.201114",
+      "lon": "-123.094312"
+    },
     "nodes": [
       {
         "lat": "49.201226",
@@ -7799,6 +8223,10 @@
       "addr:street": "Gray Avenue",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.253146",
+      "lon": "-123.233199"
+    },
     "nodes": [
       {
         "lat": "49.253110",
@@ -7836,6 +8264,10 @@
       "shop": "supermarket",
       "source": "UBC Plant Ops 2011",
       "ubc:building_num": "588-2"
+    },
+    "centroid": {
+      "lat": "49.254688",
+      "lon": "-123.236933"
     },
     "nodes": [
       {
@@ -7927,6 +8359,10 @@
       "building": "yes",
       "name": "yu Presentation Center"
     },
+    "centroid": {
+      "lat": "49.252362",
+      "lon": "-123.233341"
+    },
     "nodes": [
       {
         "lat": "49.252380",
@@ -7985,6 +8421,10 @@
       "addr:street": "Gray Avenue",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.253115",
+      "lon": "-123.233146"
+    },
     "nodes": [
       {
         "lat": "49.253117",
@@ -8018,6 +8458,10 @@
       "addr:postcode": "V6S 0A9",
       "addr:street": "Gray Avenue",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.252944",
+      "lon": "-123.232784"
     },
     "nodes": [
       {
@@ -8053,6 +8497,10 @@
       "addr:street": "Gray Avenue",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.253294",
+      "lon": "-123.233019"
+    },
     "nodes": [
       {
         "lat": "49.253339",
@@ -8086,6 +8534,10 @@
       "addr:postcode": "V6S 0A9",
       "addr:street": "Gray Avenue",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.253015",
+      "lon": "-123.232320"
     },
     "nodes": [
       {
@@ -8121,6 +8573,10 @@
       "addr:street": "Gray Avenue",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.253341",
+      "lon": "-123.233171"
+    },
     "nodes": [
       {
         "lat": "49.253386",
@@ -8154,6 +8610,10 @@
       "addr:postcode": "V6S 0A9",
       "addr:street": "Gray Avenue",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.253001",
+      "lon": "-123.232403"
     },
     "nodes": [
       {
@@ -8189,6 +8649,10 @@
       "addr:street": "Gray Avenue",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.252909",
+      "lon": "-123.232999"
+    },
     "nodes": [
       {
         "lat": "49.252944",
@@ -8222,6 +8686,10 @@
       "addr:postcode": "V6S 0A9",
       "addr:street": "Gray Avenue",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.253255",
+      "lon": "-123.232796"
     },
     "nodes": [
       {
@@ -8257,6 +8725,10 @@
       "addr:street": "Gray Avenue",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.253237",
+      "lon": "-123.232489"
+    },
     "nodes": [
       {
         "lat": "49.253280",
@@ -8290,6 +8762,10 @@
       "addr:postcode": "V6S 0A9",
       "addr:street": "Gray Avenue",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.252982",
+      "lon": "-123.232542"
     },
     "nodes": [
       {
@@ -8325,6 +8801,10 @@
       "addr:street": "Gray Avenue",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.253318",
+      "lon": "-123.233095"
+    },
     "nodes": [
       {
         "lat": "49.253363",
@@ -8358,6 +8838,10 @@
       "addr:postcode": "V6S 0A9",
       "addr:street": "Gray Avenue",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.252922",
+      "lon": "-123.232916"
     },
     "nodes": [
       {
@@ -8393,6 +8877,10 @@
       "addr:street": "Gray Avenue",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.253265",
+      "lon": "-123.232879"
+    },
     "nodes": [
       {
         "lat": "49.253301",
@@ -8426,6 +8914,10 @@
       "addr:postcode": "V6S 0A9",
       "addr:street": "Gray Avenue",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.253028",
+      "lon": "-123.232236"
     },
     "nodes": [
       {
@@ -8461,6 +8953,10 @@
       "addr:street": "Gray Avenue",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.253236",
+      "lon": "-123.232630"
+    },
     "nodes": [
       {
         "lat": "49.253272",
@@ -8494,6 +8990,10 @@
       "addr:postcode": "V6S 0A9",
       "addr:street": "Gray Avenue",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.253254",
+      "lon": "-123.232324"
     },
     "nodes": [
       {
@@ -8529,6 +9029,10 @@
       "addr:street": "Gray Avenue",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.253065",
+      "lon": "-123.233109"
+    },
     "nodes": [
       {
         "lat": "49.253068",
@@ -8562,6 +9066,10 @@
       "addr:postcode": "V6S 0A9",
       "addr:street": "Gray Avenue",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.252957",
+      "lon": "-123.232703"
     },
     "nodes": [
       {
@@ -8597,6 +9105,10 @@
       "addr:street": "Gray Avenue",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.253365",
+      "lon": "-123.233247"
+    },
     "nodes": [
       {
         "lat": "49.253410",
@@ -8630,6 +9142,10 @@
       "addr:postcode": "V6S 0A9",
       "addr:street": "Gray Avenue",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.252896",
+      "lon": "-123.233081"
     },
     "nodes": [
       {
@@ -8665,6 +9181,10 @@
       "addr:street": "Gray Avenue",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.253246",
+      "lon": "-123.232713"
+    },
     "nodes": [
       {
         "lat": "49.253282",
@@ -8698,6 +9218,10 @@
       "addr:postcode": "V6S 0A9",
       "addr:street": "Gray Avenue",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.253246",
+      "lon": "-123.232407"
     },
     "nodes": [
       {
@@ -8733,6 +9257,10 @@
       "addr:street": "Gray Avenue",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.252970",
+      "lon": "-123.232623"
+    },
     "nodes": [
       {
         "lat": "49.253003",
@@ -8766,6 +9294,10 @@
       "building": "yes",
       "military": "yes",
       "name": "Beatty Street Armoury"
+    },
+    "centroid": {
+      "lat": "49.279447",
+      "lon": "-123.110811"
     },
     "nodes": [
       {
@@ -8870,6 +9402,10 @@
       "addr:street": "Fir Street",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.269017",
+      "lon": "-123.141159"
+    },
     "nodes": [
       {
         "lat": "49.268912",
@@ -8910,6 +9446,10 @@
       "website": "http://www.gib.ca",
       "wheelchair": "yes"
     },
+    "centroid": {
+      "lat": "49.270588",
+      "lon": "-123.135658"
+    },
     "nodes": [
       {
         "lat": "49.270582",
@@ -8945,6 +9485,10 @@
       "leisure": "park",
       "name": "Alexandra Park",
       "website": "https://cfapp.vancouver.ca/parkfinder_wa/index.cfm?fuseaction=FAC.ParkDetails&park_id=199"
+    },
+    "centroid": {
+      "lat": "49.285457",
+      "lon": "-123.142144"
     },
     "nodes": [
       {
@@ -8985,6 +9529,10 @@
       "phone": "6046837373",
       "tourism": "hotel",
       "website": "http://www.granvilleislandhotel.com/"
+    },
+    "centroid": {
+      "lat": "49.269416",
+      "lon": "-123.131129"
     },
     "nodes": [
       {
@@ -9083,6 +9631,10 @@
       "building": "yes",
       "source": "Bing"
     },
+    "centroid": {
+      "lat": "49.234479",
+      "lon": "-123.184102"
+    },
     "nodes": [
       {
         "lat": "49.234599",
@@ -9127,6 +9679,10 @@
       "shop": "art",
       "website": "www.craftcouncilbc.ca"
     },
+    "centroid": {
+      "lat": "49.269784",
+      "lon": "-123.134866"
+    },
     "nodes": [
       {
         "lat": "49.269760",
@@ -9168,6 +9724,10 @@
       "building": "residential",
       "name": "L'Atelier"
     },
+    "centroid": {
+      "lat": "49.280902",
+      "lon": "-123.053061"
+    },
     "nodes": [
       {
         "lat": "49.281023",
@@ -9206,6 +9766,10 @@
       "addr:street": "Chancellor Boulevard",
       "building": "school",
       "name": "University Hill Elementary School"
+    },
+    "centroid": {
+      "lat": "49.274700",
+      "lon": "-123.236953"
     },
     "nodes": [
       {
@@ -9326,6 +9890,10 @@
       "addr:housenumber": "988",
       "addr:street": "Harbourside Drive",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.315002",
+      "lon": "-123.100804"
     },
     "nodes": [
       {
@@ -9487,6 +10055,10 @@
       "addr:street": "Harbourside Drive",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.314199",
+      "lon": "-123.101146"
+    },
     "nodes": [
       {
         "lat": "49.314447",
@@ -9534,6 +10106,10 @@
       "addr:housenumber": "1075",
       "addr:street": "West 1st Street",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.317401",
+      "lon": "-123.104257"
     },
     "nodes": [
       {
@@ -9698,6 +10274,10 @@
       "building:levels": "30",
       "name": "The Vancouver Sun"
     },
+    "centroid": {
+      "lat": "49.286722",
+      "lon": "-123.112349"
+    },
     "nodes": [
       {
         "lat": "49.286832",
@@ -9729,6 +10309,10 @@
       "addr:housenumber": "1370",
       "amenity": "school",
       "name": "Saint Anthony of Podua School"
+    },
+    "centroid": {
+      "lat": "49.204474",
+      "lon": "-123.136891"
     },
     "nodes": [
       {
@@ -9763,6 +10347,10 @@
       "addr:street": "West Broadway",
       "building": "yes",
       "name": "Broadway Centre"
+    },
+    "centroid": {
+      "lat": "49.263242",
+      "lon": "-123.129811"
     },
     "nodes": [
       {
@@ -9883,6 +10471,10 @@
       "addr:street": "West 3rd Avenue",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.268647",
+      "lon": "-123.142081"
+    },
     "nodes": [
       {
         "lat": "49.268749",
@@ -9917,6 +10509,10 @@
       "addr:street": "West 3rd Avenue",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.268652",
+      "lon": "-123.141572"
+    },
     "nodes": [
       {
         "lat": "49.268738",
@@ -9950,6 +10546,10 @@
       "addr:province": "BC",
       "addr:street": "West 3rd Avenue",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.268641",
+      "lon": "-123.141891"
     },
     "nodes": [
       {
@@ -9990,6 +10590,10 @@
       "name": "Audi Service Downtown Vancouver",
       "shop": "car_repair",
       "website": "http://audidowntownvancouver.ca"
+    },
+    "centroid": {
+      "lat": "49.269158",
+      "lon": "-123.142775"
     },
     "nodes": [
       {
@@ -10033,6 +10637,10 @@
       "building": "commercial",
       "name": "Brix Studio"
     },
+    "centroid": {
+      "lat": "49.282935",
+      "lon": "-123.102592"
+    },
     "nodes": [
       {
         "lat": "49.282805",
@@ -10072,6 +10680,10 @@
       "phone": "604-662-8574",
       "website": "http://foursisters.ca"
     },
+    "centroid": {
+      "lat": "49.283694",
+      "lon": "-123.101752"
+    },
     "nodes": [
       {
         "lat": "49.283689",
@@ -10108,6 +10720,10 @@
       "building": "commercial",
       "name": "Gastown Tattoo"
     },
+    "centroid": {
+      "lat": "49.283145",
+      "lon": "-123.107133"
+    },
     "nodes": [
       {
         "lat": "49.283210",
@@ -10143,6 +10759,10 @@
       "amenity": "pub",
       "building": "yes",
       "name": "The Irish Heather Gastropub"
+    },
+    "centroid": {
+      "lat": "49.282872",
+      "lon": "-123.103849"
     },
     "nodes": [
       {
@@ -10186,6 +10806,10 @@
       "name": "Resource World Magazine Inc.",
       "payment:bitcoin": "yes"
     },
+    "centroid": {
+      "lat": "49.284866",
+      "lon": "-123.115702"
+    },
     "nodes": [
       {
         "lat": "49.285128",
@@ -10221,6 +10845,10 @@
       "name": "Fairmont Hotel Vancouver",
       "operator": "The Fairmont",
       "tourism": "hotel"
+    },
+    "centroid": {
+      "lat": "49.283665",
+      "lon": "-123.121302"
     },
     "nodes": [
       {
@@ -10294,6 +10922,10 @@
       "addr:street": "Mountain Highway",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.313899",
+      "lon": "-123.038496"
+    },
     "nodes": [
       {
         "lat": "49.313920",
@@ -10347,6 +10979,10 @@
       "source": "Bing",
       "website": "http://www.flowpurefilters.com"
     },
+    "centroid": {
+      "lat": "49.272878",
+      "lon": "-123.097911"
+    },
     "nodes": [
       {
         "lat": "49.272848",
@@ -10399,6 +11035,10 @@
       "name": "Oceanic Plaza",
       "source": "Bing"
     },
+    "centroid": {
+      "lat": "49.287400",
+      "lon": "-123.119086"
+    },
     "nodes": [
       {
         "lat": "49.287332",
@@ -10433,6 +11073,10 @@
       "building": "yes",
       "name": "Daon Building",
       "source": "local_knowledge"
+    },
+    "centroid": {
+      "lat": "49.286996",
+      "lon": "-123.119654"
     },
     "nodes": [
       {
@@ -10474,6 +11118,10 @@
       "name": "Guinness Tower",
       "source": "Bing"
     },
+    "centroid": {
+      "lat": "49.287774",
+      "lon": "-123.118342"
+    },
     "nodes": [
       {
         "lat": "49.287707",
@@ -10512,6 +11160,10 @@
       "name": "Mink",
       "source": "Bing"
     },
+    "centroid": {
+      "lat": "49.286615",
+      "lon": "-123.115188"
+    },
     "nodes": [
       {
         "lat": "49.286544",
@@ -10547,6 +11199,10 @@
       "name": "Hyatt Regency Vancouver",
       "source": "Bing",
       "tourism": "hotel"
+    },
+    "centroid": {
+      "lat": "49.285264",
+      "lon": "-123.120721"
     },
     "nodes": [
       {
@@ -10589,6 +11245,10 @@
       "name": "West Valley Produce",
       "shop": "supermarket"
     },
+    "centroid": {
+      "lat": "49.281962",
+      "lon": "-123.132794"
+    },
     "nodes": [
       {
         "lat": "49.281968",
@@ -10620,6 +11280,10 @@
       "addr:housenumber": "930",
       "addr:street": "Cambie Street",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.276711",
+      "lon": "-123.116635"
     },
     "nodes": [
       {
@@ -10787,6 +11451,10 @@
       "name": "Nelson Square",
       "source": "Bing"
     },
+    "centroid": {
+      "lat": "49.279953",
+      "lon": "-123.125046"
+    },
     "nodes": [
       {
         "lat": "49.280232",
@@ -10853,6 +11521,10 @@
       "building": "yes",
       "name": "Kopernik Lodge Building A"
     },
+    "centroid": {
+      "lat": "49.215188",
+      "lon": "-123.039064"
+    },
     "nodes": [
       {
         "lat": "49.215327",
@@ -10909,6 +11581,10 @@
       "addr:street": "SW Marine Drive",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.222980",
+      "lon": "-123.162979"
+    },
     "nodes": [
       {
         "lat": "49.223049",
@@ -10960,6 +11636,10 @@
       "shop": "wood",
       "website": "www.pjwhitehardwoods.com/"
     },
+    "centroid": {
+      "lat": "49.208566",
+      "lon": "-123.081015"
+    },
     "nodes": [
       {
         "lat": "49.208689",
@@ -11002,6 +11682,10 @@
       "building": "yes",
       "name": "British Columbia Paraplegic Association"
     },
+    "centroid": {
+      "lat": "49.206905",
+      "lon": "-123.123410"
+    },
     "nodes": [
       {
         "lat": "49.206733",
@@ -11032,6 +11716,10 @@
     "tags": {
       "addr:housenumber": "942",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.205328",
+      "lon": "-123.127591"
     },
     "nodes": [
       {
@@ -11066,6 +11754,10 @@
       "addr:street": "West 41st Avenue",
       "building": "yes",
       "name": "Southland Farm MArket"
+    },
+    "centroid": {
+      "lat": "49.234455",
+      "lon": "-123.173302"
     },
     "nodes": [
       {
@@ -11105,6 +11797,10 @@
       "name": "HSBC",
       "opening_hours": "Mo-Fr 09:00-17:00; Sa 10:00-14:00"
     },
+    "centroid": {
+      "lat": "49.232790",
+      "lon": "-123.033923"
+    },
     "nodes": [
       {
         "lat": "49.232626",
@@ -11141,6 +11837,10 @@
       "addr:housenumber": "5750",
       "building": "yes",
       "name": "Lulavich Centre"
+    },
+    "centroid": {
+      "lat": "49.233468",
+      "lon": "-123.127663"
     },
     "nodes": [
       {
@@ -11185,6 +11885,10 @@
       "building": "bank",
       "name": "Scotiabank"
     },
+    "centroid": {
+      "lat": "49.234137",
+      "lon": "-123.140949"
+    },
     "nodes": [
       {
         "lat": "49.234185",
@@ -11221,6 +11925,10 @@
       "name": "Domino's Pizza",
       "opening_hours": "Su-th 11-1;fr-sa 11-3",
       "phone": "6047330188"
+    },
+    "centroid": {
+      "lat": "49.255801",
+      "lon": "-123.184803"
     },
     "nodes": [
       {
@@ -11261,6 +11969,10 @@
       "name": "Toorak Tile & Design",
       "phone": "604 739 5966",
       "shop": "tile"
+    },
+    "centroid": {
+      "lat": "49.255724",
+      "lon": "-123.184823"
     },
     "nodes": [
       {
@@ -11309,6 +12021,10 @@
       "shop": "convenience",
       "website": "http://www.shell.ca/"
     },
+    "centroid": {
+      "lat": "49.248891",
+      "lon": "-123.127194"
+    },
     "nodes": [
       {
         "lat": "49.249053",
@@ -11341,6 +12057,10 @@
       "addr:housenumber": "1338",
       "addr:street": "Southwest Marine Drive",
       "landuse": "construction"
+    },
+    "centroid": {
+      "lat": "49.203153",
+      "lon": "-123.136178"
     },
     "nodes": [
       {
@@ -11386,6 +12106,10 @@
       "addr:housenumber": "688",
       "addr:street": "Southwest Marine Drive",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.208476",
+      "lon": "-123.120276"
     },
     "nodes": [
       {
@@ -11465,6 +12189,10 @@
       "name": "Subway",
       "website": "http://www.subway.com/"
     },
+    "centroid": {
+      "lat": "49.208481",
+      "lon": "-123.119733"
+    },
     "nodes": [
       {
         "lat": "49.208728",
@@ -11513,6 +12241,10 @@
       "addr:housenumber": "2218",
       "addr:street": "Southwest Marine Drive",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.220346",
+      "lon": "-123.159403"
     },
     "nodes": [
       {
@@ -11579,6 +12311,10 @@
       "addr:street": "Southwest Marine Drive",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.229895",
+      "lon": "-123.183776"
+    },
     "nodes": [
       {
         "lat": "49.229824",
@@ -11636,6 +12372,10 @@
       "addr:street": "Southwest Marine Drive",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.208270",
+      "lon": "-123.145971"
+    },
     "nodes": [
       {
         "lat": "49.208343",
@@ -11676,6 +12416,10 @@
       "addr:housenumber": "2086",
       "addr:street": "Southwest Marine Drive",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.218377",
+      "lon": "-123.158299"
     },
     "nodes": [
       {
@@ -11725,6 +12469,10 @@
       "addr:housenumber": "8633",
       "addr:street": "Southwest Marine Drive",
       "building": "apartments"
+    },
+    "centroid": {
+      "lat": "49.207859",
+      "lon": "-123.142629"
     },
     "nodes": [
       {
@@ -11831,6 +12579,10 @@
       "addr:street": "Southwest Marine Drive",
       "building": "apartments"
     },
+    "centroid": {
+      "lat": "49.207411",
+      "lon": "-123.142686"
+    },
     "nodes": [
       {
         "lat": "49.207203",
@@ -11921,6 +12673,10 @@
       "landuse": "residential",
       "name": "Ashdown Gardens"
     },
+    "centroid": {
+      "lat": "49.209360",
+      "lon": "-123.118232"
+    },
     "nodes": [
       {
         "lat": "49.209708",
@@ -11959,6 +12715,10 @@
       "building": "yes",
       "name": "UHaul",
       "shop": "self_storage"
+    },
+    "centroid": {
+      "lat": "49.210192",
+      "lon": "-123.085054"
     },
     "nodes": [
       {
@@ -12058,6 +12818,10 @@
       "building": "apartments",
       "name": "McLeod Apartments"
     },
+    "centroid": {
+      "lat": "49.265253",
+      "lon": "-123.101784"
+    },
     "nodes": [
       {
         "lat": "49.265365",
@@ -12107,6 +12871,10 @@
       "building": "yes",
       "name": "Hub"
     },
+    "centroid": {
+      "lat": "49.262282",
+      "lon": "-123.100606"
+    },
     "nodes": [
       {
         "lat": "49.262420",
@@ -12149,6 +12917,10 @@
       "building": "residential",
       "name": "Montreux",
       "source": "bing"
+    },
+    "centroid": {
+      "lat": "49.267204",
+      "lon": "-123.113214"
     },
     "nodes": [
       {
@@ -12216,6 +12988,10 @@
       "building:levels": "4",
       "name": "Belvedere Court"
     },
+    "centroid": {
+      "lat": "49.262222",
+      "lon": "-123.101358"
+    },
     "nodes": [
       {
         "lat": "49.262112",
@@ -12256,6 +13032,10 @@
       "addr:housenumber": "2250",
       "addr:street": "Southwest Marine Drive",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.221155",
+      "lon": "-123.158983"
     },
     "nodes": [
       {
@@ -12305,6 +13085,10 @@
       "addr:housenumber": "2408",
       "addr:street": "Southwest Marine Drive",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.222465",
+      "lon": "-123.162020"
     },
     "nodes": [
       {
@@ -12363,6 +13147,10 @@
       "addr:street": "Southwest Marine Drive",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.224622",
+      "lon": "-123.165367"
+    },
     "nodes": [
       {
         "lat": "49.224682",
@@ -12395,6 +13183,10 @@
       "addr:housenumber": "2636",
       "addr:street": "Southwest Marine Drive",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.224726",
+      "lon": "-123.165568"
     },
     "nodes": [
       {
@@ -12444,6 +13236,10 @@
       "addr:housenumber": "2136",
       "addr:street": "Southwest Marine Drive",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.216360",
+      "lon": "-123.156529"
     },
     "nodes": [
       {
@@ -12506,6 +13302,10 @@
       "addr:street": "Logan Street",
       "building": "apartments",
       "name": "Logan Ville Manor"
+    },
+    "centroid": {
+      "lat": "49.208062",
+      "lon": "-123.125362"
     },
     "nodes": [
       {
@@ -12589,6 +13389,10 @@
       "building": "yes",
       "name": "Opsal Presentation Centre"
     },
+    "centroid": {
+      "lat": "49.269554",
+      "lon": "-123.104080"
+    },
     "nodes": [
       {
         "lat": "49.269371",
@@ -12633,6 +13437,10 @@
       "shop": "car_repair",
       "website": "http://www.budgetbrake.com/"
     },
+    "centroid": {
+      "lat": "49.268872",
+      "lon": "-123.099617"
+    },
     "nodes": [
       {
         "lat": "49.268754",
@@ -12669,6 +13477,10 @@
       "addr:street": "Great Northern Way",
       "building": "industrial",
       "source": "BC Government Openmaps (bc_gvrd_west_xc100mm_2009)"
+    },
+    "centroid": {
+      "lat": "49.265924",
+      "lon": "-123.082520"
     },
     "nodes": [
       {
@@ -12719,6 +13531,10 @@
       "addr:street": "West Broadway",
       "building": "yes",
       "name": "Collingwood Manor"
+    },
+    "centroid": {
+      "lat": "49.264087",
+      "lon": "-123.182233"
     },
     "nodes": [
       {
@@ -12771,6 +13587,10 @@
       "name": "The Toybox",
       "shop": "toys"
     },
+    "centroid": {
+      "lat": "49.263902",
+      "lon": "-123.172301"
+    },
     "nodes": [
       {
         "lat": "49.264018",
@@ -12813,6 +13633,10 @@
       "phone": "16047141450",
       "shop": "computer",
       "website": "http://simply.ca"
+    },
+    "centroid": {
+      "lat": "49.263419",
+      "lon": "-123.143040"
     },
     "nodes": [
       {
@@ -12867,6 +13691,10 @@
       "addr:street": "West Broadway",
       "building": "yes",
       "height": "10m"
+    },
+    "centroid": {
+      "lat": "49.263213",
+      "lon": "-123.139117"
     },
     "nodes": [
       {
@@ -12956,6 +13784,10 @@
       "phone": "604.700.8708",
       "website": "http://www.canadaionizers.ca"
     },
+    "centroid": {
+      "lat": "49.263129",
+      "lon": "-123.124674"
+    },
     "nodes": [
       {
         "lat": "49.263219",
@@ -12989,6 +13821,10 @@
       "addr:street": "East Broadway",
       "building": "yes",
       "name": "la Boussole Centre Communautaire"
+    },
+    "centroid": {
+      "lat": "49.262241",
+      "lon": "-123.090571"
     },
     "nodes": [
       {
@@ -13030,6 +13866,10 @@
       "addr:housenumber": "1060",
       "addr:street": "East Broadway",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.262147",
+      "lon": "-123.081809"
     },
     "nodes": [
       {
@@ -13080,6 +13920,10 @@
       "addr:street": "East Broadway",
       "building": "apartments",
       "name": "Mariner Mews"
+    },
+    "centroid": {
+      "lat": "49.262114",
+      "lon": "-123.082673"
     },
     "nodes": [
       {
@@ -13155,6 +13999,10 @@
       "addr:street": "East Broadway",
       "building": "school",
       "name": "Queen Alexandra Elementary School"
+    },
+    "centroid": {
+      "lat": "49.261848",
+      "lon": "-123.077081"
     },
     "nodes": [
       {
@@ -13245,6 +14093,10 @@
       "addr:street": "Yukon Street",
       "building": "industrial"
     },
+    "centroid": {
+      "lat": "49.266789",
+      "lon": "-123.113235"
+    },
     "nodes": [
       {
         "lat": "49.266720",
@@ -13274,6 +14126,10 @@
       "addr:street": "East 11th Avenue",
       "building": "yes",
       "name": "Mount Pleasant Universal Funeral Home"
+    },
+    "centroid": {
+      "lat": "49.260848",
+      "lon": "-123.097972"
     },
     "nodes": [
       {
@@ -13320,6 +14176,10 @@
       "building": "office",
       "source": "survey"
     },
+    "centroid": {
+      "lat": "49.266973",
+      "lon": "-123.101353"
+    },
     "nodes": [
       {
         "lat": "49.266738",
@@ -13357,6 +14217,10 @@
       "building": "retail",
       "source": "bing"
     },
+    "centroid": {
+      "lat": "49.266225",
+      "lon": "-123.100492"
+    },
     "nodes": [
       {
         "lat": "49.266299",
@@ -13387,6 +14251,10 @@
     "tags": {
       "addr:housenumber": "161",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.315286",
+      "lon": "-123.077898"
     },
     "nodes": [
       {
@@ -13439,6 +14307,10 @@
       "tourism": "museum",
       "website": "http://www.hastings-mill-museum.ca/"
     },
+    "centroid": {
+      "lat": "49.272805",
+      "lon": "-123.186039"
+    },
     "nodes": [
       {
         "lat": "49.272843",
@@ -13471,6 +14343,10 @@
       "addr:street": "Watson Street",
       "building": "yes",
       "name": "Claude Douglas Place"
+    },
+    "centroid": {
+      "lat": "49.261772",
+      "lon": "-123.100080"
     },
     "nodes": [
       {
@@ -13507,6 +14383,10 @@
       "name": "Tala Vera",
       "source": "Walk"
     },
+    "centroid": {
+      "lat": "49.261397",
+      "lon": "-123.100118"
+    },
     "nodes": [
       {
         "lat": "49.261507",
@@ -13542,6 +14422,10 @@
       "building": "residential",
       "name": "Maison"
     },
+    "centroid": {
+      "lat": "49.261802",
+      "lon": "-123.102734"
+    },
     "nodes": [
       {
         "lat": "49.261914",
@@ -13573,6 +14457,10 @@
       "addr:housenumber": "71",
       "addr:street": "Lonsdale Avenue",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.312605",
+      "lon": "-123.078460"
     },
     "nodes": [
       {
@@ -13609,6 +14497,10 @@
       "addr:housenumber": "3746",
       "addr:street": "Rumble Street",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.214555",
+      "lon": "-123.022287"
     },
     "nodes": [
       {
@@ -13658,6 +14550,10 @@
       "addr:street": "Rumble Street",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.215054",
+      "lon": "-123.021994"
+    },
     "nodes": [
       {
         "lat": "49.215069",
@@ -13706,6 +14602,10 @@
       "addr:street": "Boundary Road",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.215004",
+      "lon": "-123.023159"
+    },
     "nodes": [
       {
         "lat": "49.215039",
@@ -13745,6 +14645,10 @@
       "addr:housenumber": "3756",
       "addr:street": "Rumble Street",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.214541",
+      "lon": "-123.022041"
     },
     "nodes": [
       {
@@ -13786,6 +14690,10 @@
       "addr:street": "Rumble Street",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.214579",
+      "lon": "-123.022523"
+    },
     "nodes": [
       {
         "lat": "49.214598",
@@ -13826,6 +14734,10 @@
       "addr:street": "Boundary Road",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.215246",
+      "lon": "-123.023213"
+    },
     "nodes": [
       {
         "lat": "49.215195",
@@ -13857,6 +14769,10 @@
       "addr:housenumber": "3726",
       "addr:street": "Rumble Street",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.214532",
+      "lon": "-123.022758"
     },
     "nodes": [
       {
@@ -13906,6 +14822,10 @@
       "addr:street": "Rumble Street",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.215035",
+      "lon": "-123.021568"
+    },
     "nodes": [
       {
         "lat": "49.214959",
@@ -13953,6 +14873,10 @@
       "addr:housenumber": "3766",
       "addr:street": "Rumble Street",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.214574",
+      "lon": "-123.021781"
     },
     "nodes": [
       {
@@ -14002,6 +14926,10 @@
       "addr:street": "Rumble Street",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.215081",
+      "lon": "-123.021137"
+    },
     "nodes": [
       {
         "lat": "49.215098",
@@ -14050,6 +14978,10 @@
       "addr:street": "Rumble Street",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.215024",
+      "lon": "-123.021359"
+    },
     "nodes": [
       {
         "lat": "49.214957",
@@ -14089,6 +15021,10 @@
       "addr:housenumber": "3765",
       "addr:street": "Rumble Street",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.215054",
+      "lon": "-123.021764"
     },
     "nodes": [
       {
@@ -14138,6 +15074,10 @@
       "addr:street": "Boundary Road",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.215135",
+      "lon": "-123.023208"
+    },
     "nodes": [
       {
         "lat": "49.215186",
@@ -14169,6 +15109,10 @@
       "addr:housenumber": "3798",
       "addr:street": "Rumble Street",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.214591",
+      "lon": "-123.021189"
     },
     "nodes": [
       {
@@ -14209,6 +15153,10 @@
       "addr:housenumber": "3788",
       "addr:street": "Rumble Street",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.214552",
+      "lon": "-123.021410"
     },
     "nodes": [
       {
@@ -14253,6 +15201,10 @@
       "name": "Kerrisdale Cyclone Taylor Arena",
       "sport": "skating"
     },
+    "centroid": {
+      "lat": "49.235271",
+      "lon": "-123.154049"
+    },
     "nodes": [
       {
         "lat": "49.235114",
@@ -14293,6 +15245,10 @@
       "addr:street": "Arborlynn Drive",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.316158",
+      "lon": "-123.036290"
+    },
     "nodes": [
       {
         "lat": "49.316138",
@@ -14324,6 +15280,10 @@
       "addr:housenumber": "3705",
       "addr:street": "Southwood Street",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.214025",
+      "lon": "-123.023236"
     },
     "nodes": [
       {
@@ -14357,6 +15317,10 @@
       "addr:street": "Southwood Street",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.214042",
+      "lon": "-123.023052"
+    },
     "nodes": [
       {
         "lat": "49.214085",
@@ -14388,6 +15352,10 @@
       "addr:housenumber": "3718",
       "addr:street": "Southwood Street",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.213599",
+      "lon": "-123.023104"
     },
     "nodes": [
       {
@@ -14441,6 +15409,10 @@
       "addr:street": "Southwood Street",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.214010",
+      "lon": "-123.022788"
+    },
     "nodes": [
       {
         "lat": "49.213974",
@@ -14472,6 +15444,10 @@
       "addr:housenumber": "3737",
       "addr:street": "Southwood Street",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.214015",
+      "lon": "-123.022551"
     },
     "nodes": [
       {
@@ -14505,6 +15481,10 @@
       "addr:street": "Southwood Street",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.214035",
+      "lon": "-123.022283"
+    },
     "nodes": [
       {
         "lat": "49.214069",
@@ -14536,6 +15516,10 @@
       "addr:housenumber": "3759",
       "addr:street": "Southwood Street",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.214032",
+      "lon": "-123.022048"
     },
     "nodes": [
       {
@@ -14569,6 +15553,10 @@
       "addr:street": "Southwood Street",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.214035",
+      "lon": "-123.021808"
+    },
     "nodes": [
       {
         "lat": "49.214072",
@@ -14600,6 +15588,10 @@
       "addr:housenumber": "7615",
       "addr:street": "Joffre Avenue",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.214299",
+      "lon": "-123.021211"
     },
     "nodes": [
       {
@@ -14640,6 +15632,10 @@
       "addr:housenumber": "7620",
       "addr:street": "Boundary Road",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.214593",
+      "lon": "-123.023109"
     },
     "nodes": [
       {
@@ -14689,6 +15685,10 @@
       "addr:street": "Joffre Avenue",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.214126",
+      "lon": "-123.021232"
+    },
     "nodes": [
       {
         "lat": "49.214077",
@@ -14720,6 +15720,10 @@
       "addr:housenumber": "7635",
       "addr:street": "Joffre Avenue",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.213986",
+      "lon": "-123.021315"
     },
     "nodes": [
       {
@@ -14769,6 +15773,10 @@
       "addr:street": "Boundary Road",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.214371",
+      "lon": "-123.023190"
+    },
     "nodes": [
       {
         "lat": "49.214420",
@@ -14800,6 +15808,10 @@
       "addr:housenumber": "7510",
       "addr:street": "Boundary Road",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.215541",
+      "lon": "-123.023256"
     },
     "nodes": [
       {
@@ -14833,6 +15845,10 @@
       "addr:street": "Boundary Road",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.215410",
+      "lon": "-123.023250"
+    },
     "nodes": [
       {
         "lat": "49.215460",
@@ -14864,6 +15880,10 @@
       "addr:housenumber": "3369",
       "addr:street": "Euclid Avenue",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.237291",
+      "lon": "-123.035106"
     },
     "nodes": [
       {
@@ -14903,6 +15923,10 @@
       "name": "St. Mary's Roman Catholic Church",
       "religion": "christian",
       "website": "http://stmarysvancouver.ca/"
+    },
+    "centroid": {
+      "lat": "49.236883",
+      "lon": "-123.033875"
     },
     "nodes": [
       {
@@ -14986,6 +16010,10 @@
       "tourism": "hotel",
       "wheelchair": "yes"
     },
+    "centroid": {
+      "lat": "49.288494",
+      "lon": "-123.120816"
+    },
     "nodes": [
       {
         "lat": "49.288411",
@@ -15023,6 +16051,10 @@
       "building": "yes",
       "name": "Guiness Tower"
     },
+    "centroid": {
+      "lat": "49.288754",
+      "lon": "-123.121652"
+    },
     "nodes": [
       {
         "lat": "49.288652",
@@ -15056,6 +16088,10 @@
       "building": "yes",
       "name": "Heritage Hall",
       "website": "http://www.heritagehall.bc.ca/"
+    },
+    "centroid": {
+      "lat": "49.257317",
+      "lon": "-123.100821"
     },
     "nodes": [
       {
@@ -15100,6 +16136,10 @@
       "denomination": "lutheran",
       "religion": "christian",
       "website": "http://www.vancouverlutheran.org/"
+    },
+    "centroid": {
+      "lat": "49.257248",
+      "lon": "-123.097904"
     },
     "nodes": [
       {
@@ -15146,6 +16186,10 @@
       "religion": "christian",
       "website": "http://vancouverfilipino22.adventistchurchconnect.org/"
     },
+    "centroid": {
+      "lat": "49.257758",
+      "lon": "-123.099864"
+    },
     "nodes": [
       {
         "lat": "49.257845",
@@ -15178,6 +16222,10 @@
       "addr:street": "River Drive",
       "building": "yes",
       "rfr": "yes"
+    },
+    "centroid": {
+      "lat": "49.196052",
+      "lon": "-123.116875"
     },
     "nodes": [
       {
@@ -15214,6 +16262,10 @@
       "height": "115m",
       "name": "Patina"
     },
+    "centroid": {
+      "lat": "49.282178",
+      "lon": "-123.125952"
+    },
     "nodes": [
       {
         "lat": "49.282318",
@@ -15249,6 +16301,10 @@
       "building": "school",
       "name": "John Norquay Elementary School",
       "website": "http://norquay.vsb.bc.ca"
+    },
+    "centroid": {
+      "lat": "49.241889",
+      "lon": "-123.051351"
     },
     "nodes": [
       {
@@ -15491,6 +16547,10 @@
       "addr:street": "West 1st Avenue",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.270526",
+      "lon": "-123.148117"
+    },
     "nodes": [
       {
         "lat": "49.270608",
@@ -15535,6 +16595,10 @@
       "name": "Shoppers Drug Mart",
       "operator": "Loblaw Companies Limited"
     },
+    "centroid": {
+      "lat": "49.260075",
+      "lon": "-123.138333"
+    },
     "nodes": [
       {
         "lat": "49.260149",
@@ -15571,6 +16635,10 @@
       "addr:street": "Tisdall Street",
       "amenity": "school",
       "name": "Dr. Annie B. Jamieson Elementary School"
+    },
+    "centroid": {
+      "lat": "49.227503",
+      "lon": "-123.121021"
     },
     "nodes": [
       {
@@ -15637,6 +16705,10 @@
       "amenity": "school",
       "name": "King David High School"
     },
+    "centroid": {
+      "lat": "49.233520",
+      "lon": "-123.123253"
+    },
     "nodes": [
       {
         "lat": "49.233604",
@@ -15694,6 +16766,10 @@
       "amenity": "community_centre",
       "name": "Jewish Community Centre of Greater Vancouver",
       "website": "http://www.jccgv.com/"
+    },
+    "centroid": {
+      "lat": "49.233422",
+      "lon": "-123.126581"
     },
     "nodes": [
       {
@@ -15866,6 +16942,10 @@
       "building:levels": "4",
       "name": "Yaletown Centre"
     },
+    "centroid": {
+      "lat": "49.276501",
+      "lon": "-123.119672"
+    },
     "nodes": [
       {
         "lat": "49.276447",
@@ -15898,6 +16978,10 @@
       "addr:street": "Dunsmuir Street",
       "building": "yes",
       "name": "BC Hydro"
+    },
+    "centroid": {
+      "lat": "49.281896",
+      "lon": "-123.112686"
     },
     "nodes": [
       {
@@ -15967,6 +17051,10 @@
       "source": "bing;survey",
       "tourism": "hotel",
       "wheelchair": "yes"
+    },
+    "centroid": {
+      "lat": "49.287890",
+      "lon": "-123.120640"
     },
     "nodes": [
       {
@@ -16050,6 +17138,10 @@
       "landuse": "commercial",
       "source": "bing;survey"
     },
+    "centroid": {
+      "lat": "49.287498",
+      "lon": "-123.121597"
+    },
     "nodes": [
       {
         "lat": "49.287641",
@@ -16108,6 +17200,10 @@
       "source": "http://www.yourindependentgrocer.ca/",
       "website": "http://www.yourindependentgrocer.ca/"
     },
+    "centroid": {
+      "lat": "49.282504",
+      "lon": "-123.134022"
+    },
     "nodes": [
       {
         "lat": "49.282503",
@@ -16140,6 +17236,10 @@
       "addr:street": "Denman Street",
       "building": "yes",
       "source": "survey"
+    },
+    "centroid": {
+      "lat": "49.293722",
+      "lon": "-123.131698"
     },
     "nodes": [
       {
@@ -16177,6 +17277,10 @@
       "name": "BC Electric Railway Company Terminal",
       "note": "Built in 1911",
       "source": "bc_mosaic"
+    },
+    "centroid": {
+      "lat": "49.281190",
+      "lon": "-123.104805"
     },
     "nodes": [
       {
@@ -16237,6 +17341,10 @@
       "name": "Hastings Urban Farm",
       "source": "survey"
     },
+    "centroid": {
+      "lat": "49.281600",
+      "lon": "-123.106263"
+    },
     "nodes": [
       {
         "lat": "49.281794",
@@ -16271,6 +17379,10 @@
       "addr:street": "Broughton Street",
       "landuse": "residential",
       "name": "Harbourside Park Towers"
+    },
+    "centroid": {
+      "lat": "49.289593",
+      "lon": "-123.126302"
     },
     "nodes": [
       {
@@ -16307,6 +17419,10 @@
       "building": "yes",
       "name": "Tung Lin Kok Yuen Buddhist Temple",
       "religion": "buddhist"
+    },
+    "centroid": {
+      "lat": "49.262622",
+      "lon": "-123.066362"
     },
     "nodes": [
       {
@@ -16387,6 +17503,10 @@
       "wheelchair": "yes",
       "wikipedia": "en:Yaletown–Roundhouse Station"
     },
+    "centroid": {
+      "lat": "49.274567",
+      "lon": "-123.121879"
+    },
     "nodes": [
       {
         "lat": "49.274644",
@@ -16426,6 +17546,10 @@
       "building": "yes",
       "building:levels": "2"
     },
+    "centroid": {
+      "lat": "49.216872",
+      "lon": "-123.069238"
+    },
     "nodes": [
       {
         "lat": "49.216922",
@@ -16460,6 +17584,10 @@
       "addr:street": "Jasper Crescent",
       "building": "yes",
       "building:levels": "2"
+    },
+    "centroid": {
+      "lat": "49.213393",
+      "lon": "-123.069532"
     },
     "nodes": [
       {
@@ -16498,6 +17626,10 @@
       "payment:bitcoin": "yes",
       "phone": "604-696-3855",
       "website": "http://www.DigitalCurrencyProfits.com"
+    },
+    "centroid": {
+      "lat": "49.283650",
+      "lon": "-123.124920"
     },
     "nodes": [
       {
@@ -16602,6 +17734,10 @@
       "name": "London Place",
       "source": "Bing"
     },
+    "centroid": {
+      "lat": "49.278928",
+      "lon": "-123.128006"
+    },
     "nodes": [
       {
         "lat": "49.278921",
@@ -16638,6 +17774,10 @@
       "source": "Bing",
       "tourism": "motel"
     },
+    "centroid": {
+      "lat": "49.279415",
+      "lon": "-123.127283"
+    },
     "nodes": [
       {
         "lat": "49.279471",
@@ -16672,6 +17812,10 @@
       "name": "Burrard Health Centre",
       "source": "Bing"
     },
+    "centroid": {
+      "lat": "49.279250",
+      "lon": "-123.128363"
+    },
     "nodes": [
       {
         "lat": "49.279256",
@@ -16704,6 +17848,10 @@
       "building": "yes",
       "building:levels": "6",
       "name": "Murchies"
+    },
+    "centroid": {
+      "lat": "49.274921",
+      "lon": "-123.123195"
     },
     "nodes": [
       {
@@ -16746,6 +17894,10 @@
       "source": "Bing",
       "website": "http://www.pumpjackpub.com"
     },
+    "centroid": {
+      "lat": "49.281372",
+      "lon": "-123.132374"
+    },
     "nodes": [
       {
         "lat": "49.281381",
@@ -16782,6 +17934,10 @@
       "name": "BC Libraries Cooperative",
       "source": "Bing"
     },
+    "centroid": {
+      "lat": "49.281057",
+      "lon": "-123.118912"
+    },
     "nodes": [
       {
         "lat": "49.281053",
@@ -16816,6 +17972,10 @@
       "building": "yes",
       "building:levels": "4",
       "name": "Osler Place"
+    },
+    "centroid": {
+      "lat": "49.207133",
+      "lon": "-123.131343"
     },
     "nodes": [
       {
@@ -16853,6 +18013,10 @@
       "building:levels": "1",
       "name": "The Hive Bouldering Gym",
       "website": "http://www.hiveclimbing.com/"
+    },
+    "centroid": {
+      "lat": "49.268743",
+      "lon": "-123.092642"
     },
     "nodes": [
       {
@@ -16898,6 +18062,10 @@
       "name": "Le Chateau Outlet Store",
       "phone": "(778) 327-5872"
     },
+    "centroid": {
+      "lat": "49.278291",
+      "lon": "-123.125126"
+    },
     "nodes": [
       {
         "lat": "49.278345",
@@ -16938,6 +18106,10 @@
       "building:levels": "4",
       "name": "Alexander Manor"
     },
+    "centroid": {
+      "lat": "49.259015",
+      "lon": "-123.098843"
+    },
     "nodes": [
       {
         "lat": "49.258925",
@@ -16974,6 +18146,10 @@
       "building:levels": "5",
       "name": "Main Space"
     },
+    "centroid": {
+      "lat": "49.266831",
+      "lon": "-123.097110"
+    },
     "nodes": [
       {
         "lat": "49.267090",
@@ -17008,6 +18184,10 @@
       "addr:street": "West 11th Avenue",
       "building": "apartments",
       "building:levels": "3"
+    },
+    "centroid": {
+      "lat": "49.262133",
+      "lon": "-123.144078"
     },
     "nodes": [
       {
@@ -17078,6 +18258,10 @@
       "name": "The Edge",
       "note": "The Edge is one of (sadly) few Live-Work buildings in Vancouver (The Arc is another)."
     },
+    "centroid": {
+      "lat": "49.284361",
+      "lon": "-123.098288"
+    },
     "nodes": [
       {
         "lat": "49.284127",
@@ -17110,6 +18294,10 @@
       "addr:street": "Vulcan Way",
       "building": "yes",
       "rfr": "yes"
+    },
+    "centroid": {
+      "lat": "49.198314",
+      "lon": "-123.082184"
     },
     "nodes": [
       {
@@ -17148,6 +18336,10 @@
       "building": "yes",
       "rfr": "yes"
     },
+    "centroid": {
+      "lat": "49.196700",
+      "lon": "-123.082046"
+    },
     "nodes": [
       {
         "lat": "49.197356",
@@ -17181,6 +18373,10 @@
       "building": "yes",
       "rfr": "yes"
     },
+    "centroid": {
+      "lat": "49.198582",
+      "lon": "-123.080686"
+    },
     "nodes": [
       {
         "lat": "49.199130",
@@ -17213,6 +18409,10 @@
       "addr:street": "Vulcan Way",
       "building": "yes",
       "rfr": "yes"
+    },
+    "centroid": {
+      "lat": "49.196969",
+      "lon": "-123.080657"
     },
     "nodes": [
       {
@@ -17253,6 +18453,10 @@
       "website": "http://windermere.vsb.bc.ca",
       "wheelchair": "yes",
       "wikipedia": "en:Windermere Secondary School"
+    },
+    "centroid": {
+      "lat": "49.246701",
+      "lon": "-123.038010"
     },
     "nodes": [
       {
@@ -17308,6 +18512,10 @@
       "phone": "6047134851",
       "website": "renfrew.vsb.bc.ca",
       "wikipedia": "en:Renfrew Elementary School"
+    },
+    "centroid": {
+      "lat": "49.251085",
+      "lon": "-123.032834"
     },
     "nodes": [
       {
@@ -17374,6 +18582,10 @@
       "building": "yes",
       "rfr": "yes"
     },
+    "centroid": {
+      "lat": "49.199177",
+      "lon": "-123.078211"
+    },
     "nodes": [
       {
         "lat": "49.199707",
@@ -17415,6 +18627,10 @@
       "building": "yes",
       "rfr": "yes"
     },
+    "centroid": {
+      "lat": "49.197453",
+      "lon": "-123.079703"
+    },
     "nodes": [
       {
         "lat": "49.198526",
@@ -17451,6 +18667,10 @@
       "addr:street": "Vulcan Way",
       "building": "yes",
       "rfr": "yes"
+    },
+    "centroid": {
+      "lat": "49.197691",
+      "lon": "-123.078247"
     },
     "nodes": [
       {
@@ -17491,6 +18711,10 @@
       "building": "school",
       "building:levels": "1",
       "name": "Sir Charles Dickens Elementary Annex"
+    },
+    "centroid": {
+      "lat": "49.250215",
+      "lon": "-123.082743"
     },
     "nodes": [
       {
@@ -17543,6 +18767,10 @@
       "building:levels": "2",
       "name": "Kopernik Lodge Building B"
     },
+    "centroid": {
+      "lat": "49.215152",
+      "lon": "-123.040375"
+    },
     "nodes": [
       {
         "lat": "49.215296",
@@ -17593,6 +18821,10 @@
       "cuisine": "chinese",
       "name": "Congee Noodle King"
     },
+    "centroid": {
+      "lat": "49.234130",
+      "lon": "-123.035155"
+    },
     "nodes": [
       {
         "lat": "49.234207",
@@ -17637,6 +18869,10 @@
       "building:levels": "4",
       "name": "Montage",
       "wheelchair": "yes"
+    },
+    "centroid": {
+      "lat": "49.235059",
+      "lon": "-123.028782"
     },
     "nodes": [
       {
@@ -17759,6 +18995,10 @@
       "addr:street": "Iona Drive",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.269992",
+      "lon": "-123.252306"
+    },
     "nodes": [
       {
         "lat": "49.269839",
@@ -17796,6 +19036,10 @@
       "building": "residential",
       "name": "Cosmo"
     },
+    "centroid": {
+      "lat": "49.278811",
+      "lon": "-123.111525"
+    },
     "nodes": [
       {
         "lat": "49.278772",
@@ -17831,6 +19075,10 @@
       "building": "yes",
       "building:levels": "1",
       "name": "King's Restaurant"
+    },
+    "centroid": {
+      "lat": "49.244610",
+      "lon": "-123.100985"
     },
     "nodes": [
       {
@@ -17869,6 +19117,10 @@
       "addr:street": "Main Street",
       "building": "yes",
       "building:levels": "2"
+    },
+    "centroid": {
+      "lat": "49.245287",
+      "lon": "-123.100913"
     },
     "nodes": [
       {
@@ -17911,6 +19163,10 @@
       "building": "yes",
       "rfr": "yes"
     },
+    "centroid": {
+      "lat": "49.196012",
+      "lon": "-123.098395"
+    },
     "nodes": [
       {
         "lat": "49.196121",
@@ -17943,6 +19199,10 @@
       "addr:street": "Simpson Road",
       "building": "yes",
       "rfr": "yes"
+    },
+    "centroid": {
+      "lat": "49.195564",
+      "lon": "-123.098410"
     },
     "nodes": [
       {
@@ -17977,6 +19237,10 @@
       "building": "yes",
       "rfr": "yes"
     },
+    "centroid": {
+      "lat": "49.195810",
+      "lon": "-123.097461"
+    },
     "nodes": [
       {
         "lat": "49.196104",
@@ -18009,6 +19273,10 @@
       "addr:street": "Valmont Way",
       "building": "yes",
       "rfr": "yes"
+    },
+    "centroid": {
+      "lat": "49.201819",
+      "lon": "-123.062284"
     },
     "nodes": [
       {
@@ -18043,6 +19311,10 @@
       "building": "yes",
       "rfr": "yes"
     },
+    "centroid": {
+      "lat": "49.201559",
+      "lon": "-123.062296"
+    },
     "nodes": [
       {
         "lat": "49.201600",
@@ -18075,6 +19347,10 @@
       "addr:street": "Vulcan Way",
       "building": "yes",
       "rfr": "yes"
+    },
+    "centroid": {
+      "lat": "49.198049",
+      "lon": "-123.076460"
     },
     "nodes": [
       {
@@ -18112,6 +19388,10 @@
       "addr:street": "Vulcan Way",
       "building": "yes",
       "rfr": "yes"
+    },
+    "centroid": {
+      "lat": "49.199661",
+      "lon": "-123.076616"
     },
     "nodes": [
       {
@@ -18170,6 +19450,10 @@
       "building": "yes",
       "rfr": "yes"
     },
+    "centroid": {
+      "lat": "49.198826",
+      "lon": "-123.066891"
+    },
     "nodes": [
       {
         "lat": "49.198978",
@@ -18202,6 +19486,10 @@
       "addr:street": "Burrows Road",
       "building": "yes",
       "rfr": "yes"
+    },
+    "centroid": {
+      "lat": "49.197976",
+      "lon": "-123.067247"
     },
     "nodes": [
       {
@@ -18236,6 +19524,10 @@
       "building": "yes",
       "rfr": "yes"
     },
+    "centroid": {
+      "lat": "49.197995",
+      "lon": "-123.066361"
+    },
     "nodes": [
       {
         "lat": "49.198284",
@@ -18268,6 +19560,10 @@
       "addr:street": "Burrows Road",
       "building": "yes",
       "rfr": "yes"
+    },
+    "centroid": {
+      "lat": "49.198260",
+      "lon": "-123.067737"
     },
     "nodes": [
       {
@@ -18326,6 +19622,10 @@
       "building": "yes",
       "rfr": "yes"
     },
+    "centroid": {
+      "lat": "49.196381",
+      "lon": "-123.093001"
+    },
     "nodes": [
       {
         "lat": "49.196053",
@@ -18366,6 +19666,10 @@
       "addr:street": "River Road",
       "building": "yes",
       "rfr": "yes"
+    },
+    "centroid": {
+      "lat": "49.196299",
+      "lon": "-123.096298"
     },
     "nodes": [
       {
@@ -18420,6 +19724,10 @@
       "building": "yes",
       "rfr": "yes"
     },
+    "centroid": {
+      "lat": "49.195637",
+      "lon": "-123.096522"
+    },
     "nodes": [
       {
         "lat": "49.195721",
@@ -18460,6 +19768,10 @@
       "addr:street": "East 8th Street",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.313978",
+      "lon": "-123.037900"
+    },
     "nodes": [
       {
         "lat": "49.313916",
@@ -18491,6 +19803,10 @@
       "addr:housenumber": "1337",
       "addr:street": "East 8th Street",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.313966",
+      "lon": "-123.036965"
     },
     "nodes": [
       {
@@ -18524,6 +19840,10 @@
       "addr:street": "East 8th Street",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.314454",
+      "lon": "-123.036748"
+    },
     "nodes": [
       {
         "lat": "49.314376",
@@ -18555,6 +19875,10 @@
       "addr:housenumber": "1339",
       "addr:street": "East 8th Street",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.314003",
+      "lon": "-123.036826"
     },
     "nodes": [
       {
@@ -18626,6 +19950,10 @@
       "website": "http://foursisters.ca/",
       "wheelchair": "yes"
     },
+    "centroid": {
+      "lat": "49.283400",
+      "lon": "-123.100790"
+    },
     "nodes": [
       {
         "lat": "49.283297",
@@ -18674,6 +20002,10 @@
       "website": "http://foursisters.ca",
       "wheelchair": "yes"
     },
+    "centroid": {
+      "lat": "49.283452",
+      "lon": "-123.101527"
+    },
     "nodes": [
       {
         "lat": "49.283578",
@@ -18718,6 +20050,10 @@
       "building:levels": "6 levels",
       "name": "Burns Block Microlofts"
     },
+    "centroid": {
+      "lat": "49.281386",
+      "lon": "-123.105234"
+    },
     "nodes": [
       {
         "lat": "49.281306",
@@ -18759,6 +20095,10 @@
       "name": "Dominion Building",
       "website": "http://dominionbuilding.ca/",
       "wikipedia": "en:Dominion Building"
+    },
+    "centroid": {
+      "lat": "49.282989",
+      "lon": "-123.109710"
     },
     "nodes": [
       {
@@ -18809,6 +20149,10 @@
       "building": "yes",
       "rfr": "yes"
     },
+    "centroid": {
+      "lat": "49.204192",
+      "lon": "-123.091005"
+    },
     "nodes": [
       {
         "lat": "49.204242",
@@ -18841,6 +20185,10 @@
       "addr:street": "Mitchell Road",
       "building": "yes",
       "rfr": "yes"
+    },
+    "centroid": {
+      "lat": "49.204271",
+      "lon": "-123.090680"
     },
     "nodes": [
       {
@@ -18891,6 +20239,10 @@
       "building": "yes",
       "rfr": "yes"
     },
+    "centroid": {
+      "lat": "49.204635",
+      "lon": "-123.079135"
+    },
     "nodes": [
       {
         "lat": "49.204749",
@@ -18923,6 +20275,10 @@
       "addr:street": "Knox Way",
       "building": "yes",
       "rfr": "yes"
+    },
+    "centroid": {
+      "lat": "49.201489",
+      "lon": "-123.065942"
     },
     "nodes": [
       {
@@ -18961,6 +20317,10 @@
       "building": "yes",
       "rfr": "yes"
     },
+    "centroid": {
+      "lat": "49.201642",
+      "lon": "-123.065137"
+    },
     "nodes": [
       {
         "lat": "49.202013",
@@ -18993,6 +20353,10 @@
       "addr:street": "Knox Way",
       "building": "yes",
       "rfr": "yes"
+    },
+    "centroid": {
+      "lat": "49.200470",
+      "lon": "-123.063698"
     },
     "nodes": [
       {
@@ -19027,6 +20391,10 @@
       "building": "yes",
       "rfr": "yes"
     },
+    "centroid": {
+      "lat": "49.199854",
+      "lon": "-123.063714"
+    },
     "nodes": [
       {
         "lat": "49.199967",
@@ -19059,6 +20427,10 @@
       "addr:street": "Savage Road",
       "building": "yes",
       "rfr": "yes"
+    },
+    "centroid": {
+      "lat": "49.201497",
+      "lon": "-123.059458"
     },
     "nodes": [
       {
@@ -19100,6 +20472,10 @@
       "addr:street": "Savage Road",
       "building": "yes",
       "rfr": "yes"
+    },
+    "centroid": {
+      "lat": "49.201436",
+      "lon": "-123.060322"
     },
     "nodes": [
       {
@@ -19174,6 +20550,10 @@
       "building": "yes",
       "rfr": "yes"
     },
+    "centroid": {
+      "lat": "49.206058",
+      "lon": "-123.073635"
+    },
     "nodes": [
       {
         "lat": "49.206413",
@@ -19239,6 +20619,10 @@
       "building": "yes",
       "rfr": "yes"
     },
+    "centroid": {
+      "lat": "49.206796",
+      "lon": "-123.074058"
+    },
     "nodes": [
       {
         "lat": "49.206893",
@@ -19271,6 +20655,10 @@
       "addr:street": "Mitchell Road",
       "building": "yes",
       "rfr": "yes"
+    },
+    "centroid": {
+      "lat": "49.205015",
+      "lon": "-123.084899"
     },
     "nodes": [
       {
@@ -19313,6 +20701,10 @@
       "building": "yes",
       "rfr": "yes"
     },
+    "centroid": {
+      "lat": "49.205106",
+      "lon": "-123.083013"
+    },
     "nodes": [
       {
         "lat": "49.205169",
@@ -19353,6 +20745,10 @@
       "addr:street": "River Road",
       "building": "yes",
       "rfr": "yes"
+    },
+    "centroid": {
+      "lat": "49.197521",
+      "lon": "-123.127790"
     },
     "nodes": [
       {
@@ -19424,6 +20820,10 @@
       "phone": "604-228-8811",
       "website": "http://www.olphbc.ca/"
     },
+    "centroid": {
+      "lat": "49.264157",
+      "lon": "-123.195849"
+    },
     "nodes": [
       {
         "lat": "49.264542",
@@ -19470,6 +20870,10 @@
       "name": "Oscar",
       "source": "tynielson",
       "website": "http://www.oscarvancouver.com/"
+    },
+    "centroid": {
+      "lat": "49.275220",
+      "lon": "-123.125730"
     },
     "nodes": [
       {
@@ -19520,6 +20924,10 @@
       "name": "Congregation Schara Tzedeck",
       "phone": "604-736-7607",
       "religion": "jewish"
+    },
+    "centroid": {
+      "lat": "49.254722",
+      "lon": "-123.126833"
     },
     "nodes": [
       {
@@ -19578,6 +20986,10 @@
       "building": "yes",
       "rfr": "yes"
     },
+    "centroid": {
+      "lat": "49.196713",
+      "lon": "-123.104121"
+    },
     "nodes": [
       {
         "lat": "49.196786",
@@ -19610,6 +21022,10 @@
       "addr:street": "Finlayson Drive",
       "building": "yes",
       "rfr": "yes"
+    },
+    "centroid": {
+      "lat": "49.195119",
+      "lon": "-123.108831"
     },
     "nodes": [
       {
@@ -19644,6 +21060,10 @@
       "building": "yes",
       "rfr": "yes"
     },
+    "centroid": {
+      "lat": "49.198033",
+      "lon": "-123.113464"
+    },
     "nodes": [
       {
         "lat": "49.198092",
@@ -19676,6 +21096,10 @@
       "addr:street": "Mitchell Road",
       "building": "yes",
       "rfr": "yes"
+    },
+    "centroid": {
+      "lat": "49.203970",
+      "lon": "-123.087870"
     },
     "nodes": [
       {
@@ -19712,6 +21136,10 @@
       "building": "apartments",
       "building:levels": "22"
     },
+    "centroid": {
+      "lat": "49.241436",
+      "lon": "-123.058068"
+    },
     "nodes": [
       {
         "lat": "49.241361",
@@ -19746,6 +21174,10 @@
       "addr:street": "Eldorado Mews",
       "building": "apartments",
       "building:levels": "8"
+    },
+    "centroid": {
+      "lat": "49.241131",
+      "lon": "-123.057413"
     },
     "nodes": [
       {
@@ -19782,6 +21214,10 @@
       "building": "apartments",
       "building:levels": "7"
     },
+    "centroid": {
+      "lat": "49.240961",
+      "lon": "-123.058280"
+    },
     "nodes": [
       {
         "lat": "49.240862",
@@ -19816,6 +21252,10 @@
       "amenity": "childcare",
       "building": "yes",
       "name": "Terry Tayler Early Learning and Care"
+    },
+    "centroid": {
+      "lat": "49.240711",
+      "lon": "-123.057718"
     },
     "nodes": [
       {
@@ -19852,6 +21292,10 @@
       "building": "apartments",
       "building:levels": "4"
     },
+    "centroid": {
+      "lat": "49.240894",
+      "lon": "-123.056900"
+    },
     "nodes": [
       {
         "lat": "49.240830",
@@ -19884,6 +21328,10 @@
       "addr:housenumber": "618",
       "addr:street": "East Kent Avenue South",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.207667",
+      "lon": "-123.090622"
     },
     "nodes": [
       {
@@ -19923,6 +21371,10 @@
       "building": "school",
       "name": "Marzena's Montessori Center"
     },
+    "centroid": {
+      "lat": "49.241051",
+      "lon": "-123.067627"
+    },
     "nodes": [
       {
         "lat": "49.241163",
@@ -19957,6 +21409,10 @@
       "addr:street": "Gladstone Street",
       "building": "school",
       "name": "Gladstone Secondary School"
+    },
+    "centroid": {
+      "lat": "49.248600",
+      "lon": "-123.061455"
     },
     "nodes": [
       {
@@ -20149,6 +21605,10 @@
       "building": "school",
       "name": "Cunningham Elementary School"
     },
+    "centroid": {
+      "lat": "49.236797",
+      "lon": "-123.058136"
+    },
     "nodes": [
       {
         "lat": "49.237228",
@@ -20259,6 +21719,10 @@
       "name": "Church's Chicken",
       "website": "http://www.churchschickenbc.ca/"
     },
+    "centroid": {
+      "lat": "49.240020",
+      "lon": "-123.054676"
+    },
     "nodes": [
       {
         "lat": "49.240002",
@@ -20295,6 +21759,10 @@
       "phone": "604-434-2464",
       "tourism": "motel",
       "website": "http://www.2400motel.com/"
+    },
+    "centroid": {
+      "lat": "49.240183",
+      "lon": "-123.056391"
     },
     "nodes": [
       {
@@ -20359,6 +21827,10 @@
       "building": "yes",
       "leisure": "sports_centre",
       "name": "Trout Lake Community Centre"
+    },
+    "centroid": {
+      "lat": "49.254978",
+      "lon": "-123.065192"
     },
     "nodes": [
       {
@@ -20496,6 +21968,10 @@
       "name": "Tai Kong United Church",
       "religion": "christian"
     },
+    "centroid": {
+      "lat": "49.242272",
+      "lon": "-123.082284"
+    },
     "nodes": [
       {
         "lat": "49.242263",
@@ -20537,6 +22013,10 @@
       "addr:street": "Mainland St.",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.276183",
+      "lon": "-123.119210"
+    },
     "nodes": [
       {
         "lat": "49.276531",
@@ -20570,6 +22050,10 @@
       "addr:street": "Mainland Street",
       "building": "yes",
       "name": "Yaletown Building"
+    },
+    "centroid": {
+      "lat": "49.274862",
+      "lon": "-123.121094"
     },
     "nodes": [
       {
@@ -20623,6 +22107,10 @@
       "building:levels": "3",
       "name": "KENSINGTON COURT"
     },
+    "centroid": {
+      "lat": "49.260980",
+      "lon": "-123.095519"
+    },
     "nodes": [
       {
         "lat": "49.261048",
@@ -20673,6 +22161,10 @@
       "building": "industrial",
       "building:levels": "2"
     },
+    "centroid": {
+      "lat": "49.268545",
+      "lon": "-123.098127"
+    },
     "nodes": [
       {
         "lat": "49.268557",
@@ -20707,6 +22199,10 @@
       "amenity": "cafe",
       "building": "yes",
       "name": "JJ Bean"
+    },
+    "centroid": {
+      "lat": "49.258233",
+      "lon": "-123.100801"
     },
     "nodes": [
       {
@@ -20754,6 +22250,10 @@
       "building": "commercial",
       "name": "Terra Kendama"
     },
+    "centroid": {
+      "lat": "49.263642",
+      "lon": "-123.107583"
+    },
     "nodes": [
       {
         "lat": "49.263702",
@@ -20788,6 +22288,10 @@
       "addr:street": "Victoria Drive",
       "building": "apartments",
       "building:levels": "3"
+    },
+    "centroid": {
+      "lat": "49.261128",
+      "lon": "-123.066375"
     },
     "nodes": [
       {
@@ -20826,6 +22330,10 @@
       "addr:postcode": "V5N 1X8",
       "addr:street": "East 10th Avenue",
       "building": "apartments"
+    },
+    "centroid": {
+      "lat": "49.261717",
+      "lon": "-123.066841"
     },
     "nodes": [
       {
@@ -20941,6 +22449,10 @@
       "addr:street": "East 10th Avenue",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.261203",
+      "lon": "-123.068554"
+    },
     "nodes": [
       {
         "lat": "49.261279",
@@ -20976,6 +22488,10 @@
       "building": "yes",
       "operator": "Safeway",
       "shop": "supermarket"
+    },
+    "centroid": {
+      "lat": "49.261738",
+      "lon": "-123.068621"
     },
     "nodes": [
       {
@@ -21018,6 +22534,10 @@
       "addr:postcode": "V5N 1X7",
       "addr:street": "east 10th Avenue",
       "building": "apartments"
+    },
+    "centroid": {
+      "lat": "49.261530",
+      "lon": "-123.066415"
     },
     "nodes": [
       {
@@ -21089,6 +22609,10 @@
       "building": "apartments",
       "building:levels": "3"
     },
+    "centroid": {
+      "lat": "49.241431",
+      "lon": "-123.059110"
+    },
     "nodes": [
       {
         "lat": "49.241648",
@@ -21146,6 +22670,10 @@
       "addr:street": "East 30th Avenue",
       "building": "apartments",
       "building:levels": "3"
+    },
+    "centroid": {
+      "lat": "49.241591",
+      "lon": "-123.059456"
     },
     "nodes": [
       {
@@ -21206,6 +22734,10 @@
       "name": "TMA Autobody and Services",
       "shop": "car_repair"
     },
+    "centroid": {
+      "lat": "49.242223",
+      "lon": "-123.059767"
+    },
     "nodes": [
       {
         "lat": "49.242341",
@@ -21249,6 +22781,10 @@
       "building": "yes",
       "building:levels": "1"
     },
+    "centroid": {
+      "lat": "49.275017",
+      "lon": "-123.069805"
+    },
     "nodes": [
       {
         "lat": "49.275063",
@@ -21286,6 +22822,10 @@
       "addr:street": "Commercial Drive",
       "building": "yes",
       "name": "Croatian Cultural Centre"
+    },
+    "centroid": {
+      "lat": "49.255472",
+      "lon": "-123.068328"
     },
     "nodes": [
       {
@@ -21399,6 +22939,10 @@
       "name": "Vancouver Community College",
       "phone": "1 866 565 7820"
     },
+    "centroid": {
+      "lat": "49.263565",
+      "lon": "-123.080540"
+    },
     "nodes": [
       {
         "lat": "49.262529",
@@ -21434,6 +22978,10 @@
       "building": "yes",
       "name": "Or Shalom Synagogue",
       "religion": "jewish"
+    },
+    "centroid": {
+      "lat": "49.261255",
+      "lon": "-123.088915"
     },
     "nodes": [
       {
@@ -21488,6 +23036,10 @@
       "name": "Masjid Omar Al-Farooq",
       "religion": "muslim"
     },
+    "centroid": {
+      "lat": "49.261618",
+      "lon": "-123.070579"
+    },
     "nodes": [
       {
         "lat": "49.261702",
@@ -21523,6 +23075,10 @@
       "building": "public",
       "name": "Veterans Club",
       "note": "Army, Navy, & Airforce Veterans Club, Taurus Unit #298"
+    },
+    "centroid": {
+      "lat": "49.250036",
+      "lon": "-123.101388"
     },
     "nodes": [
       {
@@ -21563,6 +23119,10 @@
       "building": "yes",
       "name": "The Rio"
     },
+    "centroid": {
+      "lat": "49.262068",
+      "lon": "-123.070555"
+    },
     "nodes": [
       {
         "lat": "49.262165",
@@ -21602,6 +23162,10 @@
       "building": "yes",
       "name": "The Cultch",
       "website": "http://thecultch.com/"
+    },
+    "centroid": {
+      "lat": "49.276839",
+      "lon": "-123.066063"
     },
     "nodes": [
       {
@@ -21668,6 +23232,10 @@
       "addr:street": "East 22nd Avenue",
       "building": "school",
       "name": "Lord Selkirk Elementary"
+    },
+    "centroid": {
+      "lat": "49.249666",
+      "lon": "-123.069049"
     },
     "nodes": [
       {
@@ -21788,6 +23356,10 @@
       "building": "school",
       "name": "Tyee Elimentry"
     },
+    "centroid": {
+      "lat": "49.253296",
+      "lon": "-123.073791"
+    },
     "nodes": [
       {
         "lat": "49.253414",
@@ -21846,6 +23418,10 @@
       "shop": "variety_store",
       "website": "http://www.dollarama.com/"
     },
+    "centroid": {
+      "lat": "49.243707",
+      "lon": "-123.061226"
+    },
     "nodes": [
       {
         "lat": "49.243723",
@@ -21880,6 +23456,10 @@
       "building": "yes",
       "name": "Gin's Auto Repair",
       "shop": "car_repair"
+    },
+    "centroid": {
+      "lat": "49.278704",
+      "lon": "-123.076847"
     },
     "nodes": [
       {
@@ -21925,6 +23505,10 @@
       "cuisine": "filipino",
       "name": "Pinpin"
     },
+    "centroid": {
+      "lat": "49.228952",
+      "lon": "-123.090981"
+    },
     "nodes": [
       {
         "lat": "49.228983",
@@ -21957,6 +23541,10 @@
       "addr:street": "Bentley Street",
       "building": "yes",
       "rfr": "yes"
+    },
+    "centroid": {
+      "lat": "49.202474",
+      "lon": "-123.144373"
     },
     "nodes": [
       {
@@ -21991,6 +23579,10 @@
       "building": "yes",
       "rfr": "yes"
     },
+    "centroid": {
+      "lat": "49.202687",
+      "lon": "-123.144886"
+    },
     "nodes": [
       {
         "lat": "49.202785",
@@ -22024,6 +23616,10 @@
       "addr:street": "Trafalgar Street",
       "building": "school",
       "name": "Trafalgar Elementary"
+    },
+    "centroid": {
+      "lat": "49.249947",
+      "lon": "-123.164359"
     },
     "nodes": [
       {
@@ -22138,6 +23734,10 @@
       "opening_hours": "Su 08:00-12:00; We 19:00+; Th 11:15+",
       "religion": "christian"
     },
+    "centroid": {
+      "lat": "49.283191",
+      "lon": "-123.133813"
+    },
     "nodes": [
       {
         "lat": "49.283354",
@@ -22176,6 +23776,10 @@
       "addr:street": "Eddington Drive",
       "building": "school",
       "name": "Prince of Wales Secondary"
+    },
+    "centroid": {
+      "lat": "49.245382",
+      "lon": "-123.157449"
     },
     "nodes": [
       {
@@ -22304,6 +23908,10 @@
       "building": "house",
       "building:levels": "3"
     },
+    "centroid": {
+      "lat": "49.275944",
+      "lon": "-123.068595"
+    },
     "nodes": [
       {
         "lat": "49.276003",
@@ -22336,6 +23944,10 @@
       "addr:housenumber": "313",
       "addr:street": "Alexander Street",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.284239",
+      "lon": "-123.097287"
     },
     "nodes": [
       {
@@ -22374,6 +23986,10 @@
       "addr:street": "East Cordova Street",
       "building": "yes",
       "name": "United Poultry Co Ltd"
+    },
+    "centroid": {
+      "lat": "49.281858",
+      "lon": "-123.092543"
     },
     "nodes": [
       {
@@ -22417,6 +24033,10 @@
       "addr:street": "Ontario Street",
       "building": "school",
       "name": "Sir William Van Horne Elementary"
+    },
+    "centroid": {
+      "lat": "49.231818",
+      "lon": "-123.106373"
     },
     "nodes": [
       {
@@ -22508,6 +24128,10 @@
       "building": "school",
       "name": "General Wolfe Elementary",
       "website": "http://wolfe.vsb.bc.ca/"
+    },
+    "centroid": {
+      "lat": "49.247360",
+      "lon": "-123.105691"
     },
     "nodes": [
       {
@@ -22613,6 +24237,10 @@
       "addr:street": "East Pender Street",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.279908",
+      "lon": "-123.089336"
+    },
     "nodes": [
       {
         "lat": "49.279778",
@@ -22646,6 +24274,10 @@
       "addr:postcode": "V5N1H2",
       "addr:street": "East 3rd Avenue",
       "building": "residential"
+    },
+    "centroid": {
+      "lat": "49.267590",
+      "lon": "-123.067199"
     },
     "nodes": [
       {
@@ -22683,6 +24315,10 @@
       "building": "yes",
       "name": "Grandview Calvary Baptist Church",
       "religion": "christian"
+    },
+    "centroid": {
+      "lat": "49.269749",
+      "lon": "-123.067311"
     },
     "nodes": [
       {
@@ -22729,6 +24365,10 @@
       "name": "Chùa Chân Quang",
       "religion": "buddhist"
     },
+    "centroid": {
+      "lat": "49.269796",
+      "lon": "-123.067872"
+    },
     "nodes": [
       {
         "lat": "49.269926",
@@ -22772,6 +24412,10 @@
       "building": "yes",
       "building:levels": "5",
       "name": "Wesix"
+    },
+    "centroid": {
+      "lat": "49.266570",
+      "lon": "-123.139636"
     },
     "nodes": [
       {
@@ -22889,6 +24533,10 @@
       "building": "residential",
       "building:levels": "2"
     },
+    "centroid": {
+      "lat": "49.258929",
+      "lon": "-123.073998"
+    },
     "nodes": [
       {
         "lat": "49.258962",
@@ -22934,6 +24582,10 @@
       "source": "Bing",
       "website": "www.tilleyendurables.com"
     },
+    "centroid": {
+      "lat": "49.264375",
+      "lon": "-123.138937"
+    },
     "nodes": [
       {
         "lat": "49.264435",
@@ -22973,6 +24625,10 @@
       "takeaway": "yes",
       "website": "www.verasburgershack.com"
     },
+    "centroid": {
+      "lat": "49.263802",
+      "lon": "-123.137208"
+    },
     "nodes": [
       {
         "lat": "49.263863",
@@ -23008,6 +24664,10 @@
       "building": "apartments",
       "building:levels": "4",
       "name": "The Barclay"
+    },
+    "centroid": {
+      "lat": "49.287471",
+      "lon": "-123.134123"
     },
     "nodes": [
       {
@@ -23182,6 +24842,10 @@
       "building:levels": "11",
       "name": "The Fairview"
     },
+    "centroid": {
+      "lat": "49.265830",
+      "lon": "-123.142943"
+    },
     "nodes": [
       {
         "lat": "49.266049",
@@ -23267,6 +24931,10 @@
       "religion": "christian",
       "website": "http://www.gracevancouver.com"
     },
+    "centroid": {
+      "lat": "49.265255",
+      "lon": "-123.143107"
+    },
     "nodes": [
       {
         "lat": "49.265335",
@@ -23303,6 +24971,10 @@
       "building": "residential",
       "building:levels": "8",
       "name": "Harwood House"
+    },
+    "centroid": {
+      "lat": "49.282539",
+      "lon": "-123.139316"
     },
     "nodes": [
       {
@@ -23379,6 +25051,10 @@
       "addr:street": "West 14th Avenue",
       "building": "apartments",
       "building:levels": "3"
+    },
+    "centroid": {
+      "lat": "49.258632",
+      "lon": "-123.136727"
     },
     "nodes": [
       {
@@ -23537,6 +25213,10 @@
       "name": "the grange",
       "wheelchair": "no"
     },
+    "centroid": {
+      "lat": "49.259181",
+      "lon": "-123.135884"
+    },
     "nodes": [
       {
         "lat": "49.259300",
@@ -23590,6 +25270,10 @@
       "building:levels": "12",
       "name": "Avedon"
     },
+    "centroid": {
+      "lat": "49.258683",
+      "lon": "-123.137372"
+    },
     "nodes": [
       {
         "lat": "49.258750",
@@ -23641,6 +25325,10 @@
       "building": "school",
       "name": "L'École Bilingue",
       "website": "http://lecole-bilingue.vsb.bc.ca/contact.html"
+    },
+    "centroid": {
+      "lat": "49.258360",
+      "lon": "-123.130765"
     },
     "nodes": [
       {
@@ -23709,6 +25397,10 @@
       "addr:street": "Broughton",
       "building": "yes",
       "name": "Harbourside Park Towers"
+    },
+    "centroid": {
+      "lat": "49.289654",
+      "lon": "-123.126664"
     },
     "nodes": [
       {
@@ -23864,6 +25556,10 @@
       "phone": "+1 604 713 8266",
       "source": "Bing"
     },
+    "centroid": {
+      "lat": "49.275271",
+      "lon": "-123.071677"
+    },
     "nodes": [
       {
         "lat": "49.275585",
@@ -23996,6 +25692,10 @@
       "building": "house",
       "building:levels": "2"
     },
+    "centroid": {
+      "lat": "49.258971",
+      "lon": "-123.073220"
+    },
     "nodes": [
       {
         "lat": "49.258941",
@@ -24041,6 +25741,10 @@
       "building:levels": "8",
       "name": "Alexander-Alexis Building"
     },
+    "centroid": {
+      "lat": "49.283734",
+      "lon": "-123.103539"
+    },
     "nodes": [
       {
         "lat": "49.283822",
@@ -24077,6 +25781,10 @@
       "building": "residential",
       "building:levels": "8",
       "name": "The Captian French"
+    },
+    "centroid": {
+      "lat": "49.283779",
+      "lon": "-123.103321"
     },
     "nodes": [
       {
@@ -24116,6 +25824,10 @@
       "opening_hours": "Mo-Fr 9:30-17:30;Sa 9:30-17:00",
       "operator": "Purdy's Chocolatier",
       "shop": "chocolate"
+    },
+    "centroid": {
+      "lat": "49.237909",
+      "lon": "-123.047778"
     },
     "nodes": [
       {
@@ -24160,6 +25872,10 @@
       "building": "garage",
       "name": "P&T Auto Service Ltd."
     },
+    "centroid": {
+      "lat": "49.259709",
+      "lon": "-123.061722"
+    },
     "nodes": [
       {
         "lat": "49.259650",
@@ -24201,6 +25917,10 @@
       "building:levels": "4",
       "name": "Shaughnessy Lodge",
       "wheelchair": "no"
+    },
+    "centroid": {
+      "lat": "49.262317",
+      "lon": "-123.133465"
     },
     "nodes": [
       {
@@ -24275,6 +25995,10 @@
       "building": "school",
       "name": "Edith Cavell Elementary School",
       "website": "http://cavell.vsb.bc.ca/"
+    },
+    "centroid": {
+      "lat": "49.252857",
+      "lon": "-123.117166"
     },
     "nodes": [
       {
@@ -24361,6 +26085,10 @@
       "building:levels": "6",
       "name": "The Exchange"
     },
+    "centroid": {
+      "lat": "49.268294",
+      "lon": "-123.113337"
+    },
     "nodes": [
       {
         "lat": "49.268235",
@@ -24426,6 +26154,10 @@
       "addr:street": "East 28th Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.245214",
+      "lon": "-123.078423"
+    },
     "nodes": [
       {
         "lat": "49.245279",
@@ -24458,6 +26190,10 @@
       "addr:housenumber": "1282",
       "addr:street": "East 28th Avenue",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.245213",
+      "lon": "-123.078530"
     },
     "nodes": [
       {
@@ -24500,6 +26236,10 @@
       "addr:street": "East 28th Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.245224",
+      "lon": "-123.078675"
+    },
     "nodes": [
       {
         "lat": "49.245268",
@@ -24532,6 +26272,10 @@
       "addr:housenumber": "1266",
       "addr:street": "East 28th Avenue",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.245225",
+      "lon": "-123.078840"
     },
     "nodes": [
       {
@@ -24566,6 +26310,10 @@
       "addr:street": "East 28th Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.245206",
+      "lon": "-123.078978"
+    },
     "nodes": [
       {
         "lat": "49.245159",
@@ -24598,6 +26346,10 @@
       "addr:housenumber": "1250",
       "addr:street": "East 28th Avenue",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.245199",
+      "lon": "-123.079095"
     },
     "nodes": [
       {
@@ -24647,6 +26399,10 @@
       "addr:housenumber": "1242",
       "addr:street": "East 28th Avenue",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.245209",
+      "lon": "-123.079244"
     },
     "nodes": [
       {
@@ -24713,6 +26469,10 @@
       "addr:street": "East 28th Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.245222",
+      "lon": "-123.079506"
+    },
     "nodes": [
       {
         "lat": "49.245278",
@@ -24745,6 +26505,10 @@
       "addr:housenumber": "1238",
       "addr:street": "East 28th Avenue",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.245182",
+      "lon": "-123.079387"
     },
     "nodes": [
       {
@@ -24798,6 +26562,10 @@
       "addr:housenumber": "1220",
       "addr:street": "East 28th Avenue",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.245223",
+      "lon": "-123.079694"
     },
     "nodes": [
       {
@@ -24864,6 +26632,10 @@
       "addr:street": "East 28th Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.245198",
+      "lon": "-123.079882"
+    },
     "nodes": [
       {
         "lat": "49.245144",
@@ -24896,6 +26668,10 @@
       "addr:housenumber": "4388",
       "addr:street": "Inverness Street",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.245673",
+      "lon": "-123.079937"
     },
     "nodes": [
       {
@@ -24938,6 +26714,10 @@
       "addr:street": "East 28th Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.245669",
+      "lon": "-123.079789"
+    },
     "nodes": [
       {
         "lat": "49.245732",
@@ -24970,6 +26750,10 @@
       "addr:housenumber": "1219",
       "addr:street": "East 28th Avenue",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.245636",
+      "lon": "-123.079631"
     },
     "nodes": [
       {
@@ -25004,6 +26788,10 @@
       "addr:street": "East 28th Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.245677",
+      "lon": "-123.079515"
+    },
     "nodes": [
       {
         "lat": "49.245742",
@@ -25037,6 +26825,10 @@
       "addr:street": "East 28th Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.245602",
+      "lon": "-123.079352"
+    },
     "nodes": [
       {
         "lat": "49.245558",
@@ -25068,6 +26860,10 @@
       "addr:housenumber": "1239",
       "addr:street": "East 28th Avenue",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.245655",
+      "lon": "-123.079213"
     },
     "nodes": [
       {
@@ -25101,6 +26897,10 @@
       "addr:housenumber": "1249",
       "addr:street": "East 28th Avenue",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.245682",
+      "lon": "-123.079082"
     },
     "nodes": [
       {
@@ -25159,6 +26959,10 @@
       "addr:street": "East 28th Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.245680",
+      "lon": "-123.078948"
+    },
     "nodes": [
       {
         "lat": "49.245586",
@@ -25200,6 +27004,10 @@
       "addr:street": "East 28th Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.245627",
+      "lon": "-123.078823"
+    },
     "nodes": [
       {
         "lat": "49.245578",
@@ -25232,6 +27040,10 @@
       "addr:housenumber": "1271",
       "addr:street": "East 28th Avenue",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.245673",
+      "lon": "-123.078691"
     },
     "nodes": [
       {
@@ -25282,6 +27094,10 @@
       "addr:street": "East 28th Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.245620",
+      "lon": "-123.078520"
+    },
     "nodes": [
       {
         "lat": "49.245565",
@@ -25314,6 +27130,10 @@
       "addr:housenumber": "1287",
       "addr:street": "East 28th Avenue",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.245613",
+      "lon": "-123.078413"
     },
     "nodes": [
       {
@@ -25348,6 +27168,10 @@
       "addr:street": "East 28th Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.245746",
+      "lon": "-123.078267"
+    },
     "nodes": [
       {
         "lat": "49.245797",
@@ -25380,6 +27204,10 @@
       "addr:housenumber": "1297",
       "addr:street": "East 28th Avenue",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.245649",
+      "lon": "-123.078129"
     },
     "nodes": [
       {
@@ -25414,6 +27242,10 @@
       "addr:street": "East 28th Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.245703",
+      "lon": "-123.077986"
+    },
     "nodes": [
       {
         "lat": "49.245794",
@@ -25446,6 +27278,10 @@
       "addr:housenumber": "1319",
       "addr:street": "East 28th Avenue",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.245596",
+      "lon": "-123.077837"
     },
     "nodes": [
       {
@@ -25480,6 +27316,10 @@
       "addr:street": "East 28th Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.245637",
+      "lon": "-123.077714"
+    },
     "nodes": [
       {
         "lat": "49.245577",
@@ -25513,6 +27353,10 @@
       "addr:street": "East 28th Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.245626",
+      "lon": "-123.077548"
+    },
     "nodes": [
       {
         "lat": "49.245573",
@@ -25545,6 +27389,10 @@
       "addr:housenumber": "1349",
       "addr:street": "East 28th Avenue",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.245656",
+      "lon": "-123.077425"
     },
     "nodes": [
       {
@@ -25599,6 +27447,10 @@
       "addr:street": "East 28th Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.245631",
+      "lon": "-123.077270"
+    },
     "nodes": [
       {
         "lat": "49.245572",
@@ -25631,6 +27483,10 @@
       "addr:housenumber": "1365",
       "addr:street": "East 28th Avenue",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.245594",
+      "lon": "-123.077143"
     },
     "nodes": [
       {
@@ -25665,6 +27521,10 @@
       "addr:street": "East 28th Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.245612",
+      "lon": "-123.077020"
+    },
     "nodes": [
       {
         "lat": "49.245653",
@@ -25697,6 +27557,10 @@
       "addr:street": "Mohawk Street",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.245219",
+      "lon": "-123.078009"
+    },
     "nodes": [
       {
         "lat": "49.245266",
@@ -25728,6 +27592,10 @@
       "addr:housenumber": "1312",
       "addr:street": "East 28th Avenue",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.245171",
+      "lon": "-123.077867"
     },
     "nodes": [
       {
@@ -25769,6 +27637,10 @@
       "addr:street": "East 28th Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.245193",
+      "lon": "-123.077724"
+    },
     "nodes": [
       {
         "lat": "49.245103",
@@ -25809,6 +27681,10 @@
       "addr:street": "East 28th Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.245195",
+      "lon": "-123.077588"
+    },
     "nodes": [
       {
         "lat": "49.245264",
@@ -25848,6 +27724,10 @@
       "addr:housenumber": "1336",
       "addr:street": "East 28th Avenue",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.245162",
+      "lon": "-123.077435"
     },
     "nodes": [
       {
@@ -25897,6 +27777,10 @@
       "addr:street": "East 28th Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.245212",
+      "lon": "-123.077300"
+    },
     "nodes": [
       {
         "lat": "49.245269",
@@ -25945,6 +27829,10 @@
       "addr:street": "East 28th Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.245196",
+      "lon": "-123.077181"
+    },
     "nodes": [
       {
         "lat": "49.245265",
@@ -25984,6 +27872,10 @@
       "addr:housenumber": "1358",
       "addr:street": "East 28th Avenue",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.245207",
+      "lon": "-123.077043"
     },
     "nodes": [
       {
@@ -26025,6 +27917,10 @@
       "addr:street": "East 28th Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.245215",
+      "lon": "-123.076903"
+    },
     "nodes": [
       {
         "lat": "49.245265",
@@ -26056,6 +27952,10 @@
       "addr:housenumber": "1392",
       "addr:street": "East 28th Avenue",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.245166",
+      "lon": "-123.076493"
     },
     "nodes": [
       {
@@ -26097,6 +27997,10 @@
       "addr:street": "East 28th Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.245215",
+      "lon": "-123.076598"
+    },
     "nodes": [
       {
         "lat": "49.245257",
@@ -26128,6 +28032,10 @@
       "addr:housenumber": "1374",
       "addr:street": "East 28th Avenue",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.245198",
+      "lon": "-123.076752"
     },
     "nodes": [
       {
@@ -26175,6 +28083,10 @@
       "name": "Laura Secord Elementary School",
       "phone": "+1 604 713 4996",
       "website": "http://secord.vsb.bc.ca"
+    },
+    "centroid": {
+      "lat": "49.261775",
+      "lon": "-123.061461"
     },
     "nodes": [
       {
@@ -26316,6 +28228,10 @@
       "building": "school",
       "name": "Templeton Secondary School",
       "website": "http://templeton.vsb.bc.ca"
+    },
+    "centroid": {
+      "lat": "49.278110",
+      "lon": "-123.060791"
     },
     "nodes": [
       {
@@ -26480,6 +28396,10 @@
       "building": "yes",
       "name": "Cactus Club Cafe"
     },
+    "centroid": {
+      "lat": "49.286746",
+      "lon": "-123.142707"
+    },
     "nodes": [
       {
         "lat": "49.286639",
@@ -26523,6 +28443,10 @@
       "area": "yes",
       "name": "Vancouver School Board Grounds Nursery"
     },
+    "centroid": {
+      "lat": "49.230445",
+      "lon": "-123.052603"
+    },
     "nodes": [
       {
         "lat": "49.230773",
@@ -26557,6 +28481,10 @@
       "addr:street": "Victoria Drive",
       "building": "yes"
     },
+    "centroid": {
+      "lat": "49.278223",
+      "lon": "-123.065404"
+    },
     "nodes": [
       {
         "lat": "49.278254",
@@ -26589,6 +28517,10 @@
       "addr:street": "Iona Drive",
       "building": "apartments",
       "name": "Coast West"
+    },
+    "centroid": {
+      "lat": "49.270764",
+      "lon": "-123.253248"
     },
     "nodes": [
       {
@@ -26643,6 +28575,10 @@
       "building": "apartments",
       "name": "Coast East"
     },
+    "centroid": {
+      "lat": "49.270970",
+      "lon": "-123.252661"
+    },
     "nodes": [
       {
         "lat": "49.270725",
@@ -26686,6 +28622,10 @@
       "addr:street": "Oak Street",
       "building": "apartments",
       "building:levels": "2"
+    },
+    "centroid": {
+      "lat": "49.260321",
+      "lon": "-123.127019"
     },
     "nodes": [
       {
@@ -26739,6 +28679,10 @@
       "building": "apartments",
       "building:levels": "3"
     },
+    "centroid": {
+      "lat": "49.260315",
+      "lon": "-123.126278"
+    },
     "nodes": [
       {
         "lat": "49.260414",
@@ -26790,6 +28734,10 @@
       "addr:street": "West 12th Avenue",
       "building": "hospital",
       "name": "Windermere Care Centre"
+    },
+    "centroid": {
+      "lat": "49.260301",
+      "lon": "-123.124906"
     },
     "nodes": [
       {
@@ -26849,6 +28797,10 @@
       "addr:street": "West 12th Avenue",
       "building": "apartments",
       "building:levels": "3"
+    },
+    "centroid": {
+      "lat": "49.260971",
+      "lon": "-123.130717"
     },
     "nodes": [
       {
@@ -26916,6 +28868,10 @@
       "building": "apartments",
       "building:levels": "13"
     },
+    "centroid": {
+      "lat": "49.260869",
+      "lon": "-123.129744"
+    },
     "nodes": [
       {
         "lat": "49.260982",
@@ -26967,6 +28923,10 @@
       "building": "apartments",
       "building:levels": "3",
       "name": "Carlton House"
+    },
+    "centroid": {
+      "lat": "49.260379",
+      "lon": "-123.130109"
     },
     "nodes": [
       {
@@ -27034,6 +28994,10 @@
       "addr:street": "West 12th Avenue",
       "building": "apartments",
       "building:levels": "3"
+    },
+    "centroid": {
+      "lat": "49.260369",
+      "lon": "-123.129782"
     },
     "nodes": [
       {
@@ -27103,6 +29067,10 @@
       "building": "apartments",
       "building:levels": "3"
     },
+    "centroid": {
+      "lat": "49.260954",
+      "lon": "-123.131908"
+    },
     "nodes": [
       {
         "lat": "49.261055",
@@ -27154,6 +29122,10 @@
       "building": "apartments",
       "building:levels": "2",
       "name": "The Montrose"
+    },
+    "centroid": {
+      "lat": "49.260390",
+      "lon": "-123.131170"
     },
     "nodes": [
       {
@@ -27207,6 +29179,10 @@
       "building:levels": "3",
       "name": "Hartethrone"
     },
+    "centroid": {
+      "lat": "49.260977",
+      "lon": "-123.131031"
+    },
     "nodes": [
       {
         "lat": "49.261054",
@@ -27244,6 +29220,10 @@
       "building:levels": "3",
       "name": "Randolph"
     },
+    "centroid": {
+      "lat": "49.260493",
+      "lon": "-123.130742"
+    },
     "nodes": [
       {
         "lat": "49.260543",
@@ -27280,6 +29260,10 @@
       "building": "apartments",
       "building:levels": "3",
       "name": "Regent Court"
+    },
+    "centroid": {
+      "lat": "49.260405",
+      "lon": "-123.130472"
     },
     "nodes": [
       {
@@ -27349,6 +29333,10 @@
       "building": "apartments",
       "building:levels": "3"
     },
+    "centroid": {
+      "lat": "49.260298",
+      "lon": "-123.128405"
+    },
     "nodes": [
       {
         "lat": "49.260462",
@@ -27409,6 +29397,10 @@
       "building": "apartments",
       "building:levels": "3"
     },
+    "centroid": {
+      "lat": "49.260354",
+      "lon": "-123.127848"
+    },
     "nodes": [
       {
         "lat": "49.260453",
@@ -27444,6 +29436,10 @@
       "addr:street": "West 12th Avenue",
       "building": "apartments",
       "building:levels": "3"
+    },
+    "centroid": {
+      "lat": "49.260382",
+      "lon": "-123.129590"
     },
     "nodes": [
       {
@@ -27482,6 +29478,10 @@
       "building:levels": "3",
       "wheelchair": "yes"
     },
+    "centroid": {
+      "lat": "49.260364",
+      "lon": "-123.129383"
+    },
     "nodes": [
       {
         "lat": "49.260484",
@@ -27518,6 +29518,10 @@
       "building": "apartments",
       "building:levels": "3"
     },
+    "centroid": {
+      "lat": "49.260928",
+      "lon": "-123.129363"
+    },
     "nodes": [
       {
         "lat": "49.261016",
@@ -27553,6 +29557,10 @@
       "addr:street": "West 12th Avenue",
       "building": "apartments",
       "building:levels": "3"
+    },
+    "centroid": {
+      "lat": "49.260334",
+      "lon": "-123.127535"
     },
     "nodes": [
       {
@@ -27622,6 +29630,10 @@
       "building": "apartments",
       "building:levels": "2"
     },
+    "centroid": {
+      "lat": "49.260334",
+      "lon": "-123.127245"
+    },
     "nodes": [
       {
         "lat": "49.260434",
@@ -27672,6 +29684,10 @@
       "addr:street": "West 12th Avenue",
       "building": "apartments",
       "building:levels": "3"
+    },
+    "centroid": {
+      "lat": "49.260912",
+      "lon": "-123.127292"
     },
     "nodes": [
       {
@@ -27750,6 +29766,10 @@
       "name": "Vancouver General Hospital (VGH)",
       "wheelchair": "yes"
     },
+    "centroid": {
+      "lat": "49.261122",
+      "lon": "-123.123578"
+    },
     "nodes": [
       {
         "lat": "49.262384",
@@ -27815,6 +29835,10 @@
       "building": "apartments",
       "name": "Willingdon Lodge"
     },
+    "centroid": {
+      "lat": "49.257415",
+      "lon": "-123.140931"
+    },
     "nodes": [
       {
         "lat": "49.257510",
@@ -27866,6 +29890,10 @@
       "addr:street": "West 16th Avenue",
       "building": "apartments"
     },
+    "centroid": {
+      "lat": "49.257311",
+      "lon": "-123.140060"
+    },
     "nodes": [
       {
         "lat": "49.257374",
@@ -27897,6 +29925,10 @@
       "addr:housenumber": "1535",
       "addr:street": "West 16th Avenue",
       "building": "apartments"
+    },
+    "centroid": {
+      "lat": "49.257303",
+      "lon": "-123.139749"
     },
     "nodes": [
       {
@@ -27930,6 +29962,10 @@
       "addr:street": "McRae Avenue",
       "building": "yes",
       "name": "Hycroft"
+    },
+    "centroid": {
+      "lat": "49.257330",
+      "lon": "-123.136609"
     },
     "nodes": [
       {
@@ -28045,6 +30081,10 @@
       "smoking": "no",
       "takeaway": "yes"
     },
+    "centroid": {
+      "lat": "49.236987",
+      "lon": "-123.047959"
+    },
     "nodes": [
       {
         "lat": "49.237068",
@@ -28083,6 +30123,10 @@
       "addr:street": "West 16th Avenue",
       "building": "church",
       "name": "Fairview Baptist Church"
+    },
+    "centroid": {
+      "lat": "49.256851",
+      "lon": "-123.144241"
     },
     "nodes": [
       {
@@ -28152,6 +30196,10 @@
       "building": "house",
       "building:levels": "1"
     },
+    "centroid": {
+      "lat": "49.237336",
+      "lon": "-123.124208"
+    },
     "nodes": [
       {
         "lat": "49.237271",
@@ -28186,6 +30234,10 @@
       "addr:province": "BC",
       "addr:street": "West 37th Avenue",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.237299",
+      "lon": "-123.127072"
     },
     "nodes": [
       {
@@ -28229,6 +30281,10 @@
       "addr:province": "BC",
       "addr:street": "West 38th Avenue",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.236931",
+      "lon": "-123.127113"
     },
     "nodes": [
       {
@@ -28274,6 +30330,10 @@
       "building": "house",
       "building:levels": "1"
     },
+    "centroid": {
+      "lat": "49.236783",
+      "lon": "-123.124147"
+    },
     "nodes": [
       {
         "lat": "49.236732",
@@ -28308,6 +30368,10 @@
       "addr:province": "BC",
       "addr:street": "West 37th Avenue",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.237493",
+      "lon": "-123.128477"
     },
     "nodes": [
       {
@@ -28344,6 +30408,10 @@
       "addr:street": "Oak Street",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.237307",
+      "lon": "-123.128393"
+    },
     "nodes": [
       {
         "lat": "49.237370",
@@ -28378,6 +30446,10 @@
       "addr:province": "BC",
       "addr:street": "Osler Street",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.237496",
+      "lon": "-123.130031"
     },
     "nodes": [
       {
@@ -28414,6 +30486,10 @@
       "addr:street": "West 37th Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.237513",
+      "lon": "-123.130568"
+    },
     "nodes": [
       {
         "lat": "49.237427",
@@ -28448,6 +30524,10 @@
       "addr:province": "BC",
       "addr:street": "Selkirk Street",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.237549",
+      "lon": "-123.132187"
     },
     "nodes": [
       {
@@ -28484,6 +30564,10 @@
       "addr:street": "West 37th Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.237598",
+      "lon": "-123.132762"
+    },
     "nodes": [
       {
         "lat": "49.237670",
@@ -28518,6 +30602,10 @@
       "addr:province": "BC",
       "addr:street": "Hudson Street",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.237640",
+      "lon": "-123.134489"
     },
     "nodes": [
       {
@@ -28554,6 +30642,10 @@
       "addr:street": "West 37th Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.237656",
+      "lon": "-123.135048"
+    },
     "nodes": [
       {
         "lat": "49.237732",
@@ -28588,6 +30680,10 @@
       "addr:province": "BC",
       "addr:street": "Cartier Street",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.237715",
+      "lon": "-123.136831"
     },
     "nodes": [
       {
@@ -28624,6 +30720,10 @@
       "addr:street": "West 37th Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.237759",
+      "lon": "-123.137693"
+    },
     "nodes": [
       {
         "lat": "49.237858",
@@ -28658,6 +30758,10 @@
       "addr:province": "BC",
       "addr:street": "West 37th Avenue",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.237768",
+      "lon": "-123.138563"
     },
     "nodes": [
       {
@@ -28695,6 +30799,10 @@
       "amenity": "hospital",
       "emergency": "no",
       "name": "Louis Brier Home and Hospital"
+    },
+    "centroid": {
+      "lat": "49.234631",
+      "lon": "-123.129168"
     },
     "nodes": [
       {
@@ -28899,6 +31007,10 @@
       "addr:street": "Oak Street",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.236335",
+      "lon": "-123.128483"
+    },
     "nodes": [
       {
         "lat": "49.236390",
@@ -28933,6 +31045,10 @@
       "addr:province": "BC",
       "addr:street": "West 38th Avenue",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.236475",
+      "lon": "-123.129156"
     },
     "nodes": [
       {
@@ -28969,6 +31085,10 @@
       "addr:street": "Osler Street",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.236554",
+      "lon": "-123.130054"
+    },
     "nodes": [
       {
         "lat": "49.236636",
@@ -29003,6 +31123,10 @@
       "addr:province": "BC",
       "addr:street": "West 38th Avenue",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.236539",
+      "lon": "-123.130595"
     },
     "nodes": [
       {
@@ -29039,6 +31163,10 @@
       "addr:street": "Osler Street",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.237091",
+      "lon": "-123.130578"
+    },
     "nodes": [
       {
         "lat": "49.237185",
@@ -29073,6 +31201,10 @@
       "addr:province": "BC",
       "addr:street": "West 38th Avenue",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.237094",
+      "lon": "-123.132201"
     },
     "nodes": [
       {
@@ -29109,6 +31241,10 @@
       "addr:street": "West 38th Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.236607",
+      "lon": "-123.132206"
+    },
     "nodes": [
       {
         "lat": "49.236662",
@@ -29143,6 +31279,10 @@
       "addr:province": "BC",
       "addr:street": "Selkirk Street",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.236646",
+      "lon": "-123.132782"
     },
     "nodes": [
       {
@@ -29179,6 +31319,10 @@
       "addr:street": "Selkirk Street",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.237121",
+      "lon": "-123.132755"
+    },
     "nodes": [
       {
         "lat": "49.237206",
@@ -29214,6 +31358,10 @@
       "addr:street": "Hudson Street",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.237177",
+      "lon": "-123.134480"
+    },
     "nodes": [
       {
         "lat": "49.237255",
@@ -29248,6 +31396,10 @@
       "addr:province": "BC",
       "addr:street": "Hudson Street",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.236705",
+      "lon": "-123.134481"
     },
     "nodes": [
       {
@@ -29285,6 +31437,10 @@
       "building": "house",
       "building:levels": "2"
     },
+    "centroid": {
+      "lat": "49.236245",
+      "lon": "-123.134512"
+    },
     "nodes": [
       {
         "lat": "49.236310",
@@ -29319,6 +31475,10 @@
       "addr:province": "BC",
       "addr:street": "Hudson Street",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.237192",
+      "lon": "-123.135044"
     },
     "nodes": [
       {
@@ -29355,6 +31515,10 @@
       "addr:street": "Cartier Street",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.237299",
+      "lon": "-123.137410"
+    },
     "nodes": [
       {
         "lat": "49.237364",
@@ -29389,6 +31553,10 @@
       "addr:province": "BC",
       "addr:street": "West 38th Avenue",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.237294",
+      "lon": "-123.138576"
     },
     "nodes": [
       {
@@ -29425,6 +31593,10 @@
       "amenity": "place_of_worship",
       "building": "yes",
       "name": "St Peter and Paul Parish"
+    },
+    "centroid": {
+      "lat": "49.236624",
+      "lon": "-123.137983"
     },
     "nodes": [
       {
@@ -29493,6 +31665,10 @@
       "addr:street": "Cartier Street",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.236829",
+      "lon": "-123.137340"
+    },
     "nodes": [
       {
         "lat": "49.236896",
@@ -29527,6 +31703,10 @@
       "addr:province": "BC",
       "addr:street": "Selkirk Street",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.236229",
+      "lon": "-123.132791"
     },
     "nodes": [
       {
@@ -29563,6 +31743,10 @@
       "addr:street": "West 39th Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.235763",
+      "lon": "-123.132817"
+    },
     "nodes": [
       {
         "lat": "49.235853",
@@ -29597,6 +31781,10 @@
       "addr:province": "BC",
       "addr:street": "Selkirk Street",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.235705",
+      "lon": "-123.132232"
     },
     "nodes": [
       {
@@ -29633,6 +31821,10 @@
       "addr:street": "Selkirk Street",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.236208",
+      "lon": "-123.132242"
+    },
     "nodes": [
       {
         "lat": "49.236303",
@@ -29667,6 +31859,10 @@
       "addr:province": "BC",
       "addr:street": "West 40th Avenue",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.235307",
+      "lon": "-123.132828"
     },
     "nodes": [
       {
@@ -29703,6 +31899,10 @@
       "addr:street": "Selkirk Street",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.235281",
+      "lon": "-123.132292"
+    },
     "nodes": [
       {
         "lat": "49.235376",
@@ -29738,6 +31938,10 @@
       "addr:street": "West 40th Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.234828",
+      "lon": "-123.132259"
+    },
     "nodes": [
       {
         "lat": "49.234924",
@@ -29772,6 +31976,10 @@
       "addr:province": "BC",
       "addr:street": "Selkirk Street",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.234831",
+      "lon": "-123.132848"
     },
     "nodes": [
       {
@@ -29809,6 +32017,10 @@
       "building": "house",
       "building:levels": "2"
     },
+    "centroid": {
+      "lat": "49.234408",
+      "lon": "-123.132831"
+    },
     "nodes": [
       {
         "lat": "49.234511",
@@ -29843,6 +32055,10 @@
       "addr:province": "BC",
       "addr:street": "West 41st Avenue",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.234360",
+      "lon": "-123.132328"
     },
     "nodes": [
       {
@@ -29879,6 +32095,10 @@
       "addr:street": "West 41st Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.234307",
+      "lon": "-123.130657"
+    },
     "nodes": [
       {
         "lat": "49.234390",
@@ -29913,6 +32133,10 @@
       "addr:province": "BC",
       "addr:street": "Osler Street",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.234729",
+      "lon": "-123.130632"
     },
     "nodes": [
       {
@@ -29949,6 +32173,10 @@
       "addr:street": "West 40th Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.235267",
+      "lon": "-123.130622"
+    },
     "nodes": [
       {
         "lat": "49.235368",
@@ -29983,6 +32211,10 @@
       "addr:province": "BC",
       "addr:street": "Osler Street",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.235698",
+      "lon": "-123.130564"
     },
     "nodes": [
       {
@@ -30019,6 +32251,10 @@
       "addr:street": "West 39th Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.236159",
+      "lon": "-123.130602"
+    },
     "nodes": [
       {
         "lat": "49.236251",
@@ -30053,6 +32289,10 @@
       "addr:province": "BC",
       "addr:street": "West 39th Avenue",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.235783",
+      "lon": "-123.134232"
     },
     "nodes": [
       {
@@ -30089,6 +32329,10 @@
       "addr:street": "West 40th Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.234902",
+      "lon": "-123.134558"
+    },
     "nodes": [
       {
         "lat": "49.234996",
@@ -30123,6 +32367,10 @@
       "addr:province": "BC",
       "addr:street": "Hudson Street",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.234411",
+      "lon": "-123.134555"
     },
     "nodes": [
       {
@@ -30159,6 +32407,10 @@
       "addr:street": "Cartier Street",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.236433",
+      "lon": "-123.137406"
+    },
     "nodes": [
       {
         "lat": "49.236517",
@@ -30193,6 +32445,10 @@
       "addr:province": "BC",
       "addr:street": "Cartier Street",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.235955",
+      "lon": "-123.137436"
     },
     "nodes": [
       {
@@ -30229,6 +32485,10 @@
       "addr:street": "West 40th Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.235515",
+      "lon": "-123.137429"
+    },
     "nodes": [
       {
         "lat": "49.235575",
@@ -30263,6 +32523,10 @@
       "addr:street": "Cartier Street",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.235068",
+      "lon": "-123.137443"
+    },
     "nodes": [
       {
         "lat": "49.235146",
@@ -30296,6 +32560,10 @@
       "addr:province": "BC",
       "addr:street": "Cartier Street",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.234503",
+      "lon": "-123.137448"
     },
     "nodes": [
       {
@@ -30332,6 +32600,10 @@
       "addr:street": "West 41st Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.234505",
+      "lon": "-123.136957"
+    },
     "nodes": [
       {
         "lat": "49.234556",
@@ -30366,6 +32638,10 @@
       "addr:province": "BC",
       "addr:street": "West 41st Avenue",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.234562",
+      "lon": "-123.138706"
     },
     "nodes": [
       {
@@ -30402,6 +32678,10 @@
       "addr:street": "Hudson Street",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.234470",
+      "lon": "-123.135137"
+    },
     "nodes": [
       {
         "lat": "49.234527",
@@ -30437,6 +32717,10 @@
       "amenity": "hospital",
       "emergency": "no",
       "name": "St. Vincent's Hospital Langara"
+    },
+    "centroid": {
+      "lat": "49.214823",
+      "lon": "-123.111028"
     },
     "nodes": [
       {
@@ -30568,6 +32852,10 @@
       "addr:street": "West 39th Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.235782",
+      "lon": "-123.134534"
+    },
     "nodes": [
       {
         "lat": "49.235883",
@@ -30602,6 +32890,10 @@
       "addr:province": "BC",
       "addr:street": "Montgomery Street",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.233782",
+      "lon": "-123.131665"
     },
     "nodes": [
       {
@@ -30638,6 +32930,10 @@
       "addr:street": "West 42nd Street",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.232887",
+      "lon": "-123.131685"
+    },
     "nodes": [
       {
         "lat": "49.232969",
@@ -30672,6 +32968,10 @@
       "addr:province": "BC",
       "addr:street": "West 41st Avenue",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.233683",
+      "lon": "-123.129092"
     },
     "nodes": [
       {
@@ -30708,6 +33008,10 @@
       "addr:street": "West 42nd Street",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.233231",
+      "lon": "-123.129098"
+    },
     "nodes": [
       {
         "lat": "49.233322",
@@ -30742,6 +33046,10 @@
       "addr:province": "BC",
       "addr:street": "West 43rd Avenue",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.232370",
+      "lon": "-123.129136"
     },
     "nodes": [
       {
@@ -30778,6 +33086,10 @@
       "addr:street": "West 42nd Street",
       "building": "apartments",
       "name": "Oak Gardens"
+    },
+    "centroid": {
+      "lat": "49.232560",
+      "lon": "-123.128540"
     },
     "nodes": [
       {
@@ -30829,6 +33141,10 @@
       "addr:street": "Montgomery Street",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.232458",
+      "lon": "-123.131679"
+    },
     "nodes": [
       {
         "lat": "49.232545",
@@ -30862,6 +33178,10 @@
       "addr:postcode": "V5Y 3J6",
       "addr:street": "Cook Street",
       "building": "yes"
+    },
+    "centroid": {
+      "lat": "49.269506",
+      "lon": "-123.110879"
     },
     "nodes": [
       {
@@ -30899,6 +33219,10 @@
       "building": "commercial",
       "building:levels": "2"
     },
+    "centroid": {
+      "lat": "49.269139",
+      "lon": "-123.142407"
+    },
     "nodes": [
       {
         "lat": "49.269269",
@@ -30934,6 +33258,10 @@
       "addr:street": "Jarvis",
       "building": "yes",
       "name": "Harbourside Park Towers"
+    },
+    "centroid": {
+      "lat": "49.289389",
+      "lon": "-123.125784"
     },
     "nodes": [
       {
@@ -31087,6 +33415,10 @@
       "name": "Kensington Gardens",
       "operator": "Westbank Corp."
     },
+    "centroid": {
+      "lat": "49.242814",
+      "lon": "-123.061772"
+    },
     "nodes": [
       {
         "lat": "49.242772",
@@ -31122,6 +33454,10 @@
       "amenity": "community_centre",
       "building": "yes",
       "name": "Nancy Styles Hall"
+    },
+    "centroid": {
+      "lat": "49.229607",
+      "lon": "-123.058682"
     },
     "nodes": [
       {
@@ -31174,6 +33510,10 @@
       "cuisine": "Palestinian",
       "name": "TAMAM"
     },
+    "centroid": {
+      "lat": "49.280967",
+      "lon": "-123.051604"
+    },
     "nodes": [
       {
         "lat": "49.281028",
@@ -31207,6 +33547,10 @@
       "amenity": "police",
       "building": "yes",
       "name": "Hastings Sunrise Community Policing Centre"
+    },
+    "centroid": {
+      "lat": "49.280756",
+      "lon": "-123.051701"
     },
     "nodes": [
       {
@@ -31242,6 +33586,10 @@
       "addr:province": "BC",
       "addr:street": "Cartier Street",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.234052",
+      "lon": "-123.138449"
     },
     "nodes": [
       {
@@ -31294,6 +33642,10 @@
       "addr:street": "West 43rd Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.232617",
+      "lon": "-123.138438"
+    },
     "nodes": [
       {
         "lat": "49.232675",
@@ -31328,6 +33680,10 @@
       "addr:province": "BC",
       "addr:street": "West 45th Avenue",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.230743",
+      "lon": "-123.138525"
     },
     "nodes": [
       {
@@ -31372,6 +33728,10 @@
       "addr:street": "Athlone Street",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.230724",
+      "lon": "-123.136938"
+    },
     "nodes": [
       {
         "lat": "49.230798",
@@ -31406,6 +33766,10 @@
       "addr:province": "BC",
       "addr:street": "Hudson Street",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.230644",
+      "lon": "-123.135410"
     },
     "nodes": [
       {
@@ -31458,6 +33822,10 @@
       "addr:street": "West 45th Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.230584",
+      "lon": "-123.133859"
+    },
     "nodes": [
       {
         "lat": "49.230640",
@@ -31492,6 +33860,10 @@
       "addr:street": "Selkirk Street",
       "building": "school",
       "name": "Sir William Osler Elementary"
+    },
+    "centroid": {
+      "lat": "49.231302",
+      "lon": "-123.132905"
     },
     "nodes": [
       {
@@ -31592,6 +33964,10 @@
       "addr:street": "West 43rd Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.232089",
+      "lon": "-123.133807"
+    },
     "nodes": [
       {
         "lat": "49.232147",
@@ -31626,6 +34002,10 @@
       "addr:province": "BC",
       "addr:street": "West 41st Avenue",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.233923",
+      "lon": "-123.133721"
     },
     "nodes": [
       {
@@ -31670,6 +34050,10 @@
       "addr:street": "Hudson Street",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.233985",
+      "lon": "-123.135283"
+    },
     "nodes": [
       {
         "lat": "49.234033",
@@ -31706,6 +34090,10 @@
       "building": "apartments",
       "name": "Willow Gardens"
     },
+    "centroid": {
+      "lat": "49.230240",
+      "lon": "-123.122078"
+    },
     "nodes": [
       {
         "lat": "49.230427",
@@ -31741,6 +34129,10 @@
       "addr:street": "Tisdall Street",
       "building": "apartments",
       "name": "Willow Gardens"
+    },
+    "centroid": {
+      "lat": "49.229681",
+      "lon": "-123.122134"
     },
     "nodes": [
       {
@@ -31794,6 +34186,10 @@
       "building": "apartments",
       "name": "Willow Gardens"
     },
+    "centroid": {
+      "lat": "49.229728",
+      "lon": "-123.122987"
+    },
     "nodes": [
       {
         "lat": "49.229955",
@@ -31846,6 +34242,10 @@
       "building": "apartments",
       "name": "Willow Gardens"
     },
+    "centroid": {
+      "lat": "49.230231",
+      "lon": "-123.123032"
+    },
     "nodes": [
       {
         "lat": "49.230393",
@@ -31880,6 +34280,10 @@
       "addr:province": "BC",
       "addr:street": "Tisdall Street",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.228921",
+      "lon": "-123.122048"
     },
     "nodes": [
       {
@@ -31916,6 +34320,10 @@
       "addr:street": "West 48th Avenue",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.227446",
+      "lon": "-123.122099"
+    },
     "nodes": [
       {
         "lat": "49.227505",
@@ -31951,6 +34359,10 @@
       "addr:street": "Tisdall Street",
       "building": "house"
     },
+    "centroid": {
+      "lat": "49.226550",
+      "lon": "-123.122135"
+    },
     "nodes": [
       {
         "lat": "49.226611",
@@ -31985,6 +34397,10 @@
       "addr:province": "BC",
       "addr:street": "Tisdall Street",
       "building": "house"
+    },
+    "centroid": {
+      "lat": "49.226041",
+      "lon": "-123.121152"
     },
     "nodes": [
       {
@@ -32024,6 +34440,10 @@
       "denomination": "anglican",
       "name": "St. Matthias and St. Luke Anglican Church",
       "religion": "christian"
+    },
+    "centroid": {
+      "lat": "49.225908",
+      "lon": "-123.120341"
     },
     "nodes": [
       {
