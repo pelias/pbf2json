@@ -62,8 +62,8 @@ You can also combine the above 2 delimiters to get even more control over what g
 If you need to target only specific values for a tag you can specify exactly which values you wish to extract using the `~` symbol:
 
 ```bash
-# only extract amenity tags which have the value of toilets or kindergarten
--tags="amenity~toilets,amenity~kindergarten"
+# only extract cuisine tags which have the value of vegetarian or vegan
+-tags="cuisine~vegetarian,cuisine~vegan"
 ```
 
 ### Denormalization
