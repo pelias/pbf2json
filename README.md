@@ -1,7 +1,7 @@
 
 pbf2json creates a JSON stream of openstreetmap data from any PBF extract, you can pick-and-choose only the bits of the file you want, the library will take care of de-normalizing the relational data (nodes/ways) so you can put it straight in to your favourite document-store, inverted index or graph database.
 
-![animated-gif](http://missinglink.embed.s3.amazonaws.com/pbf2json.gif)
+![animated-gif](http://missinglink.embed.s3.amazonaws.com/pbf2json-2.gif)
 
 ### Run from pre-built binary
 
