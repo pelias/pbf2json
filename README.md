@@ -10,13 +10,18 @@ You don't need to have `Go` installed on your system to use one of the binary fi
 ```bash
 # 64-bit linux distributions
 $ ./build/pbf2json.linux-x64
-Nothing to do, you must specify tags to match against
 ```
 
 ```bash
 # 64-bit OSX distributions
 $ ./build/pbf2json.darwin-x64
-Nothing to do, you must specify tags to match against
+```
+
+you can also run it on your raspberry pi!
+
+```bash
+# embedded devices
+$ ./build/pbf2json.linux-arm
 ```
 
 ### Usage
