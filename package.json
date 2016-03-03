@@ -9,7 +9,9 @@
     "units": "node test/run.js | tap-spec",
     "test": "npm run units",
     "pretest": "test/pretest.sh",
-    "end-to-end": "npm run pretest; node test/end-to-end.js;"
+    "end-to-end": "npm run pretest; node test/end-to-end.js;",
+    "lint": "jshint .",
+    "validate": "npm ls"
   },
   "repository": {
     "type": "git",
@@ -39,5 +41,10 @@
     "tap-spec": "^4.1.1",
     "tape": "^4.4.0",
     "tmp": "0.0.28"
-  }
+  },
+  "pre-commit": [
+    "lint",
+    "validate",
+    "test"
+  ]
 }
