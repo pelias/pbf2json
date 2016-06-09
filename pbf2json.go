@@ -1,26 +1,30 @@
 
 package main
 
-import "encoding/json"
-import "fmt"
-import "flag"
-import "bytes"
-import "os"
-import "log"
-import "io"
-import "time"
-import "runtime"
-import "strings"
-import "strconv"
-import "github.com/qedus/osmpbf"
-import "github.com/syndtr/goleveldb/leveldb"
-import "github.com/paulmach/go.geo"
-import "math"
+import (
+  "encoding/json"
+  "fmt"
+  "flag"
+  "bytes"
+  "os"
+  "log"
+  "io"
+  "time"
+  "runtime"
+  "sort"
+  "strings"
+  "strconv"
+  "github.com/qedus/osmpbf"
+  "github.com/syndtr/goleveldb/leveldb"
+  "github.com/paulmach/go.geo"
+  "math"
+)
 
 type Settings struct {
   PbfPath           string
   LevedbPath        string
   Tags              map[string][]string
+  Ids               []string
   BatchSize         int
 }
 
@@ -29,30 +33,45 @@ func getSettings() Settings {
   // command line flags
   leveldbPath := flag.String("leveldb", "/tmp", "path to leveldb directory")
   tagList := flag.String("tags", "", "comma-separated list of valid tags, group AND conditions with a +")
-  batchSize := flag.Int("batch", 50000, "batch leveldb writes in batches of this size")
+  idList := flag.String("ids", "", "comma-separated list of valid ids")
+  batchSize := flag.Int("batch", 500, "batch leveldb writes in batches of this size")
 
   flag.Parse()
   args := flag.Args();
+
+  tagsConditions := make(map[string][]string)
+  idsConditions := make([]string,0,0)
 
   if len( args ) < 1 {
     log.Fatal("invalid args, you must specify a PBF file")
   }
 
-  // invalid tags
-  if( len(*tagList) < 1 ){
-    log.Fatal("Nothing to do, you must specify tags to match against")
+  if len(*tagList) > 0 && len(*idList) > 0 {
+    log.Fatal("Please use either the -tags option or the -ids option, but not both at the same time")
+  } else if len(*tagList) < 1 && len(*idList) < 1 {
+    if len(*tagList) < 1 {
+      log.Fatal("Nothing to do, you must specify tags to match against")
+    } else { // len(*idList) < 1
+      log.Fatal("Nothing to do, you must specify id to match against")
+    }
+  } else if len(*tagList) > 0 {
+    // parse tag conditions
+    for _, group := range strings.Split(*tagList,",") {
+      tagsConditions[group] = strings.Split(group,"+")
+    }
+  } else {
+    // parse id conditions
+    for _, value := range strings.Split(*idList,",") {
+      idsConditions = append(idsConditions, value)
+      sort.Strings(idsConditions)
+    }
   }
 
-  // parse tag conditions
-  conditions := make(map[string][]string)
-  for _, group := range strings.Split(*tagList,",") {
-    conditions[group] = strings.Split(group,"+")
-  }
-
-  // fmt.Print(conditions, len(conditions))
+  // fmt.Println(tagsConditions, len(tagsConditions))
+  // fmt.Println(idsConditions, len(idsConditions))
   // os.Exit(1)
 
-  return Settings{ args[0], *leveldbPath, conditions, *batchSize }
+  return Settings{ args[0], *leveldbPath, tagsConditions, idsConditions, *batchSize }
 }
 
 func main() {
@@ -108,15 +127,23 @@ func run(d *osmpbf.Decoder, db *leveldb.DB, config Settings){
           }
 
           // ----------------
-          // handle tags
+          // handle conditions
           // ----------------
 
-          if !hasTags(v.Tags) { break }
+          if len(config.Ids) != 0 {
+            i := sort.SearchStrings(config.Ids, strconv.FormatInt(v.ID,10))
+            if i < len(config.Ids) && config.Ids[i] == strconv.FormatInt(v.ID,10) {
+              onNode(v)
+            }
+          } else {
+            if !hasTags(v.Tags) { break }
 
-          v.Tags = trimTags(v.Tags)
-          if containsValidTags( v.Tags, config.Tags ) {
-            onNode(v)
+            v.Tags = trimTags(v.Tags)
+            if containsValidTags( v.Tags, config.Tags ) {
+              onNode(v)
+            }
           }
+
         
         case *osmpbf.Way:
 
@@ -132,22 +159,39 @@ func run(d *osmpbf.Decoder, db *leveldb.DB, config Settings){
           // inc count
           wc++
 
-          if !hasTags(v.Tags) { break }
+          if len(config.Ids) != 0 {
+            i := sort.SearchStrings(config.Ids, strconv.FormatInt(v.ID,10))
+            if i < len(config.Ids) && config.Ids[i] == strconv.FormatInt(v.ID,10) {
+              // lookup from leveldb
+              latlons, err := cacheLookup(db, v)
 
-          v.Tags = trimTags(v.Tags)
-          if containsValidTags( v.Tags, config.Tags ) {
+              // skip ways which fail to denormalize
+              if err != nil { break }
 
-            // lookup from leveldb
-            latlons, err := cacheLookup(db, v)
+              // compute centroid
+              var centroid = computeCentroid(latlons);
 
-            // skip ways which fail to denormalize
-            if err != nil { break }
+              onWay(v,latlons,centroid)
+            }
+          } else {
+            if !hasTags(v.Tags) { break }
 
-            // compute centroid
-            var centroid = computeCentroid(latlons);
+            v.Tags = trimTags(v.Tags)
+            if containsValidTags( v.Tags, config.Tags ) {
 
-            onWay(v,latlons,centroid)
+              // lookup from leveldb
+              latlons, err := cacheLookup(db, v)
+
+              // skip ways which fail to denormalize
+              if err != nil { break }
+
+              // compute centroid
+              var centroid = computeCentroid(latlons);
+
+              onWay(v,latlons,centroid)
+            }
           }
+
 
         case *osmpbf.Relation:
           
@@ -177,7 +221,7 @@ type JsonNode struct {
 }
 
 func onNode(node *osmpbf.Node){
-  marshall := JsonNode{ node.ID, "node", node.Lat, node.Lon, node.Tags, node.Timestamp }
+  marshall := JsonNode{ node.ID, "node", node.Lat, node.Lon, node.Tags, node.Info.Timestamp }
   json, _ := json.Marshal(marshall)
   fmt.Println(string(json))
 }
@@ -193,7 +237,7 @@ type JsonWay struct {
 }
 
 func onWay(way *osmpbf.Way, latlons []map[string]string, centroid map[string]string){
-  marshall := JsonWay{ way.ID, "way", way.Tags/*, way.NodeIDs*/, centroid, latlons, way.Timestamp }
+  marshall := JsonWay{ way.ID, "way", way.Tags/*, way.NodeIDs*/, centroid, latlons, way.Info.Timestamp }
   json, _ := json.Marshal(marshall)
   fmt.Println(string(json))
 }
