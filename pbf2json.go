@@ -14,7 +14,6 @@ import "strconv"
 import "github.com/qedus/osmpbf"
 import "github.com/syndtr/goleveldb/leveldb"
 import "github.com/paulmach/go.geo"
-import "math"
 
 type settings struct {
 	PbfPath    string
@@ -358,53 +357,33 @@ func hasTags(tags map[string]string) bool {
 // compute the centroid of a way
 func computeCentroid(latlons []map[string]string) map[string]string {
 
-	points := geo.PointSet{}
+	// convert lat/lon map to geo.PointSet
+	points := geo.NewPointSet()
 	for _, each := range latlons {
 		var lon, _ = strconv.ParseFloat(each["lon"], 64)
 		var lat, _ = strconv.ParseFloat(each["lat"], 64)
 		points.Push(geo.NewPoint(lon, lat))
 	}
 
-	var compute = getCentroid(points)
+	// determine if the way is a closed centroid or a linestring
+	// by comparing first and last coordinates.
+	isClosed := false
+	if points.Length() > 2 {
+		isClosed = points.First().Equals(points.Last())
+	}
 
+	// compute the centroid using one of two different algorithms
+	var compute *geo.Point
+	if isClosed {
+		compute = GetPolygonCentroid(points)
+	} else {
+		compute = GetLineCentroid(points)
+	}
+
+	// return point as lat/lon map
 	var centroid = make(map[string]string)
 	centroid["lat"] = strconv.FormatFloat(compute.Lat(), 'f', 6, 64)
 	centroid["lon"] = strconv.FormatFloat(compute.Lng(), 'f', 6, 64)
-
-	return centroid
-}
-
-// compute the centroid of a polygon set
-// using a spherical co-ordinate system
-func getCentroid(ps geo.PointSet) *geo.Point {
-
-	X := 0.0
-	Y := 0.0
-	Z := 0.0
-
-	var toRad = math.Pi / 180
-	var fromRad = 180 / math.Pi
-
-	for _, point := range ps {
-
-		var lon = point[0] * toRad
-		var lat = point[1] * toRad
-
-		X += math.Cos(lat) * math.Cos(lon)
-		Y += math.Cos(lat) * math.Sin(lon)
-		Z += math.Sin(lat)
-	}
-
-	numPoints := float64(len(ps))
-	X = X / numPoints
-	Y = Y / numPoints
-	Z = Z / numPoints
-
-	var lon = math.Atan2(Y, X)
-	var hyp = math.Sqrt(X*X + Y*Y)
-	var lat = math.Atan2(Z, hyp)
-
-	var centroid = geo.NewPoint(lon*fromRad, lat*fromRad)
 
 	return centroid
 }
