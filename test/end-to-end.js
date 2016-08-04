@@ -22,7 +22,7 @@ function test( name, tags, cb ){
   fs.writeFileSync( tmpfile, '{}' ); // init naivedb
   var db = naivedb(tmpfile);
 
-  pbf2json.createReadStream({ file: pbfPath, tags: tags, leveldb: '/tmp/leveldb' })
+  pbf2json.createReadStream({ file: pbfPath, tags: tags })
     .pipe( db.createWriteStream('id') )
     .on('finish', function assert(){
 
