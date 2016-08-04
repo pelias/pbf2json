@@ -1,4 +1,3 @@
-
 package main
 
 import "encoding/json"
@@ -17,280 +16,286 @@ import "github.com/syndtr/goleveldb/leveldb"
 import "github.com/paulmach/go.geo"
 import "math"
 
-type Settings struct {
-  PbfPath           string
-  LevedbPath        string
-  Tags              map[string][]string
-  BatchSize         int
+type settings struct {
+	PbfPath    string
+	LevedbPath string
+	Tags       map[string][]string
+	BatchSize  int
 }
 
-func getSettings() Settings {
+func getSettings() settings {
 
-  // command line flags
-  leveldbPath := flag.String("leveldb", "/tmp", "path to leveldb directory")
-  tagList := flag.String("tags", "", "comma-separated list of valid tags, group AND conditions with a +")
-  batchSize := flag.Int("batch", 50000, "batch leveldb writes in batches of this size")
+	// command line flags
+	leveldbPath := flag.String("leveldb", "/tmp", "path to leveldb directory")
+	tagList := flag.String("tags", "", "comma-separated list of valid tags, group AND conditions with a +")
+	batchSize := flag.Int("batch", 50000, "batch leveldb writes in batches of this size")
 
-  flag.Parse()
-  args := flag.Args();
+	flag.Parse()
+	args := flag.Args()
 
-  if len( args ) < 1 {
-    log.Fatal("invalid args, you must specify a PBF file")
-  }
+	if len(args) < 1 {
+		log.Fatal("invalid args, you must specify a PBF file")
+	}
 
-  // invalid tags
-  if( len(*tagList) < 1 ){
-    log.Fatal("Nothing to do, you must specify tags to match against")
-  }
+	// invalid tags
+	if len(*tagList) < 1 {
+		log.Fatal("Nothing to do, you must specify tags to match against")
+	}
 
-  // parse tag conditions
-  conditions := make(map[string][]string)
-  for _, group := range strings.Split(*tagList,",") {
-    conditions[group] = strings.Split(group,"+")
-  }
+	// parse tag conditions
+	conditions := make(map[string][]string)
+	for _, group := range strings.Split(*tagList, ",") {
+		conditions[group] = strings.Split(group, "+")
+	}
 
-  // fmt.Print(conditions, len(conditions))
-  // os.Exit(1)
+	// fmt.Print(conditions, len(conditions))
+	// os.Exit(1)
 
-  return Settings{ args[0], *leveldbPath, conditions, *batchSize }
+	return settings{args[0], *leveldbPath, conditions, *batchSize}
 }
 
 func main() {
 
-  // configuration
-  config := getSettings()
+	// configuration
+	config := getSettings()
 
-  // open pbf file
-  file := openFile(config.PbfPath)
-  defer file.Close()
+	// open pbf file
+	file := openFile(config.PbfPath)
+	defer file.Close()
 
-  decoder := osmpbf.NewDecoder(file)
-  err := decoder.Start(runtime.GOMAXPROCS(-1)) // use several goroutines for faster decoding
-  if err != nil {
-    log.Fatal(err)
-  }
+	decoder := osmpbf.NewDecoder(file)
+	err := decoder.Start(runtime.GOMAXPROCS(-1)) // use several goroutines for faster decoding
+	if err != nil {
+		log.Fatal(err)
+	}
 
-  db := openLevelDB(config.LevedbPath)
-  defer db.Close()
+	db := openLevelDB(config.LevedbPath)
+	defer db.Close()
 
-  run(decoder, db, config)
+	run(decoder, db, config)
 }
 
-func run(d *osmpbf.Decoder, db *leveldb.DB, config Settings){
+func run(d *osmpbf.Decoder, db *leveldb.DB, config settings) {
 
-  batch := new(leveldb.Batch)
+	batch := new(leveldb.Batch)
 
-  var nc, wc, rc uint64
-  for {
-    if v, err := d.Decode(); err == io.EOF {
-      break
-    } else if err != nil {
-      log.Fatal(err)
-    } else {
-      switch v := v.(type) {
+	var nc, wc, rc uint64
+	for {
+		if v, err := d.Decode(); err == io.EOF {
+			break
+		} else if err != nil {
+			log.Fatal(err)
+		} else {
+			switch v := v.(type) {
 
-        case *osmpbf.Node:
+			case *osmpbf.Node:
 
-          // inc count
-          nc++
+				// inc count
+				nc++
 
-          // ----------------
-          // write to leveldb
-          // ----------------
+				// ----------------
+				// write to leveldb
+				// ----------------
 
-          // write immediately
-          // cacheStore(db, v)
+				// write immediately
+				// cacheStore(db, v)
 
-          // write in batches
-          cacheQueue(batch, v)
-          if batch.Len() > config.BatchSize {
-            cacheFlush(db, batch)
-          }
+				// write in batches
+				cacheQueue(batch, v)
+				if batch.Len() > config.BatchSize {
+					cacheFlush(db, batch)
+				}
 
-          // ----------------
-          // handle tags
-          // ----------------
+				// ----------------
+				// handle tags
+				// ----------------
 
-          if !hasTags(v.Tags) { break }
+				if !hasTags(v.Tags) {
+					break
+				}
 
-          v.Tags = trimTags(v.Tags)
-          if containsValidTags( v.Tags, config.Tags ) {
-            onNode(v)
-          }
-        
-        case *osmpbf.Way:
+				v.Tags = trimTags(v.Tags)
+				if containsValidTags(v.Tags, config.Tags) {
+					onNode(v)
+				}
 
-          // ----------------
-          // write to leveldb
-          // ----------------
+			case *osmpbf.Way:
 
-          // flush outstanding batches
-          if batch.Len() > 1 {
-            cacheFlush(db, batch)
-          }
+				// ----------------
+				// write to leveldb
+				// ----------------
 
-          // inc count
-          wc++
+				// flush outstanding batches
+				if batch.Len() > 1 {
+					cacheFlush(db, batch)
+				}
 
-          if !hasTags(v.Tags) { break }
+				// inc count
+				wc++
 
-          v.Tags = trimTags(v.Tags)
-          if containsValidTags( v.Tags, config.Tags ) {
+				if !hasTags(v.Tags) {
+					break
+				}
 
-            // lookup from leveldb
-            latlons, err := cacheLookup(db, v)
+				v.Tags = trimTags(v.Tags)
+				if containsValidTags(v.Tags, config.Tags) {
 
-            // skip ways which fail to denormalize
-            if err != nil { break }
+					// lookup from leveldb
+					latlons, err := cacheLookup(db, v)
 
-            // compute centroid
-            var centroid = computeCentroid(latlons);
+					// skip ways which fail to denormalize
+					if err != nil {
+						break
+					}
 
-            onWay(v,latlons,centroid)
-          }
+					// compute centroid
+					var centroid = computeCentroid(latlons)
 
-        case *osmpbf.Relation:
-          
-          // inc count
-          rc++
+					onWay(v, latlons, centroid)
+				}
 
-          onRelation(v)
+			case *osmpbf.Relation:
 
-        default:
+				// inc count
+				rc++
 
-          log.Fatalf("unknown type %T\n", v)
+				onRelation(v)
 
-      }
-    }
-  }
+			default:
 
-  // fmt.Printf("Nodes: %d, Ways: %d, Relations: %d\n", nc, wc, rc)
+				log.Fatalf("unknown type %T\n", v)
+
+			}
+		}
+	}
+
+	// fmt.Printf("Nodes: %d, Ways: %d, Relations: %d\n", nc, wc, rc)
 }
 
-type JsonNode struct {
-  ID        int64               `json:"id"`
-  Type      string              `json:"type"`
-  Lat       float64             `json:"lat"`
-  Lon       float64             `json:"lon"`
-  Tags      map[string]string   `json:"tags"`
-  Timestamp time.Time           `json:"timestamp"`
+type jsonNode struct {
+	ID        int64             `json:"id"`
+	Type      string            `json:"type"`
+	Lat       float64           `json:"lat"`
+	Lon       float64           `json:"lon"`
+	Tags      map[string]string `json:"tags"`
+	Timestamp time.Time         `json:"timestamp"`
 }
 
-func onNode(node *osmpbf.Node){
-  marshall := JsonNode{ node.ID, "node", node.Lat, node.Lon, node.Tags, node.Timestamp }
-  json, _ := json.Marshal(marshall)
-  fmt.Println(string(json))
+func onNode(node *osmpbf.Node) {
+	marshall := jsonNode{node.ID, "node", node.Lat, node.Lon, node.Tags, node.Timestamp}
+	json, _ := json.Marshal(marshall)
+	fmt.Println(string(json))
 }
 
-type JsonWay struct {
-  ID        int64               `json:"id"`
-  Type      string              `json:"type"`
-  Tags      map[string]string   `json:"tags"`
-  // NodeIDs   []int64             `json:"refs"`
-  Centroid  map[string]string   `json:"centroid"`
-  Nodes     []map[string]string `json:"nodes"`
-  Timestamp time.Time           `json:"timestamp"`
+type jsonWay struct {
+	ID   int64             `json:"id"`
+	Type string            `json:"type"`
+	Tags map[string]string `json:"tags"`
+	// NodeIDs   []int64             `json:"refs"`
+	Centroid  map[string]string   `json:"centroid"`
+	Nodes     []map[string]string `json:"nodes"`
+	Timestamp time.Time           `json:"timestamp"`
 }
 
-func onWay(way *osmpbf.Way, latlons []map[string]string, centroid map[string]string){
-  marshall := JsonWay{ way.ID, "way", way.Tags/*, way.NodeIDs*/, centroid, latlons, way.Timestamp }
-  json, _ := json.Marshal(marshall)
-  fmt.Println(string(json))
+func onWay(way *osmpbf.Way, latlons []map[string]string, centroid map[string]string) {
+	marshall := jsonWay{way.ID, "way", way.Tags /*, way.NodeIDs*/, centroid, latlons, way.Timestamp}
+	json, _ := json.Marshal(marshall)
+	fmt.Println(string(json))
 }
 
-func onRelation(relation *osmpbf.Relation){
-  // do nothing (yet)
+func onRelation(relation *osmpbf.Relation) {
+	// do nothing (yet)
 }
 
 // write to leveldb immediately
-func cacheStore(db *leveldb.DB, node *osmpbf.Node){
-  id, val := formatLevelDB(node)
-  err := db.Put([]byte(id), []byte(val), nil)
-  if err != nil {
-    log.Fatal(err)
-  }
+func cacheStore(db *leveldb.DB, node *osmpbf.Node) {
+	id, val := formatLevelDB(node)
+	err := db.Put([]byte(id), []byte(val), nil)
+	if err != nil {
+		log.Fatal(err)
+	}
 }
 
 // queue a leveldb write in a batch
-func cacheQueue(batch *leveldb.Batch, node *osmpbf.Node){
-  id, val := formatLevelDB(node)
-  batch.Put([]byte(id), []byte(val))
+func cacheQueue(batch *leveldb.Batch, node *osmpbf.Node) {
+	id, val := formatLevelDB(node)
+	batch.Put([]byte(id), []byte(val))
 }
 
 // flush a leveldb batch to database and reset batch to 0
-func cacheFlush(db *leveldb.DB, batch *leveldb.Batch){
-  err := db.Write(batch, nil)
-  if err != nil {
-    log.Fatal(err)
-  }
-  batch.Reset()
+func cacheFlush(db *leveldb.DB, batch *leveldb.Batch) {
+	err := db.Write(batch, nil)
+	if err != nil {
+		log.Fatal(err)
+	}
+	batch.Reset()
 }
 
 func cacheLookup(db *leveldb.DB, way *osmpbf.Way) ([]map[string]string, error) {
 
-  var container []map[string]string
+	var container []map[string]string
 
-  for _, each := range way.NodeIDs {
-    stringid := strconv.FormatInt(each,10)
+	for _, each := range way.NodeIDs {
+		stringid := strconv.FormatInt(each, 10)
 
-    data, err := db.Get([]byte(stringid), nil)
-    if err != nil {
-      log.Println("denormalize failed for way:", way.ID, "node not found:", stringid)
-      return container, err
-    }
+		data, err := db.Get([]byte(stringid), nil)
+		if err != nil {
+			log.Println("denormalize failed for way:", way.ID, "node not found:", stringid)
+			return container, err
+		}
 
-    s := string(data)
-    spl := strings.Split(s, ":");
+		s := string(data)
+		spl := strings.Split(s, ":")
 
-    latlon := make(map[string]string)
-    lat, lon := spl[0], spl[1]
-    latlon["lat"] = lat
-    latlon["lon"] = lon
+		latlon := make(map[string]string)
+		lat, lon := spl[0], spl[1]
+		latlon["lat"] = lat
+		latlon["lon"] = lon
 
-    container = append(container, latlon)
+		container = append(container, latlon)
 
-  }
+	}
 
-  return container, nil
+	return container, nil
 
-  // fmt.Println(way.NodeIDs)
-  // fmt.Println(container)
-  // os.Exit(1)
+	// fmt.Println(way.NodeIDs)
+	// fmt.Println(container)
+	// os.Exit(1)
 }
 
-func formatLevelDB(node *osmpbf.Node) (id string, val []byte){
+func formatLevelDB(node *osmpbf.Node) (id string, val []byte) {
 
-  stringid := strconv.FormatInt(node.ID,10)
+	stringid := strconv.FormatInt(node.ID, 10)
 
-  var bufval bytes.Buffer
-  bufval.WriteString(strconv.FormatFloat(node.Lat,'f',6,64))
-  bufval.WriteString(":")
-  bufval.WriteString(strconv.FormatFloat(node.Lon,'f',6,64))
-  byteval := []byte(bufval.String())
-  
-  return stringid, byteval
+	var bufval bytes.Buffer
+	bufval.WriteString(strconv.FormatFloat(node.Lat, 'f', 6, 64))
+	bufval.WriteString(":")
+	bufval.WriteString(strconv.FormatFloat(node.Lon, 'f', 6, 64))
+	byteval := []byte(bufval.String())
+
+	return stringid, byteval
 }
 
 func openFile(filename string) *os.File {
-  // no file specified
-  if len(filename) < 1 {
-    log.Fatal("invalid file: you must specify a pbf path as arg[1]")
-  }
-  // try to open the file
-  file, err := os.Open(filename)
-  if err != nil {
-    log.Fatal(err)
-  }  
-  return file
+	// no file specified
+	if len(filename) < 1 {
+		log.Fatal("invalid file: you must specify a pbf path as arg[1]")
+	}
+	// try to open the file
+	file, err := os.Open(filename)
+	if err != nil {
+		log.Fatal(err)
+	}
+	return file
 }
 
 func openLevelDB(path string) *leveldb.DB {
-  // try to open the db
-  db, err := leveldb.OpenFile(path, nil)
-  if err != nil {
-    log.Fatal(err)
-  }
-  return db
+	// try to open the db
+	db, err := leveldb.OpenFile(path, nil)
+	if err != nil {
+		log.Fatal(err)
+	}
+	return db
 }
 
 // extract all keys to array
@@ -301,105 +306,105 @@ func openLevelDB(path string) *leveldb.DB {
 
 // check tags contain features from a whitelist
 func matchTagsAgainstCompulsoryTagList(tags map[string]string, tagList []string) bool {
-  for _, name := range tagList {
+	for _, name := range tagList {
 
-    feature := strings.Split(name,"~")
-    foundVal, foundKey := tags[feature[0]]
+		feature := strings.Split(name, "~")
+		foundVal, foundKey := tags[feature[0]]
 
-    // key check
-    if !foundKey {
-      return false
-    }
+		// key check
+		if !foundKey {
+			return false
+		}
 
-    // value check
-    if len( feature ) > 1 {
-      if foundVal != feature[1] {
-        return false
-      }
-    }
-  }
+		// value check
+		if len(feature) > 1 {
+			if foundVal != feature[1] {
+				return false
+			}
+		}
+	}
 
-  return true
+	return true
 }
 
 // check tags contain features from a groups of whitelists
 func containsValidTags(tags map[string]string, group map[string][]string) bool {
-  for _, list := range group {
-    if matchTagsAgainstCompulsoryTagList( tags, list ){
-      return true
-    }
-  }
-  return false
+	for _, list := range group {
+		if matchTagsAgainstCompulsoryTagList(tags, list) {
+			return true
+		}
+	}
+	return false
 }
 
 // trim leading/trailing spaces from keys and values
 func trimTags(tags map[string]string) map[string]string {
-  trimmed := make(map[string]string)
-  for k, v := range tags {
-    trimmed[strings.TrimSpace(k)] = strings.TrimSpace(v);
-  }
-  return trimmed
+	trimmed := make(map[string]string)
+	for k, v := range tags {
+		trimmed[strings.TrimSpace(k)] = strings.TrimSpace(v)
+	}
+	return trimmed
 }
 
 // check if a tag list is empty or not
 func hasTags(tags map[string]string) bool {
-  n := len(tags)
-  if n == 0 {
-    return false
-  }
-  return true
+	n := len(tags)
+	if n == 0 {
+		return false
+	}
+	return true
 }
 
 // compute the centroid of a way
 func computeCentroid(latlons []map[string]string) map[string]string {
 
-  points := geo.PointSet{}
-  for _, each := range latlons {
-    var lon, _ = strconv.ParseFloat( each["lon"], 64 );
-    var lat, _ = strconv.ParseFloat( each["lat"], 64 );
-    points.Push( geo.NewPoint( lon, lat ))
-  }
+	points := geo.PointSet{}
+	for _, each := range latlons {
+		var lon, _ = strconv.ParseFloat(each["lon"], 64)
+		var lat, _ = strconv.ParseFloat(each["lat"], 64)
+		points.Push(geo.NewPoint(lon, lat))
+	}
 
-  var compute = getCentroid(points);
+	var compute = getCentroid(points)
 
-  var centroid = make(map[string]string)
-  centroid["lat"] = strconv.FormatFloat(compute.Lat(),'f',6,64)
-  centroid["lon"] = strconv.FormatFloat(compute.Lng(),'f',6,64)
+	var centroid = make(map[string]string)
+	centroid["lat"] = strconv.FormatFloat(compute.Lat(), 'f', 6, 64)
+	centroid["lon"] = strconv.FormatFloat(compute.Lng(), 'f', 6, 64)
 
-  return centroid
+	return centroid
 }
 
 // compute the centroid of a polygon set
 // using a spherical co-ordinate system
 func getCentroid(ps geo.PointSet) *geo.Point {
 
-  X := 0.0
-  Y := 0.0
-  Z := 0.0
+	X := 0.0
+	Y := 0.0
+	Z := 0.0
 
-  var toRad = math.Pi / 180
-  var fromRad = 180 / math.Pi
+	var toRad = math.Pi / 180
+	var fromRad = 180 / math.Pi
 
-  for _, point := range ps {
+	for _, point := range ps {
 
-    var lon = point[0] * toRad
-    var lat = point[1] * toRad
+		var lon = point[0] * toRad
+		var lat = point[1] * toRad
 
-    X += math.Cos(lat) * math.Cos(lon)
-    Y += math.Cos(lat) * math.Sin(lon)
-    Z += math.Sin(lat)
-  }
+		X += math.Cos(lat) * math.Cos(lon)
+		Y += math.Cos(lat) * math.Sin(lon)
+		Z += math.Sin(lat)
+	}
 
-  numPoints := float64(len(ps))
-  X = X / numPoints
-  Y = Y / numPoints
-  Z = Z / numPoints
+	numPoints := float64(len(ps))
+	X = X / numPoints
+	Y = Y / numPoints
+	Z = Z / numPoints
 
-  var lon = math.Atan2(Y, X)
-  var hyp = math.Sqrt(X * X + Y * Y)
-  var lat = math.Atan2(Z, hyp)
+	var lon = math.Atan2(Y, X)
+	var hyp = math.Sqrt(X*X + Y*Y)
+	var lat = math.Atan2(Z, hyp)
 
-  var centroid = geo.NewPoint(lon * fromRad, lat * fromRad)
+	var centroid = geo.NewPoint(lon*fromRad, lat*fromRad)
 
-  return centroid;
+	return centroid
 }
