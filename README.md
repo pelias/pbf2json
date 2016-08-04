@@ -167,6 +167,8 @@ pbf2json.createReadStream( config )
 
 Make sure `Go` is installed and configured on your system, see: https://gist.github.com/missinglink/4212a81a7d9c125b68d9
 
+**Note:** You should install the latest version of Golang, at least `1.5+`, last tested on `1.6.2`
+
 ```bash
 sudo apt-get install mercurial;
 go get;
@@ -189,7 +191,7 @@ If you would like to compile a version of this lib for an architecture which isn
 
 ```bash
 go get;
-go build pbf2json.go;
+go build;
 chmod +x pbf2json;
 mv pbf2json build/pbf2json.{platform}-{arch};
 ```

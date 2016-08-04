@@ -26,15 +26,15 @@ function test( name, tags, cb ){
     .pipe( db.createWriteStream('id') )
     .on('finish', function assert(){
 
+      // write actual to disk
       db.writeSync();
 
+      // load files from disk
       var actual = JSON.parse( fs.readFileSync( tmpfile, { encoding: 'utf8' } ) ),
           expected = JSON.parse( fs.readFileSync( expectedPath, { encoding: 'utf8' } ) );
 
-      var diff = deep.diff( actual, expected );
-
-      if( diff ){
-        console.log( diff );
+      // actual != expected
+      if( !deepEqual( actual, expected ) ){
         console.error( 'end-to-end tests failed :(' );
         console.error( 'contents of', tmpfile, 'do not match expected:', expectedPath );
         process.exit(1);
@@ -59,6 +59,17 @@ function next(){
   var t = tests.shift();
   if( t ){ test( t[0], t[1], next ); }
 }
+
+// deep equal comparison, optimised for fast fail
+var deepEqual = function(a, b) {
+  if(!a || !b){ return false; }
+  if(Object.keys(a).length !== Object.keys(b).length){ return false; }
+  for(var i in a) {
+    if( !b.hasOwnProperty(i) ){ return false; }
+    if( deep.diff(a[i], b[i]) ){ return false; }
+  }
+  return true;
+};
 
 // run each test synchronously
 next();
