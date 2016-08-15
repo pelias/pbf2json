@@ -7,7 +7,7 @@ import "bytes"
 import "os"
 import "log"
 import "io"
-import "time"
+
 import "runtime"
 import "strings"
 import "strconv"
@@ -172,16 +172,15 @@ func run(d *osmpbf.Decoder, db *leveldb.DB, config settings) {
 }
 
 type jsonNode struct {
-	ID        int64             `json:"id"`
-	Type      string            `json:"type"`
-	Lat       float64           `json:"lat"`
-	Lon       float64           `json:"lon"`
-	Tags      map[string]string `json:"tags"`
-	Timestamp time.Time         `json:"timestamp"`
+	ID   int64             `json:"id"`
+	Type string            `json:"type"`
+	Lat  float64           `json:"lat"`
+	Lon  float64           `json:"lon"`
+	Tags map[string]string `json:"tags"`
 }
 
 func onNode(node *osmpbf.Node) {
-	marshall := jsonNode{node.ID, "node", node.Lat, node.Lon, node.Tags, node.Timestamp}
+	marshall := jsonNode{node.ID, "node", node.Lat, node.Lon, node.Tags}
 	json, _ := json.Marshal(marshall)
 	fmt.Println(string(json))
 }
@@ -191,13 +190,12 @@ type jsonWay struct {
 	Type string            `json:"type"`
 	Tags map[string]string `json:"tags"`
 	// NodeIDs   []int64             `json:"refs"`
-	Centroid  map[string]string   `json:"centroid"`
-	Nodes     []map[string]string `json:"nodes"`
-	Timestamp time.Time           `json:"timestamp"`
+	Centroid map[string]string   `json:"centroid"`
+	Nodes    []map[string]string `json:"nodes"`
 }
 
 func onWay(way *osmpbf.Way, latlons []map[string]string, centroid map[string]string) {
-	marshall := jsonWay{way.ID, "way", way.Tags /*, way.NodeIDs*/, centroid, latlons, way.Timestamp}
+	marshall := jsonWay{way.ID, "way", way.Tags /*, way.NodeIDs*/, centroid, latlons}
 	json, _ := json.Marshal(marshall)
 	fmt.Println(string(json))
 }
