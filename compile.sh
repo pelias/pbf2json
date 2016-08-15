@@ -12,6 +12,27 @@ function assert() {
   fi
 }
 
+# ensure the files were compiled to the correct architecture
+declare -A matrix
+matrix["build/pbf2json.darwin-x64"]="Mach-O 64-bit x86_64 executable"
+matrix["build/pbf2json.linux-arm"]="ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, not stripped"
+matrix["build/pbf2json.linux-x64"]="ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically linked, not stripped"
+matrix["build/pbf2json.win32-x64"]="PE32 executable (console) Intel 80386 (stripped to external PDB), for MS Windows"
+
+function checkFiles() {
+  for path in "${!matrix[@]}"
+  do
+    expected="$path: ${matrix[$path]}";
+    actual=$(file $path);
+    if [ "$actual" != "$expected" ]; then
+      echo "invalid file architecture: $path"
+      echo "expected: $expected"
+      echo "actual: $actual"
+      exit 1
+    fi
+  done
+}
+
 echo "[compile] linux arm";
 env GOOS=linux GOARCH=arm go build;
 assert $?;
@@ -83,3 +104,5 @@ mv pbf2json.exe build/pbf2json.win32-x64;
 # assert $?;
 # chmod +x pbf2json;
 # mv pbf2json build/pbf2json.openbsd-x64;
+
+checkFiles
