@@ -119,8 +119,7 @@ Since version `3.0` centroids are also computed for each way.
       "lat": "51.554663",
       "lon": "-0.098369"
     }
-  ],
-  "timestamp": "0001-01-01T00:00:00Z"
+  ]
 }
 ```
 
