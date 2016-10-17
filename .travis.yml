@@ -1,26 +1,32 @@
 sudo: false
 language: node_js
+cache:
+  directories:
+    - node_modules
+notifications:
+  email: false
 node_js:
   - 4
   - 6
 matrix:
-  fast_finish: true
-  allow_failures:
+    fast_finish: true
+    allow_failures:
 env:
   global:
     - CXX=g++-4.8
-  matrix:
-    - TEST_SUITE=units
-    - TEST_SUITE=end-to-end
-script: npm run $TEST_SUITE
+script: "npm run travis"
 addons:
   apt:
     sources:
       - ubuntu-toolchain-r-test
     packages:
       - g++-4.8
-cache:
-  directories:
-    - node_modules
+before_install:
+  - npm i -g npm@^2.0.0
 before_script:
   - npm prune
+after_success:
+  - 'curl -Lo travis_after_all.py https://git.io/travis_after_all'
+  - python travis_after_all.py
+  - export $(cat .to_export_back) &> /dev/null
+  - npm run semantic-release
