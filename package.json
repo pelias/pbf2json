@@ -1,7 +1,7 @@
 {
   "name": "pbf2json",
   "author": "mapzen",
-  "version": "4.1.0",
+  "version": "0.0.0-semantic-release",
   "description": "Golang osm pbf parser with npm wrapper",
   "homepage": "https://github.com/pelias/pbf2json",
   "license": "MIT",
@@ -11,11 +11,13 @@
     "pretest": "test/pretest.sh",
     "end-to-end": "npm run pretest; node test/end-to-end.js;",
     "lint": "jshint .",
-    "validate": "npm ls"
+    "validate": "npm ls",
+    "travis": "npm test && npm run end-to-end",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/pelias/pbf2json.git"
+    "url": "https://github.com/pelias/pbf2json.git"
   },
   "keywords": [
     "pelias",
@@ -40,7 +42,8 @@
     "precommit-hook": "3.0.0",
     "tap-spec": "^4.1.1",
     "tape": "^4.5.0",
-    "tmp": "0.0.29"
+    "tmp": "0.0.29",
+    "semantic-release": "^4.3.5"
   },
   "pre-commit": [
     "lint",
