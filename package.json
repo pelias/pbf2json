@@ -43,7 +43,7 @@
     "tap-spec": "^4.1.1",
     "tape": "^4.5.0",
     "tmp": "0.0.30",
-    "semantic-release": "^4.3.5"
+    "semantic-release": "^6.3.2"
   },
   "pre-commit": [
     "lint",
