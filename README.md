@@ -5,6 +5,8 @@ pbf2json creates a JSON stream of openstreetmap data from any PBF extract, you c
 
 ### Run from pre-built binary
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/pelias/pbf2json.svg)](https://greenkeeper.io/)
+
 You don't need to have `Go` installed on your system to use one of the binary files in `./build`:
 
 ```bash
