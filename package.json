@@ -12,8 +12,9 @@
     "end-to-end": "npm run pretest; node test/end-to-end.js;",
     "lint": "jshint .",
     "validate": "npm ls",
-    "travis": "npm test && npm run end-to-end",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "travis": "npm run check-dependencies && npm test && npm run end-to-end",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "check-dependencies": "node_modules/.bin/npm-check --production"
   },
   "repository": {
     "type": "git",
@@ -39,15 +40,17 @@
   "devDependencies": {
     "deep-diff": "^0.3.1",
     "naivedb": "^1.0.7",
+    "npm-check": "^5.4.0",
     "precommit-hook": "3.0.0",
+    "semantic-release": "^6.3.2",
     "tap-spec": "^4.1.1",
     "tape": "^4.5.0",
-    "tmp": "0.0.31",
-    "semantic-release": "^6.3.2"
+    "tmp": "0.0.31"
   },
   "pre-commit": [
     "lint",
     "validate",
-    "test"
+    "test",
+    "check-dependencies"
   ]
 }
