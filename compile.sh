@@ -14,7 +14,7 @@ function assert() {
 
 # ensure the files were compiled to the correct architecture
 declare -A matrix
-matrix["build/pbf2json.darwin-x64"]="Mach-O 64-bit x86_64 executable"
+matrix["build/pbf2json.darwin-x64"]="Mach-O 64-bit x86_64 executable, flags:<NOUNDEFS>"
 matrix["build/pbf2json.linux-arm"]="ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, not stripped"
 matrix["build/pbf2json.linux-x64"]="ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically linked, not stripped"
 matrix["build/pbf2json.win32-x64"]="PE32 executable (console) Intel 80386 (stripped to external PDB), for MS Windows"
