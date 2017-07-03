@@ -68,7 +68,7 @@ function createReadStream( conf, done ){
     if( code > 0 ){
       return done( new Error( 'pbf genmask: process existed with code: ' + code ) );
     }
-    return done( 0, jsonflat( settings ) );
+    return done( null, jsonflat( settings ) );
   });
 }
 
