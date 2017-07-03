@@ -2,3 +2,4 @@ node_modules
 npm-debug.log
 example.js
 test/*.pbf
+test/*.pbf.idx

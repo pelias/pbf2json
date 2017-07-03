@@ -22,27 +22,38 @@ function test( name, tags, cb ){
   fs.writeFileSync( tmpfile, '{}' ); // init naivedb
   var db = naivedb(tmpfile);
 
-  pbf2json.createReadStream({ file: pbfPath, tags: tags })
-    .pipe( db.createWriteStream('id') )
-    .on('finish', function assert(){
+  pbf2json.createReadStream({ file: pbfPath, tags: tags }, function( err, stream ){
 
-      // write actual to disk
-      db.writeSync();
+    if( err ){
+      console.error( 'error', err );
+      process.exit(1);
+    }
 
-      // load files from disk
-      var actual = JSON.parse( fs.readFileSync( tmpfile, { encoding: 'utf8' } ) ),
-          expected = JSON.parse( fs.readFileSync( expectedPath, { encoding: 'utf8' } ) );
+    if( !stream ){
+      console.error( 'invalid stream', stream );
+      process.exit(1);
+    }
 
-      // actual != expected
-      if( !deepEqual( actual, expected ) ){
-        console.error( 'end-to-end tests failed :(' );
-        console.error( 'contents of', tmpfile, 'do not match expected:', expectedPath );
-        process.exit(1);
-      }
+    stream.pipe( db.createWriteStream('id') )
+          .on('finish', function assert(){
 
-      cb();
-    });
+            // write actual to disk
+            db.writeSync();
 
+            // load files from disk
+            var actual = JSON.parse( fs.readFileSync( tmpfile, { encoding: 'utf8' } ) ),
+            expected = JSON.parse( fs.readFileSync( expectedPath, { encoding: 'utf8' } ) );
+
+            // actual != expected
+            if( !deepEqual( actual, expected ) ){
+              console.error( 'end-to-end tests failed :(' );
+              console.error( 'contents of', tmpfile, 'do not match expected:', expectedPath );
+              process.exit(1);
+            }
+
+            cb();
+          });
+  });
 }
 
 var tests = [

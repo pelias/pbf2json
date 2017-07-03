@@ -34,8 +34,9 @@
     "npm": ">=1.4.3"
   },
   "dependencies": {
-    "split": "^1.0.0",
-    "through2": "^2.0.1"
+    "split2": "^2.1.1",
+    "through2": "^2.0.1",
+    "tmp": "0.0.31"
   },
   "devDependencies": {
     "deep-diff": "^0.3.1",
@@ -44,8 +45,7 @@
     "precommit-hook": "3.0.0",
     "semantic-release": "^6.3.2",
     "tap-spec": "^4.1.1",
-    "tape": "^4.5.0",
-    "tmp": "0.0.31"
+    "tape": "^4.5.0"
   },
   "pre-commit": [
     "lint",
