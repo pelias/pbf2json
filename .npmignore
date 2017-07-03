@@ -1,2 +1,10 @@
-test/fixtures/
-test/*.pbf
+node_modules/
+test/
+.gitignore
+.jshintignore
+.jshintrc
+.lgtm
+.travis.yml
+.validate.json
+example.js
+npm-debug.log
