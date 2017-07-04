@@ -1,38 +1,38 @@
 
+// spawn a 'pbf' process and manage it
+// see: https://github.com/missinglink/pbf
+
 var fs = require('fs'),
     tmp = require('tmp'),
     proc = require('./lib/process'),
     jsonStream = require('./lib/jsonStream');
 
-// args is an array if all command-line args which will
-// be passed when spawning the process.
-function api( args, done ){
-
-  // spawn child process
-  var child = proc( args );
-
-  // create a json read stream
-  return jsonStream( child, done );
-}
-
+// convert the legacy 'features' file format to a config file
+// as required by the missinglink/pbf library
 function writeConfig( features ){
-  var tmpFile = tmp.fileSync().name;
+
+  // create a new temp file
+  var tmpFileName = tmp.fileSync().name;
 
   // convert pbf2json format to pbf format
   var tags = features.map( function( feat ){
     return feat.replace(/~/g, '=').split('+');
   });
 
-  fs.writeFileSync(tmpFile, JSON.stringify({
+  // write a config file as required by missinglink/pbf
+  fs.writeFileSync(tmpFileName, JSON.stringify({
     node: tags,
     way: tags
   }), 'utf8');
 
-  return tmpFile;
+  // return the tmp file path
+  return tmpFileName;
 }
 
-function genmask( settings, done ){
+// execute the 'genmask' command synchronously
+function genmask( settings ){
 
+  // command line arguments
   var args = ['genmask', '-i'];
   args.push( '-c', settings.config );
   args.push( settings.pbf );
@@ -40,11 +40,15 @@ function genmask( settings, done ){
 
   // debug command
   // console.error( args );
-  return api( args, done );
+
+  // return the child process object
+  return proc( args, true );
 }
 
-function jsonflat( settings, done ){
+// execute the 'jsonflat' command asyncronously
+function jsonflat( settings ){
 
+  // command line arguments
   var args = ['json-flat', '-c'];
   args.push( '-m', settings.mask );
   args.push( '-l', settings.leveldb );
@@ -52,11 +56,20 @@ function jsonflat( settings, done ){
 
   // debug command
   // console.error( args );
-  return api( args, done );
+
+  // spawn child process
+  var child = proc( args );
+
+  // return stream of parsed json objects from process stdout
+  return jsonStream( child );
 }
 
-function createReadStream( conf, done ){
+// create a readable object stream from the output of the 'jsonflat' command.
+// note: we run the 'genmask' command first to ensure that both the mask
+// and the index file have been created (which are required by 'jsonflat').
+function createReadStream( conf ){
 
+  // a 'state' object, with all the settings we will be using
   var settings = {
     config: writeConfig( conf.tags ),
     mask: tmp.tmpNameSync(),
@@ -64,15 +77,16 @@ function createReadStream( conf, done ){
     pbf: conf.file
   };
 
-  genmask( settings, function( code ){
-    if( code > 0 ){
-      return done( new Error( 'pbf genmask: process existed with code: ' + code ) );
-    }
-    return done( null, jsonflat( settings ) );
-  });
+  // launch the genmask command synchronously
+  var genmaskProc = genmask( settings );
+  if( genmaskProc.status > 0 ){
+    throw new Error( 'pbf genmask: process exited with code: ' + genmaskProc.status );
+  }
+
+  // return stream of parsed json objects from process stdout
+  return jsonflat( settings );
 }
 
-module.exports.api = api;
 module.exports.writeConfig = writeConfig;
 module.exports.genmask = genmask;
 module.exports.jsonflat = jsonflat;

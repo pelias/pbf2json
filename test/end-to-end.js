@@ -22,19 +22,8 @@ function test( name, tags, cb ){
   fs.writeFileSync( tmpfile, '{}' ); // init naivedb
   var db = naivedb(tmpfile);
 
-  pbf2json.createReadStream({ file: pbfPath, tags: tags }, function( err, stream ){
-
-    if( err ){
-      console.error( 'error', err );
-      process.exit(1);
-    }
-
-    if( !stream ){
-      console.error( 'invalid stream', stream );
-      process.exit(1);
-    }
-
-    stream.pipe( db.createWriteStream('id') )
+  pbf2json.createReadStream({ file: pbfPath, tags: tags })
+          .pipe( db.createWriteStream('id') )
           .on('finish', function assert(){
 
             // write actual to disk
@@ -53,7 +42,6 @@ function test( name, tags, cb ){
 
             cb();
           });
-  });
 }
 
 var tests = [
