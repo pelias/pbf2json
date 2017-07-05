@@ -34,6 +34,7 @@
     "npm": ">=1.4.3"
   },
   "dependencies": {
+    "pelias-logger": "^0.2.0",
     "split2": "^2.1.1",
     "through2": "^2.0.1",
     "tmp": "0.0.31"
