@@ -42,7 +42,7 @@
     "naivedb": "^1.0.7",
     "npm-check": "^5.4.0",
     "precommit-hook": "3.0.0",
-    "semantic-release": "^6.3.2",
+    "semantic-release": "^7.0.1",
     "tap-spec": "^4.1.1",
     "tape": "^4.5.0",
     "tmp": "0.0.31"
