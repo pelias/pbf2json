@@ -26,6 +26,10 @@ function createReadStream( config ){
 
   var proc = child.spawn( exec, flags );
 
+  // propagate signals from parent to child
+  process.on('SIGINT',  function(){ proc.kill(); });
+  process.on('SIGTERM', function(){ proc.kill(); });
+
   var decoder = createJsonDecodeStream();
   proc.stdout
     .pipe( split() )
