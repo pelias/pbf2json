@@ -5,6 +5,7 @@ notifications:
 node_js:
   - 4
   - 6
+  - 10
 matrix:
   fast_finish: true
 env:
