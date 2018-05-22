@@ -12,8 +12,7 @@
     "end-to-end": "npm run pretest; node test/end-to-end.js;",
     "lint": "jshint .",
     "validate": "npm ls",
-    "travis": "npm test && npm run end-to-end",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "travis": "npm test && npm run end-to-end"
   },
   "repository": {
     "type": "git",
@@ -49,5 +48,8 @@
     "lint",
     "validate",
     "test"
-  ]
+  ],
+  "release": {
+    "success": []
+  }
 }
