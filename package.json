@@ -1,7 +1,7 @@
 {
   "name": "pbf2json",
   "author": "mapzen",
-  "version": "0.0.0-semantic-release",
+  "version": "0.0.0-development",
   "description": "Golang osm pbf parser with npm wrapper",
   "homepage": "https://github.com/pelias/pbf2json",
   "license": "MIT",
@@ -12,9 +12,7 @@
     "end-to-end": "npm run pretest; node test/end-to-end.js;",
     "lint": "jshint .",
     "validate": "npm ls",
-    "travis": "npm run check-dependencies && npm test && npm run end-to-end",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "check-dependencies": "node_modules/.bin/npm-check --production"
+    "travis": "npm test && npm run end-to-end"
   },
   "repository": {
     "type": "git",
@@ -30,7 +28,7 @@
     "url": "https://github.com/pelias/pbf2json/issues"
   },
   "engines": {
-    "node": ">=4.0.0",
+    "node": ">=6.0.0",
     "npm": ">=1.4.3"
   },
   "dependencies": {
@@ -40,7 +38,6 @@
   "devDependencies": {
     "deep-diff": "^1.0.0",
     "naivedb": "^1.0.7",
-    "npm-check": "^5.4.0",
     "precommit-hook": "3.0.0",
     "semantic-release": "^15.0.0",
     "tap-spec": "^4.1.1",
@@ -50,7 +47,9 @@
   "pre-commit": [
     "lint",
     "validate",
-    "test",
-    "check-dependencies"
-  ]
+    "test"
+  ],
+  "release": {
+    "success": []
+  }
 }

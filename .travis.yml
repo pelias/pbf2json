@@ -3,24 +3,16 @@ language: node_js
 notifications:
   email: false
 node_js:
-  - 4
   - 6
+  - 8
+  - 10
 matrix:
   fast_finish: true
-env:
-  global:
-    - CXX=g++-4.8
 script: npm run travis
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - g++-4.8
 before_install:
-  - npm i -g npm@^3.0.0
-before_script:
-  - npm prune
+  - npm i -g npm
 after_success:
-  - npm install -g npx
-  - npx -p node@8 npm run semantic-release
+  - npx semantic-release
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/
