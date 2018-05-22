@@ -4,6 +4,7 @@ notifications:
   email: false
 node_js:
   - 6
+  - 8
   - 10
 matrix:
   fast_finish: true
