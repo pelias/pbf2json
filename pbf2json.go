@@ -440,6 +440,8 @@ func computeCentroid(latlons []map[string]string) map[string]string {
 	// compute the centroid using one of two different algorithms
 	var compute *geo.Point
 	if isClosed {
+		// remove the last point, which is a duplicate of the first
+		points.RemoveAt(len(*points) - 1)
 		compute = GetPolygonCentroid(points)
 	} else {
 		compute = GetLineCentroid(points)
