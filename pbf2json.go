@@ -204,6 +204,30 @@ func onRelation(relation *osmpbf.Relation) {
 	// do nothing (yet)
 }
 
+// determine if the node is for an entrance
+// https://wiki.openstreetmap.org/wiki/Key:entrance
+func isEntranceNode(node *osmpbf.Node) bool {
+	if val, ok := node.Tags["entrance"]; ok {
+		var norm = strings.ToLower(val)
+		if "main" == norm || "yes" == norm || "home" == norm {
+			return true
+		}
+	}
+	return false
+}
+
+// determine if the node is accessible for wheelchair users
+// https://wiki.openstreetmap.org/wiki/Key:entrance
+func isWheelchairAccessibleNode(node *osmpbf.Node) bool {
+	if val, ok := node.Tags["wheelchair"]; ok {
+		var norm = strings.ToLower(val)
+		if "no" != norm {
+			return true
+		}
+	}
+	return false
+}
+
 // write to leveldb immediately
 func cacheStore(db *leveldb.DB, node *osmpbf.Node) {
 	id, val := formatLevelDB(node)
@@ -249,6 +273,13 @@ func cacheLookup(db *leveldb.DB, way *osmpbf.Way) ([]map[string]string, error) {
 		latlon["lat"] = lat
 		latlon["lon"] = lon
 
+		// check for third & fourth fields which indicate an entrance
+		// and the level of wheelchair accessibility
+		if len(spl) == 4 {
+			latlon["entrance"] = spl[2]
+			latlon["wheelchair"] = spl[3]
+		}
+
 		container = append(container, latlon)
 
 	}
@@ -268,6 +299,15 @@ func formatLevelDB(node *osmpbf.Node) (id string, val []byte) {
 	bufval.WriteString(strconv.FormatFloat(node.Lat, 'f', 6, 64))
 	bufval.WriteString(":")
 	bufval.WriteString(strconv.FormatFloat(node.Lon, 'f', 6, 64))
+
+	if isEntranceNode(node) {
+		if isWheelchairAccessibleNode(node) {
+			bufval.WriteString(":1:1")
+		} else {
+			bufval.WriteString(":1:0")
+		}
+	}
+
 	byteval := []byte(bufval.String())
 
 	return stringid, byteval
@@ -354,6 +394,33 @@ func hasTags(tags map[string]string) bool {
 
 // compute the centroid of a way
 func computeCentroid(latlons []map[string]string) map[string]string {
+
+	// check to see if there is a tagged entrance we can use.
+	var entrances []map[string]string
+	for _, latlon := range latlons {
+		if val, ok := latlon["entrance"]; ok && val == "1" {
+			entrances = append(entrances, latlon)
+		}
+	}
+
+	// use the mapped entrance location where available
+	if len(entrances) > 0 {
+		var centroid = make(map[string]string)
+
+		// prefer the wheelchair accessible entrance if we have one
+		for _, entrance := range entrances {
+			if val, ok := entrance["wheelchair"]; ok && val == "1" {
+				centroid["lat"] = entrance["lat"]
+				centroid["lon"] = entrance["lon"]
+				return centroid
+			}
+		}
+
+		// otherwise just take the first entrance in the list
+		centroid["lat"] = entrances[0]["lat"]
+		centroid["lon"] = entrances[0]["lon"]
+		return centroid
+	}
 
 	// convert lat/lon map to geo.PointSet
 	points := geo.NewPointSet()
