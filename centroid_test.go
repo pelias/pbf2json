@@ -64,8 +64,8 @@ func TestComputeCentroidForClosedPolygon(t *testing.T) {
 	}
 
 	var centroid = computeCentroid(latlons)
-	assert.Equal(t, "0.000000", centroid["lat"])
-	assert.Equal(t, "0.000000", centroid["lon"])
+	assert.Equal(t, "0.0000000", centroid["lat"])
+	assert.Equal(t, "0.0000000", centroid["lon"])
 }
 
 func TestComputeCentroidForHillboroPublicLibrary(t *testing.T) {
@@ -81,8 +81,8 @@ func TestComputeCentroidForHillboroPublicLibrary(t *testing.T) {
 	}
 
 	var centroid = computeCentroid(latlons)
-	assert.Equal(t, "45.542876", centroid["lat"])
-	assert.Equal(t, "-122.935995", centroid["lon"])
+	assert.Equal(t, "45.5428760", centroid["lat"])
+	assert.Equal(t, "-122.9359955", centroid["lon"])
 }
 
 func TestComputeCentroidForOpenLineString(t *testing.T) {
@@ -94,6 +94,6 @@ func TestComputeCentroidForOpenLineString(t *testing.T) {
 	}
 
 	var centroid = computeCentroid(latlons)
-	assert.Equal(t, "0.000000", centroid["lat"])
-	assert.Equal(t, "0.000000", centroid["lon"])
+	assert.Equal(t, "0.0000000", centroid["lat"])
+	assert.Equal(t, "0.0000000", centroid["lon"])
 }

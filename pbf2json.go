@@ -304,9 +304,9 @@ func formatLevelDB(node *osmpbf.Node) (id string, val []byte) {
 	stringid := strconv.FormatInt(node.ID, 10)
 
 	var bufval bytes.Buffer
-	bufval.WriteString(strconv.FormatFloat(node.Lat, 'f', 6, 64))
+	bufval.WriteString(strconv.FormatFloat(node.Lat, 'f', 7, 64))
 	bufval.WriteString(":")
-	bufval.WriteString(strconv.FormatFloat(node.Lon, 'f', 6, 64))
+	bufval.WriteString(strconv.FormatFloat(node.Lon, 'f', 7, 64))
 
 	var isEntrance = isEntranceNode(node)
 	if isEntrance > 0 {
@@ -469,8 +469,8 @@ func computeCentroid(latlons []map[string]string) map[string]string {
 
 	// return point as lat/lon map
 	var centroid = make(map[string]string)
-	centroid["lat"] = strconv.FormatFloat(compute.Lat(), 'f', 6, 64)
-	centroid["lon"] = strconv.FormatFloat(compute.Lng(), 'f', 6, 64)
+	centroid["lat"] = strconv.FormatFloat(compute.Lat(), 'f', 7, 64)
+	centroid["lon"] = strconv.FormatFloat(compute.Lng(), 'f', 7, 64)
 
 	return centroid
 }
