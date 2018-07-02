@@ -402,6 +402,7 @@ func selectEntrance(entrances []map[string]string) map[string]string {
 
 	// use the mapped entrance location where available
 	var centroid = make(map[string]string)
+	centroid["type"] = "entrance"
 
 	// prefer the first 'main' entrance we find (should usually only be one).
 	for _, entrance := range entrances {
