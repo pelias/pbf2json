@@ -40,6 +40,6 @@ func TestGetPolygonCentroid(t *testing.T) {
 	poly.Push(geo.NewPoint(-73.989605, 40.740760))
 
 	var centroid = GetPolygonCentroid(poly)
-	assert.Equal(t, 40.74100992600508, centroid.Lat())
-	assert.Equal(t, -73.98964244467275, centroid.Lng())
+	assert.InDelta(t, 40.74101953854348, centroid.Lat(), 1e-7)
+	assert.InDelta(t, -73.9896438848581, centroid.Lng(), 1e-7)
 }

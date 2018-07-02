@@ -44,6 +44,23 @@ func TestComputeCentroidForClosedPolygon(t *testing.T) {
 	assert.Equal(t, "0.000000", centroid["lon"])
 }
 
+func TestComputeCentroidForHillboroPublicLibrary(t *testing.T) {
+
+	var latlons = []map[string]string{
+		map[string]string{"lat": "45.5424694", "lon": "-122.9356798"},
+		map[string]string{"lat": "45.5424261", "lon": "-122.9361523"},
+		map[string]string{"lat": "45.5432827", "lon": "-122.9363111"},
+		map[string]string{"lat": "45.5433259", "lon": "-122.9358387"},
+		map[string]string{"lat": "45.5430581", "lon": "-122.9357890"},
+		map[string]string{"lat": "45.5429060", "lon": "-122.9357608"},
+		map[string]string{"lat": "45.5424694", "lon": "-122.9356798"},
+	}
+
+	var centroid = computeCentroid(latlons)
+	assert.Equal(t, "45.542876", centroid["lat"])
+	assert.Equal(t, "-122.935995", centroid["lon"])
+}
+
 func TestComputeCentroidForOpenLineString(t *testing.T) {
 
 	var latlons = []map[string]string{
