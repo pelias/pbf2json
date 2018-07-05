@@ -288,31 +288,42 @@ func bytesToLatLon(data []byte) map[string]string {
 
 	var latlon = make(map[string]string)
 
-	var lat64 = math.Float64frombits(binary.BigEndian.Uint64(data[0:8]))
-	var lon64 = math.Float64frombits(binary.BigEndian.Uint64(data[8:16]))
+	// first 6 bytes are the latitude
+	var latBytes = append([]byte{}, data[0:6]...)
+	var lat64 = math.Float64frombits(binary.BigEndian.Uint64(append(latBytes, []byte{0x0, 0x0}...)))
 	latlon["lat"] = strconv.FormatFloat(lat64, 'f', 7, 64)
+
+	// next 6 bytes are the longitude
+	var lonBytes = append([]byte{}, data[6:12]...)
+	var lon64 = math.Float64frombits(binary.BigEndian.Uint64(append(lonBytes, []byte{0x0, 0x0}...)))
 	latlon["lon"] = strconv.FormatFloat(lon64, 'f', 7, 64)
 
 	// check for the bitmask byte which indicates things like an
 	// entrance and the level of wheelchair accessibility
-	if len(data) > 16 {
-		latlon["entrance"] = fmt.Sprintf("%d", (data[16]&0xC0)>>6)
-		latlon["wheelchair"] = fmt.Sprintf("%d", (data[16]&0x30)>>4)
+	if len(data) > 12 {
+		latlon["entrance"] = fmt.Sprintf("%d", (data[12]&0xC0)>>6)
+		latlon["wheelchair"] = fmt.Sprintf("%d", (data[12]&0x30)>>4)
 	}
 
 	return latlon
 }
 
-// encode a node as bytes (between 16 & 17 bytes used)
+// encode a node as bytes (between 12 & 13 bytes used)
 func nodeToBytes(node *osmpbf.Node) (string, []byte) {
 
 	var bufval bytes.Buffer
 
-	// encode lat/lon as two 64 bit floats packed in to 16 bytes
-	var bufLatLon = make([]byte, 16)
-	binary.BigEndian.PutUint64(bufLatLon[:8], math.Float64bits(node.Lat))
-	binary.BigEndian.PutUint64(bufLatLon[8:], math.Float64bits(node.Lon))
-	bufval.Write(bufLatLon)
+	// encode lat/lon as 64 bit floats packed in to 8 bytes,
+	// each float is then truncated to 6 bytes because we don't
+	// need the additional precision (> 8 decimal places)
+
+	var latBytes = make([]byte, 8)
+	binary.BigEndian.PutUint64(latBytes, math.Float64bits(node.Lat))
+	bufval.Write(latBytes[0:6])
+
+	var lonBytes = make([]byte, 8)
+	binary.BigEndian.PutUint64(lonBytes, math.Float64bits(node.Lon))
+	bufval.Write(lonBytes[0:6])
 
 	// generate a bitmask for relevant tag features
 	var isEntrance = isEntranceNode(node)
