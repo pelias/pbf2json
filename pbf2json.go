@@ -1,19 +1,23 @@
 package main
 
-import "encoding/json"
-import "fmt"
-import "flag"
-import "bytes"
-import "os"
-import "log"
-import "io"
+import (
+	"bytes"
+	"encoding/binary"
+	"encoding/json"
+	"flag"
+	"fmt"
+	"io"
+	"log"
+	"math"
+	"os"
+	"runtime"
+	"strconv"
+	"strings"
 
-import "runtime"
-import "strings"
-import "strconv"
-import "github.com/qedus/osmpbf"
-import "github.com/syndtr/goleveldb/leveldb"
-import "github.com/paulmach/go.geo"
+	"github.com/paulmach/go.geo"
+	"github.com/qedus/osmpbf"
+	"github.com/syndtr/goleveldb/leveldb"
+)
 
 type settings struct {
 	PbfPath    string
@@ -238,7 +242,7 @@ func isWheelchairAccessibleNode(node *osmpbf.Node) uint8 {
 
 // write to leveldb immediately
 func cacheStore(db *leveldb.DB, node *osmpbf.Node) {
-	id, val := formatLevelDB(node)
+	id, val := nodeToBytes(node)
 	err := db.Put([]byte(id), []byte(val), nil)
 	if err != nil {
 		log.Fatal(err)
@@ -247,7 +251,7 @@ func cacheStore(db *leveldb.DB, node *osmpbf.Node) {
 
 // queue a leveldb write in a batch
 func cacheQueue(batch *leveldb.Batch, node *osmpbf.Node) {
-	id, val := formatLevelDB(node)
+	id, val := nodeToBytes(node)
 	batch.Put([]byte(id), []byte(val))
 }
 
@@ -273,47 +277,69 @@ func cacheLookup(db *leveldb.DB, way *osmpbf.Way) ([]map[string]string, error) {
 			return container, err
 		}
 
-		s := string(data)
-		spl := strings.Split(s, ":")
-
-		latlon := make(map[string]string)
-		lat, lon := spl[0], spl[1]
-		latlon["lat"] = lat
-		latlon["lon"] = lon
-
-		// check for third & fourth fields which indicate an entrance
-		// and the level of wheelchair accessibility
-		if len(spl) == 4 {
-			latlon["entrance"] = spl[2]
-			latlon["wheelchair"] = spl[3]
-		}
-
-		container = append(container, latlon)
-
+		container = append(container, bytesToLatLon(data))
 	}
 
 	return container, nil
-
-	// fmt.Println(way.NodeIDs)
-	// fmt.Println(container)
-	// os.Exit(1)
 }
 
-func formatLevelDB(node *osmpbf.Node) (id string, val []byte) {
+// decode bytes to a 'latlon' type object
+func bytesToLatLon(data []byte) map[string]string {
 
-	stringid := strconv.FormatInt(node.ID, 10)
+	var latlon = make(map[string]string)
 
-	var bufval bytes.Buffer
-	bufval.WriteString(strconv.FormatFloat(node.Lat, 'f', 7, 64))
-	bufval.WriteString(":")
-	bufval.WriteString(strconv.FormatFloat(node.Lon, 'f', 7, 64))
+	// first 6 bytes are the latitude
+	var latBytes = append([]byte{}, data[0:6]...)
+	var lat64 = math.Float64frombits(binary.BigEndian.Uint64(append(latBytes, []byte{0x0, 0x0}...)))
+	latlon["lat"] = strconv.FormatFloat(lat64, 'f', 7, 64)
 
-	var isEntrance = isEntranceNode(node)
-	if isEntrance > 0 {
-		bufval.WriteString(fmt.Sprintf(":%d:%d", isEntrance, isWheelchairAccessibleNode(node)))
+	// next 6 bytes are the longitude
+	var lonBytes = append([]byte{}, data[6:12]...)
+	var lon64 = math.Float64frombits(binary.BigEndian.Uint64(append(lonBytes, []byte{0x0, 0x0}...)))
+	latlon["lon"] = strconv.FormatFloat(lon64, 'f', 7, 64)
+
+	// check for the bitmask byte which indicates things like an
+	// entrance and the level of wheelchair accessibility
+	if len(data) > 12 {
+		latlon["entrance"] = fmt.Sprintf("%d", (data[12]&0xC0)>>6)
+		latlon["wheelchair"] = fmt.Sprintf("%d", (data[12]&0x30)>>4)
 	}
 
-	byteval := []byte(bufval.String())
+	return latlon
+}
+
+// encode a node as bytes (between 12 & 13 bytes used)
+func nodeToBytes(node *osmpbf.Node) (string, []byte) {
+
+	var bufval bytes.Buffer
+
+	// encode lat/lon as 64 bit floats packed in to 8 bytes,
+	// each float is then truncated to 6 bytes because we don't
+	// need the additional precision (> 8 decimal places)
+
+	var latBytes = make([]byte, 8)
+	binary.BigEndian.PutUint64(latBytes, math.Float64bits(node.Lat))
+	bufval.Write(latBytes[0:6])
+
+	var lonBytes = make([]byte, 8)
+	binary.BigEndian.PutUint64(lonBytes, math.Float64bits(node.Lon))
+	bufval.Write(lonBytes[0:6])
+
+	// generate a bitmask for relevant tag features
+	var isEntrance = isEntranceNode(node)
+	if isEntrance > 0 {
+		// leftmost two bits are for the entrance, next two bits are accessibility
+		// remaining 4 rightmost bits are reserved for future use.
+		var bitmask = isEntrance << 6
+		var isWheelchairAccessible = isWheelchairAccessibleNode(node)
+		if isWheelchairAccessible > 0 {
+			bitmask |= isWheelchairAccessible << 4
+		}
+		bufval.WriteByte(bitmask)
+	}
+
+	stringid := strconv.FormatInt(node.ID, 10)
+	byteval := bufval.Bytes()
 
 	return stringid, byteval
 }
