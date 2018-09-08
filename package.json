@@ -39,7 +39,6 @@
     "deep-diff": "^1.0.0",
     "naivedb": "^1.0.7",
     "precommit-hook": "3.0.0",
-    "semantic-release": "^15.0.0",
     "tap-spec": "^5.0.0",
     "tape": "^4.5.0",
     "tmp": "0.0.33"
