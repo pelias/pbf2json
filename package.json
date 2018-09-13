@@ -6,7 +6,7 @@
   "homepage": "https://github.com/pelias/pbf2json",
   "license": "MIT",
   "scripts": {
-    "units": "node test/run.js | tap-spec",
+    "units": "./bin/units",
     "test": "npm run units",
     "pretest": "test/pretest.sh",
     "end-to-end": "npm run pretest; node test/end-to-end.js;",
