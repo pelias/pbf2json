@@ -156,12 +156,12 @@ func run(d *osmpbf.Decoder, db *leveldb.DB, config settings) {
 					}
 
 					// compute centroid
-					var centroid = computeCentroid(latlons)
+					centroid, bounds := computeCentroidAndBounds(latlons)
 
 					if config.WayNodes {
-						onWay(v, latlons, centroid)
+						onWay(v, latlons, centroid, bounds)
 					} else {
-						onWay(v, emptyLatLons, centroid)
+						onWay(v, emptyLatLons, centroid, bounds)
 					}
 				}
 
@@ -203,11 +203,20 @@ type jsonWay struct {
 	Tags map[string]string `json:"tags"`
 	// NodeIDs   []int64             `json:"refs"`
 	Centroid map[string]string   `json:"centroid"`
+	Bounds   map[string]string   `json:"bounds"`
 	Nodes    []map[string]string `json:"nodes,omitempty"`
 }
 
-func onWay(way *osmpbf.Way, latlons []map[string]string, centroid map[string]string) {
-	marshall := jsonWay{way.ID, "way", way.Tags /*, way.NodeIDs*/, centroid, latlons}
+func onWay(way *osmpbf.Way, latlons []map[string]string, centroid map[string]string, bounds *geo.Bound) {
+
+	// render a North-South-East-West bounding box
+	var bbox = make(map[string]string)
+	bbox["n"] = strconv.FormatFloat(bounds.North(), 'f', 7, 64)
+	bbox["s"] = strconv.FormatFloat(bounds.South(), 'f', 7, 64)
+	bbox["e"] = strconv.FormatFloat(bounds.East(), 'f', 7, 64)
+	bbox["w"] = strconv.FormatFloat(bounds.West(), 'f', 7, 64)
+
+	marshall := jsonWay{way.ID, "way", way.Tags /*, way.NodeIDs*/, centroid, bbox, latlons}
 	json, _ := json.Marshal(marshall)
 	fmt.Println(string(json))
 }
@@ -462,8 +471,8 @@ func selectEntrance(entrances []map[string]string) map[string]string {
 	return centroid
 }
 
-// compute the centroid of a way
-func computeCentroid(latlons []map[string]string) map[string]string {
+// compute the centroid of a way and its bbox
+func computeCentroidAndBounds(latlons []map[string]string) (map[string]string, *geo.Bound) {
 
 	// check to see if there is a tagged entrance we can use.
 	var entrances []map[string]string
@@ -473,17 +482,17 @@ func computeCentroid(latlons []map[string]string) map[string]string {
 		}
 	}
 
-	// use the mapped entrance location where available
-	if len(entrances) > 0 {
-		return selectEntrance(entrances)
-	}
-
 	// convert lat/lon map to geo.PointSet
 	points := geo.NewPointSet()
 	for _, each := range latlons {
 		var lon, _ = strconv.ParseFloat(each["lon"], 64)
 		var lat, _ = strconv.ParseFloat(each["lat"], 64)
 		points.Push(geo.NewPoint(lon, lat))
+	}
+
+	// use the mapped entrance location where available
+	if len(entrances) > 0 {
+		return selectEntrance(entrances), points.Bound()
 	}
 
 	// determine if the way is a closed centroid or a linestring
@@ -506,5 +515,5 @@ func computeCentroid(latlons []map[string]string) map[string]string {
 	centroid["lat"] = strconv.FormatFloat(compute.Lat(), 'f', 7, 64)
 	centroid["lon"] = strconv.FormatFloat(compute.Lng(), 'f', 7, 64)
 
-	return centroid
+	return centroid, points.Bound()
 }

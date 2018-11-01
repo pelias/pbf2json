@@ -90,6 +90,12 @@ Output of the `nodes` array (as seen below) is optional, this was disabled by de
     "lat": "51.554679",
     "lon": "-0.098485"
   },
+  "bounds": {
+    "e": "-0.0983673",
+    "n": "51.5547179",
+    "s": "51.5546574",
+    "w": "-0.0985915"
+  },
   "nodes": [
     {
       "lat": "51.554663",
