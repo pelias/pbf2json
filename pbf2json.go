@@ -24,7 +24,10 @@ type settings struct {
 	LevedbPath string
 	Tags       map[string][]string
 	BatchSize  int
+	WayNodes   bool
 }
+
+var emptyLatLons = make([]map[string]string, 0)
 
 func getSettings() settings {
 
@@ -32,6 +35,7 @@ func getSettings() settings {
 	leveldbPath := flag.String("leveldb", "/tmp", "path to leveldb directory")
 	tagList := flag.String("tags", "", "comma-separated list of valid tags, group AND conditions with a +")
 	batchSize := flag.Int("batch", 50000, "batch leveldb writes in batches of this size")
+	wayNodes := flag.Bool("waynodes", false, "should the lat/lons of nodes belonging to ways be printed")
 
 	flag.Parse()
 	args := flag.Args()
@@ -54,7 +58,7 @@ func getSettings() settings {
 	// fmt.Print(conditions, len(conditions))
 	// os.Exit(1)
 
-	return settings{args[0], *leveldbPath, conditions, *batchSize}
+	return settings{args[0], *leveldbPath, conditions, *batchSize, *wayNodes}
 }
 
 func main() {
@@ -154,7 +158,11 @@ func run(d *osmpbf.Decoder, db *leveldb.DB, config settings) {
 					// compute centroid
 					var centroid = computeCentroid(latlons)
 
-					onWay(v, latlons, centroid)
+					if config.WayNodes {
+						onWay(v, latlons, centroid)
+					} else {
+						onWay(v, emptyLatLons, centroid)
+					}
 				}
 
 			case *osmpbf.Relation:
@@ -195,7 +203,7 @@ type jsonWay struct {
 	Tags map[string]string `json:"tags"`
 	// NodeIDs   []int64             `json:"refs"`
 	Centroid map[string]string   `json:"centroid"`
-	Nodes    []map[string]string `json:"nodes"`
+	Nodes    []map[string]string `json:"nodes,omitempty"`
 }
 
 func onWay(way *osmpbf.Way, latlons []map[string]string, centroid map[string]string) {
