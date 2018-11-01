@@ -70,9 +70,11 @@ If you need to target only specific values for a tag you can specify exactly whi
 
 ### Denormalization
 
-When processing the ways, the node refs are looked up for you and the lat/lon values are added to each way:
+When processing the ways, the node refs are looked up for you and the lat/lon values are added to each way.
 
-Since version `3.0` centroids are also computed for each way.
+Since version `3.0` centroids are also computed for each way, since version `5.0` bounds are now also computed.
+
+Output of the `nodes` array (as seen below) is optional, this was disabled by default in version `5.0` but can be enabled with the flag `--waynodes=true`.
 
 ```bash
 {
@@ -87,6 +89,12 @@ Since version `3.0` centroids are also computed for each way.
   "centroid": {
     "lat": "51.554679",
     "lon": "-0.098485"
+  },
+  "bounds": {
+    "e": "-0.0983673",
+    "n": "51.5547179",
+    "s": "51.5546574",
+    "w": "-0.0985915"
   },
   "nodes": [
     {

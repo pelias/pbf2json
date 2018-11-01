@@ -24,7 +24,10 @@ type settings struct {
 	LevedbPath string
 	Tags       map[string][]string
 	BatchSize  int
+	WayNodes   bool
 }
+
+var emptyLatLons = make([]map[string]string, 0)
 
 func getSettings() settings {
 
@@ -32,6 +35,7 @@ func getSettings() settings {
 	leveldbPath := flag.String("leveldb", "/tmp", "path to leveldb directory")
 	tagList := flag.String("tags", "", "comma-separated list of valid tags, group AND conditions with a +")
 	batchSize := flag.Int("batch", 50000, "batch leveldb writes in batches of this size")
+	wayNodes := flag.Bool("waynodes", false, "should the lat/lons of nodes belonging to ways be printed")
 
 	flag.Parse()
 	args := flag.Args()
@@ -54,7 +58,7 @@ func getSettings() settings {
 	// fmt.Print(conditions, len(conditions))
 	// os.Exit(1)
 
-	return settings{args[0], *leveldbPath, conditions, *batchSize}
+	return settings{args[0], *leveldbPath, conditions, *batchSize, *wayNodes}
 }
 
 func main() {
@@ -152,9 +156,13 @@ func run(d *osmpbf.Decoder, db *leveldb.DB, config settings) {
 					}
 
 					// compute centroid
-					var centroid = computeCentroid(latlons)
+					centroid, bounds := computeCentroidAndBounds(latlons)
 
-					onWay(v, latlons, centroid)
+					if config.WayNodes {
+						onWay(v, latlons, centroid, bounds)
+					} else {
+						onWay(v, emptyLatLons, centroid, bounds)
+					}
 				}
 
 			case *osmpbf.Relation:
@@ -195,11 +203,20 @@ type jsonWay struct {
 	Tags map[string]string `json:"tags"`
 	// NodeIDs   []int64             `json:"refs"`
 	Centroid map[string]string   `json:"centroid"`
-	Nodes    []map[string]string `json:"nodes"`
+	Bounds   map[string]string   `json:"bounds"`
+	Nodes    []map[string]string `json:"nodes,omitempty"`
 }
 
-func onWay(way *osmpbf.Way, latlons []map[string]string, centroid map[string]string) {
-	marshall := jsonWay{way.ID, "way", way.Tags /*, way.NodeIDs*/, centroid, latlons}
+func onWay(way *osmpbf.Way, latlons []map[string]string, centroid map[string]string, bounds *geo.Bound) {
+
+	// render a North-South-East-West bounding box
+	var bbox = make(map[string]string)
+	bbox["n"] = strconv.FormatFloat(bounds.North(), 'f', 7, 64)
+	bbox["s"] = strconv.FormatFloat(bounds.South(), 'f', 7, 64)
+	bbox["e"] = strconv.FormatFloat(bounds.East(), 'f', 7, 64)
+	bbox["w"] = strconv.FormatFloat(bounds.West(), 'f', 7, 64)
+
+	marshall := jsonWay{way.ID, "way", way.Tags /*, way.NodeIDs*/, centroid, bbox, latlons}
 	json, _ := json.Marshal(marshall)
 	fmt.Println(string(json))
 }
@@ -454,8 +471,8 @@ func selectEntrance(entrances []map[string]string) map[string]string {
 	return centroid
 }
 
-// compute the centroid of a way
-func computeCentroid(latlons []map[string]string) map[string]string {
+// compute the centroid of a way and its bbox
+func computeCentroidAndBounds(latlons []map[string]string) (map[string]string, *geo.Bound) {
 
 	// check to see if there is a tagged entrance we can use.
 	var entrances []map[string]string
@@ -465,17 +482,17 @@ func computeCentroid(latlons []map[string]string) map[string]string {
 		}
 	}
 
-	// use the mapped entrance location where available
-	if len(entrances) > 0 {
-		return selectEntrance(entrances)
-	}
-
 	// convert lat/lon map to geo.PointSet
 	points := geo.NewPointSet()
 	for _, each := range latlons {
 		var lon, _ = strconv.ParseFloat(each["lon"], 64)
 		var lat, _ = strconv.ParseFloat(each["lat"], 64)
 		points.Push(geo.NewPoint(lon, lat))
+	}
+
+	// use the mapped entrance location where available
+	if len(entrances) > 0 {
+		return selectEntrance(entrances), points.Bound()
 	}
 
 	// determine if the way is a closed centroid or a linestring
@@ -498,5 +515,5 @@ func computeCentroid(latlons []map[string]string) map[string]string {
 	centroid["lat"] = strconv.FormatFloat(compute.Lat(), 'f', 7, 64)
 	centroid["lon"] = strconv.FormatFloat(compute.Lng(), 'f', 7, 64)
 
-	return centroid
+	return centroid, points.Bound()
 }
