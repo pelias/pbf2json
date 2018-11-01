@@ -12,25 +12,22 @@ function assert() {
   fi
 }
 
-# ensure the files were compiled to the correct architecture
-declare -A matrix
-matrix["build/pbf2json.darwin-x64"]="Mach-O 64-bit x86_64 executable, flags:<NOUNDEFS>"
-matrix["build/pbf2json.linux-arm"]="ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), statically linked, with debug_info, not stripped"
-matrix["build/pbf2json.linux-x64"]="ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically linked, with debug_info, not stripped"
-matrix["build/pbf2json.win32-x64"]="PE32 executable (console) Intel 80386 (stripped to external PDB), for MS Windows"
+# check the reported file class matches what's expected
+function check() {
+  actual=$(file -b ${1});
+  if [[ "${actual}" != "${2}"* ]]; then
+    echo "invalid file architecture: ${1}"
+    echo "expected: ${2}"
+    echo "actual: ${actual}"
+    echo "-${actual}-${2}-"
+    exit 1
+  fi
+}
 
-function checkFiles() {
-  for path in "${!matrix[@]}"
-  do
-    expected="$path: ${matrix[$path]}";
-    actual=$(file $path);
-    if [ "$actual" != "$expected" ]; then
-      echo "invalid file architecture: $path"
-      echo "expected: $expected"
-      echo "actual: $actual"
-      exit 1
-    fi
-  done
+# if the 'UPX' bindary packer is available, use it
+# https://upx.github.io/
+function compress() {
+  [ -x "$(command -v upx)" ] && upx "${1}"
 }
 
 echo "[compile] linux arm";
@@ -38,71 +35,30 @@ env GOOS=linux GOARCH=arm go build -ldflags="-s -w" -gcflags=-trimpath="${GOPATH
 assert $?;
 chmod +x pbf2json;
 mv pbf2json build/pbf2json.linux-arm;
-
-# echo "[compile] linux i386";
-# env GOOS=linux GOARCH=386 go build -ldflags="-s -w" -gcflags=-trimpath="${GOPATH}" -asmflags=-trimpath="${GOPATH}";
-# assert $?;
-# chmod +x pbf2json;
-# mv pbf2json build/pbf2json.linux-ia32;
+check 'build/pbf2json.linux-arm' 'ELF 32-bit LSB executable';
+compress 'build/pbf2json.linux-arm';
 
 echo "[compile] linux x64";
 env GOOS=linux GOARCH=amd64 go build -ldflags="-s -w" -gcflags=-trimpath="${GOPATH}" -asmflags=-trimpath="${GOPATH}";
 assert $?;
 chmod +x pbf2json;
 mv pbf2json build/pbf2json.linux-x64;
-
-# echo "[compile] darwin i386";
-# env GOOS=darwin GOARCH=386 go build -ldflags="-s -w" -gcflags=-trimpath="${GOPATH}" -asmflags=-trimpath="${GOPATH}";
-# assert $?;
-# chmod +x pbf2json;
-# mv pbf2json build/pbf2json.darwin-ia32;
+check 'build/pbf2json.linux-x64' 'ELF 64-bit LSB executable';
+compress 'build/pbf2json.linux-x64';
 
 echo "[compile] darwin x64";
 env GOOS=darwin GOARCH=amd64 go build -ldflags="-s -w" -gcflags=-trimpath="${GOPATH}" -asmflags=-trimpath="${GOPATH}";
 assert $?;
 chmod +x pbf2json;
 mv pbf2json build/pbf2json.darwin-x64;
-
-# echo "[compile] windows i386";
-# env GOOS=windows GOARCH=386 go build -ldflags="-s -w" -gcflags=-trimpath="${GOPATH}" -asmflags=-trimpath="${GOPATH}";
-# assert $?;
-# chmod +x pbf2json.exe;
-# mv pbf2json.exe build/pbf2json.win32-ia32;
+check 'build/pbf2json.darwin-x64' 'Mach-O 64-bit';
+# UPX disabled due to https://github.com/upx/upx/issues/187
+# compress 'build/pbf2json.darwin-x64';
 
 echo "[compile] windows x64";
 env GOOS=windows GOARCH=386 go build -ldflags="-s -w" -gcflags=-trimpath=${GOPATH} -asmflags=-trimpath=${GOPATH} -o pbf2json.exe;
 assert $?;
 chmod +x pbf2json.exe;
 mv pbf2json.exe build/pbf2json.win32-x64;
-
-# echo "[compile] freebsd arm";
-# env GOOS=freebsd GOARCH=arm go build -ldflags="-s -w" -gcflags=-trimpath="${GOPATH}" -asmflags=-trimpath="${GOPATH}";
-# assert $?;
-# chmod +x pbf2json;
-# mv pbf2json build/pbf2json.freebsd-arm;
-
-# echo "[compile] freebsd i386";
-# env GOOS=freebsd GOARCH=386 go build -ldflags="-s -w" -gcflags=-trimpath="${GOPATH}" -asmflags=-trimpath="${GOPATH}";
-# assert $?;
-# chmod +x pbf2json;
-# mv pbf2json build/pbf2json.freebsd-ia32;
-
-# echo "[compile] freebsd x64";
-# env GOOS=freebsd GOARCH=amd64 go build -ldflags="-s -w" -gcflags=-trimpath="${GOPATH}" -asmflags=-trimpath="${GOPATH}";
-# assert $?;
-# chmod +x pbf2json;
-# mv pbf2json build/pbf2json.freebsd-x64;
-
-# echo "[compile] openbsd i386";
-# env GOOS=openbsd GOARCH=386 go build -ldflags="-s -w" -gcflags=-trimpath="${GOPATH}" -asmflags=-trimpath="${GOPATH}";
-# assert $?;
-# chmod +x pbf2json;
-# mv pbf2json build/pbf2json.openbsd-ia32;
-
-# echo "[compile] openbsd x64";
-# env GOOS=openbsd GOARCH=amd64 go build -ldflags="-s -w" -gcflags=-trimpath="${GOPATH}" -asmflags=-trimpath="${GOPATH}";
-# assert $?;
-# chmod +x pbf2json;
-# mv pbf2json build/pbf2json.openbsd-x64;
-
-checkFiles
+check 'build/pbf2json.win32-x64' 'PE32 executable';
+compress 'build/pbf2json.win32-x64';
