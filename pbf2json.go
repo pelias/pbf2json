@@ -254,28 +254,48 @@ func print(d *osmpbf.Decoder, masks *BitmaskMap, db *leveldb.DB, config settings
 				// if so, print it
 				if masks.Relations.Has(v.ID) {
 
-					// find the first way in the relation
-					// for now, we only consider the first one for
-					// bounds and centroid
-					// @todo: consider all ways
-					var firstWayID = int64(0)
-					for _, mem := range v.Members {
-						if mem.Type == 1 {
-							firstWayID = mem.ID
-							break
+					// fetch all latlons for all ways in relation
+					var memberWayLatLons = findMemberWayLatLons(db, v)
+
+					// no ways found, skip relation
+					if len(memberWayLatLons) == 0 {
+						log.Println("denormalize failed for relation:", v.ID, "no ways found")
+						continue
+					}
+
+					// best centroid and bounds to use
+					var largestArea = 0.0
+					var centroid map[string]string
+					var bounds *geo.Bound
+
+					// iterate over each way, selecting the largest way to use
+					// for the centroid and bbox
+					for _, latlons := range memberWayLatLons {
+
+						// compute centroid
+						wayCentroid, wayBounds := computeCentroidAndBounds(latlons)
+
+						// if for any reason we failed to find a valid bounds
+						if nil == wayBounds {
+							log.Println("failed to calculate bounds for relation member way")
+							continue
+						}
+
+						area := wayBounds.GeoWidth() * wayBounds.GeoHeight()
+
+						// find the way with the largest area
+						if area > largestArea {
+							largestArea = area
+							centroid = wayCentroid
+							bounds = wayBounds
 						}
 					}
 
-					// lookup from leveldb
-					latlons, err := cacheLookupWayNodes(db, firstWayID)
-
-					// skip way if it fails to denormalize
-					if err != nil {
-						break
+					// if for any reason we failed to find a valid bounds
+					if nil == bounds {
+						log.Println("denormalize failed for relation:", v.ID, "no valid bounds")
+						continue
 					}
-
-					// compute centroid
-					centroid, bounds := computeCentroidAndBounds(latlons)
 
 					// trim tags
 					v.Tags = trimTags(v.Tags)
@@ -291,6 +311,28 @@ func print(d *osmpbf.Decoder, masks *BitmaskMap, db *leveldb.DB, config settings
 			}
 		}
 	}
+}
+
+// lookup all latlons for all ways in relation
+func findMemberWayLatLons(db *leveldb.DB, v *osmpbf.Relation) [][]map[string]string {
+	var memberWayLatLons [][]map[string]string
+
+	for _, mem := range v.Members {
+		if mem.Type == 1 {
+
+			// lookup from leveldb
+			latlons, err := cacheLookupWayNodes(db, mem.ID)
+
+			// skip way if it fails to denormalize
+			if err != nil {
+				break
+			}
+
+			memberWayLatLons = append(memberWayLatLons, latlons)
+		}
+	}
+
+	return memberWayLatLons
 }
 
 type jsonNode struct {
