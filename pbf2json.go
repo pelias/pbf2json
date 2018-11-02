@@ -70,23 +70,88 @@ func main() {
 	file := openFile(config.PbfPath)
 	defer file.Close()
 
-	decoder := osmpbf.NewDecoder(file)
-	err := decoder.Start(runtime.GOMAXPROCS(-1)) // use several goroutines for faster decoding
+	// perform two passes over the file, on the first pass
+	// we record a bitmask of the interesting elements in the
+	// file, on the second pass we extract the data
+
+	// set up bimasks
+	var masks = NewBitmaskMap()
+
+	// set up leveldb connection
+	var db = openLevelDB(config.LevedbPath)
+	defer db.Close()
+
+	// === first pass (indexing) ===
+	idxDecoder := osmpbf.NewDecoder(file)
+	err := idxDecoder.Start(runtime.GOMAXPROCS(-1)) // use several goroutines for faster decoding
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	db := openLevelDB(config.LevedbPath)
-	defer db.Close()
+	// index interesting IDs in bitmasks
+	index(idxDecoder, masks, config)
 
-	run(decoder, db, config)
+	// rewind file
+	file.Seek(0, 0)
+
+	// === second pass (printing json) ===
+	decoder := osmpbf.NewDecoder(file)
+	err = decoder.Start(runtime.GOMAXPROCS(-1)) // use several goroutines for faster decoding
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// print json
+	print(decoder, masks, db, config)
 }
 
-func run(d *osmpbf.Decoder, db *leveldb.DB, config settings) {
+func index(d *osmpbf.Decoder, masks *BitmaskMap, config settings) {
+	for {
+		if v, err := d.Decode(); err == io.EOF {
+			break
+		} else if err != nil {
+			log.Fatal(err)
+		} else {
+			switch v := v.(type) {
+
+			case *osmpbf.Node:
+				if hasTags(v.Tags) && containsValidTags(v.Tags, config.Tags) {
+					masks.Nodes.Insert(v.ID)
+				}
+
+			case *osmpbf.Way:
+				if hasTags(v.Tags) && containsValidTags(v.Tags, config.Tags) {
+					masks.Ways.Insert(v.ID)
+					for _, wayid := range v.NodeIDs {
+						masks.WayRefs.Insert(wayid)
+					}
+				}
+
+			case *osmpbf.Relation:
+				if hasTags(v.Tags) && containsValidTags(v.Tags, config.Tags) {
+					masks.Relations.Insert(v.ID)
+					for _, member := range v.Members {
+						switch member.Type {
+						case 0: // node
+							masks.RelNodes.Insert(member.ID)
+						case 1: // way
+							masks.RelWays.Insert(member.ID)
+						case 2: // relation
+							masks.RelRelation.Insert(member.ID)
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+func print(d *osmpbf.Decoder, masks *BitmaskMap, db *leveldb.DB, config settings) {
 
 	batch := new(leveldb.Batch)
+	finishedNodes := false
+	finishedWays := false
 
-	var nc, wc, rc uint64
 	for {
 		if v, err := d.Decode(); err == io.EOF {
 			break
@@ -97,32 +162,25 @@ func run(d *osmpbf.Decoder, db *leveldb.DB, config settings) {
 
 			case *osmpbf.Node:
 
-				// inc count
-				nc++
-
 				// ----------------
 				// write to leveldb
+				// note: only write way refs and relation member nodes
 				// ----------------
+				if masks.WayRefs.Has(v.ID) || masks.RelNodes.Has(v.ID) {
 
-				// write immediately
-				// cacheStore(db, v)
-
-				// write in batches
-				cacheQueue(batch, v)
-				if batch.Len() > config.BatchSize {
-					cacheFlush(db, batch)
+					// write in batches
+					cacheQueueNode(batch, v)
+					if batch.Len() > config.BatchSize {
+						cacheFlush(db, batch)
+					}
 				}
 
-				// ----------------
-				// handle tags
-				// ----------------
+				// bitmask indicates if this is a node of interest
+				// if so, print it
+				if masks.Nodes.Has(v.ID) {
 
-				if !hasTags(v.Tags) {
-					break
-				}
-
-				v.Tags = trimTags(v.Tags)
-				if containsValidTags(v.Tags, config.Tags) {
+					// trim tags
+					v.Tags = trimTags(v.Tags)
 					onNode(v)
 				}
 
@@ -130,25 +188,35 @@ func run(d *osmpbf.Decoder, db *leveldb.DB, config settings) {
 
 				// ----------------
 				// write to leveldb
+				// flush outstanding node batches
+				// before processing any ways
 				// ----------------
-
-				// flush outstanding batches
-				if batch.Len() > 1 {
-					cacheFlush(db, batch)
+				if !finishedNodes {
+					finishedNodes = true
+					if batch.Len() > 1 {
+						cacheFlush(db, batch)
+					}
 				}
 
-				// inc count
-				wc++
+				// ----------------
+				// write to leveldb
+				// note: only write relation member ways
+				// ----------------
+				if masks.RelWays.Has(v.ID) {
 
-				if !hasTags(v.Tags) {
-					break
+					// write in batches
+					cacheQueueWay(batch, v)
+					if batch.Len() > config.BatchSize {
+						cacheFlush(db, batch)
+					}
 				}
 
-				v.Tags = trimTags(v.Tags)
-				if containsValidTags(v.Tags, config.Tags) {
+				// bitmask indicates if this is a way of interest
+				// if so, print it
+				if masks.Ways.Has(v.ID) {
 
 					// lookup from leveldb
-					latlons, err := cacheLookup(db, v)
+					latlons, err := cacheLookupNodes(db, v)
 
 					// skip ways which fail to denormalize
 					if err != nil {
@@ -157,6 +225,9 @@ func run(d *osmpbf.Decoder, db *leveldb.DB, config settings) {
 
 					// compute centroid
 					centroid, bounds := computeCentroidAndBounds(latlons)
+
+					// trim tags
+					v.Tags = trimTags(v.Tags)
 
 					if config.WayNodes {
 						onWay(v, latlons, centroid, bounds)
@@ -167,10 +238,51 @@ func run(d *osmpbf.Decoder, db *leveldb.DB, config settings) {
 
 			case *osmpbf.Relation:
 
-				// inc count
-				rc++
+				// ----------------
+				// write to leveldb
+				// flush outstanding way batches
+				// before processing any relation
+				// ----------------
+				if !finishedWays {
+					finishedWays = true
+					if batch.Len() > 1 {
+						cacheFlush(db, batch)
+					}
+				}
 
-				onRelation(v)
+				// bitmask indicates if this is a relation of interest
+				// if so, print it
+				if masks.Relations.Has(v.ID) {
+
+					// find the first way in the relation
+					// for now, we only consider the first one for
+					// bounds and centroid
+					// @todo: consider all ways
+					var firstWayID = int64(0)
+					for _, mem := range v.Members {
+						if mem.Type == 1 {
+							firstWayID = mem.ID
+							break
+						}
+					}
+
+					// lookup from leveldb
+					latlons, err := cacheLookupWayNodes(db, firstWayID)
+
+					// skip way if it fails to denormalize
+					if err != nil {
+						break
+					}
+
+					// compute centroid
+					centroid, bounds := computeCentroidAndBounds(latlons)
+
+					// trim tags
+					v.Tags = trimTags(v.Tags)
+
+					// print relation
+					onRelation(v, centroid, bounds)
+				}
 
 			default:
 
@@ -179,8 +291,6 @@ func run(d *osmpbf.Decoder, db *leveldb.DB, config settings) {
 			}
 		}
 	}
-
-	// fmt.Printf("Nodes: %d, Ways: %d, Relations: %d\n", nc, wc, rc)
 }
 
 type jsonNode struct {
@@ -207,8 +317,7 @@ type jsonWay struct {
 	Nodes    []map[string]string `json:"nodes,omitempty"`
 }
 
-func onWay(way *osmpbf.Way, latlons []map[string]string, centroid map[string]string, bounds *geo.Bound) {
-
+func jsonBbox(bounds *geo.Bound) map[string]string {
 	// render a North-South-East-West bounding box
 	var bbox = make(map[string]string)
 	bbox["n"] = strconv.FormatFloat(bounds.North(), 'f', 7, 64)
@@ -216,13 +325,29 @@ func onWay(way *osmpbf.Way, latlons []map[string]string, centroid map[string]str
 	bbox["e"] = strconv.FormatFloat(bounds.East(), 'f', 7, 64)
 	bbox["w"] = strconv.FormatFloat(bounds.West(), 'f', 7, 64)
 
+	return bbox
+}
+
+func onWay(way *osmpbf.Way, latlons []map[string]string, centroid map[string]string, bounds *geo.Bound) {
+	bbox := jsonBbox(bounds)
 	marshall := jsonWay{way.ID, "way", way.Tags /*, way.NodeIDs*/, centroid, bbox, latlons}
 	json, _ := json.Marshal(marshall)
 	fmt.Println(string(json))
 }
 
-func onRelation(relation *osmpbf.Relation) {
-	// do nothing (yet)
+type jsonRelation struct {
+	ID       int64             `json:"id"`
+	Type     string            `json:"type"`
+	Tags     map[string]string `json:"tags"`
+	Centroid map[string]string `json:"centroid"`
+	Bounds   map[string]string `json:"bounds"`
+}
+
+func onRelation(relation *osmpbf.Relation, centroid map[string]string, bounds *geo.Bound) {
+	bbox := jsonBbox(bounds)
+	marshall := jsonRelation{relation.ID, "relation", relation.Tags, centroid, bbox}
+	json, _ := json.Marshal(marshall)
+	fmt.Println(string(json))
 }
 
 // determine if the node is for an entrance
@@ -257,18 +382,15 @@ func isWheelchairAccessibleNode(node *osmpbf.Node) uint8 {
 	return 0
 }
 
-// write to leveldb immediately
-func cacheStore(db *leveldb.DB, node *osmpbf.Node) {
+// queue a leveldb write in a batch
+func cacheQueueNode(batch *leveldb.Batch, node *osmpbf.Node) {
 	id, val := nodeToBytes(node)
-	err := db.Put([]byte(id), []byte(val), nil)
-	if err != nil {
-		log.Fatal(err)
-	}
+	batch.Put([]byte(id), []byte(val))
 }
 
 // queue a leveldb write in a batch
-func cacheQueue(batch *leveldb.Batch, node *osmpbf.Node) {
-	id, val := nodeToBytes(node)
+func cacheQueueWay(batch *leveldb.Batch, way *osmpbf.Way) {
+	id, val := wayToBytes(way)
 	batch.Put([]byte(id), []byte(val))
 }
 
@@ -281,7 +403,7 @@ func cacheFlush(db *leveldb.DB, batch *leveldb.Batch) {
 	batch.Reset()
 }
 
-func cacheLookup(db *leveldb.DB, way *osmpbf.Way) ([]map[string]string, error) {
+func cacheLookupNodes(db *leveldb.DB, way *osmpbf.Way) ([]map[string]string, error) {
 
 	var container []map[string]string
 
@@ -291,13 +413,34 @@ func cacheLookup(db *leveldb.DB, way *osmpbf.Way) ([]map[string]string, error) {
 		data, err := db.Get([]byte(stringid), nil)
 		if err != nil {
 			log.Println("denormalize failed for way:", way.ID, "node not found:", stringid)
-			return container, err
+			return make([]map[string]string, 0), err
 		}
 
 		container = append(container, bytesToLatLon(data))
 	}
 
 	return container, nil
+}
+
+func cacheLookupWayNodes(db *leveldb.DB, wayid int64) ([]map[string]string, error) {
+
+	// prefix the key with 'W' to differentiate it from node ids
+	stringid := "W" + strconv.FormatInt(wayid, 10)
+
+	// look up way bytes
+	reldata, err := db.Get([]byte(stringid), nil)
+	if err != nil {
+		log.Println("lookup failed for way:", wayid, "noderefs not found:", stringid)
+		return make([]map[string]string, 0), err
+	}
+
+	// generate a way object
+	var way = &osmpbf.Way{
+		ID:      wayid,
+		NodeIDs: bytesToIDSlice(reldata),
+	}
+
+	return cacheLookupNodes(db, way)
 }
 
 // decode bytes to a 'latlon' type object
@@ -359,6 +502,35 @@ func nodeToBytes(node *osmpbf.Node) (string, []byte) {
 	byteval := bufval.Bytes()
 
 	return stringid, byteval
+}
+
+func idSliceToBytes(ids []int64) []byte {
+	var bufval bytes.Buffer
+	for _, id := range ids {
+		var idBytes = make([]byte, 8)
+		binary.BigEndian.PutUint64(idBytes, uint64(id))
+		bufval.Write(idBytes)
+	}
+	return bufval.Bytes()
+}
+
+func bytesToIDSlice(bytes []byte) []int64 {
+	var ids []int64
+	if len(bytes)%8 != 0 {
+		log.Fatal("invalid byte slice length: not divisible by 8")
+		return make([]int64, 0)
+	}
+	for i := 0; i < len(bytes)/8; i++ {
+		ids = append(ids, int64(binary.BigEndian.Uint64(bytes[i*8:(i*8)+8])))
+	}
+	return ids
+}
+
+// encode a way as bytes (repeated int64 numbers)
+func wayToBytes(way *osmpbf.Way) (string, []byte) {
+	// prefix the key with 'W' to differentiate it from node ids
+	stringid := "W" + strconv.FormatInt(way.ID, 10)
+	return stringid, idSliceToBytes(way.NodeIDs)
 }
 
 func openFile(filename string) *os.File {
