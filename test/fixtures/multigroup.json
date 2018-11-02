@@ -1,4 +1,23 @@
 {
+  "87022": {
+    "id": 87022,
+    "type": "relation",
+    "tags": {
+      "name": "Fraser River (North Arm)",
+      "type": "multipolygon",
+      "waterway": "riverbank"
+    },
+    "centroid": {
+      "lat": "49.2112608",
+      "lon": "-123.1570658"
+    },
+    "bounds": {
+      "e": "-123.1315940",
+      "n": "49.2226900",
+      "s": "49.1996686",
+      "w": "-123.2019788"
+    }
+  },
   "4231647": {
     "id": 4231647,
     "type": "way",
