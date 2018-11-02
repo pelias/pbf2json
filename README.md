@@ -1,5 +1,5 @@
 
-pbf2json creates a JSON stream of openstreetmap data from any PBF extract, you can pick-and-choose only the bits of the file you want, the library will take care of de-normalizing the relational data (nodes/ways) so you can put it straight in to your favourite document-store, inverted index or graph database.
+pbf2json creates a JSON stream of openstreetmap data from any PBF extract, you can pick-and-choose only the bits of the file you want, the library will take care of de-normalizing the relational data (nodes/ways/relations) so you can put it straight in to your favourite document-store, inverted index or graph database.
 
 ![animated-gif](http://missinglink.embed.s3.amazonaws.com/pbf2json-2.gif)
 
@@ -132,6 +132,10 @@ Output of the `nodes` array (as seen below) is optional, this was disabled by de
   ]
 }
 ```
+
+### Relations
+
+Since version `6.0` centroids and bounding boxes are also computed for relations, the calulations are based off the largest member way by area.
 
 ### Leveldb
 
