@@ -17,6 +17,7 @@ import (
 	"github.com/paulmach/go.geo"
 	"github.com/qedus/osmpbf"
 	"github.com/syndtr/goleveldb/leveldb"
+	"github.com/syndtr/goleveldb/leveldb/opt"
 )
 
 type settings struct {
@@ -171,7 +172,7 @@ func print(d *osmpbf.Decoder, masks *BitmaskMap, db *leveldb.DB, config settings
 					// write in batches
 					cacheQueueNode(batch, v)
 					if batch.Len() > config.BatchSize {
-						cacheFlush(db, batch)
+						cacheFlush(db, batch, true)
 					}
 				}
 
@@ -194,7 +195,7 @@ func print(d *osmpbf.Decoder, masks *BitmaskMap, db *leveldb.DB, config settings
 				if !finishedNodes {
 					finishedNodes = true
 					if batch.Len() > 1 {
-						cacheFlush(db, batch)
+						cacheFlush(db, batch, true)
 					}
 				}
 
@@ -207,7 +208,7 @@ func print(d *osmpbf.Decoder, masks *BitmaskMap, db *leveldb.DB, config settings
 					// write in batches
 					cacheQueueWay(batch, v)
 					if batch.Len() > config.BatchSize {
-						cacheFlush(db, batch)
+						cacheFlush(db, batch, true)
 					}
 				}
 
@@ -246,7 +247,7 @@ func print(d *osmpbf.Decoder, masks *BitmaskMap, db *leveldb.DB, config settings
 				if !finishedWays {
 					finishedWays = true
 					if batch.Len() > 1 {
-						cacheFlush(db, batch)
+						cacheFlush(db, batch, true)
 					}
 				}
 
@@ -437,8 +438,13 @@ func cacheQueueWay(batch *leveldb.Batch, way *osmpbf.Way) {
 }
 
 // flush a leveldb batch to database and reset batch to 0
-func cacheFlush(db *leveldb.DB, batch *leveldb.Batch) {
-	err := db.Write(batch, nil)
+func cacheFlush(db *leveldb.DB, batch *leveldb.Batch, sync bool) {
+	var writeOpts = &opt.WriteOptions{
+		NoWriteMerge: true,
+		Sync:         sync,
+	}
+
+	err := db.Write(batch, writeOpts)
 	if err != nil {
 		log.Fatal(err)
 	}
