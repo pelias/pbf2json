@@ -10,7 +10,7 @@ var util = require('util'),
 function errorHandler( name ){
   return function( data ){
     data.toString('utf8').trim().split('\n').forEach( function( line ){
-      console.log( util.format( '[%s]:', name ), line );
+      console.error( util.format( '[%s]:', name ), line );
     });
   };
 }
