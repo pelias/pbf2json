@@ -1,6 +1,7 @@
 package main
 
 import (
+	"math"
 	"testing"
 
 	"github.com/qedus/osmpbf"
@@ -54,4 +55,18 @@ func TestEncodingBitmaskValues(t *testing.T) {
 	// decode
 	var latlon = bytesToLatLon(byteval)
 	assert.Equal(t, expectedLatlon, latlon)
+}
+
+func TestEncodingAndDecodingIdsToBytes(t *testing.T) {
+
+	var ids = []int64{0, 100, 100000, 100000000, math.MaxInt64}
+
+	// encode
+	var encoded = idSliceToBytes(ids)
+	// assert.Equal(t, "100", stringid)
+	// assert.Equal(t, expectedBytes, byteval)
+
+	// decode
+	var decoded = bytesToIDSlice(encoded)
+	assert.Equal(t, decoded, ids)
 }

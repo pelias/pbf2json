@@ -10,6 +10,7 @@ var fs = require('fs'),
     path = require('path'),
     tmp = require('tmp'),
     deep = require('deep-diff'),
+    through = require('through2'),
     naivedb = require('naivedb'),
     pbf2json = require('../index');
 
@@ -23,7 +24,11 @@ function test( name, tags, cb ){
   var db = naivedb(tmpfile);
 
   pbf2json.createReadStream({ file: pbfPath, tags: tags })
-    .pipe( db.createWriteStream('id') )
+    .pipe( through.obj( function( obj, _, next ){
+      obj.gid = obj.type + ':' + obj.id;
+      next(null, obj);
+    }))
+    .pipe( db.createWriteStream('gid') )
     .on('finish', function assert(){
 
       // write actual to disk
