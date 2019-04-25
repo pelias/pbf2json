@@ -36,6 +36,13 @@ func (b *Bitmask) Len() uint64 {
 	return l
 }
 
+// Empty - return true if bitmask is entirely empty
+func (b *Bitmask) Empty() bool {
+	b.mutex.RLock()
+	defer b.mutex.RUnlock()
+	return len(b.I) == 0
+}
+
 // NewBitMask - constructor
 func NewBitMask() *Bitmask {
 	return &Bitmask{

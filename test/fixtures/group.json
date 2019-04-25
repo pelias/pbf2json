@@ -29659,5 +29659,149 @@
       "w": "-123.1206628"
     },
     "gid": "way:340564714"
+  },
+  "relation:1414902": {
+    "id": 1414902,
+    "type": "relation",
+    "tags": {
+      "addr:housenumber": "4004",
+      "addr:street": "Wesbrook Mall",
+      "building": "yes",
+      "name": "TRIUMF MOB",
+      "source": "UBC Plant Ops 2011",
+      "type": "multipolygon",
+      "ubc:building_num": "853"
+    },
+    "centroid": {
+      "lat": "49.2476482",
+      "lon": "-123.2307034"
+    },
+    "bounds": {
+      "e": "-123.2301584",
+      "n": "49.2478749",
+      "s": "49.2473937",
+      "w": "-123.2309654"
+    },
+    "gid": "relation:1414902"
+  },
+  "relation:1671051": {
+    "id": 1671051,
+    "type": "relation",
+    "tags": {
+      "addr:housenumber": "2075",
+      "addr:street": "Kingsway",
+      "building": "yes",
+      "name": "Days Inn - Vancouver Metro",
+      "tourism": "motel",
+      "type": "multipolygon",
+      "website": "http://www.daysinnvancouvermetro.com/"
+    },
+    "centroid": {
+      "lat": "49.2449135",
+      "lon": "-123.0636847"
+    },
+    "bounds": {
+      "e": "-123.0631808",
+      "n": "49.2453123",
+      "s": "49.2446708",
+      "w": "-123.0640355"
+    },
+    "gid": "relation:1671051"
+  },
+  "relation:3274518": {
+    "id": 3274518,
+    "type": "relation",
+    "tags": {
+      "addr:city": "Vancouver",
+      "addr:housenumber": "2146",
+      "addr:postcode": "V6T 1Z3",
+      "addr:street": "Health Sciences Mall",
+      "building": "yes",
+      "building:levels": "4",
+      "name": "D.H. Copp Building",
+      "type": "multipolygon"
+    },
+    "centroid": {
+      "lat": "49.2655386",
+      "lon": "-123.2474331"
+    },
+    "bounds": {
+      "e": "-123.2467844",
+      "n": "49.2657471",
+      "s": "49.2652481",
+      "w": "-123.2482981"
+    },
+    "gid": "relation:3274518"
+  },
+  "relation:3579391": {
+    "id": 3579391,
+    "type": "relation",
+    "tags": {
+      "addr:city": "Vancouver",
+      "addr:housenumber": "350",
+      "addr:street": "Nanaimo Street",
+      "building": "yes",
+      "cuisine": "sushi",
+      "type": "multipolygon"
+    },
+    "centroid": {
+      "lat": "49.2814858",
+      "lon": "-123.0561845"
+    },
+    "bounds": {
+      "e": "-123.0560608",
+      "n": "49.2815786",
+      "s": "49.2813929",
+      "w": "-123.0563082"
+    },
+    "gid": "relation:3579391"
+  },
+  "relation:4055271": {
+    "id": 4055271,
+    "type": "relation",
+    "tags": {
+      "addr:city": "Vancouver",
+      "addr:housenumber": "1950",
+      "addr:postcode": "V5L 1T7",
+      "addr:street": "East Pender Street",
+      "building": "school",
+      "name": "Sir William Macdonald Elementary School",
+      "phone": "+1 604 713 4696",
+      "type": "multipolygon"
+    },
+    "centroid": {
+      "lat": "49.2806553",
+      "lon": "-123.0647792"
+    },
+    "bounds": {
+      "e": "-123.0643952",
+      "n": "49.2807812",
+      "s": "49.2804302",
+      "w": "-123.0649937"
+    },
+    "gid": "relation:4055271"
+  },
+  "relation:4600827": {
+    "id": 4600827,
+    "type": "relation",
+    "tags": {
+      "addr:city": "Vancouver",
+      "addr:housenumber": "1856",
+      "addr:province": "BC",
+      "addr:street": "Frances Street",
+      "building": "residential",
+      "type": "multipolygon"
+    },
+    "centroid": {
+      "lat": "49.2789797",
+      "lon": "-123.0671473"
+    },
+    "bounds": {
+      "e": "-123.0667246",
+      "n": "49.2791734",
+      "s": "49.2789588",
+      "w": "-123.0672027"
+    },
+    "gid": "relation:4600827"
   }
 }
