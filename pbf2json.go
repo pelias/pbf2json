@@ -89,13 +89,25 @@ func main() {
 		log.Fatal(err)
 	}
 
-	// index interesting IDs in bitmasks
+	// index target IDs in bitmasks
 	index(idxDecoder, masks, config)
 
-	// rewind file
-	file.Seek(0, 0)
+	// no-op if no relation members of type 'way' present in mask
+	if !masks.RelWays.Empty() {
+		// === potential second pass (indexing) to index members of relations ===
+		file.Seek(io.SeekStart, 0) // rewind file
+		idxRelationsDecoder := osmpbf.NewDecoder(file)
+		err = idxRelationsDecoder.Start(runtime.GOMAXPROCS(-1)) // use several goroutines for faster decoding
+		if err != nil {
+			log.Fatal(err)
+		}
 
-	// === second pass (printing json) ===
+		// index relation member IDs in bitmasks
+		indexRelationMembers(idxRelationsDecoder, masks, config)
+	}
+
+	// === final pass (printing json) ===
+	file.Seek(io.SeekStart, 0) // rewind file
 	decoder := osmpbf.NewDecoder(file)
 	err = decoder.Start(runtime.GOMAXPROCS(-1)) // use several goroutines for faster decoding
 	if err != nil {
@@ -123,8 +135,8 @@ func index(d *osmpbf.Decoder, masks *BitmaskMap, config settings) {
 			case *osmpbf.Way:
 				if hasTags(v.Tags) && containsValidTags(v.Tags, config.Tags) {
 					masks.Ways.Insert(v.ID)
-					for _, wayid := range v.NodeIDs {
-						masks.WayRefs.Insert(wayid)
+					for _, nodeid := range v.NodeIDs {
+						masks.WayRefs.Insert(nodeid)
 					}
 				}
 
@@ -142,6 +154,37 @@ func index(d *osmpbf.Decoder, masks *BitmaskMap, config settings) {
 						}
 					}
 				}
+			}
+		}
+	}
+}
+
+func indexRelationMembers(d *osmpbf.Decoder, masks *BitmaskMap, config settings) {
+	for {
+		if v, err := d.Decode(); err == io.EOF {
+			break
+		} else if err != nil {
+			log.Fatal(err)
+		} else {
+			switch v := v.(type) {
+			case *osmpbf.Way:
+				if masks.RelWays.Has(v.ID) {
+					for _, nodeid := range v.NodeIDs {
+						masks.RelNodes.Insert(nodeid)
+					}
+				}
+				// support for super-relations
+				// case *osmpbf.Relation:
+				// 	if masks.RelRelation.Has(v.ID) {
+				// 		for _, member := range v.Members {
+				// 			switch member.Type {
+				// 			case 0: // node
+				// 				masks.RelNodes.Insert(member.ID)
+				// 			case 1: // way
+				// 				masks.RelWays.Insert(member.ID)
+				// 			}
+				// 		}
+				// 	}
 			}
 		}
 	}
