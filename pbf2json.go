@@ -303,7 +303,7 @@ func print(d *osmpbf.Decoder, masks *BitmaskMap, db *leveldb.DB, config settings
 
 					// no ways found, skip relation
 					if len(memberWayLatLons) == 0 {
-						log.Println("denormalize failed for relation:", v.ID, "no ways found")
+						log.Println("[warn] denormalize failed for relation:", v.ID, "no ways found")
 						continue
 					}
 
@@ -321,7 +321,7 @@ func print(d *osmpbf.Decoder, masks *BitmaskMap, db *leveldb.DB, config settings
 
 						// if for any reason we failed to find a valid bounds
 						if nil == wayBounds {
-							log.Println("failed to calculate bounds for relation member way")
+							log.Println("[warn] failed to calculate bounds for relation member way")
 							continue
 						}
 
@@ -337,7 +337,7 @@ func print(d *osmpbf.Decoder, masks *BitmaskMap, db *leveldb.DB, config settings
 
 					// if for any reason we failed to find a valid bounds
 					if nil == bounds {
-						log.Println("denormalize failed for relation:", v.ID, "no valid bounds")
+						log.Println("[warn] denormalize failed for relation:", v.ID, "no valid bounds")
 						continue
 					}
 
@@ -350,7 +350,7 @@ func print(d *osmpbf.Decoder, masks *BitmaskMap, db *leveldb.DB, config settings
 
 			default:
 
-				log.Fatalf("unknown type %T\n", v)
+				log.Fatalf("[error] unknown type %T\n", v)
 
 			}
 		}
@@ -503,7 +503,7 @@ func cacheLookupNodes(db *leveldb.DB, way *osmpbf.Way) ([]map[string]string, err
 
 		data, err := db.Get([]byte(stringid), nil)
 		if err != nil {
-			log.Println("denormalize failed for way:", way.ID, "node not found:", stringid)
+			log.Println("[warn] denormalize failed for way:", way.ID, "node not found:", stringid)
 			return make([]map[string]string, 0), err
 		}
 
@@ -521,7 +521,7 @@ func cacheLookupWayNodes(db *leveldb.DB, wayid int64) ([]map[string]string, erro
 	// look up way bytes
 	reldata, err := db.Get([]byte(stringid), nil)
 	if err != nil {
-		log.Println("lookup failed for way:", wayid, "noderefs not found:", stringid)
+		log.Println("[warn] lookup failed for way:", wayid, "noderefs not found:", stringid)
 		return make([]map[string]string, 0), err
 	}
 
