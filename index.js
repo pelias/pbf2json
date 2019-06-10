@@ -7,10 +7,22 @@ var util = require('util'),
     child = require('child_process'),
     exec = path.join(__dirname, 'build', util.format( 'pbf2json.%s-%s', os.platform(), os.arch() ) );
 
-function errorHandler( name ){
+// custom log levels can be detected for lines with the format:
+// [level] message
+// supported levels (listed from least verbose to most verbose):
+// error, warn, info
+function getLogLevel( line ){
+  if( line.indexOf('[warn]') > -1 ){ return 1; }
+  if( line.indexOf('[info]') > -1 ){ return 2; }
+  return 0;
+}
+
+function errorHandler( name, level ){
   return function( data ){
     data.toString('utf8').trim().split('\n').forEach( function( line ){
-      console.error( util.format( '[%s]:', name ), line );
+      if( getLogLevel( line ) <= level ){
+        console.error( util.format( '[%s]:', name ), line );
+      }
     });
   };
 }
@@ -44,10 +56,10 @@ function createReadStream( config ){
     .pipe( decoder );
 
   // print error and exit on decoder pipeline error
-  decoder.on( 'error', errorHandler( 'decoder' ) );
+  decoder.on( 'error', errorHandler( 'decoder', config.loglevel || 0 ) );
 
   // print error and exit on stderr
-  proc.stderr.on( 'data', errorHandler( 'pbf2json' ) );
+  proc.stderr.on( 'data', errorHandler( 'pbf2json', config.loglevel || 0 ) );
 
   // terminate the process and pipeline
   decoder.kill = function(){
