@@ -137,6 +137,8 @@ Output of the `nodes` array (as seen below) is optional, this was disabled by de
 
 Since version `6.0` centroids and bounding boxes are also computed for relations, the calulations are based off the largest member way by area.
 
+Note: if a `relation` does not contain at least one `way` then it will not be output.
+
 ### Leveldb
 
 This library uses `leveldb` to store the lat/lon info about nodes so that it can denormalize the ways for you.
