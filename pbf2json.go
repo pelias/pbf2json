@@ -142,6 +142,19 @@ func index(d *osmpbf.Decoder, masks *BitmaskMap, config settings) {
 
 			case *osmpbf.Relation:
 				if hasTags(v.Tags) && containsValidTags(v.Tags, config.Tags) {
+
+					// record a count of which type of members
+					// are present in the relation
+					var count = make(map[int]int64)
+					for _, member := range v.Members {
+						count[int(member.Type)]++
+					}
+
+					// skip relations which contain 0 ways
+					if count[1] == 0 {
+						continue
+					}
+
 					masks.Relations.Insert(v.ID)
 					for _, member := range v.Members {
 						switch member.Type {
@@ -325,7 +338,7 @@ func print(d *osmpbf.Decoder, masks *BitmaskMap, db *leveldb.DB, config settings
 							continue
 						}
 
-						area := wayBounds.GeoWidth() * wayBounds.GeoHeight()
+						area := math.Max(wayBounds.GeoWidth(), 0.000001) * math.Max(wayBounds.GeoHeight(), 0.000001)
 
 						// find the way with the largest area
 						if area > largestArea {
