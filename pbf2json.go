@@ -26,6 +26,7 @@ type settings struct {
 	Tags       map[string][]string
 	BatchSize  int
 	WayNodes   bool
+	Metadata   bool
 }
 
 var emptyLatLons = make([]map[string]string, 0)
@@ -37,6 +38,7 @@ func getSettings() settings {
 	tagList := flag.String("tags", "", "comma-separated list of valid tags, group AND conditions with a +")
 	batchSize := flag.Int("batch", 50000, "batch leveldb writes in batches of this size")
 	wayNodes := flag.Bool("waynodes", false, "should the lat/lons of nodes belonging to ways be printed")
+	metadata := flag.Bool("metadata", false, "output metdata such as changset and timestamp")
 
 	flag.Parse()
 	args := flag.Args()
@@ -59,7 +61,7 @@ func getSettings() settings {
 	// fmt.Print(conditions, len(conditions))
 	// os.Exit(1)
 
-	return settings{args[0], *leveldbPath, conditions, *batchSize, *wayNodes}
+	return settings{args[0], *leveldbPath, conditions, *batchSize, *wayNodes, *metadata}
 }
 
 func main() {
@@ -225,7 +227,7 @@ func print(d *osmpbf.Decoder, masks *BitmaskMap, db *leveldb.DB, config settings
 
 					// trim tags
 					v.Tags = trimTags(v.Tags)
-					onNode(v)
+					onNode(v, &config)
 				}
 
 			case *osmpbf.Way:
@@ -274,9 +276,9 @@ func print(d *osmpbf.Decoder, masks *BitmaskMap, db *leveldb.DB, config settings
 					v.Tags = trimTags(v.Tags)
 
 					if config.WayNodes {
-						onWay(v, latlons, centroid, bounds)
+						onWay(v, &config, latlons, centroid, bounds)
 					} else {
-						onWay(v, emptyLatLons, centroid, bounds)
+						onWay(v, &config, emptyLatLons, centroid, bounds)
 					}
 				}
 
@@ -345,7 +347,7 @@ func print(d *osmpbf.Decoder, masks *BitmaskMap, db *leveldb.DB, config settings
 					v.Tags = trimTags(v.Tags)
 
 					// print relation
-					onRelation(v, centroid, bounds)
+					onRelation(v, &config, centroid, bounds)
 				}
 
 			default:
@@ -379,16 +381,39 @@ func findMemberWayLatLons(db *leveldb.DB, v *osmpbf.Relation) [][]map[string]str
 	return memberWayLatLons
 }
 
-type jsonNode struct {
-	ID   int64             `json:"id"`
-	Type string            `json:"type"`
-	Lat  float64           `json:"lat"`
-	Lon  float64           `json:"lon"`
-	Tags map[string]string `json:"tags"`
+type jsonMetadata struct {
+	Version   int32 `json:"version,omitempty"`
+	Timestamp int64 `json:"timestamp,omitempty"`
 }
 
-func onNode(node *osmpbf.Node) {
-	marshall := jsonNode{node.ID, "node", node.Lat, node.Lon, node.Tags}
+func formatMetadata(info osmpbf.Info, config *settings) *jsonMetadata {
+	if config.Metadata != true {
+		return nil
+	}
+	return &jsonMetadata{
+		Version:   info.Version,
+		Timestamp: info.Timestamp.Unix(),
+	}
+}
+
+type jsonNode struct {
+	ID       int64             `json:"id"`
+	Type     string            `json:"type"`
+	Lat      float64           `json:"lat"`
+	Lon      float64           `json:"lon"`
+	Tags     map[string]string `json:"tags"`
+	Metadata *jsonMetadata     `json:"meta,omitempty"`
+}
+
+func onNode(node *osmpbf.Node, config *settings) {
+	marshall := jsonNode{
+		ID:       node.ID,
+		Type:     "node",
+		Lat:      node.Lat,
+		Lon:      node.Lon,
+		Tags:     node.Tags,
+		Metadata: formatMetadata(node.Info, config),
+	}
 	json, _ := json.Marshal(marshall)
 	fmt.Println(string(json))
 }
@@ -401,6 +426,7 @@ type jsonWay struct {
 	Centroid map[string]string   `json:"centroid"`
 	Bounds   map[string]string   `json:"bounds"`
 	Nodes    []map[string]string `json:"nodes,omitempty"`
+	Metadata *jsonMetadata       `json:"meta,omitempty"`
 }
 
 func jsonBbox(bounds *geo.Bound) map[string]string {
@@ -414,9 +440,18 @@ func jsonBbox(bounds *geo.Bound) map[string]string {
 	return bbox
 }
 
-func onWay(way *osmpbf.Way, latlons []map[string]string, centroid map[string]string, bounds *geo.Bound) {
+func onWay(way *osmpbf.Way, config *settings, latlons []map[string]string, centroid map[string]string, bounds *geo.Bound) {
 	bbox := jsonBbox(bounds)
-	marshall := jsonWay{way.ID, "way", way.Tags /*, way.NodeIDs*/, centroid, bbox, latlons}
+	marshall := jsonWay{
+		ID:   way.ID,
+		Type: "way",
+		Tags: way.Tags,
+		/*, way.NodeIDs,*/
+		Centroid: centroid,
+		Bounds:   bbox,
+		Nodes:    latlons,
+		Metadata: formatMetadata(way.Info, config),
+	}
 	json, _ := json.Marshal(marshall)
 	fmt.Println(string(json))
 }
@@ -427,11 +462,19 @@ type jsonRelation struct {
 	Tags     map[string]string `json:"tags"`
 	Centroid map[string]string `json:"centroid"`
 	Bounds   map[string]string `json:"bounds"`
+	Metadata *jsonMetadata     `json:"meta,omitempty"`
 }
 
-func onRelation(relation *osmpbf.Relation, centroid map[string]string, bounds *geo.Bound) {
+func onRelation(relation *osmpbf.Relation, config *settings, centroid map[string]string, bounds *geo.Bound) {
 	bbox := jsonBbox(bounds)
-	marshall := jsonRelation{relation.ID, "relation", relation.Tags, centroid, bbox}
+	marshall := jsonRelation{
+		ID:       relation.ID,
+		Type:     "relation",
+		Tags:     relation.Tags,
+		Centroid: centroid,
+		Bounds:   bbox,
+		Metadata: formatMetadata(relation.Info, config),
+	}
 	json, _ := json.Marshal(marshall)
 	fmt.Println(string(json))
 }
