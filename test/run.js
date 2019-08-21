@@ -3,7 +3,8 @@ var tape = require('tape');
 var common = {};
 
 var tests = [
-  require('./index.js')
+  require('./index.js'),
+  require('./lib/generateParams.js')
 ];
 
 tests.map(function(t) {

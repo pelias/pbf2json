@@ -5,7 +5,8 @@ var util = require('util'),
     split = require('split'),
     through = require('through2'),
     child = require('child_process'),
-    exec = path.join(__dirname, 'build', util.format( 'pbf2json.%s-%s', os.platform(), os.arch() ) );
+    exec = path.join(__dirname, 'build', util.format( 'pbf2json.%s-%s', os.platform(), os.arch() ) ),
+    generateParams = require('./lib/generateParams');
 
 // custom log levels can be detected for lines with the format:
 // [level] message
@@ -29,14 +30,9 @@ function errorHandler( name, level ){
 
 function createReadStream( config ){
 
-  var flags = [];
-  flags.push( util.format( '-tags=%s', config.tags ) );
-  if( config.hasOwnProperty( 'leveldb' ) ){
-    flags.push( util.format( '-leveldb=%s', config.leveldb ) );
-  }
-  flags.push( config.file );
+  const params = generateParams(config);
 
-  var proc = child.spawn( exec, flags );
+  var proc = child.spawn( exec, params );
 
   // propagate signals from parent to child
   process.on('SIGINT',  function(){ proc.kill(); });
