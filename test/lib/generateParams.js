@@ -29,6 +29,19 @@ module.exports.tests.params = function(test) {
     t.equal(params[0], expected, 'tag array is serialized into parameter');
     t.end();
   });
+
+  test('waynodes', function(t) {
+    const config = {
+      waynodes: true
+    };
+
+    const params = generateParams(config);
+
+    const expected = '--waynodes=true';
+
+    t.equal(params[0], expected, 'waynodes is serialized into parameter');
+    t.end();
+  });
 };
 
 module.exports.all = function (tape, common) {
