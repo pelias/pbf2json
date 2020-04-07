@@ -6,8 +6,6 @@ node_js:
   - 8
   - 10
   - 12
-matrix:
-  fast_finish: true
 script: npm run travis
 before_install:
   - npm i -g npm
