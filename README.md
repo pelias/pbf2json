@@ -167,7 +167,9 @@ var pbf2json = require('pbf2json'),
 
 var config = {
   file: '/tmp/wellington_new-zealand.osm.pbf',
-  tags: 'addr:housenumber+addr:street',
+  tags: [
+    'addr:housenumber+addr:street'
+  ],
   leveldb: '/tmp'
 };
 
