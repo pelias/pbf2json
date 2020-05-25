@@ -40,7 +40,7 @@
     "naivedb": "^1.0.7",
     "precommit-hook": "3.0.0",
     "tap-spec": "^5.0.0",
-    "tape": "^4.5.0",
+    "tape": "^5.0.1",
     "tmp": "0.1.0"
   },
   "pre-commit": [
