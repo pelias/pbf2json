@@ -70,3 +70,24 @@ func TestEncodingAndDecodingIdsToBytes(t *testing.T) {
 	var decoded = bytesToIDSlice(encoded)
 	assert.Equal(t, decoded, ids)
 }
+
+func BenchmarkIdSliceToBytes(b *testing.B) {
+	ids := make([]int64, 100)
+
+	b.ReportAllocs()
+	b.ResetTimer()
+	for n := 0; n < b.N; n++ {
+		idSliceToBytes(ids)
+	}
+}
+
+func BenchmarkBytesToIDSlice(b *testing.B) {
+	ids := make([]int64, 100)
+	data := idSliceToBytes(ids)
+
+	b.ReportAllocs()
+	b.ResetTimer()
+	for n := 0; n < b.N; n++ {
+		bytesToIDSlice(data)
+	}
+}

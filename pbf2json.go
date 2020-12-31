@@ -609,23 +609,21 @@ func nodeToBytes(node *osmpbf.Node) (string, []byte) {
 }
 
 func idSliceToBytes(ids []int64) []byte {
-	var bufval bytes.Buffer
-	for _, id := range ids {
-		var idBytes = make([]byte, 8)
-		binary.BigEndian.PutUint64(idBytes, uint64(id))
-		bufval.Write(idBytes)
+	buf := make([]byte, 8*len(ids))
+	for i, id := range ids {
+		binary.BigEndian.PutUint64(buf[8*i:], uint64(id))
 	}
-	return bufval.Bytes()
+	return buf
 }
 
 func bytesToIDSlice(bytes []byte) []int64 {
-	var ids []int64
 	if len(bytes)%8 != 0 {
 		log.Fatal("invalid byte slice length: not divisible by 8")
-		return make([]int64, 0)
 	}
-	for i := 0; i < len(bytes)/8; i++ {
-		ids = append(ids, int64(binary.BigEndian.Uint64(bytes[i*8:(i*8)+8])))
+
+	ids := make([]int64, 0, len(bytes)/8)
+	for i := 0; i < len(bytes); i += 8 {
+		ids = append(ids, int64(binary.BigEndian.Uint64(bytes[i:])))
 	}
 	return ids
 }
