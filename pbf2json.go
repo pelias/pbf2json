@@ -1,7 +1,6 @@
 package main
 
 import (
-	"bytes"
 	"encoding/binary"
 	"encoding/json"
 	"flag"
@@ -549,17 +548,17 @@ func cacheLookupWayNodes(db *leveldb.DB, wayid int64) ([]map[string]string, erro
 
 // decode bytes to a 'latlon' type object
 func bytesToLatLon(data []byte) map[string]string {
-
-	var latlon = make(map[string]string)
+	buf := make([]byte, 0, 8)
+	latlon := make(map[string]string, 4)
 
 	// first 6 bytes are the latitude
-	var latBytes = append([]byte{}, data[0:6]...)
-	var lat64 = math.Float64frombits(binary.BigEndian.Uint64(append(latBytes, []byte{0x0, 0x0}...)))
+	buf = append(buf, data[0:6]...)
+	lat64 := math.Float64frombits(binary.BigEndian.Uint64(buf[:8]))
 	latlon["lat"] = strconv.FormatFloat(lat64, 'f', 7, 64)
 
 	// next 6 bytes are the longitude
-	var lonBytes = append([]byte{}, data[6:12]...)
-	var lon64 = math.Float64frombits(binary.BigEndian.Uint64(append(lonBytes, []byte{0x0, 0x0}...)))
+	buf = append(buf[:0], data[6:12]...)
+	lon64 := math.Float64frombits(binary.BigEndian.Uint64(buf[:8]))
 	latlon["lon"] = strconv.FormatFloat(lon64, 'f', 7, 64)
 
 	// check for the bitmask byte which indicates things like an
@@ -574,38 +573,29 @@ func bytesToLatLon(data []byte) map[string]string {
 
 // encode a node as bytes (between 12 & 13 bytes used)
 func nodeToBytes(node *osmpbf.Node) (string, []byte) {
+	stringid := strconv.FormatInt(node.ID, 10)
 
-	var bufval bytes.Buffer
-
+	buf := make([]byte, 14)
 	// encode lat/lon as 64 bit floats packed in to 8 bytes,
 	// each float is then truncated to 6 bytes because we don't
 	// need the additional precision (> 8 decimal places)
 
-	var latBytes = make([]byte, 8)
-	binary.BigEndian.PutUint64(latBytes, math.Float64bits(node.Lat))
-	bufval.Write(latBytes[0:6])
-
-	var lonBytes = make([]byte, 8)
-	binary.BigEndian.PutUint64(lonBytes, math.Float64bits(node.Lon))
-	bufval.Write(lonBytes[0:6])
+	binary.BigEndian.PutUint64(buf, math.Float64bits(node.Lat))
+	binary.BigEndian.PutUint64(buf[6:], math.Float64bits(node.Lon))
 
 	// generate a bitmask for relevant tag features
-	var isEntrance = isEntranceNode(node)
-	if isEntrance > 0 {
-		// leftmost two bits are for the entrance, next two bits are accessibility
-		// remaining 4 rightmost bits are reserved for future use.
-		var bitmask = isEntrance << 6
-		var isWheelchairAccessible = isWheelchairAccessibleNode(node)
-		if isWheelchairAccessible > 0 {
-			bitmask |= isWheelchairAccessible << 4
-		}
-		bufval.WriteByte(bitmask)
+	isEntrance := isEntranceNode(node)
+	if isEntrance == 0 {
+		return stringid, buf[:12]
 	}
 
-	stringid := strconv.FormatInt(node.ID, 10)
-	byteval := bufval.Bytes()
+	// leftmost two bits are for the entrance, next two bits are accessibility
+	// remaining 4 rightmost bits are reserved for future use.
+	bitmask := isEntrance << 6
+	bitmask |= isWheelchairAccessibleNode(node) << 4
+	buf[12] = bitmask
 
-	return stringid, byteval
+	return stringid, buf[:13]
 }
 
 func idSliceToBytes(ids []int64) []byte {
