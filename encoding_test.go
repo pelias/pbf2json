@@ -71,6 +71,41 @@ func TestEncodingAndDecodingIdsToBytes(t *testing.T) {
 	assert.Equal(t, decoded, ids)
 }
 
+func BenchmarkBytesToLatLon(b *testing.B) {
+	node := &osmpbf.Node{
+		ID:  123,
+		Lat: 12.1234,
+		Lon: -122.1234,
+		Tags: map[string]string{
+			"entrance": "main",
+		},
+	}
+	_, data := nodeToBytes(node)
+
+	b.ReportAllocs()
+	b.ResetTimer()
+	for n := 0; n < b.N; n++ {
+		bytesToLatLon(data)
+	}
+}
+
+func BenchmarkNodeToBytes(b *testing.B) {
+	node := &osmpbf.Node{
+		ID:  123,
+		Lat: 12.1234,
+		Lon: -122.1234,
+		Tags: map[string]string{
+			"entrance": "main",
+		},
+	}
+
+	b.ReportAllocs()
+	b.ResetTimer()
+	for n := 0; n < b.N; n++ {
+		nodeToBytes(node)
+	}
+}
+
 func BenchmarkIdSliceToBytes(b *testing.B) {
 	ids := make([]int64, 100)
 
