@@ -548,16 +548,18 @@ func cacheLookupWayNodes(db *leveldb.DB, wayid int64) ([]map[string]string, erro
 
 // decode bytes to a 'latlon' type object
 func bytesToLatLon(data []byte) map[string]string {
-	buf := make([]byte, 0, 8)
+	buf := make([]byte, 8)
 	latlon := make(map[string]string, 4)
 
 	// first 6 bytes are the latitude
-	buf = append(buf, data[0:6]...)
+	// buf = append(buf, data[0:6]...)
+	copy(buf, data[:6])
 	lat64 := math.Float64frombits(binary.BigEndian.Uint64(buf[:8]))
 	latlon["lat"] = strconv.FormatFloat(lat64, 'f', 7, 64)
 
 	// next 6 bytes are the longitude
-	buf = append(buf[:0], data[6:12]...)
+	// buf = append(buf[:0], data[6:12]...)
+	copy(buf, data[6:12])
 	lon64 := math.Float64frombits(binary.BigEndian.Uint64(buf[:8]))
 	latlon["lon"] = strconv.FormatFloat(lon64, 'f', 7, 64)
 
@@ -611,9 +613,9 @@ func bytesToIDSlice(bytes []byte) []int64 {
 		log.Fatal("invalid byte slice length: not divisible by 8")
 	}
 
-	ids := make([]int64, 0, len(bytes)/8)
-	for i := 0; i < len(bytes); i += 8 {
-		ids = append(ids, int64(binary.BigEndian.Uint64(bytes[i:])))
+	ids := make([]int64, len(bytes)/8)
+	for i := 0; i < len(bytes)/8; i++ {
+		ids[i] = int64(binary.BigEndian.Uint64(bytes[8*i:]))
 	}
 	return ids
 }
