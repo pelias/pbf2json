@@ -463,38 +463,6 @@ func onRelation(relation *osmpbf.Relation, centroid map[string]string, bounds *g
 	fmt.Println(string(json))
 }
 
-// determine if the node is for an entrance
-// https://wiki.openstreetmap.org/wiki/Key:entrance
-func isEntranceNode(node *osmpbf.Node) uint8 {
-	if val, ok := node.Tags["entrance"]; ok {
-		var norm = strings.ToLower(val)
-		switch norm {
-		case "main":
-			return 2
-		case "yes", "home", "staircase":
-			return 1
-		}
-	}
-	return 0
-}
-
-// determine if the node is accessible for wheelchair users
-// https://wiki.openstreetmap.org/wiki/Key:entrance
-func isWheelchairAccessibleNode(node *osmpbf.Node) uint8 {
-	if val, ok := node.Tags["wheelchair"]; ok {
-		var norm = strings.ToLower(val)
-		switch norm {
-		case "yes":
-			return 2
-		case "no":
-			return 0
-		default:
-			return 1
-		}
-	}
-	return 0
-}
-
 // queue a leveldb write in a batch
 func cacheQueueNode(batch *leveldb.Batch, node *osmpbf.Node) {
 	id, val := nodeToBytes(node)
@@ -573,28 +541,21 @@ func cacheLookupWayNodes(db *leveldb.DB, wayid int64) ([]map[string]string, erro
 	return cacheLookupNodes(db, way)
 }
 
-// decode bytes to a 'latlon' type object
+// decode bytes to a 'latlon' type object (map[string]string)
 func bytesToLatLon(data []byte) map[string]string {
-	buf := make([]byte, 8)
 	latlon := make(map[string]string, 4)
+	enc := encoding(data)
 
-	// first 6 bytes are the latitude
-	// buf = append(buf, data[0:6]...)
-	copy(buf, data[:6])
-	lat64 := math.Float64frombits(binary.BigEndian.Uint64(buf[:8]))
+	lat64, lon64 := enc.getCoords()
 	latlon["lat"] = strconv.FormatFloat(lat64, 'f', 7, 64)
-
-	// next 6 bytes are the longitude
-	// buf = append(buf[:0], data[6:12]...)
-	copy(buf, data[6:12])
-	lon64 := math.Float64frombits(binary.BigEndian.Uint64(buf[:8]))
 	latlon["lon"] = strconv.FormatFloat(lon64, 'f', 7, 64)
 
 	// check for the bitmask byte which indicates things like an
 	// entrance and the level of wheelchair accessibility
-	if len(data) > 12 {
-		latlon["entrance"] = fmt.Sprintf("%d", (data[12]&0xC0)>>6)
-		latlon["wheelchair"] = fmt.Sprintf("%d", (data[12]&0x30)>>4)
+	meta := enc.getMetadata()
+	if meta.EntranceType > 0 {
+		latlon["entrance"] = fmt.Sprintf("%d", meta.EntranceType)
+		latlon["wheelchair"] = fmt.Sprintf("%d", meta.AccessibilityType)
 	}
 
 	return latlon
@@ -604,27 +565,16 @@ func bytesToLatLon(data []byte) map[string]string {
 func nodeToBytes(node *osmpbf.Node) (string, []byte) {
 	stringid := strconv.FormatInt(node.ID, 10)
 
-	buf := make([]byte, 14)
-	// encode lat/lon as 64 bit floats packed in to 8 bytes,
-	// each float is then truncated to 6 bytes because we don't
-	// need the additional precision (> 8 decimal places)
+	enc := make(encoding, 14)
+	enc.setCoords(node.Lat, node.Lon)
 
-	binary.BigEndian.PutUint64(buf, math.Float64bits(node.Lat))
-	binary.BigEndian.PutUint64(buf[6:], math.Float64bits(node.Lon))
+	len := enc.setMetadata(encodingMetadata{
+		EntranceType:      entranceType(node),
+		AccessibilityType: accessibilityType(node),
+	})
 
-	// generate a bitmask for relevant tag features
-	isEntrance := isEntranceNode(node)
-	if isEntrance == 0 {
-		return stringid, buf[:12]
-	}
-
-	// leftmost two bits are for the entrance, next two bits are accessibility
-	// remaining 4 rightmost bits are reserved for future use.
-	bitmask := isEntrance << 6
-	bitmask |= isWheelchairAccessibleNode(node) << 4
-	buf[12] = bitmask
-
-	return stringid, buf[:13]
+	// return variable length encoding
+	return stringid, enc[:len]
 }
 
 func idSliceToBytes(ids []int64) []byte {
