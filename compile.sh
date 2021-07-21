@@ -30,6 +30,9 @@ function compress() {
   [ -x "$(command -v upx)" ] && upx "${1}"
 }
 
+# ensure build directory exists
+rm -rf build; mkdir -p build
+
 echo "[compile] linux arm";
 env GOOS=linux GOARCH=arm go build -ldflags="-s -w" -gcflags=-trimpath="${GOPATH}" -asmflags=-trimpath="${GOPATH}";
 assert $?;
