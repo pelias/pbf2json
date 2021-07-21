@@ -1,2 +1,7 @@
-test/fixtures/
-test/*.pbf
+.*
+bin
+vendor
+test
+go.*
+*.go
+*.sh

@@ -7,12 +7,15 @@
   "license": "MIT",
   "scripts": {
     "units": "./bin/units",
+    "gotest": "go test ./...",
     "test": "npm run units",
     "pretest": "test/pretest.sh",
     "end-to-end": "npm run pretest; node test/end-to-end.js;",
     "lint": "jshint .",
     "validate": "npm ls",
-    "travis": "npm test && npm run end-to-end"
+    "travis": "npm test && npm run end-to-end",
+    "compile": "./compile.sh",
+    "no-unstaged": "git diff --exit-code"
   },
   "repository": {
     "type": "git",
@@ -38,15 +41,20 @@
   "devDependencies": {
     "deep-diff": "^1.0.0",
     "naivedb": "^1.0.7",
+    "pre-commit": "^1.2.2",
     "precommit-hook": "3.0.0",
     "tap-spec": "^5.0.0",
     "tape": "^4.5.0",
     "tmp": "0.1.0"
   },
   "pre-commit": [
+    "gotest",
+    "compile",
+    "no-unstaged",
     "lint",
     "validate",
-    "test"
+    "test",
+    "end-to-end"
   ],
   "release": {
     "success": []
