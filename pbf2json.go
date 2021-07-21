@@ -13,7 +13,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/paulmach/go.geo"
+	geo "github.com/paulmach/go.geo"
 	"github.com/qedus/osmpbf"
 	"github.com/syndtr/goleveldb/leveldb"
 	"github.com/syndtr/goleveldb/leveldb/opt"
@@ -353,6 +353,21 @@ func print(d *osmpbf.Decoder, masks *BitmaskMap, db *leveldb.DB, config settings
 						continue
 					}
 
+					// use 'admin_centre' node centroid where available
+					// note: only applies to 'boundary=administrative' relations
+					// see: https://github.com/pelias/pbf2json/pull/98
+					if v.Tags["boundary"] == "administrative" {
+						for _, member := range v.Members {
+							if member.Type == 0 && member.Role == "admin_centre" {
+								if latlons, err := cacheLookupNodeByID(db, member.ID); err == nil {
+									latlons["type"] = "admin_centre"
+									centroid = latlons
+									break
+								}
+							}
+						}
+					}
+
 					// trim tags
 					v.Tags = trimTags(v.Tags)
 
@@ -504,6 +519,18 @@ func cacheFlush(db *leveldb.DB, batch *leveldb.Batch, sync bool) {
 		log.Fatal(err)
 	}
 	batch.Reset()
+}
+
+func cacheLookupNodeByID(db *leveldb.DB, id int64) (map[string]string, error) {
+	stringid := strconv.FormatInt(id, 10)
+
+	data, err := db.Get([]byte(stringid), nil)
+	if err != nil {
+		log.Println("[warn] fetch failed for node ID:", stringid)
+		return make(map[string]string, 0), err
+	}
+
+	return bytesToLatLon(data), nil
 }
 
 func cacheLookupNodes(db *leveldb.DB, way *osmpbf.Way) ([]map[string]string, error) {
