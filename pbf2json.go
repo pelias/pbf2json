@@ -16,7 +16,6 @@ import (
 	geo "github.com/paulmach/go.geo"
 	"github.com/qedus/osmpbf"
 	"github.com/syndtr/goleveldb/leveldb"
-	"github.com/syndtr/goleveldb/leveldb/opt"
 )
 
 type settings struct {
@@ -225,9 +224,9 @@ func print(d *osmpbf.Decoder, masks *BitmaskMap, db *leveldb.DB, config settings
 				if masks.WayRefs.Has(v.ID) || masks.RelNodes.Has(v.ID) {
 
 					// write in batches
-					cacheQueueNode(batch, v)
+					CacheQueueNode(batch, v)
 					if batch.Len() > config.BatchSize {
-						cacheFlush(db, batch, true)
+						CacheFlush(db, batch, true)
 					}
 				}
 
@@ -250,7 +249,7 @@ func print(d *osmpbf.Decoder, masks *BitmaskMap, db *leveldb.DB, config settings
 				if !finishedNodes {
 					finishedNodes = true
 					if batch.Len() > 1 {
-						cacheFlush(db, batch, true)
+						CacheFlush(db, batch, true)
 					}
 				}
 
@@ -261,9 +260,9 @@ func print(d *osmpbf.Decoder, masks *BitmaskMap, db *leveldb.DB, config settings
 				if masks.RelWays.Has(v.ID) {
 
 					// write in batches
-					cacheQueueWay(batch, v)
+					CacheQueueWay(batch, v)
 					if batch.Len() > config.BatchSize {
-						cacheFlush(db, batch, true)
+						CacheFlush(db, batch, true)
 					}
 				}
 
@@ -272,7 +271,7 @@ func print(d *osmpbf.Decoder, masks *BitmaskMap, db *leveldb.DB, config settings
 				if masks.Ways.Has(v.ID) {
 
 					// lookup from leveldb
-					latlons, err := cacheLookupNodes(db, v)
+					latlons, err := CacheLookupNodes(db, v)
 
 					// skip ways which fail to denormalize
 					if err != nil {
@@ -302,7 +301,7 @@ func print(d *osmpbf.Decoder, masks *BitmaskMap, db *leveldb.DB, config settings
 				if !finishedWays {
 					finishedWays = true
 					if batch.Len() > 1 {
-						cacheFlush(db, batch, true)
+						CacheFlush(db, batch, true)
 					}
 				}
 
@@ -359,7 +358,7 @@ func print(d *osmpbf.Decoder, masks *BitmaskMap, db *leveldb.DB, config settings
 					if v.Tags["boundary"] == "administrative" {
 						for _, member := range v.Members {
 							if member.Type == 0 && member.Role == "admin_centre" {
-								if latlons, err := cacheLookupNodeByID(db, member.ID); err == nil {
+								if latlons, err := CacheLookupNodeByID(db, member.ID); err == nil {
 									latlons["type"] = "admin_centre"
 									centroid = latlons
 									break
@@ -392,7 +391,7 @@ func findMemberWayLatLons(db *leveldb.DB, v *osmpbf.Relation) [][]map[string]str
 		if mem.Type == 1 {
 
 			// lookup from leveldb
-			latlons, err := cacheLookupWayNodes(db, mem.ID)
+			latlons, err := CacheLookupWayNodes(db, mem.ID)
 
 			// skip way if it fails to denormalize
 			if err != nil {
@@ -493,84 +492,6 @@ func isWheelchairAccessibleNode(node *osmpbf.Node) uint8 {
 		}
 	}
 	return 0
-}
-
-// queue a leveldb write in a batch
-func cacheQueueNode(batch *leveldb.Batch, node *osmpbf.Node) {
-	id, val := nodeToBytes(node)
-	batch.Put([]byte(id), []byte(val))
-}
-
-// queue a leveldb write in a batch
-func cacheQueueWay(batch *leveldb.Batch, way *osmpbf.Way) {
-	id, val := wayToBytes(way)
-	batch.Put([]byte(id), []byte(val))
-}
-
-// flush a leveldb batch to database and reset batch to 0
-func cacheFlush(db *leveldb.DB, batch *leveldb.Batch, sync bool) {
-	var writeOpts = &opt.WriteOptions{
-		NoWriteMerge: true,
-		Sync:         sync,
-	}
-
-	err := db.Write(batch, writeOpts)
-	if err != nil {
-		log.Fatal(err)
-	}
-	batch.Reset()
-}
-
-func cacheLookupNodeByID(db *leveldb.DB, id int64) (map[string]string, error) {
-	stringid := strconv.FormatInt(id, 10)
-
-	data, err := db.Get([]byte(stringid), nil)
-	if err != nil {
-		log.Println("[warn] fetch failed for node ID:", stringid)
-		return make(map[string]string, 0), err
-	}
-
-	return bytesToLatLon(data), nil
-}
-
-func cacheLookupNodes(db *leveldb.DB, way *osmpbf.Way) ([]map[string]string, error) {
-
-	var container []map[string]string
-
-	for _, each := range way.NodeIDs {
-		stringid := strconv.FormatInt(each, 10)
-
-		data, err := db.Get([]byte(stringid), nil)
-		if err != nil {
-			log.Println("[warn] denormalize failed for way:", way.ID, "node not found:", stringid)
-			return make([]map[string]string, 0), err
-		}
-
-		container = append(container, bytesToLatLon(data))
-	}
-
-	return container, nil
-}
-
-func cacheLookupWayNodes(db *leveldb.DB, wayid int64) ([]map[string]string, error) {
-
-	// prefix the key with 'W' to differentiate it from node ids
-	stringid := "W" + strconv.FormatInt(wayid, 10)
-
-	// look up way bytes
-	reldata, err := db.Get([]byte(stringid), nil)
-	if err != nil {
-		log.Println("[warn] lookup failed for way:", wayid, "noderefs not found:", stringid)
-		return make([]map[string]string, 0), err
-	}
-
-	// generate a way object
-	var way = &osmpbf.Way{
-		ID:      wayid,
-		NodeIDs: bytesToIDSlice(reldata),
-	}
-
-	return cacheLookupNodes(db, way)
 }
 
 // decode bytes to a 'latlon' type object
