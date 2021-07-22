@@ -711,10 +711,7 @@ func computeCentroidAndBounds(latlons []map[string]string) (map[string]string, *
 
 	// determine if the way is a closed centroid or a linestring
 	// by comparing first and last coordinates.
-	isClosed := false
-	if points.Length() > 2 {
-		isClosed = IsPointSetClosed(points)
-	}
+	isClosed := IsPointSetClosed(points)
 
 	// compute the centroid using one of two different algorithms
 	var compute *geo.Point
