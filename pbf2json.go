@@ -224,9 +224,9 @@ func print(d *osmpbf.Decoder, masks *BitmaskMap, db *leveldb.DB, config settings
 				if masks.WayRefs.Has(v.ID) || masks.RelNodes.Has(v.ID) {
 
 					// write in batches
-					cacheQueueNode(batch, v)
+					CacheQueueNode(batch, v)
 					if batch.Len() > config.BatchSize {
-						cacheFlush(db, batch, true)
+						CacheFlush(db, batch, true)
 					}
 				}
 
@@ -249,7 +249,7 @@ func print(d *osmpbf.Decoder, masks *BitmaskMap, db *leveldb.DB, config settings
 				if !finishedNodes {
 					finishedNodes = true
 					if batch.Len() > 1 {
-						cacheFlush(db, batch, true)
+						CacheFlush(db, batch, true)
 					}
 				}
 
@@ -260,9 +260,9 @@ func print(d *osmpbf.Decoder, masks *BitmaskMap, db *leveldb.DB, config settings
 				if masks.RelWays.Has(v.ID) {
 
 					// write in batches
-					cacheQueueWay(batch, v)
+					CacheQueueWay(batch, v)
 					if batch.Len() > config.BatchSize {
-						cacheFlush(db, batch, true)
+						CacheFlush(db, batch, true)
 					}
 				}
 
@@ -271,7 +271,7 @@ func print(d *osmpbf.Decoder, masks *BitmaskMap, db *leveldb.DB, config settings
 				if masks.Ways.Has(v.ID) {
 
 					// lookup from leveldb
-					latlons, err := cacheLookupNodes(db, v)
+					latlons, err := CacheLookupNodes(db, v)
 
 					// skip ways which fail to denormalize
 					if err != nil {
@@ -301,7 +301,7 @@ func print(d *osmpbf.Decoder, masks *BitmaskMap, db *leveldb.DB, config settings
 				if !finishedWays {
 					finishedWays = true
 					if batch.Len() > 1 {
-						cacheFlush(db, batch, true)
+						CacheFlush(db, batch, true)
 					}
 				}
 
@@ -358,7 +358,7 @@ func print(d *osmpbf.Decoder, masks *BitmaskMap, db *leveldb.DB, config settings
 					if v.Tags["boundary"] == "administrative" {
 						for _, member := range v.Members {
 							if member.Type == 0 && member.Role == "admin_centre" {
-								if latlons, err := cacheLookupNodeByID(db, member.ID); err == nil {
+								if latlons, err := CacheLookupNodeByID(db, member.ID); err == nil {
 									latlons["type"] = "admin_centre"
 									centroid = latlons
 									break
@@ -391,7 +391,7 @@ func findMemberWayLatLons(db *leveldb.DB, v *osmpbf.Relation) [][]map[string]str
 		if mem.Type == 1 {
 
 			// lookup from leveldb
-			latlons, err := cacheLookupWayNodes(db, mem.ID)
+			latlons, err := CacheLookupWayNodes(db, mem.ID)
 
 			// skip way if it fails to denormalize
 			if err != nil {
