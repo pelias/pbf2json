@@ -336,7 +336,7 @@ func print(d *osmpbf.Decoder, masks *BitmaskMap, db *leveldb.DB, config settings
 							continue
 						}
 
-						area := math.Max(wayBounds.GeoWidth(), 0.000001) * math.Max(wayBounds.GeoHeight(), 0.000001)
+						area := GetAreaOfBounds(wayBounds)
 
 						// find the way with the largest area
 						if area > largestArea {
@@ -713,7 +713,7 @@ func computeCentroidAndBounds(latlons []map[string]string) (map[string]string, *
 	// by comparing first and last coordinates.
 	isClosed := false
 	if points.Length() > 2 {
-		isClosed = points.First().Equals(points.Last())
+		isClosed = IsPointSetClosed(points)
 	}
 
 	// compute the centroid using one of two different algorithms
@@ -725,9 +725,7 @@ func computeCentroidAndBounds(latlons []map[string]string) (map[string]string, *
 	}
 
 	// return point as lat/lon map
-	var centroid = make(map[string]string)
-	centroid["lat"] = strconv.FormatFloat(compute.Lat(), 'f', 7, 64)
-	centroid["lon"] = strconv.FormatFloat(compute.Lng(), 'f', 7, 64)
+	centroid := PointToLatLon(compute)
 
 	return centroid, points.Bound()
 }
