@@ -7,7 +7,10 @@ import (
 )
 
 func IsPointSetClosed(points *geo.PointSet) bool {
-	return points.First().Equals(points.Last())
+	if points.Length() > 2 {
+		return points.First().Equals(points.Last())
+	}
+	return false
 }
 
 func PointToLatLon(point *geo.Point) map[string]string {
