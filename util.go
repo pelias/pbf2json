@@ -21,6 +21,18 @@ func PointToLatLon(point *geo.Point) map[string]string {
 	return latLon
 }
 
+func LatLngMapToPointSet(latLons []map[string]string) *geo.PointSet {
+	points := geo.NewPointSet()
+
+	for _, each := range latLons {
+		var lon, _ = strconv.ParseFloat(each["lon"], 64)
+		var lat, _ = strconv.ParseFloat(each["lat"], 64)
+		points.Push(geo.NewPoint(lon, lat))
+	}
+
+	return points
+}
+
 func GetAreaOfBounds(bound *geo.Bound) float64 {
 	return math.Max(bound.GeoWidth(), 0.000001) * math.Max(bound.GeoHeight(), 0.000001)
 }
