@@ -384,22 +384,19 @@ func print(d *osmpbf.Decoder, masks *BitmaskMap, db *leveldb.DB, config settings
 }
 
 // lookup all latlons for all ways in relation
-func findMemberWayLatLons(db *leveldb.DB, v *osmpbf.Relation) [][]map[string]string {
-	var memberWayLatLons [][]map[string]string
+func findMemberWayLatLons(db *leveldb.DB, v *osmpbf.Relation) map[osmpbf.Member][]map[string]string {
+	var memberWayLatLons = make(map[osmpbf.Member][]map[string]string)
 
 	for _, mem := range v.Members {
-		if mem.Type == 1 {
+		// lookup from leveldb
+		latlons, err := CacheLookupWayNodes(db, mem.ID)
 
-			// lookup from leveldb
-			latlons, err := CacheLookupWayNodes(db, mem.ID)
-
-			// skip way if it fails to denormalize
-			if err != nil {
-				break
-			}
-
-			memberWayLatLons = append(memberWayLatLons, latlons)
+		// skip way if it fails to denormalize
+		if err != nil {
+			break
 		}
+
+		memberWayLatLons[mem] = latlons
 	}
 
 	return memberWayLatLons
