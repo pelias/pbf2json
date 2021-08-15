@@ -224,9 +224,9 @@ func print(d *osmpbf.Decoder, masks *BitmaskMap, db *leveldb.DB, config settings
 				if masks.WayRefs.Has(v.ID) || masks.RelNodes.Has(v.ID) {
 
 					// write in batches
-					CacheQueueNode(batch, v)
+					cacheQueueNode(batch, v)
 					if batch.Len() > config.BatchSize {
-						CacheFlush(db, batch, true)
+						cacheFlush(db, batch, true)
 					}
 				}
 
@@ -249,7 +249,7 @@ func print(d *osmpbf.Decoder, masks *BitmaskMap, db *leveldb.DB, config settings
 				if !finishedNodes {
 					finishedNodes = true
 					if batch.Len() > 1 {
-						CacheFlush(db, batch, true)
+						cacheFlush(db, batch, true)
 					}
 				}
 
@@ -260,9 +260,9 @@ func print(d *osmpbf.Decoder, masks *BitmaskMap, db *leveldb.DB, config settings
 				if masks.RelWays.Has(v.ID) {
 
 					// write in batches
-					CacheQueueWay(batch, v)
+					cacheQueueWay(batch, v)
 					if batch.Len() > config.BatchSize {
-						CacheFlush(db, batch, true)
+						cacheFlush(db, batch, true)
 					}
 				}
 
@@ -271,7 +271,7 @@ func print(d *osmpbf.Decoder, masks *BitmaskMap, db *leveldb.DB, config settings
 				if masks.Ways.Has(v.ID) {
 
 					// lookup from leveldb
-					latlons, err := CacheLookupNodes(db, v)
+					latlons, err := cacheLookupNodes(db, v)
 
 					// skip ways which fail to denormalize
 					if err != nil {
@@ -301,7 +301,7 @@ func print(d *osmpbf.Decoder, masks *BitmaskMap, db *leveldb.DB, config settings
 				if !finishedWays {
 					finishedWays = true
 					if batch.Len() > 1 {
-						CacheFlush(db, batch, true)
+						cacheFlush(db, batch, true)
 					}
 				}
 
@@ -349,7 +349,7 @@ func findMemberWayLatLons(db *leveldb.DB, v *osmpbf.Relation) map[osmpbf.Member]
 
 	for _, mem := range v.Members {
 		// lookup from leveldb
-		latlons, err := CacheLookupWayNodes(db, mem.ID)
+		latlons, err := cacheLookupWayNodes(db, mem.ID)
 
 		// skip way if it fails to denormalize
 		if err != nil {
