@@ -13,7 +13,6 @@
     "end-to-end": "npm run pretest; node test/end-to-end.js;",
     "lint": "jshint .",
     "validate": "npm ls",
-    "travis": "npm test && npm run end-to-end",
     "compile": "./compile.sh",
     "no-unstaged": "git diff --exit-code"
   },
