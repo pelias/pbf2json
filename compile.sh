@@ -33,13 +33,13 @@ function compress() {
 # ensure build directory exists
 rm -rf build; mkdir -p build
 
-echo "[compile] linux arm";
-env GOOS=linux GOARCH=arm go build -ldflags="-s -w" -gcflags=-trimpath="${GOPATH}" -asmflags=-trimpath="${GOPATH}";
+echo "[compile] linux arm64";
+env GOOS=linux GOARCH=arm64 go build -ldflags="-s -w" -gcflags=-trimpath="${GOPATH}" -asmflags=-trimpath="${GOPATH}";
 assert $?;
 chmod +x pbf2json;
-mv pbf2json build/pbf2json.linux-arm;
-check 'build/pbf2json.linux-arm' 'ELF 32-bit LSB executable';
-compress 'build/pbf2json.linux-arm';
+mv pbf2json build/pbf2json.linux-arm64;
+check 'build/pbf2json.linux-arm64' 'ELF 64-bit LSB executable';
+compress 'build/pbf2json.linux-arm64';
 
 echo "[compile] linux x64";
 env GOOS=linux GOARCH=amd64 go build -ldflags="-s -w" -gcflags=-trimpath="${GOPATH}" -asmflags=-trimpath="${GOPATH}";
@@ -58,10 +58,20 @@ check 'build/pbf2json.darwin-x64' 'Mach-O 64-bit';
 # UPX disabled due to https://github.com/upx/upx/issues/187
 # compress 'build/pbf2json.darwin-x64';
 
+echo "[compile] darwin arm64";
+env GOOS=darwin GOARCH=arm64 go build -ldflags="-s -w" -gcflags=-trimpath="${GOPATH}" -asmflags=-trimpath="${GOPATH}";
+assert $?;
+chmod +x pbf2json;
+mv pbf2json build/pbf2json.darwin-arm64;
+check 'build/pbf2json.darwin-arm64' 'Mach-O 64-bit';
+# UPX disabled due to https://github.com/upx/upx/issues/187
+# note: this is untested, assumed to be the same bug as above
+# compress 'build/pbf2json.darwin-arm64';
+
 echo "[compile] windows x64";
-env GOOS=windows GOARCH=386 go build -ldflags="-s -w" -gcflags=-trimpath=${GOPATH} -asmflags=-trimpath=${GOPATH} -o pbf2json.exe;
+env GOOS=windows GOARCH=amd64 go build -ldflags="-s -w" -gcflags=-trimpath=${GOPATH} -asmflags=-trimpath=${GOPATH} -o pbf2json.exe;
 assert $?;
 chmod +x pbf2json.exe;
 mv pbf2json.exe build/pbf2json.win32-x64;
-check 'build/pbf2json.win32-x64' 'PE32 executable';
+check 'build/pbf2json.win32-x64' 'PE32+ executable (console) x86-64';
 compress 'build/pbf2json.win32-x64';
