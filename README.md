@@ -7,23 +7,17 @@ pbf2json creates a JSON stream of openstreetmap data from any PBF extract, you c
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/pelias/pbf2json.svg)](https://greenkeeper.io/)
 
-You don't need to have `Go` installed on your system to use one of the binary files in `./build`:
+You don't need to have `Go` installed on your system to use one of the precompiled binaries in `./build`:
 
 ```bash
-# 64-bit linux distributions
+# AMD 64-bit linux/macOS/windows
 $ ./build/pbf2json.linux-x64
-```
-
-```bash
-# 64-bit OSX distributions
 $ ./build/pbf2json.darwin-x64
-```
+$ ./build/pbf2json.win32-x64
 
-you can also run it on your raspberry pi!
-
-```bash
-# embedded devices
-$ ./build/pbf2json.linux-arm
+# ARM 64-bit linux/macOS
+$ ./build/pbf2json.linux-arm64
+$ ./build/pbf2json.darwin-arm64
 ```
 
 ### Usage
