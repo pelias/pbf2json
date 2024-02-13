@@ -21,9 +21,11 @@ function test( name, tags, cb ){
       expectedPath = path.resolve(__dirname) + '/fixtures/' + name + '.json',
       actual = {};
 
+  const metadata = name === 'metadata'; // just for one test case
+
   // give each test its own leveldb directory, the default of '/tmp' is shared
   // between concurrent runs and leaves its files behind
-  pbf2json.createReadStream({ file: pbfPath, tags: tags, leveldb: leveldbDir })
+  pbf2json.createReadStream({ file: pbfPath, tags: tags, leveldb: leveldbDir, metadata: metadata })
     .on('data', function( obj ){
       obj.gid = obj.type + ':' + obj.id;
       actual[ obj.gid ] = obj;
@@ -49,6 +51,7 @@ function test( name, tags, cb ){
 }
 
 var tests = [
+  [ 'metadata',   ['shop~musical_instrument','amenity~university'] ],
   [ 'single',     ['building'] ],
   [ 'multiple',   ['building','shop'] ],
   [ 'colon',      ['addr:housenumber'] ],

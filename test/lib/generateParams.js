@@ -42,6 +42,19 @@ module.exports.tests.params = function(test) {
     t.equal(params[0], expected, 'waynodes is serialized into parameter');
     t.end();
   });
+
+  test('metadata', function(t) {
+    const config = {
+      metadata: true
+    };
+
+    const params = generateParams(config);
+
+    const expected = '--metadata=true';
+
+    t.equal(params[0], expected, 'metadata is serialized into parameter');
+    t.end();
+  });
 };
 
 module.exports.all = function (tape, common) {

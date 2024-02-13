@@ -195,6 +195,7 @@ var config = {
   tags: [
     'addr:housenumber+addr:street'
   ],
+  metadata: false, // optional, if true then each feature will include a 'meta' object
   leveldb: '/tmp'
 };
 
