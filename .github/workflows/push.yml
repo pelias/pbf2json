@@ -14,7 +14,7 @@ jobs:
         go-version:
           - 1.16.x
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: 'Install Golang ${{ matrix.go-version }}'
         uses: actions/setup-go@v2
         with:
@@ -22,7 +22,7 @@ jobs:
       - name: Run Go unit tests
         run: go test ./...
       - name: 'Install node.js ${{ matrix.node-version }}'
-        uses: actions/setup-node@v2-beta
+        uses: actions/setup-node@v4
         with:
           node-version: '${{ matrix.node-version }}'
       - name: Install npm dependencies
@@ -36,13 +36,13 @@ jobs:
     if: github.ref == 'refs/heads/master' && github.event_name == 'push'
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: 'Install Golang 1.16.x'
         uses: actions/setup-go@v2
         with:
           go-version: '1.16.x'
       - name: 'Install node.js 16.x'
-        uses: actions/setup-node@v2-beta
+        uses: actions/setup-node@v4
         with:
           node-version: '16.x'
       - name: Install npm dependencies
