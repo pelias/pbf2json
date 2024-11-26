@@ -6,7 +6,7 @@ jobs:
     strategy:
       matrix:
         os:
-          - ubuntu-20.04
+          - ubuntu-22.04
         node-version:
           - 12.x
           - 14.x
@@ -34,7 +34,7 @@ jobs:
   npm-publish:
     needs: unit-tests
     if: github.ref == 'refs/heads/master' && github.event_name == 'push'
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
       - name: 'Install Golang 1.16.x'
