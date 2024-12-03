@@ -1,0 +1,30 @@
+name: Unit Tests
+on: workflow_call
+jobs:
+  unit-tests:
+    runs-on: '${{ matrix.os }}'
+    strategy:
+      matrix:
+        os:
+          - ubuntu-22.04
+        node-version: [ 18.x, 20.x, 22.x ]
+        go-version:
+        - 1.16.x
+    steps:
+      - uses: actions/checkout@v4
+      - name: 'Install node.js ${{ matrix.node-version }}'
+        uses: actions/setup-node@v4
+        with:
+          node-version: '${{ matrix.node-version }}'
+      - name: 'Install Golang ${{ matrix.go-version }}'
+        uses: actions/setup-go@v2
+        with:
+          go-version: '${{ matrix.go-version }}'
+      - name: Run Go unit tests
+        run: go test ./...
+      - name: Install npm dependencies
+        run: npm install
+      - name: Run JS unit tests
+        run: npm test
+      - name: Run JS end-to-end tests
+        run: npm run end-to-end
