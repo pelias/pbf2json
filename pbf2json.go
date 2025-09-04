@@ -729,5 +729,15 @@ func computeCentroidAndBounds(latlons []map[string]string) (map[string]string, *
 	centroid["lat"] = strconv.FormatFloat(compute.Lat(), 'f', 7, 64)
 	centroid["lon"] = strconv.FormatFloat(compute.Lng(), 'f', 7, 64)
 
+	// normalize negative zero
+	// note: this can occur for non-zero values such as -8.481315557654037e-18
+	// and may vary across CPU architectures
+	if centroid["lat"] == "-0.0000000" {
+		centroid["lat"] = "0.0000000"
+	}
+	if centroid["lon"] == "-0.0000000" {
+		centroid["lon"] = "0.0000000"
+	}
+
 	return centroid, points.Bound()
 }
