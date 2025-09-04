@@ -71,10 +71,22 @@ var deepEqual = function(a, b) {
   if(Object.keys(a).length !== Object.keys(b).length){ return false; }
   for(var i in a) {
     if( !b.hasOwnProperty(i) ){ return false; }
-    if( deep.diff(a[i], b[i]) ){ return false; }
+    // centroid values vary slightly between CPU architecture
+    let prefilter;
+    if( a[i].hasOwnProperty('centroid') && b[i].hasOwnProperty('centroid') ) {
+      if (!equal(a[i].centroid.lat, b[i].centroid.lat, 1e-6)) { return false; }
+      if (!equal(a[i].centroid.lon, b[i].centroid.lon, 1e-6)) { return false; }
+      prefilter = (_path, key) => key === 'centroid'; // skip centroid field for the diff
+    }
+    if( deep.diff(a[i], b[i], prefilter) ){ return false; }
   }
   return true;
 };
+
+// ensure two numbers are equal within a threshold
+function equal(a, b, delta = 0.0) {
+  return Math.abs(parseFloat(a) - parseFloat(b)) <= delta;
+}
 
 // run each test synchronously
 next();

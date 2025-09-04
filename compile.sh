@@ -74,4 +74,5 @@ assert $?;
 chmod +x pbf2json.exe;
 mv pbf2json.exe build/pbf2json.win32-x64;
 check 'build/pbf2json.win32-x64' 'PE32+ executable (console) x86-64';
-compress 'build/pbf2json.win32-x64';
+# UPX disabled for windows
+# compress 'build/pbf2json.win32-x64';
