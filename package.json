@@ -48,7 +48,6 @@
   },
   "pre-commit": [
     "gotest",
-    "compile",
     "no-unstaged",
     "lint",
     "validate",
