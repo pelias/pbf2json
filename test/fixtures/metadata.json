@@ -1,0 +1,58 @@
+{
+  "node:946073131": {
+    "id": 946073131,
+    "type": "node",
+    "lat": 49.2716963,
+    "lon": -123.13586950000001,
+    "tags": {
+      "name": "Geza Burghardt Luthiery",
+      "opening_hours": "Mo,we,fr 3pm-6pm",
+      "phone": "6046831135",
+      "shop": "musical_instrument"
+    },
+    "meta": {
+      "version": 4,
+      "timestamp": 1418526780,
+      "user": "AmateurCartographer",
+      "changeset": 27449665
+    },
+    "gid": "node:946073131"
+  },
+  "node:1104197676": {
+    "id": 1104197676,
+    "type": "node",
+    "lat": 49.264455600000005,
+    "lon": -123.1839819,
+    "tags": {
+      "name": "Prussin Music",
+      "shop": "musical_instrument"
+    },
+    "meta": {
+      "version": 1,
+      "timestamp": 1295060940,
+      "user": "pnorman",
+      "changeset": 6973466
+    },
+    "gid": "node:1104197676"
+  },
+  "node:1240309412": {
+    "id": 1240309412,
+    "type": "node",
+    "lat": 49.263236000000006,
+    "lon": -123.186035,
+    "tags": {
+      "addr:housenumber": "2621",
+      "addr:street": "Alma Street",
+      "name": "Rufus Guitar Shop",
+      "phone": "6042221717",
+      "shop": "musical_instrument"
+    },
+    "meta": {
+      "version": 2,
+      "timestamp": 1388605829,
+      "user": "Math1985",
+      "changeset": 19751536
+    },
+    "gid": "node:1240309412"
+  }
+}

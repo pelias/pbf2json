@@ -23,7 +23,9 @@ function test( name, tags, cb ){
   fs.writeFileSync( tmpfile, '{}' ); // init naivedb
   var db = naivedb(tmpfile);
 
-  pbf2json.createReadStream({ file: pbfPath, tags: tags })
+  const metadata = name === "metadata"; // just for one test case
+
+  pbf2json.createReadStream({ file: pbfPath, tags: tags, metadata })
     .pipe( through.obj( function( obj, _, next ){
       obj.gid = obj.type + ':' + obj.id;
       next(null, obj);
@@ -51,6 +53,7 @@ function test( name, tags, cb ){
 }
 
 var tests = [
+  [ 'metadata',   ['shop~musical_instrument'] ],
   [ 'single',     ['building'] ],
   [ 'multiple',   ['building','shop'] ],
   [ 'colon',      ['addr:housenumber'] ],
