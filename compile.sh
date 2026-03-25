@@ -73,5 +73,5 @@ env GOOS=windows GOARCH=amd64 go build -ldflags="-s -w" -gcflags=-trimpath=${GOP
 assert $?;
 chmod +x pbf2json.exe;
 mv pbf2json.exe build/pbf2json.win32-x64;
-check 'build/pbf2json.win32-x64' 'PE32+ executable (console) x86-64';
+check 'build/pbf2json.win32-x64' 'PE32+ executable for MS Windows 6.01 (console), x86-64, 8 sections';
 compress 'build/pbf2json.win32-x64';
