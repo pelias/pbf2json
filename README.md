@@ -29,7 +29,7 @@ pbf2json creates a JSON stream of openstreetmap data from any PBF extract, you c
 ### Run from pre-built binary
 
 
-You don't need to have `Go` installed on your system to use one of the precompiled binaries in `./build`:
+The npm package ships precompiled binaries in `./build`, so you don't need to have `Go` installed on your system to use it. Working from a git clone, run `npm run compile` to populate `./build` first.
 
 ```bash
 # AMD 64-bit linux/macOS/windows
@@ -210,12 +210,20 @@ go run pbf2json.go;
 
 ### Compile source for all supported architecture
 
-If you are doing a release and would like to compile for all supported architectures:
+Releases compile the binaries themselves: `compile.sh` runs as the npm `prepack` script, so publishing from CI builds every architecture and includes it in the tarball. The binaries are not committed to git.
+
+To compile them all locally:
 
 **note** if this is your first time doing this please read the notes in './compile.sh' to set it all up on your machine.
 
 ```bash
-bash compile.sh;
+npm run compile;
+```
+
+Or just the binary for the machine you're on, which is what `npm test` uses:
+
+```bash
+./compile.sh native;
 ```
 
 ### Compile source for a new architecture
