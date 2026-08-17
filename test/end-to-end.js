@@ -17,13 +17,16 @@ var fs = require('fs'),
 function test( name, tags, cb ){
 
   var tmpfile = tmp.fileSync({ postfix: '.json' }).name,
+      leveldbDir = tmp.dirSync({ unsafeCleanup: true }),
       pbfPath = path.resolve(__dirname) + '/vancouver_canada.osm.pbf',
       expectedPath = path.resolve(__dirname) + '/fixtures/' + name + '.json';
 
   fs.writeFileSync( tmpfile, '{}' ); // init naivedb
   var db = naivedb(tmpfile);
 
-  pbf2json.createReadStream({ file: pbfPath, tags: tags })
+  // give each test its own leveldb directory, the default of '/tmp' is shared
+  // between concurrent runs and leaves its files behind
+  pbf2json.createReadStream({ file: pbfPath, tags: tags, leveldb: leveldbDir.name })
     .pipe( through.obj( function( obj, _, next ){
       obj.gid = obj.type + ':' + obj.id;
       next(null, obj);
@@ -33,6 +36,7 @@ function test( name, tags, cb ){
 
       // write actual to disk
       db.writeSync();
+      leveldbDir.removeCallback();
 
       // load files from disk
       var actual = JSON.parse( fs.readFileSync( tmpfile, { encoding: 'utf8' } ) ),

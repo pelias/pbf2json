@@ -10,7 +10,7 @@
     "gotest": "go test ./...",
     "test": "npm run units",
     "pretest": "test/pretest.sh",
-    "end-to-end": "npm run pretest; node test/end-to-end.js;",
+    "end-to-end": "npm run pretest && node test/end-to-end.js",
     "lint": "jshint .",
     "validate": "npm ls",
     "compile": "./compile.sh",
