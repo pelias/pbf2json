@@ -5,6 +5,10 @@
   "description": "Golang osm pbf parser with npm wrapper",
   "homepage": "https://github.com/pelias/pbf2json",
   "license": "MIT",
+  "main": "index.js",
+  "bin": {
+    "pbf2json": "./cli.js"
+  },
   "scripts": {
     "units": "./bin/units",
     "gotest": "go test ./...",
