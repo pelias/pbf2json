@@ -39,10 +39,6 @@
     "node": ">=22.0.0",
     "npm": ">=1.4.3"
   },
-  "dependencies": {
-    "split": "^1.0.0",
-    "through2": "^3.0.0"
-  },
   "devDependencies": {
     "jshint": "^2.13.6",
     "precommit-hook": "3.0.0",
