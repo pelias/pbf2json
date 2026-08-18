@@ -44,7 +44,6 @@
     "through2": "^3.0.0"
   },
   "devDependencies": {
-    "deep-diff": "^1.0.0",
     "pre-commit": "^1.2.2",
     "precommit-hook": "3.0.0",
     "tap-spec": "^5.0.0",

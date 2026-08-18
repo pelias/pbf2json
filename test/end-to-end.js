@@ -9,7 +9,7 @@
 var fs = require('fs'),
     os = require('os'),
     path = require('path'),
-    deep = require('deep-diff'),
+    util = require('util'),
     through = require('through2'),
     pbf2json = require('../index');
 
@@ -40,7 +40,7 @@ function test( name, tags, cb ){
       var expected = JSON.parse( fs.readFileSync( expectedPath, { encoding: 'utf8' } ) );
 
       // actual != expected
-      if( !deepEqual( actual, expected ) ){
+      if( !util.isDeepStrictEqual( actual, expected ) ){
         console.error( 'end-to-end tests failed :(' );
         console.error( 'contents of', tmpfile, 'do not match expected:', expectedPath );
         process.exit(1);
@@ -66,17 +66,6 @@ function next(){
   if( t ){ return test( t[0], t[1], next ); }
   fs.rmSync( workdir, { recursive: true, force: true } ); // only on success, failures exit early
 }
-
-// deep equal comparison, optimised for fast fail
-var deepEqual = function(a, b) {
-  if(!a || !b){ return false; }
-  if(Object.keys(a).length !== Object.keys(b).length){ return false; }
-  for(var i in a) {
-    if( !b.hasOwnProperty(i) ){ return false; }
-    if( deep.diff(a[i], b[i]) ){ return false; }
-  }
-  return true;
-};
 
 // run each test synchronously
 next();
