@@ -9,11 +9,12 @@
     "units": "./bin/units",
     "gotest": "go test ./...",
     "test": "npm run units",
-    "pretest": "test/pretest.sh",
+    "pretest": "./compile.sh native && test/pretest.sh",
     "end-to-end": "npm run pretest && node test/end-to-end.js",
     "lint": "jshint .",
     "validate": "npm ls",
     "compile": "./compile.sh",
+    "prepack": "./compile.sh",
     "no-unstaged": "git diff --exit-code"
   },
   "repository": {
