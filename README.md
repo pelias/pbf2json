@@ -26,6 +26,15 @@ pbf2json creates a JSON stream of openstreetmap data from any PBF extract, you c
 
 ![animated-gif](http://missinglink.embed.s3.amazonaws.com/pbf2json-2.gif)
 
+### Install the command-line tool
+
+```bash
+$ npm install -g pbf2json
+$ pbf2json -tags="amenity" /tmp/wellington_new-zealand.osm.pbf
+```
+
+The `pbf2json` command selects the binary matching your platform and passes every argument through to it, so the usage below applies unchanged. It can also be run without installing, using `npx pbf2json ...`.
+
 ### Run from pre-built binary
 
 

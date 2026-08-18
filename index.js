@@ -1,11 +1,9 @@
 
 var util = require('util'),
-    path = require('path'),
-    os = require('os'),
     split = require('split'),
     through = require('through2'),
     child = require('child_process'),
-    exec = path.join(__dirname, 'build', util.format( 'pbf2json.%s-%s', os.platform(), os.arch() ) ),
+    exec = require('./lib/binaryPath'),
     generateParams = require('./lib/generateParams');
 
 // custom log levels can be detected for lines with the format:
