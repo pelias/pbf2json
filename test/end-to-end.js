@@ -11,7 +11,6 @@ var fs = require('fs'),
     path = require('path'),
     deep = require('deep-diff'),
     through = require('through2'),
-    naivedb = require('naivedb'),
     pbf2json = require('../index');
 
 var workdir = fs.mkdtempSync( path.join( os.tmpdir(), 'pbf2json-e2e-' ) );
@@ -21,28 +20,24 @@ function test( name, tags, cb ){
   var tmpfile = path.join( workdir, name + '.json' ),
       leveldbDir = fs.mkdtempSync( path.join( workdir, 'leveldb-' ) ),
       pbfPath = path.resolve(__dirname) + '/vancouver_canada.osm.pbf',
-      expectedPath = path.resolve(__dirname) + '/fixtures/' + name + '.json';
-
-  fs.writeFileSync( tmpfile, '{}' ); // init naivedb
-  var db = naivedb(tmpfile);
+      expectedPath = path.resolve(__dirname) + '/fixtures/' + name + '.json',
+      actual = {};
 
   // give each test its own leveldb directory, the default of '/tmp' is shared
   // between concurrent runs and leaves its files behind
   pbf2json.createReadStream({ file: pbfPath, tags: tags, leveldb: leveldbDir })
     .pipe( through.obj( function( obj, _, next ){
       obj.gid = obj.type + ':' + obj.id;
-      next(null, obj);
+      actual[ obj.gid ] = obj;
+      next();
     }))
-    .pipe( db.createWriteStream('gid') )
     .on('finish', function assert(){
 
-      // write actual to disk
-      db.writeSync();
+      // write actual to disk, so failures can be inspected by hand
+      fs.writeFileSync( tmpfile, JSON.stringify( actual, null, 2 ) );
       fs.rmSync( leveldbDir, { recursive: true, force: true } );
 
-      // load files from disk
-      var actual = JSON.parse( fs.readFileSync( tmpfile, { encoding: 'utf8' } ) ),
-          expected = JSON.parse( fs.readFileSync( expectedPath, { encoding: 'utf8' } ) );
+      var expected = JSON.parse( fs.readFileSync( expectedPath, { encoding: 'utf8' } ) );
 
       // actual != expected
       if( !deepEqual( actual, expected ) ){
