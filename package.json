@@ -9,6 +9,7 @@
     "units": "./bin/units",
     "gotest": "go test ./...",
     "test": "npm run units",
+    "ci": "npm run gotest && npm test && npm run end-to-end",
     "pretest": "./compile.sh native && test/pretest.sh",
     "end-to-end": "npm run pretest && node test/end-to-end.js",
     "lint": "jshint .",
