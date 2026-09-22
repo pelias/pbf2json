@@ -126,3 +126,115 @@ func BenchmarkBytesToIDSlice(b *testing.B) {
 		bytesToIDSlice(data)
 	}
 }
+
+// peliasTagList is the pre-parsed form of the default Pelias OSM importer tag conditions
+// from openstreetmap/config/features.js, matching what getSettings() produces.
+var peliasTagList = []tagGroup{
+	{{key: "addr:housenumber"}, {key: "addr:street"}},
+	{{key: "addr:housenumber"}, {key: "addr:place"}},
+	{{key: "amenity"}, {key: "name"}},
+	{{key: "building"}, {key: "name"}},
+	{{key: "shop"}, {key: "name"}},
+	{{key: "office"}, {key: "name"}},
+	{{key: "public_transport"}, {key: "name"}},
+	{{key: "cuisine"}, {key: "name"}},
+	{{key: "railway", value: "station"}, {key: "name"}},
+	{{key: "railway", value: "tram_stop"}, {key: "name"}},
+	{{key: "railway", value: "halt"}, {key: "name"}},
+	{{key: "railway", value: "subway_entrance"}, {key: "name"}},
+	{{key: "railway", value: "train_station_entrance"}, {key: "name"}},
+	{{key: "highway", value: "pedestrian"}, {key: "area", value: "yes"}, {key: "name"}},
+	{{key: "place", value: "square"}, {key: "name"}},
+	{{key: "sport"}, {key: "name"}},
+	{{key: "natural"}, {key: "name"}},
+	{{key: "tourism"}, {key: "name"}},
+	{{key: "leisure"}, {key: "name"}},
+	{{key: "historic"}, {key: "name"}},
+	{{key: "man_made"}, {key: "name"}},
+	{{key: "landuse"}, {key: "name"}},
+	{{key: "waterway"}, {key: "name"}},
+	{{key: "aerialway"}, {key: "name"}},
+	{{key: "craft"}, {key: "name"}},
+	{{key: "military"}, {key: "name"}},
+	{{key: "aeroway", value: "terminal"}, {key: "name"}},
+	{{key: "aeroway", value: "aerodrome"}, {key: "name"}},
+	{{key: "aeroway", value: "helipad"}, {key: "name"}},
+	{{key: "aeroway", value: "airstrip"}, {key: "name"}},
+	{{key: "aeroway", value: "heliport"}, {key: "name"}},
+	{{key: "aeroway", value: "areodrome"}, {key: "name"}},
+	{{key: "aeroway", value: "spaceport"}, {key: "name"}},
+	{{key: "aeroway", value: "landing_strip"}, {key: "name"}},
+	{{key: "aeroway", value: "airfield"}, {key: "name"}},
+	{{key: "aeroway", value: "airport"}, {key: "name"}},
+	{{key: "brand"}, {key: "name"}},
+	{{key: "healthcare"}, {key: "name"}},
+}
+
+// BenchmarkContainsValidTags_NoMatch benchmarks the common case: an element with tags
+// that don't match any of the 37 pelias conditions (the vast majority of OSM elements).
+func BenchmarkContainsValidTags_NoMatch(b *testing.B) {
+	tags := map[string]string{
+		"highway": "residential",
+		"surface": "asphalt",
+		"oneway":  "yes",
+	}
+	b.ReportAllocs()
+	b.ResetTimer()
+	for n := 0; n < b.N; n++ {
+		containsValidTags(tags, peliasTagList)
+	}
+}
+
+// BenchmarkContainsValidTags_Match benchmarks the case where tags do match
+// (e.g., a named amenity — common for venue records).
+func BenchmarkContainsValidTags_Match(b *testing.B) {
+	tags := map[string]string{
+		"amenity": "restaurant",
+		"name":    "The Green Elephant",
+		"cuisine": "vegetarian",
+	}
+	b.ReportAllocs()
+	b.ResetTimer()
+	for n := 0; n < b.N; n++ {
+		containsValidTags(tags, peliasTagList)
+	}
+}
+
+// BenchmarkTrimTags_NoTrimNeeded benchmarks the common case where no trimming is required.
+func BenchmarkTrimTags_NoTrimNeeded(b *testing.B) {
+	tags := map[string]string{
+		"amenity":          "restaurant",
+		"name":             "The Green Elephant",
+		"cuisine":          "vegetarian",
+		"addr:housenumber": "42",
+		"addr:street":      "Main St",
+	}
+	b.ReportAllocs()
+	b.ResetTimer()
+	for n := 0; n < b.N; n++ {
+		trimTags(tags)
+	}
+}
+
+// BenchmarkBitmaskInsert benchmarks inserting IDs into the bitmask.
+func BenchmarkBitmaskInsert(b *testing.B) {
+	mask := NewBitMask()
+	b.ReportAllocs()
+	b.ResetTimer()
+	for n := 0; n < b.N; n++ {
+		mask.Insert(int64(n))
+	}
+}
+
+// BenchmarkBitmaskHas benchmarks checking membership in the bitmask (hit case).
+func BenchmarkBitmaskHas(b *testing.B) {
+	mask := NewBitMask()
+	for i := 0; i < 1000; i++ {
+		mask.Insert(int64(i))
+	}
+	b.ReportAllocs()
+	b.ResetTimer()
+	for n := 0; n < b.N; n++ {
+		mask.Has(int64(n % 1000))
+	}
+}
