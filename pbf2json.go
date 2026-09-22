@@ -18,10 +18,20 @@ import (
 	"github.com/syndtr/goleveldb/leveldb"
 )
 
+// tagPredicate is a pre-parsed key[~value] condition.
+// value is empty for a key-only match, non-empty for an exact key=value match.
+type tagPredicate struct {
+	key   string
+	value string
+}
+
+// tagGroup is an AND-list of predicates — all must match for the group to match.
+type tagGroup []tagPredicate
+
 type settings struct {
 	PbfPath    string
 	LevedbPath string
-	Tags       map[string][]string
+	Tags       []tagGroup // OR of AND-groups; pre-parsed at startup
 	BatchSize  int
 	WayNodes   bool
 }
@@ -48,14 +58,20 @@ func getSettings() settings {
 		log.Fatal("Nothing to do, you must specify tags to match against")
 	}
 
-	// parse tag conditions
-	conditions := make(map[string][]string)
+	// Pre-parse tag conditions into tagPredicate structs so the hot match path
+	// does zero string splitting or allocations.
+	var conditions []tagGroup
 	for _, group := range strings.Split(*tagList, ",") {
-		conditions[group] = strings.Split(group, "+")
+		var andList tagGroup
+		for _, part := range strings.Split(group, "+") {
+			if kv := strings.SplitN(part, "~", 2); len(kv) == 2 {
+				andList = append(andList, tagPredicate{key: kv[0], value: kv[1]})
+			} else {
+				andList = append(andList, tagPredicate{key: kv[0]})
+			}
+		}
+		conditions = append(conditions, andList)
 	}
-
-	// fmt.Print(conditions, len(conditions))
-	// os.Exit(1)
 
 	return settings{args[0], *leveldbPath, conditions, *batchSize, *wayNodes}
 }
@@ -603,33 +619,24 @@ func openLevelDB(path string) *leveldb.DB {
 //     keys = append(keys, k)
 // }
 
-// check tags contain features from a whitelist
-func matchTagsAgainstCompulsoryTagList(tags map[string]string, tagList []string) bool {
-	for _, name := range tagList {
-
-		feature := strings.Split(name, "~")
-		foundVal, foundKey := tags[feature[0]]
-
-		// key check
+// matchTagsAgainstCompulsoryTagList checks that all predicates in an AND-group match.
+func matchTagsAgainstCompulsoryTagList(tags map[string]string, group tagGroup) bool {
+	for _, pred := range group {
+		foundVal, foundKey := tags[pred.key]
 		if !foundKey {
 			return false
 		}
-
-		// value check
-		if len(feature) > 1 {
-			if foundVal != feature[1] {
-				return false
-			}
+		if pred.value != "" && foundVal != pred.value {
+			return false
 		}
 	}
-
 	return true
 }
 
-// check tags contain features from a groups of whitelists
-func containsValidTags(tags map[string]string, group map[string][]string) bool {
-	for _, list := range group {
-		if matchTagsAgainstCompulsoryTagList(tags, list) {
+// containsValidTags returns true if tags match any OR-group of AND-predicates.
+func containsValidTags(tags map[string]string, groups []tagGroup) bool {
+	for _, group := range groups {
+		if matchTagsAgainstCompulsoryTagList(tags, group) {
 			return true
 		}
 	}
