@@ -1,7 +1,7 @@
 
 var util = require('util'),
-    split = require('split'),
-    through = require('through2'),
+    stream = require('stream'),
+    StringDecoder = require('string_decoder').StringDecoder,
     child = require('child_process'),
     exec = require('./lib/binaryPath'),
     generateParams = require('./lib/generateParams');
@@ -37,17 +37,7 @@ function createReadStream( config ){
   process.on('SIGTERM', function(){ proc.kill(); });
 
   var decoder = createJsonDecodeStream();
-  proc.stdout
-    .pipe( split() )
-    .pipe( through( function( chunk, enc, next ){
-      var str = chunk.toString('utf8'); // convert buffers to strings
-      // remove empty lines
-      if( 'string' === typeof str && str.length ){
-        this.push( str );
-      }
-      next();
-    }))
-    .pipe( decoder );
+  proc.stdout.pipe( decoder );
 
   // print error and exit on decoder pipeline error
   decoder.on( 'error', errorHandler( 'decoder', config.loglevel || 0 ) );
@@ -64,16 +54,39 @@ function createReadStream( config ){
   return decoder;
 }
 
+// splits the child process stdout on newlines, emitting one object per line.
+// the StringDecoder ensures multi-byte characters spanning two chunks survive.
 function createJsonDecodeStream(){
-  return through.obj( function( str, enc, next ){
+
+  var utf8 = new StringDecoder('utf8'),
+      soFar = '';
+
+  function lines( str ){
+    var pieces = ( soFar + str ).split(/\r?\n/);
+    soFar = pieces.pop(); // the trailing piece is an incomplete line
+    return pieces;
+  }
+
+  function decode( line ){
+    if( !line.length ){ return; } // remove empty lines
     try {
-      var o = JSON.parse( str );
+      var o = JSON.parse( line );
       if( o ){ this.push( o ); }
     }
     catch( e ){
       this.emit( 'error', e );
     }
-    finally {
+  }
+
+  return new stream.Transform({
+    readableObjectMode: true,
+    transform: function( chunk, enc, next ){
+      lines( utf8.write( chunk ) ).forEach( decode, this );
+      next();
+    },
+    flush: function( next ){
+      lines( utf8.end() ).forEach( decode, this );
+      decode.call( this, soFar );
       next();
     }
   });

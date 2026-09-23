@@ -10,7 +10,6 @@ var fs = require('fs'),
     os = require('os'),
     path = require('path'),
     util = require('util'),
-    through = require('through2'),
     pbf2json = require('../index');
 
 var workdir = fs.mkdtempSync( path.join( os.tmpdir(), 'pbf2json-e2e-' ) );
@@ -26,12 +25,11 @@ function test( name, tags, cb ){
   // give each test its own leveldb directory, the default of '/tmp' is shared
   // between concurrent runs and leaves its files behind
   pbf2json.createReadStream({ file: pbfPath, tags: tags, leveldb: leveldbDir })
-    .pipe( through.obj( function( obj, _, next ){
+    .on('data', function( obj ){
       obj.gid = obj.type + ':' + obj.id;
       actual[ obj.gid ] = obj;
-      next();
-    }))
-    .on('finish', function assert(){
+    })
+    .on('end', function assert(){
 
       // write actual to disk, so failures can be inspected by hand
       fs.writeFileSync( tmpfile, JSON.stringify( actual, null, 2 ) );
