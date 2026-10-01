@@ -13,7 +13,7 @@ var fs = require('fs'),
 
 var workdir = fs.mkdtempSync( path.join( os.tmpdir(), 'pbf2json-e2e-' ) );
 
-function test( name, tags, cb ){
+function test( name, tags, options, cb ){
 
   var tmpfile = path.join( workdir, name + '.json' ),
       leveldbDir = fs.mkdtempSync( path.join( workdir, 'leveldb-' ) ),
@@ -21,11 +21,9 @@ function test( name, tags, cb ){
       expectedPath = path.resolve(__dirname) + '/fixtures/' + name + '.json',
       actual = {};
 
-  const metadata = name === 'metadata'; // just for one test case
-
   // give each test its own leveldb directory, the default of '/tmp' is shared
   // between concurrent runs and leaves its files behind
-  pbf2json.createReadStream({ file: pbfPath, tags: tags, leveldb: leveldbDir, metadata: metadata })
+  pbf2json.createReadStream({ file: pbfPath, tags: tags, leveldb: leveldbDir, metadata: options?.metadata || false })
     .on('data', function( obj ){
       obj.gid = obj.type + ':' + obj.id;
       actual[ obj.gid ] = obj;
@@ -51,7 +49,7 @@ function test( name, tags, cb ){
 }
 
 var tests = [
-  [ 'metadata',   ['shop~musical_instrument','amenity~university'] ],
+  [ 'metadata',   ['shop~musical_instrument','amenity~university'], { metadata: true } ],
   [ 'single',     ['building'] ],
   [ 'multiple',   ['building','shop'] ],
   [ 'colon',      ['addr:housenumber'] ],
@@ -63,7 +61,7 @@ var tests = [
 
 function next(){
   var t = tests.shift();
-  if( t ){ return test( t[0], t[1], next ); }
+  if( t ){ return test( t[0], t[1], t[2], next ); }
   fs.rmSync( workdir, { recursive: true, force: true } ); // only on success, failures exit early
 }
 

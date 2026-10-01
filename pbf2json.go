@@ -46,7 +46,7 @@ func getSettings() settings {
 	tagList := flag.String("tags", "", "comma-separated list of valid tags, group AND conditions with a +")
 	batchSize := flag.Int("batch", 50000, "batch leveldb writes in batches of this size")
 	wayNodes := flag.Bool("waynodes", false, "should the lat/lons of nodes belonging to ways be printed")
-	metadata := flag.Bool("metadata", false, "output metadata such as changset and timestamp")
+	metadata := flag.Bool("metadata", false, "output metadata such as changeset and timestamp")
 
 	flag.Parse()
 	args := flag.Args()
@@ -425,7 +425,7 @@ func findMemberWayLatLons(db *leveldb.DB, v *osmpbf.Relation) [][]map[string]str
 
 type jsonMetadata struct {
 	Version   int32  `json:"version,omitempty"`
-	Timestamp int64  `json:"timestamp,omitempty"`
+	Timestamp string `json:"timestamp,omitempty"`
 	User      string `json:"user,omitempty"`
 	Uid       int32  `json:"uid,omitempty"`
 	Changeset int64  `json:"changeset,omitempty"`
@@ -442,7 +442,7 @@ func formatMetadata(info osmpbf.Info, config *settings) *jsonMetadata {
 		Changeset: info.Changeset,
 	}
 	if !info.Timestamp.IsZero() {
-		meta.Timestamp = info.Timestamp.Unix()
+		meta.Timestamp = info.Timestamp.UTC().Format("2006-01-02T15:04:05.000Z07:00")
 	}
 	return meta
 }
