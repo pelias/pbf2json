@@ -1,4 +1,3 @@
-
 /**
   End-to-end tests of a small pbf extract.
 
@@ -38,7 +37,7 @@ function test( name, tags, cb ){
       var expected = JSON.parse( fs.readFileSync( expectedPath, { encoding: 'utf8' } ) );
 
       // actual != expected
-      if( !util.isDeepStrictEqual( actual, expected ) ){
+      if( !deepEqual( actual, expected ) ){
         console.error( 'end-to-end tests failed :(' );
         console.error( 'contents of', tmpfile, 'do not match expected:', expectedPath );
         process.exit(1);
@@ -63,6 +62,38 @@ function next(){
   var t = tests.shift();
   if( t ){ return test( t[0], t[1], next ); }
   fs.rmSync( workdir, { recursive: true, force: true } ); // only on success, failures exit early
+}
+
+// deep equal comparison with centroid tolerance for cross-architecture compatibility
+var deepEqual = function(a, b) {
+  if(!a || !b){ return false; }
+  if(Object.keys(a).length !== Object.keys(b).length){ return false; }
+  for(var i in a) {
+    if( !b.hasOwnProperty(i) ){ return false; }
+
+    // centroid values vary slightly between CPU architecture
+    if( a[i].hasOwnProperty('centroid') && b[i].hasOwnProperty('centroid') ) {
+      // check centroid with tolerance
+      if (!equal(a[i].centroid.lat, b[i].centroid.lat, 1e-6)) { return false; }
+      if (!equal(a[i].centroid.lon, b[i].centroid.lon, 1e-6)) { return false; }
+
+      // check everything else with strict equality
+      var aCopy = Object.assign({}, a[i]);
+      var bCopy = Object.assign({}, b[i]);
+      delete aCopy.centroid;
+      delete bCopy.centroid;
+      if (!util.isDeepStrictEqual(aCopy, bCopy)) { return false; }
+    } else {
+      // no centroid, use strict equality
+      if (!util.isDeepStrictEqual(a[i], b[i])) { return false; }
+    }
+  }
+  return true;
+};
+
+// ensure two numbers are equal within a threshold
+function equal(a, b, delta = 0.0) {
+  return Math.abs(parseFloat(a) - parseFloat(b)) <= delta;
 }
 
 // run each test synchronously
