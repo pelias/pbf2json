@@ -23,7 +23,7 @@ function test( name, tags, options, cb ){
 
   // give each test its own leveldb directory, the default of '/tmp' is shared
   // between concurrent runs and leaves its files behind
-  pbf2json.createReadStream({ file: pbfPath, tags: tags, leveldb: leveldbDir, metadata: options?.metadata || false })
+  pbf2json.createReadStream({ file: pbfPath, tags: tags, leveldb: leveldbDir, options: options })
     .on('data', function( obj ){
       obj.gid = obj.type + ':' + obj.id;
       actual[ obj.gid ] = obj;
