@@ -26,15 +26,27 @@ if ! command -v go &> /dev/null; then
   exit 1
 fi
 
-# target name -> GOOS GOARCH 'expected file(1) output' use_upx
-declare -A TARGETS=(
-  ['linux-x64']="linux amd64 'ELF 64-bit LSB.*x86-64' yes"
-  ['linux-arm64']="linux arm64 'ELF 64-bit LSB.*aarch64' yes"
-  ['darwin-x64']="darwin amd64 'Mach-O 64-bit.*x86_64' no"
-  ['darwin-arm64']="darwin arm64 'Mach-O 64-bit.*arm64' no"
-  # UPX is disabled on darwin due to https://github.com/upx/upx/issues/187
-  ['win32-x64']="windows amd64 'PE32\+ executable.*x86-64' yes"
+# name|GOOS|GOARCH|expected file(1) output|use_upx
+# (UPX is disabled on darwin due to https://github.com/upx/upx/issues/187)
+TARGETS=(
+  'linux-x64|linux|amd64|ELF 64-bit LSB.*x86-64|yes'
+  'linux-arm64|linux|arm64|ELF 64-bit LSB.*aarch64|yes'
+  'darwin-x64|darwin|amd64|Mach-O 64-bit.*x86_64|no'
+  'darwin-arm64|darwin|arm64|Mach-O 64-bit.*arm64|no'
+  'win32-x64|windows|amd64|PE32\+ executable.*x86-64|yes'
 )
+
+# prints the TARGETS record for the given target name
+function find_target() {
+  local record
+  for record in "${TARGETS[@]}"; do
+    if [[ "${record%%|*}" == "$1" ]]; then
+      echo "${record}"
+      return 0
+    fi
+  done
+  return 1
+}
 
 # the target matching the machine we're running on
 function native_target() {
@@ -48,14 +60,14 @@ function native_target() {
 
 function build() {
   local name="$1"
-  if [[ -z "${TARGETS[$name]}" ]]; then
+  local record
+  if ! record=$(find_target "${name}"); then
     echo "unknown compile target: ${name}" >&2
     exit 1
   fi
 
   local goos goarch expected upx
-  eval "set -- ${TARGETS[$name]}"
-  goos="$1"; goarch="$2"; expected="$3"; upx="$4"
+  IFS='|' read -r _ goos goarch expected upx <<< "${record}"
 
   local out="build/pbf2json.${name}"
 
@@ -86,7 +98,10 @@ function build() {
 
 targets=("$@")
 if [[ ${#targets[@]} == 0 ]]; then
-  targets=("${!TARGETS[@]}")
+  targets=()
+  for record in "${TARGETS[@]}"; do
+    targets+=("${record%%|*}")
+  done
   rm -rf build # a full build starts from scratch, partial builds do not
 elif [[ "${targets[0]}" == 'native' ]]; then
   targets=("$(native_target)")
