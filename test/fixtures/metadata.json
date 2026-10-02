@@ -1,0 +1,198 @@
+{
+  "node:946073131": {
+    "id": 946073131,
+    "type": "node",
+    "lat": 49.2716963,
+    "lon": -123.13586950000001,
+    "tags": {
+      "name": "Geza Burghardt Luthiery",
+      "opening_hours": "Mo,we,fr 3pm-6pm",
+      "phone": "6046831135",
+      "shop": "musical_instrument"
+    },
+    "meta": {
+      "version": 4,
+      "timestamp": "2014-12-14T03:13:00.000Z",
+      "user": "AmateurCartographer",
+      "uid": 1450017,
+      "changeset": 27449665
+    },
+    "gid": "node:946073131"
+  },
+  "node:1104197676": {
+    "id": 1104197676,
+    "type": "node",
+    "lat": 49.264455600000005,
+    "lon": -123.1839819,
+    "tags": {
+      "name": "Prussin Music",
+      "shop": "musical_instrument"
+    },
+    "meta": {
+      "version": 1,
+      "timestamp": "2011-01-15T03:09:00.000Z",
+      "user": "pnorman",
+      "uid": 355617,
+      "changeset": 6973466
+    },
+    "gid": "node:1104197676"
+  },
+  "node:1240309412": {
+    "id": 1240309412,
+    "type": "node",
+    "lat": 49.263236000000006,
+    "lon": -123.186035,
+    "tags": {
+      "addr:housenumber": "2621",
+      "addr:street": "Alma Street",
+      "name": "Rufus Guitar Shop",
+      "phone": "6042221717",
+      "shop": "musical_instrument"
+    },
+    "meta": {
+      "version": 2,
+      "timestamp": "2014-01-01T19:50:29.000Z",
+      "user": "Math1985",
+      "uid": 39688,
+      "changeset": 19751536
+    },
+    "gid": "node:1240309412"
+  },
+  "node:2138600904": {
+    "id": 2138600904,
+    "type": "node",
+    "lat": 49.2843503,
+    "lon": -123.1120436,
+    "tags": {
+      "addr:city": "Vancouver",
+      "addr:housenumber": "555",
+      "addr:postcode": "V6B 4N5",
+      "addr:street": "West Hastings Street",
+      "amenity": "university",
+      "name": "Simon Fraser University"
+    },
+    "meta": {
+      "version": 3,
+      "timestamp": "2014-11-07T06:05:30.000Z",
+      "user": "alester",
+      "uid": 307202,
+      "changeset": 26608146
+    },
+    "gid": "node:2138600904"
+  },
+  "way:51744572": {
+    "id": 51744572,
+    "type": "way",
+    "tags": {
+      "addr:housenumber": "1399",
+      "addr:street": "Johnson Street",
+      "amenity": "university",
+      "building": "yes",
+      "name": "Emily Carr University",
+      "phone": "604-844-3840",
+      "website": "http://www.ecuad.ca"
+    },
+    "centroid": {
+      "lat": "49.2705718",
+      "lon": "-123.1322109"
+    },
+    "bounds": {
+      "e": "-123.1315769",
+      "n": "49.2710116",
+      "s": "49.2698587",
+      "w": "-123.1332574"
+    },
+    "meta": {
+      "version": 3,
+      "timestamp": "2011-06-19T20:19:26.000Z",
+      "user": "jharvey",
+      "uid": 147559,
+      "changeset": 8488747
+    },
+    "gid": "way:51744572"
+  },
+  "way:71692700": {
+    "id": 71692700,
+    "type": "way",
+    "tags": {
+      "addr:housenumber": "1440",
+      "addr:street": "Johnson Street",
+      "amenity": "university",
+      "building": "yes",
+      "name": "Emily Carr University"
+    },
+    "centroid": {
+      "lat": "49.2704363",
+      "lon": "-123.1336761"
+    },
+    "bounds": {
+      "e": "-123.1331718",
+      "n": "49.2708388",
+      "s": "49.2700898",
+      "w": "-123.1342340"
+    },
+    "meta": {
+      "version": 3,
+      "timestamp": "2014-09-21T05:13:23.000Z",
+      "user": "maryjs",
+      "uid": 2350057,
+      "changeset": 25571794
+    },
+    "gid": "way:71692700"
+  },
+  "relation:1424987": {
+    "id": 1424987,
+    "type": "relation",
+    "tags": {
+      "alt_name": "UBC",
+      "amenity": "university",
+      "name": "University of British Columbia",
+      "type": "multipolygon"
+    },
+    "centroid": {
+      "lat": "49.2602569",
+      "lon": "-123.2567276"
+    },
+    "bounds": {
+      "e": "-123.2517239",
+      "n": "49.2667964",
+      "s": "49.2538559",
+      "w": "-123.2607478"
+    },
+    "meta": {
+      "version": 3,
+      "timestamp": "2014-04-14T17:13:35.000Z",
+      "user": "brchookolingo",
+      "uid": 2021844,
+      "changeset": 21690314
+    },
+    "gid": "relation:1424987"
+  },
+  "relation:1424998": {
+    "id": 1424998,
+    "type": "relation",
+    "tags": {
+      "amenity": "university",
+      "name": "Green College",
+      "type": "multipolygon"
+    },
+    "centroid": {
+      "lat": "49.2720055",
+      "lon": "-123.2568585"
+    },
+    "bounds": {
+      "e": "-123.2547057",
+      "n": "49.2720328",
+      "s": "49.2710150",
+      "w": "-123.2590805"
+    },
+    "meta": {
+      "version": 1,
+      "timestamp": "2011-02-13T21:56:56.000Z",
+      "user": "pnorman",
+      "uid": 355617,
+      "changeset": 7281123
+    },
+    "gid": "relation:1424998"
+  }
+}

@@ -42,6 +42,55 @@ module.exports.tests.params = function(test) {
     t.equal(params[0], expected, 'waynodes is serialized into parameter');
     t.end();
   });
+
+  test('metadata: true', function(t) {
+    const options = {
+      metadata: true
+    };
+
+    const params = generateParams({ options });
+
+    const expected = '--metadata=true';
+
+    t.equal(params[0], expected, 'metadata is set true');
+    t.end();
+  });
+
+  test('metadata: false', function(t) {
+    const options = {
+      metadata: false
+    };
+
+    const params = generateParams({ options });
+
+    t.equal(params[0], undefined, 'metadata is unset for false');
+    t.end();
+  });
+
+  test('metadata: invalid', function(t) {
+    const options = {
+      metadata: 'foo'
+    };
+
+    const params = generateParams({ options });
+
+    t.equal(params[0], undefined, 'metadata is invalid');
+    t.end();
+  });
+
+  test('metadata: empty', function(t) {
+    const params = generateParams({});
+
+    t.equal(params[0], undefined, 'options is unset');
+    t.end();
+  });
+
+  test('metadata: omit', function(t) {
+    const params = generateParams({ options: {} });
+
+    t.equal(params[0], undefined, 'metadata is unset');
+    t.end();
+  });
 };
 
 module.exports.all = function (tape, common) {
