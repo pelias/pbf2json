@@ -111,7 +111,7 @@ func main() {
 	// no-op if no relation members of type 'way' present in mask
 	if !masks.RelWays.Empty() {
 		// === potential second pass (indexing) to index members of relations ===
-		file.Seek(io.SeekStart, 0) // rewind file
+		file.Seek(0, io.SeekStart) // rewind file
 		idxRelationsDecoder := osmpbf.NewDecoder(file)
 		err = idxRelationsDecoder.Start(runtime.GOMAXPROCS(-1)) // use several goroutines for faster decoding
 		if err != nil {
@@ -123,7 +123,7 @@ func main() {
 	}
 
 	// === final pass (printing json) ===
-	file.Seek(io.SeekStart, 0) // rewind file
+	file.Seek(0, io.SeekStart) // rewind file
 	decoder := osmpbf.NewDecoder(file)
 	err = decoder.Start(runtime.GOMAXPROCS(-1)) // use several goroutines for faster decoding
 	if err != nil {
